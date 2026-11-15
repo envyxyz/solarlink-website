@@ -112,7 +112,7 @@ Rules: Unbounded is wide, so headings stay short (aim for under 45 characters) a
 
 - `public/brand/`: the logo for dark and light backgrounds, PNG and WebP, taken from the old site.
 - **Needed from the client:** the logo as a vector file (SVG or AI). The PNGs are 952 px wide and will not hold up large or in print.
-- **Favicon:** the old site's `favicon.svg` is the Astro framework's default logo, not SolarLink's. A proper icon set is drawn from the vector logo in Phase 3.
+- **Favicon:** the old site's `favicon.svg` was the Astro framework's default logo and its touch icon was the wide wordmark. `public/favicon.svg` is now a plain placeholder (green triangle on black). The real icon set is drawn from the vector logo in Phase 2.
 
 ## Enforcement
 

@@ -49,6 +49,7 @@
       .role span { display: block; padding: 0 var(--sl-space-3) var(--sl-space-2); }
       .type { display: grid; gap: var(--sl-space-6); }
       .type > div { display: grid; grid-template-columns: 9rem 1fr; gap: var(--sl-space-6); align-items: baseline; }
+      @media (max-width: 40rem) { .type > div { grid-template-columns: 1fr; gap: var(--sl-space-2); } .type p { overflow-wrap: anywhere; } }
       .d-xl { font: var(--sl-weight-display) var(--sl-display-xl) / var(--sl-leading-display) var(--sl-font-display); letter-spacing: var(--sl-tracking-display); }
       .d-lg { font: var(--sl-weight-display) var(--sl-display-lg) / var(--sl-leading-display) var(--sl-font-display); letter-spacing: var(--sl-tracking-display); }
       .d-md { font: var(--sl-weight-display) var(--sl-display-md) / var(--sl-leading-heading) var(--sl-font-display); letter-spacing: var(--sl-tracking-heading); }
