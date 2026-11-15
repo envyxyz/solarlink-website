@@ -1,0 +1,23 @@
+2 redirects pass
+FAIL (7):
+  https://www.solarlink.com.pk/services/residential-solar
+    got 200
+    want 301 -> https://solarlink.com.pk/services/residential-solar
+  https://www.solarlink.com.pk/
+    got 200
+    want 301 -> https://solarlink.com.pk/
+  http://www.solarlink.com.pk/services/residential-solar
+    got 301 https://www.solarlink.com.pk/services/residential-solar -> 200
+    want 301 -> https://solarlink.com.pk/services/residential-solar
+  http://www.solarlink.com.pk/
+    got 301 https://www.solarlink.com.pk/ -> 200
+    want 301 -> https://solarlink.com.pk/
+  https://solarlink.com.pk/services/residential-solar/
+    got 404
+    want 301 -> https://solarlink.com.pk/services/residential-solar
+  https://solarlink.com.pk/services/residential-solar.html
+    got 200
+    want 301 -> https://solarlink.com.pk/services/residential-solar
+  https://solarlink.com.pk/index.html
+    got 200
+    want 301 -> https://solarlink.com.pk/

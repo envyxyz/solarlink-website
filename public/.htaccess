@@ -1,0 +1,50 @@
+# SolarLink: one canonical URL per page, every other form one 301.
+# Canonical form: https://solarlink.com.pk/path/   (https, no www, lowercase, trailing slash)
+# Written for the current cPanel host. NOT yet tested on the real server: run
+#   node <website-seo>/scripts/hops.mjs https://<staging-host> /services/residential-solar/
+# before launch and fix anything that is not a single 301. docs/SEO-MIGRATION.md has the rules.
+# If the hosting panel has its own "Force HTTPS" or www setting, turn it off: it adds a second hop.
+
+RewriteEngine On
+DirectorySlash Off
+
+# Path rules come first and always redirect to the full canonical host,
+# so a request that is wrong in two ways (say http + .html) is still fixed in one hop.
+
+# Old duplicate branch pages: /locations/* -> /outlets/*/
+RewriteRule ^locations/([a-z-]+)(\.html|/)?$ https://solarlink.com.pk/outlets/$1/ [R=301,L]
+
+# Old one-off pages
+RewriteRule ^home_facelift\.html$ https://solarlink.com.pk/ [R=301,L]
+RewriteRule ^solar-quote-punjab(\.html|/)?$ https://solarlink.com.pk/get-quote/ [R=301,L]
+
+# /index.html and /folder/index.html -> the folder
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^ https://solarlink.com.pk/%1 [R=301,L,NE]
+
+# /page.html -> /page/   (Google's verification file google<id>.html is left alone)
+RewriteCond %{REQUEST_URI} !^/google[0-9a-z]+.html$ [NC]
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ https://solarlink.com.pk/%1/ [R=301,L,NE]
+
+# /page -> /page/ when the page exists
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^(.*[^/])$ https://solarlink.com.pk/$1/ [R=301,L]
+
+# Last: scheme and host, for requests whose path was already right
+RewriteCond %{HTTPS} !=on [OR]
+RewriteCond %{HTTP_HOST} !^solarlink\.com\.pk$ [NC]
+RewriteRule ^ https://solarlink.com.pk%{REQUEST_URI} [R=301,L,NE]
+
+# A missing page answers 404 with the site's own page, never a redirect to the home page
+ErrorDocument 404 /404.html
+
+<IfModule mod_headers.c>
+  Header always set Strict-Transport-Security "max-age=31536000"
+  Header always set X-Content-Type-Options "nosniff"
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
+  # Hashed build files never change
+  <If "%{REQUEST_URI} =~ m#^/_astro/#">
+    Header set Cache-Control "public, max-age=31536000, immutable"
+  </If>
+</IfModule>

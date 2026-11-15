@@ -1,0 +1,21 @@
+# build output
+dist/
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+*.log
+
+# environment: real keys never enter the repo
+.env
+.env.*
+!.env.example
+
+# editors and OS
+.DS_Store
+.idea/
+
+# research helpers install their own packages
+docs/research/**/node_modules/

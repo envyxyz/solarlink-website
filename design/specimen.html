@@ -1,0 +1,171 @@
+<!doctype html>
+<!--
+  Token specimen. Not a page design and not part of the site build: it only shows what
+  src/styles/tokens.css locks in. Serve the repo root over HTTP and open /design/specimen.html,
+  or add ?theme=light / ?theme=dark to pin a theme. Fonts come from Google Fonts here only;
+  the site itself self-hosts them through Astro's Fonts API.
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <title>SolarLink tokens</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&family=Outfit:wght@300..700&family=Unbounded:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../src/styles/tokens.css" />
+    <style>
+      :root {
+        --font-unbounded: "Unbounded";
+        --font-outfit: "Outfit";
+        --font-geist-mono: "Geist Mono";
+      }
+      * { box-sizing: border-box; margin: 0; }
+      body {
+        background: var(--sl-bg);
+        color: var(--sl-text);
+        font-family: var(--sl-font-body);
+        line-height: var(--sl-leading-body);
+        padding: var(--sl-space-12) var(--sl-gutter) var(--sl-space-16);
+      }
+      main { max-width: var(--sl-container); margin: 0 auto; display: grid; gap: var(--sl-space-12); }
+      h1, h2, h3 { font-family: var(--sl-font-display); font-weight: var(--sl-weight-display); letter-spacing: var(--sl-tracking-heading); line-height: var(--sl-leading-heading); }
+      h2 { font-size: var(--sl-text-md); padding-bottom: var(--sl-space-3); border-bottom: 1px solid var(--sl-border); margin-bottom: var(--sl-space-6); }
+      .label { font-family: var(--sl-font-mono); font-size: var(--sl-text-xs); color: var(--sl-text-muted); }
+      .row { display: grid; gap: var(--sl-space-6); }
+      .top { display: flex; justify-content: space-between; align-items: end; gap: var(--sl-space-8); flex-wrap: wrap; }
+      .top img { height: 3.25rem; width: auto; display: block; }
+      .top img.logo-light { display: none; }
+      .ramp { display: grid; grid-template-columns: repeat(auto-fit, minmax(4.5rem, 1fr)); border-radius: var(--sl-radius-md); overflow: hidden; border: 1px solid var(--sl-border); }
+      .sw { padding: 2.75rem var(--sl-space-2) var(--sl-space-2); font-family: var(--sl-font-mono); font-size: 0.6875rem; line-height: 1.35; }
+      .roles { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: var(--sl-space-3); }
+      .role { border: 1px solid var(--sl-border); border-radius: var(--sl-radius-md); overflow: hidden; background: var(--sl-bg-raised); }
+      .role i { display: block; height: 3.5rem; border-bottom: 1px solid var(--sl-border); }
+      .role b { display: block; padding: var(--sl-space-2) var(--sl-space-3) 0; font-weight: 500; font-size: var(--sl-text-sm); }
+      .role span { display: block; padding: 0 var(--sl-space-3) var(--sl-space-2); }
+      .type { display: grid; gap: var(--sl-space-6); }
+      .type > div { display: grid; grid-template-columns: 9rem 1fr; gap: var(--sl-space-6); align-items: baseline; }
+      .d-xl { font: var(--sl-weight-display) var(--sl-display-xl) / var(--sl-leading-display) var(--sl-font-display); letter-spacing: var(--sl-tracking-display); }
+      .d-lg { font: var(--sl-weight-display) var(--sl-display-lg) / var(--sl-leading-display) var(--sl-font-display); letter-spacing: var(--sl-tracking-display); }
+      .d-md { font: var(--sl-weight-display) var(--sl-display-md) / var(--sl-leading-heading) var(--sl-font-display); letter-spacing: var(--sl-tracking-heading); }
+      .d-sm { font: var(--sl-weight-display) var(--sl-display-sm) / var(--sl-leading-heading) var(--sl-font-display); letter-spacing: var(--sl-tracking-heading); }
+      .body-md { font-size: var(--sl-text-md); max-width: var(--sl-container-prose); color: var(--sl-text-muted); }
+      .mono { font-family: var(--sl-font-mono); font-variant-numeric: tabular-nums; }
+      .tag { font-size: var(--sl-text-xs); letter-spacing: var(--sl-tracking-label); text-transform: uppercase; font-weight: 500; color: var(--sl-text-muted); }
+      .em { color: var(--sl-accent-text); }
+      .parts { display: flex; flex-wrap: wrap; gap: var(--sl-space-4); align-items: center; }
+      .btn { font: 500 var(--sl-text-base) / 1 var(--sl-font-body); padding: 0.9375rem 1.375rem; border-radius: var(--sl-radius-full); border: 1px solid transparent; }
+      .btn-primary { background: var(--sl-accent); color: var(--sl-on-accent); }
+      .btn-ghost { background: transparent; color: var(--sl-text); border-color: var(--sl-border-strong); }
+      .chip { font: 500 var(--sl-text-sm) / 1 var(--sl-font-body); padding: 0.5rem 0.75rem; border-radius: var(--sl-radius-full); background: var(--sl-accent-soft); color: var(--sl-accent-text); border: 1px solid var(--sl-accent-border); }
+      .field { font: 400 var(--sl-text-base) / 1 var(--sl-font-body); padding: 0.875rem 1rem; border-radius: var(--sl-radius-sm); background: var(--sl-bg-inset); color: var(--sl-text); border: 1px solid var(--sl-border-strong); min-width: 14rem; }
+      .card { background: var(--sl-bg-raised); border: 1px solid var(--sl-border); border-radius: var(--sl-radius-lg); padding: var(--sl-space-6); box-shadow: var(--sl-shadow-raised); min-width: 15rem; }
+      .card .num { font: 500 2.5rem / 1 var(--sl-font-mono); letter-spacing: -0.03em; margin: var(--sl-space-3) 0 var(--sl-space-2); }
+      .bars { display: flex; gap: 0.375rem; align-items: end; height: 4.5rem; }
+      .bars i { width: 1.125rem; border-radius: var(--sl-radius-xs) var(--sl-radius-xs) 0 0; }
+      .radii { display: flex; gap: var(--sl-space-4); flex-wrap: wrap; }
+      .radii div { width: 5.5rem; height: 4rem; border: 1px solid var(--sl-border-strong); background: var(--sl-bg-raised); display: grid; place-items: center; }
+      @media (prefers-color-scheme: light) { :root:not([data-theme="dark"]) .logo-dark { display: none; } :root:not([data-theme="dark"]) .top img.logo-light { display: block; } }
+      [data-theme="light"] .logo-dark { display: none; } [data-theme="light"] .top img.logo-light { display: block; }
+    </style>
+    <script>
+      const t = new URLSearchParams(location.search).get("theme");
+      if (t) document.documentElement.dataset.theme = t;
+    </script>
+  </head>
+  <body>
+    <main>
+      <div class="top">
+        <div>
+          <img class="logo-dark" src="../public/brand/logo-dark.png" alt="SolarLink" />
+          <img class="logo-light" src="../public/brand/logo-light.png" alt="SolarLink" />
+        </div>
+        <p class="label">Design tokens v0.1 · locked from the logo · 2026-11-15</p>
+      </div>
+
+      <section>
+        <h2>Volt green</h2>
+        <div class="ramp" id="green"></div>
+      </section>
+      <section>
+        <h2>Neutrals</h2>
+        <div class="ramp" id="neutral"></div>
+      </section>
+      <section>
+        <h2>Roles in this theme</h2>
+        <div class="roles" id="roles"></div>
+      </section>
+
+      <section>
+        <h2>Type</h2>
+        <div class="type">
+          <div><span class="label">display-xl<br />Unbounded 600</span><p class="d-xl">Power that <span class="em">pays back</span></p></div>
+          <div><span class="label">display-lg (h1)</span><p class="d-lg">Solar installation in Lahore</p></div>
+          <div><span class="label">display-md (h2)</span><p class="d-md">How net metering works now</p></div>
+          <div><span class="label">display-sm (h3)</span><p class="d-sm">What a 10 kW system runs</p></div>
+          <div><span class="label">body-md<br />Outfit 400</span><p class="body-md">Body copy is set in Outfit, the same round geometric lettering as the line under the logo. It stays readable at small sizes on a mid-range phone, in sunlight, at arm's length.</p></div>
+          <div><span class="label">label<br />Outfit 500</span><p class="tag">Solar solution &amp; installation</p></div>
+          <div><span class="label">data<br />Geist Mono 500</span><p class="mono" style="font-size: var(--sl-text-xl)">12.5 kW · 1,540 units/month · Rs 0,000,000</p></div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Parts</h2>
+        <div class="row">
+          <div class="parts">
+            <button class="btn btn-primary">Get a quote on WhatsApp</button>
+            <button class="btn btn-ghost">Open the calculator</button>
+            <span class="chip">Net metering</span>
+            <input class="field" value="Monthly units: 650" aria-label="Sample field" />
+          </div>
+          <div class="parts" style="align-items: stretch">
+            <div class="card">
+              <p class="tag">Sample reading</p>
+              <p class="num">8.4<span style="font-size: 1rem; color: var(--sl-text-muted)"> kW</span></p>
+              <p class="label">placeholder figures, layout only</p>
+            </div>
+            <div class="card">
+              <p class="tag">Data colours</p>
+              <div class="bars" style="margin-top: var(--sl-space-4)">
+                <i style="height: 90%; background: var(--sl-viz-solar)"></i><i style="height: 55%; background: var(--sl-viz-load)"></i><i style="height: 30%; background: var(--sl-viz-grid)"></i><i style="height: 45%; background: var(--sl-viz-battery)"></i>
+              </div>
+              <p class="label" style="margin-top: var(--sl-space-3)">solar · load · grid · battery</p>
+            </div>
+            <div class="card">
+              <p class="tag">Status</p>
+              <p style="color: var(--sl-success)">Success: generating</p>
+              <p style="color: var(--sl-warning)">Warning: low battery</p>
+              <p style="color: var(--sl-danger)">Danger: grid fault</p>
+              <p style="color: var(--sl-info)">Info: importing from grid</p>
+            </div>
+          </div>
+          <div class="radii">
+            <div style="border-radius: var(--sl-radius-xs)" class="label">xs</div>
+            <div style="border-radius: var(--sl-radius-sm)" class="label">sm</div>
+            <div style="border-radius: var(--sl-radius-md)" class="label">md</div>
+            <div style="border-radius: var(--sl-radius-lg)" class="label">lg</div>
+            <div style="border-radius: var(--sl-radius-xl)" class="label">xl</div>
+            <div style="border-radius: var(--sl-radius-full)" class="label">full</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const css = getComputedStyle(document.documentElement);
+      const v = (n) => css.getPropertyValue(n).trim();
+      const lum = (h) => { const c = [1, 3, 5].map((i) => parseInt(h.slice(i, i + 2), 16) / 255).map((x) => (x <= 0.04045 ? x / 12.92 : ((x + 0.055) / 1.055) ** 2.4)); return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2]; };
+      const ramp = (id, name, steps) => {
+        document.getElementById(id).innerHTML = steps.map((s) => { const hex = v(`--sl-${name}-${s}`); return `<div class="sw" style="background:${hex};color:${lum(hex) > 0.4 ? "#000" : "#fff"}">${s}<br>${hex}</div>`; }).join("");
+      };
+      ramp("green", "green", [50, 100, 200, 300, 400, 500, 600, 700, 800, 900, 950]);
+      ramp("neutral", "neutral", [0, 50, 100, 200, 300, 400, 500, 600, 700, 800, 850, 900, 925, 950, 1000]);
+      const roles = [["bg", "Page"], ["bg-raised", "Raised surface"], ["bg-overlay", "Overlay"], ["bg-inset", "Inset / fields"], ["border", "Hairline"], ["border-strong", "Control border"], ["text", "Text"], ["text-muted", "Muted text"], ["accent", "Accent fill"], ["accent-text", "Accent text"], ["accent-soft", "Accent tint"], ["on-accent", "On accent"]];
+      document.getElementById("roles").innerHTML = roles.map(([k, n]) => `<div class="role"><i style="background:var(--sl-${k})"></i><b>${n}</b><span class="label">--sl-${k}</span></div>`).join("");
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+const x=require('./guide');const L=require('./lib');const {fs,path}=L;
+function fin(r,summary,extra){const{_paras,facts_raw,...rest}=r;
+ // attach sentence to each fact: fact IS the sentence; extract numeric tokens
+ const tok=/(₨|Rs\.?|PKR)\s?[\d,.]+(?:\s?(?:to|–|-)\s?(?:PKR\s)?[\d,.]+)?|\d[\d,.]*(?:–\d[\d,.]*)?\s?(?:%|kW|kWh|kWp|MW|years?|-yr|weeks?|days?|hours?|months?|units|W(?![a-z])|Wp|V(?![a-z])|Hz|°C|°|m²|cycles|articles|offices|questions)?/gi;
+ const facts=facts_raw.map(s=>({value:(s.match(tok)||[]).map(v=>v.trim()).filter(v=>/\d/.test(v)).join(' ; '),sentence:s}));
+ return{...rest,summary,facts,...extra,missing:[]};}
+const stubSummary='The page is a placeholder. The body shows a "Key Takeaways" box with three lines saying the article is being finalised, an "Article in progress" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a "Published by Solarlink" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01.';
+const files=fs.readdirSync(path.join(L.ROOT,'blog')).filter(f=>f.endsWith('.html')&&f!=='index.html').sort();
+const posts=files.map(f=>{const r=x('blog/'+f);const m=L.load('blog/'+f);
+ const kt=[];const $=m;L.mainEl($).find('li,p').each((i,e)=>{const t=L.clean($(e).text());if(/finalised|Popular Resources|Call or message/.test(t))kt.push(t)});
+ const o=fin(r,stubSummary+' Intended topic per the page head: '+r.meta_description,{is_stub:true,key_takeaways_text:kt,intro_line:null});
+ o.meta_description_is_the_intro=true;return o;});
+const idx=x('blog/index.html');
+const blog={source:'solarlink-2.0/blog/*.html',note:'ALL 10 posts are stubs ("Article in progress", ~200 words each, identical body). No real blog content exists to carry over; only the title tag, meta description, h1 and subtitle describe the intended topic. The JSON-LD BlogPosting says datePublished and dateModified 2026-02-01 for every post, author Organization "Solarlink". Blog index says "Publishing Soon - 10 articles in progress".',
+ index:fin(idx,'The blog index announces that 10 articles are publishing soon, lists three planned topic areas (system sizing, net metering deep dives, equipment comparisons) and links six existing resources (How Solar Works, Net Metering Guide, FAQs with "57 questions answered across 7 categories", Residential Solar, Projects, contact). It ends with a prompt to ask engineers directly with a "2 hours" reply promise and a claim of "hundreds of systems" installed.',{is_stub:false}),
+ posts};
+fs.writeFileSync(path.join(L.OUT,'blog.json'),JSON.stringify(blog,null,1));
+const nm=x('net-metering-guide.html'),hw=x('how-solar-works.html');
+const g={source:'solarlink-2.0/net-metering-guide.html, how-solar-works.html',note:'Dates are from JSON-LD only (2025-03-01); no visible byline. Neither page has JSON-LD FAQPage markup; FAQs are DOM <details>. Neither contains a buy-back rate figure, tariff per unit, or licence period number.',
+ guides:[
+ fin(nm,'The guide explains net metering as a NEPRA-approved arrangement where surplus solar power exported to the grid earns bill credits, distinct from a cash feed-in tariff. It walks through the billing cycle (imports minus exports times an export rate factor, with rollover and periodic settlement), eligibility (licensed DISCO connection, registered consumer, NEPRA-licensed EPC, capacity not above sanctioned load), a table of DISCOs, a six-step application process, a document checklist and common delays. It states 4-12 weeks as the typical approval time and 1kW to 1MW as the allowed size, and says SolarLink handles steps 1-5 for customers. It deliberately gives no export rate, telling readers to confirm the current NEPRA rate. A 10-question FAQ and a quote CTA close the page.',{}),
+ fin(hw,'A plain-language explainer from sunlight to bill: panels make DC, the inverter makes 220 V AC, and net metering turns exports into credits. It describes the five main components, compares on-grid, hybrid and off-grid in a table, and sizes systems by monthly kWh (for example 500-900 kWh/month suggests 5-8 kW). It adds maintenance advice (clean every 4-8 weeks in dusty areas), warranty and lifespan figures in a second table, and five common mistakes. Stated numbers include 4-6 year payback "(2025 tariffs)" and PKR 750,000 to 1,800,000 for 5-10 kW on-grid systems. An 8-question FAQ and a quote CTA close the page.',{})]};
+fs.writeFileSync(path.join(L.OUT,'guides.json'),JSON.stringify(g,null,1));

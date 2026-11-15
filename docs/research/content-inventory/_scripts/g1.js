@@ -1,0 +1,1 @@
+const x=require('./guide');for(const f of ['net-metering-guide.html','how-solar-works.html']){const r=x(f);console.log(f,r.word_count,r.date_published,JSON.stringify(r.author),r.faqs.length,r.faqs[0]&&r.faqs[0].source,r.tables.length,r.facts_raw.length,r.internal_links_out.length,r.visible_dates_or_byline);console.log(r.outline.map(o=>o.level+':'+o.text).join(' | '));}

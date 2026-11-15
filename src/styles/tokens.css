@@ -1,0 +1,235 @@
+/*
+  SolarLink design tokens. The only place raw colour values live.
+  Layer 1: primitives (ramps). Layer 2: semantic roles, dark first, light by device theme.
+  Components use the semantic roles (or their Tailwind aliases in global.css), never a primitive.
+  Source of the brand colour: the logo files (#95FF15 on #000000 / #FFFFFF), sampled 2026-11-15.
+  Contrast figures are in DESIGN.md; re-run scripts/check-contrast.mjs after any change here.
+*/
+
+:root {
+  /* ---------- Primitives ---------- */
+
+  /* Volt green: OKLCH hue 133.4, built around the logo green at step 400 */
+  --sl-green-50: #ebfedf;
+  --sl-green-100: #d7fcbe;
+  --sl-green-200: #bbfd8b;
+  --sl-green-300: #a2fd51;
+  --sl-green-400: #95ff15; /* the logo green */
+  --sl-green-500: #7ddb00;
+  --sl-green-600: #64b000;
+  --sl-green-700: #4b8700;
+  --sl-green-800: #366300;
+  --sl-green-900: #214200;
+  --sl-green-950: #0d2000;
+
+  /* Neutrals: same hue as the green at very low chroma, so greys sit with the brand */
+  --sl-neutral-0: #ffffff;
+  --sl-neutral-50: #f9fbf8;
+  --sl-neutral-100: #f2f4f0;
+  --sl-neutral-200: #e4e7e2;
+  --sl-neutral-300: #d2d6cf;
+  --sl-neutral-400: #a2a69f;
+  --sl-neutral-500: #777c75;
+  --sl-neutral-600: #555a53;
+  --sl-neutral-700: #3b3f38;
+  --sl-neutral-800: #242823;
+  --sl-neutral-850: #191c17;
+  --sl-neutral-900: #10120e;
+  --sl-neutral-925: #0b0d0a;
+  --sl-neutral-950: #060705;
+  --sl-neutral-1000: #000000;
+
+  /* Signal colours: data and status only, never decoration */
+  --sl-amber-400: #ffb224;
+  --sl-amber-700: #9a5b00;
+  --sl-blue-400: #6cb2ff;
+  --sl-blue-700: #1259c3;
+  --sl-red-400: #ff5c5c;
+  --sl-red-700: #c2261f;
+
+  /* ---------- Type ---------- */
+  /* --font-unbounded, --font-outfit and --font-geist-mono are set by Astro's Fonts API (astro.config.mjs) */
+  --sl-font-display: var(--font-unbounded), "Arial Black", system-ui, sans-serif;
+  --sl-font-body: var(--font-outfit), system-ui, -apple-system, "Segoe UI", sans-serif;
+  --sl-font-mono: var(--font-geist-mono), ui-monospace, "Cascadia Mono", Consolas, monospace;
+
+  --sl-text-xs: 0.75rem;
+  --sl-text-sm: 0.875rem;
+  --sl-text-base: 1rem;
+  --sl-text-md: 1.125rem;
+  --sl-text-lg: 1.25rem;
+  --sl-text-xl: 1.5rem;
+  /* Display steps are fluid: rem + vw, so browser zoom still scales them */
+  --sl-display-sm: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --sl-display-md: clamp(1.625rem, 1.35rem + 1.4vw, 2.5rem);
+  --sl-display-lg: clamp(2rem, 1.5rem + 2.6vw, 3.75rem);
+  --sl-display-xl: clamp(2.5rem, 1.6rem + 4.5vw, 5.5rem);
+
+  --sl-leading-display: 1.04;
+  --sl-leading-heading: 1.15;
+  --sl-leading-body: 1.6;
+  --sl-tracking-display: -0.03em;
+  --sl-tracking-heading: -0.02em;
+  --sl-tracking-label: 0.08em; /* the logo tagline's open spacing; short uppercase labels only */
+
+  --sl-weight-body: 400;
+  --sl-weight-medium: 500;
+  --sl-weight-display: 600;
+
+  /* ---------- Space and layout ---------- */
+  --sl-space-1: 0.25rem;
+  --sl-space-2: 0.5rem;
+  --sl-space-3: 0.75rem;
+  --sl-space-4: 1rem;
+  --sl-space-6: 1.5rem;
+  --sl-space-8: 2rem;
+  --sl-space-12: 3rem;
+  --sl-space-16: 4rem;
+  --sl-space-24: 6rem;
+  --sl-space-section: clamp(4rem, 3rem + 5vw, 8rem);
+  --sl-gutter: clamp(1rem, 0.5rem + 2.5vw, 2.5rem);
+  --sl-container: 76rem;
+  --sl-container-wide: 90rem;
+  --sl-container-prose: 44rem;
+
+  /* ---------- Shape ---------- */
+  /* Soft-squared corners, taken from the wordmark's letter corners */
+  --sl-radius-xs: 0.25rem;
+  --sl-radius-sm: 0.5rem;
+  --sl-radius-md: 0.75rem;
+  --sl-radius-lg: 1.25rem;
+  --sl-radius-xl: 2rem;
+  --sl-radius-full: 999px;
+  --sl-border-width: 1px;
+
+  /* ---------- Motion ---------- */
+  --sl-duration-instant: 120ms;
+  --sl-duration-fast: 200ms;
+  --sl-duration-base: 320ms;
+  --sl-duration-slow: 600ms;
+  --sl-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --sl-ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+  --sl-ease-linear: linear;
+
+  /* ---------- Layers ---------- */
+  --sl-z-base: 0;
+  --sl-z-raised: 10;
+  --sl-z-sticky: 100;
+  --sl-z-overlay: 200;
+  --sl-z-modal: 300;
+  --sl-z-toast: 400;
+
+  /* ---------- Semantic roles: dark (the default) ---------- */
+  color-scheme: dark;
+  --sl-bg: var(--sl-neutral-950);
+  --sl-bg-raised: var(--sl-neutral-925);
+  --sl-bg-overlay: var(--sl-neutral-900);
+  --sl-bg-inset: var(--sl-neutral-1000);
+  --sl-bg-hover: var(--sl-neutral-850);
+  --sl-border: var(--sl-neutral-800);
+  --sl-border-strong: var(--sl-neutral-500);
+  --sl-text: var(--sl-neutral-50);
+  --sl-text-muted: var(--sl-neutral-400);
+  --sl-text-subtle: var(--sl-neutral-500);
+
+  --sl-accent: var(--sl-green-400); /* fills: buttons, key numbers' underlines, active states */
+  --sl-accent-hover: var(--sl-green-300);
+  --sl-on-accent: var(--sl-neutral-1000); /* text and icons on an accent fill */
+  --sl-accent-text: var(--sl-green-400); /* accent-coloured text and links on the page background */
+  --sl-accent-soft: rgb(149 255 21 / 0.1);
+  --sl-accent-border: rgb(149 255 21 / 0.32);
+  --sl-accent-glow: 0 0 2.5rem rgb(149 255 21 / 0.22);
+  --sl-focus-ring: var(--sl-green-400);
+
+  --sl-success: var(--sl-green-400);
+  --sl-warning: var(--sl-amber-400);
+  --sl-danger: var(--sl-red-400);
+  --sl-info: var(--sl-blue-400);
+
+  /* Data: one meaning each, used by every chart, meter and calculator */
+  --sl-viz-solar: var(--sl-green-400);
+  --sl-viz-grid: var(--sl-blue-400);
+  --sl-viz-battery: var(--sl-amber-400);
+  --sl-viz-load: var(--sl-neutral-300);
+  --sl-viz-axis: var(--sl-neutral-700);
+
+  --sl-shadow-raised: 0 1px 0 rgb(255 255 255 / 0.04) inset, 0 1.5rem 3rem -1.5rem rgb(0 0 0 / 0.8);
+}
+
+/* Light roles: applied when the device asks for light, unless the page is pinned dark */
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --sl-bg: var(--sl-neutral-50);
+    --sl-bg-raised: var(--sl-neutral-0);
+    --sl-bg-overlay: var(--sl-neutral-0);
+    --sl-bg-inset: var(--sl-neutral-100);
+    --sl-bg-hover: var(--sl-neutral-100);
+    --sl-border: var(--sl-neutral-200);
+    --sl-border-strong: var(--sl-neutral-500);
+    --sl-text: var(--sl-neutral-950);
+    --sl-text-muted: var(--sl-neutral-600);
+    --sl-text-subtle: var(--sl-neutral-600);
+
+    --sl-accent-hover: var(--sl-green-300);
+    --sl-accent-text: var(--sl-green-800); /* #95FF15 is 1.3:1 on white, so text uses the 800 step */
+    --sl-accent-soft: var(--sl-green-50);
+    --sl-accent-border: var(--sl-green-600);
+    --sl-accent-glow: 0 0 0 transparent;
+    --sl-focus-ring: var(--sl-neutral-950);
+
+    --sl-success: var(--sl-green-800);
+    --sl-warning: var(--sl-amber-700);
+    --sl-danger: var(--sl-red-700);
+    --sl-info: var(--sl-blue-700);
+
+    --sl-viz-solar: var(--sl-green-600);
+    --sl-viz-grid: var(--sl-blue-700);
+    --sl-viz-battery: var(--sl-amber-700);
+    --sl-viz-load: var(--sl-neutral-500);
+    --sl-viz-axis: var(--sl-neutral-300);
+
+    --sl-shadow-raised: 0 1px 2px rgb(6 7 5 / 0.06), 0 1.5rem 3rem -1.5rem rgb(6 7 5 / 0.18);
+  }
+}
+
+/* Same light roles when a page or section pins light with data-theme="light" */
+:root[data-theme="light"],
+[data-theme="light"] {
+  color-scheme: light;
+  --sl-bg: var(--sl-neutral-50);
+  --sl-bg-raised: var(--sl-neutral-0);
+  --sl-bg-overlay: var(--sl-neutral-0);
+  --sl-bg-inset: var(--sl-neutral-100);
+  --sl-bg-hover: var(--sl-neutral-100);
+  --sl-border: var(--sl-neutral-200);
+  --sl-border-strong: var(--sl-neutral-500);
+  --sl-text: var(--sl-neutral-950);
+  --sl-text-muted: var(--sl-neutral-600);
+  --sl-text-subtle: var(--sl-neutral-600);
+  --sl-accent-hover: var(--sl-green-300);
+  --sl-accent-text: var(--sl-green-800);
+  --sl-accent-soft: var(--sl-green-50);
+  --sl-accent-border: var(--sl-green-600);
+  --sl-accent-glow: 0 0 0 transparent;
+  --sl-focus-ring: var(--sl-neutral-950);
+  --sl-success: var(--sl-green-800);
+  --sl-warning: var(--sl-amber-700);
+  --sl-danger: var(--sl-red-700);
+  --sl-info: var(--sl-blue-700);
+  --sl-viz-solar: var(--sl-green-600);
+  --sl-viz-grid: var(--sl-blue-700);
+  --sl-viz-battery: var(--sl-amber-700);
+  --sl-viz-load: var(--sl-neutral-500);
+  --sl-viz-axis: var(--sl-neutral-300);
+  --sl-shadow-raised: 0 1px 2px rgb(6 7 5 / 0.06), 0 1.5rem 3rem -1.5rem rgb(6 7 5 / 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --sl-duration-instant: 0ms;
+    --sl-duration-fast: 0ms;
+    --sl-duration-base: 0ms;
+    --sl-duration-slow: 0ms;
+  }
+}

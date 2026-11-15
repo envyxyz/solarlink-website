@@ -1,0 +1,7 @@
+# solarlink.com.pk
+# Search engines and AI search crawlers are welcome. Nothing is blocked here on purpose:
+# a page that must stay out of results sends noindex instead (a blocked page's noindex is never read).
+User-agent: *
+Allow: /
+
+Sitemap: https://solarlink.com.pk/sitemap.xml

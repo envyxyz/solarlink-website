@@ -1,0 +1,12 @@
+---
+// Placeholder only. The real home page is built in Phase 3, after the design direction is approved.
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { site } from "../content";
+---
+
+<BaseLayout title={site.name} description={site.tagline} noindex>
+  <main class="mx-auto max-w-page px-[var(--sl-gutter)] py-[var(--sl-space-section)]">
+    <h1>{site.name}</h1>
+    <p class="mt-4 text-muted">{site.tagline}</p>
+  </main>
+</BaseLayout>

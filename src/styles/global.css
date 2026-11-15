@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@import "./tokens.css";
+
+/*
+  Tailwind aliases for the semantic tokens. Utilities such as bg-bg, text-muted, border-line,
+  font-display and rounded-lg all resolve to tokens.css, so the theme switches without class changes.
+  The default Tailwind colour palette is switched off: only brand roles exist.
+*/
+@theme inline {
+  --color-*: initial;
+  --color-bg: var(--sl-bg);
+  --color-raised: var(--sl-bg-raised);
+  --color-overlay: var(--sl-bg-overlay);
+  --color-inset: var(--sl-bg-inset);
+  --color-hover: var(--sl-bg-hover);
+  --color-line: var(--sl-border);
+  --color-line-strong: var(--sl-border-strong);
+  --color-ink: var(--sl-text);
+  --color-muted: var(--sl-text-muted);
+  --color-subtle: var(--sl-text-subtle);
+  --color-accent: var(--sl-accent);
+  --color-accent-hover: var(--sl-accent-hover);
+  --color-on-accent: var(--sl-on-accent);
+  --color-accent-text: var(--sl-accent-text);
+  --color-accent-soft: var(--sl-accent-soft);
+  --color-accent-line: var(--sl-accent-border);
+  --color-success: var(--sl-success);
+  --color-warning: var(--sl-warning);
+  --color-danger: var(--sl-danger);
+  --color-info: var(--sl-info);
+  --color-viz-solar: var(--sl-viz-solar);
+  --color-viz-grid: var(--sl-viz-grid);
+  --color-viz-battery: var(--sl-viz-battery);
+  --color-viz-load: var(--sl-viz-load);
+  --color-viz-axis: var(--sl-viz-axis);
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  --font-display: var(--sl-font-display);
+  --font-sans: var(--sl-font-body);
+  --font-mono: var(--sl-font-mono);
+
+  --text-display-sm: var(--sl-display-sm);
+  --text-display-md: var(--sl-display-md);
+  --text-display-lg: var(--sl-display-lg);
+  --text-display-xl: var(--sl-display-xl);
+
+  --radius-xs: var(--sl-radius-xs);
+  --radius-sm: var(--sl-radius-sm);
+  --radius-md: var(--sl-radius-md);
+  --radius-lg: var(--sl-radius-lg);
+  --radius-xl: var(--sl-radius-xl);
+
+  --ease-out: var(--sl-ease-out);
+  --ease-in-out: var(--sl-ease-in-out);
+
+  --container-page: var(--sl-container);
+  --container-wide: var(--sl-container-wide);
+  --container-prose: var(--sl-container-prose);
+
+  --shadow-raised: var(--sl-shadow-raised);
+  --shadow-glow: var(--sl-accent-glow);
+}
+
+@layer base {
+  html {
+    background: var(--sl-bg);
+    color: var(--sl-text);
+    font-family: var(--sl-font-body);
+    font-weight: var(--sl-weight-body);
+    line-height: var(--sl-leading-body);
+    -webkit-text-size-adjust: 100%;
+    text-rendering: optimizeLegibility;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    min-height: 100dvh;
+    font-size: var(--sl-text-base);
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--sl-font-display);
+    font-weight: var(--sl-weight-display);
+    line-height: var(--sl-leading-heading);
+    letter-spacing: var(--sl-tracking-heading);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--sl-display-lg);
+    line-height: var(--sl-leading-display);
+    letter-spacing: var(--sl-tracking-display);
+  }
+
+  h2 {
+    font-size: var(--sl-display-md);
+  }
+
+  h3 {
+    font-size: var(--sl-display-sm);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  /* Prices, kW, units and phone numbers line up in columns */
+  .tabular,
+  table,
+  [data-numeric] {
+    font-variant-numeric: tabular-nums;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--sl-focus-ring);
+    outline-offset: 3px;
+  }
+
+  ::selection {
+    background: var(--sl-accent);
+    color: var(--sl-on-accent);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}

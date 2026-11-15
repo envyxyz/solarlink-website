@@ -1,0 +1,639 @@
+{
+ "source": "solarlink-2.0/net-metering-guide.html, how-solar-works.html",
+ "note": "Dates are from JSON-LD only (2025-03-01); no visible byline. Neither page has JSON-LD FAQPage markup; FAQs are DOM <details>. Neither contains a buy-back rate figure, tariff per unit, or licence period number.",
+ "guides": [
+  {
+   "slug": "net-metering-guide",
+   "url": "/net-metering-guide.html",
+   "title_tag": "Net Metering Guide Pakistan – Step by Step | Solarlink",
+   "meta_description": "Step-by-step net metering guide for Pakistan: NEPRA policy, DISCO documents, bi-directional meter timeline, and how Solarlink handles it.",
+   "h1": "Net Metering Guide for Pakistan",
+   "subtitle": null,
+   "date_published": "2025-03-01",
+   "date_modified": "2025-06-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "Net Metering Guide for Pakistan"
+    },
+    {
+     "level": "h2",
+     "text": "What Is Net Metering?"
+    },
+    {
+     "level": "h2",
+     "text": "How It Works — The Billing Cycle"
+    },
+    {
+     "level": "h2",
+     "text": "Eligibility Basics"
+    },
+    {
+     "level": "h2",
+     "text": "Net Metering by DISCO in Pakistan"
+    },
+    {
+     "level": "h2",
+     "text": "How to Apply for Net Metering in Pakistan — Step by Step"
+    },
+    {
+     "level": "h2",
+     "text": "Required Documents"
+    },
+    {
+     "level": "h2",
+     "text": "Timeline & Common Delays"
+    },
+    {
+     "level": "h2",
+     "text": "How SolarLink Handles It for You"
+    },
+    {
+     "level": "h2",
+     "text": "Frequently Asked Questions"
+    },
+    {
+     "level": "h2",
+     "text": "Get Your Free Solar Assessment"
+    }
+   ],
+   "faqs": [
+    {
+     "q": "What is net metering in Pakistan?",
+     "a": "Net metering is a NEPRA-approved policy that allows solar system owners to export surplus electricity to the national grid and receive bill credits for that export. The credits are applied to future bills, reducing or eliminating your electricity cost. It is governed by the NEPRA Net Metering Rules and implemented by each DISCO.",
+     "source": "dom"
+    },
+    {
+     "q": "Who is eligible for net metering in Pakistan?",
+     "a": "Any residential, commercial, agricultural, or industrial consumer who is connected to a licensed DISCO (LESCO, IESCO, GEPCO, MEPCO, FESCO, PESCO, HESCO, QESCO, SEPCO, or K-Electric) and installs a net-metering-compliant solar system may apply. The system must be installed by a NEPRA-licensed generation company.",
+     "source": "dom"
+    },
+    {
+     "q": "What is the maximum system size allowed under net metering?",
+     "a": "Under NEPRA rules, the net-metered system capacity cannot exceed your sanctioned load (the load limit on your electricity connection). Exact per-connection limits may vary by DISCO and tariff category — SolarLink checks your sanctioned load before designing your system.",
+     "source": "dom"
+    },
+    {
+     "q": "How long does the net metering application take?",
+     "a": "NEPRA sets a statutory timeline for DISCOs to process applications, but actual timelines vary by DISCO and region. In SolarLink's experience, approvals typically take 4–12 weeks from the date of complete application submission. Incomplete document sets are the most common cause of delay.",
+     "source": "dom"
+    },
+    {
+     "q": "What documents are required for net metering?",
+     "a": "The core set includes: completed DISCO application form, copy of your electricity bill, CNIC copies, technical drawing of the solar system (single-line diagram), equipment datasheets, NEPRA licence copy of your EPC contractor (SolarLink), and a net metering agreement. Some DISCOs require additional documents — SolarLink provides the complete, DISCO-specific set for your connection.",
+     "source": "dom"
+    },
+    {
+     "q": "What rate does NEPRA pay for exported electricity?",
+     "a": "The export rate (also called the avoided cost rate or buyback rate) is determined by NEPRA and is subject to revision. It is typically lower than the import tariff rate. SolarLink will provide the applicable rate at the time of your project design. Contact us or check the NEPRA website for the current rate.",
+     "source": "dom"
+    },
+    {
+     "q": "Can I get net metering for a 3-phase commercial connection?",
+     "a": "Yes — net metering is available for both single-phase and three-phase connections. Commercial and industrial consumers often install larger systems (20 kW and above) under net metering. The application process and required documents follow the same overall framework, with some additional commercial documentation.",
+     "source": "dom"
+    },
+    {
+     "q": "Does SolarLink handle the net metering application?",
+     "a": "Yes. SolarLink manages the complete application process as part of every installation — from compiling documents and submitting the DISCO application to liaising with the DISCO engineer during inspection and following up until the bi-directional meter is installed. You do not need to visit the DISCO office.",
+     "source": "dom"
+    },
+    {
+     "q": "What happens to unused net metering credits?",
+     "a": "Unused credits roll over to the next billing period. The NEPRA rules define how long credits can accumulate — currently, the net of annual exports and imports is settled by your DISCO at periodic intervals. Your DISCO or SolarLink can explain the specific settlement cycle for your connection.",
+     "source": "dom"
+    },
+    {
+     "q": "Can I get net metering if I already have solar panels installed?",
+     "a": "Yes — if your system was installed by a NEPRA-licensed contractor and meets technical standards, you can apply for net metering retroactively. SolarLink can review your existing system, prepare the required documentation, and file the application on your behalf.",
+     "source": "dom"
+    }
+   ],
+   "tables": [
+    {
+     "caption": null,
+     "first_row": [
+      "DISCO",
+      "Area Served",
+      "Relevant for Solarlink"
+     ],
+     "row_count": 6,
+     "rows": [
+      [
+       "DISCO",
+       "Area Served",
+       "Relevant for Solarlink"
+      ],
+      [
+       "LESCO",
+       "Lahore",
+       "✅ Yes"
+      ],
+      [
+       "IESCO",
+       "Islamabad, Rawalpindi",
+       "✅ Yes"
+      ],
+      [
+       "GEPCO",
+       "Gujranwala, Sargodha region",
+       "✅ Yes"
+      ],
+      [
+       "MEPCO",
+       "Multan, South Punjab",
+       "Partial"
+      ],
+      [
+       "FESCO",
+       "Faisalabad",
+       "Partial"
+      ]
+     ]
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/projects/",
+    "/resources.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html"
+   ],
+   "external_links_out": [],
+   "word_count": 2137,
+   "summary": "The guide explains net metering as a NEPRA-approved arrangement where surplus solar power exported to the grid earns bill credits, distinct from a cash feed-in tariff. It walks through the billing cycle (imports minus exports times an export rate factor, with rollover and periodic settlement), eligibility (licensed DISCO connection, registered consumer, NEPRA-licensed EPC, capacity not above sanctioned load), a table of DISCOs, a six-step application process, a document checklist and common delays. It states 4-12 weeks as the typical approval time and 1kW to 1MW as the allowed size, and says SolarLink handles steps 1-5 for customers. It deliberately gives no export rate, telling readers to confirm the current NEPRA rate. A 10-question FAQ and a quote CTA close the page.",
+   "facts": [
+    {
+     "value": "4–12 weeks",
+     "sentence": "Timeline from application to bi-directional meter varies by DISCO — expect 4–12 weeks."
+    },
+    {
+     "value": "2024, ; 100,000",
+     "sentence": "As of 2024, Pakistan has issued over 100,000 net metering connections nationwide, with the number growing rapidly as WAPDA tariffs rise."
+    },
+    {
+     "value": "1kW ; 1MW",
+     "sentence": "NEPRA regulations allow net metering for systems between 1kW and 1MW, covering virtually all residential and commercial solar installations."
+    },
+    {
+     "value": "2015 ; 2023",
+     "sentence": "Source: NEPRA Net Metering Regulations 2015 (amended 2023); AEDB Pakistan Solar Report"
+    },
+    {
+     "value": "",
+     "sentence": "The principle is simple: your solar panels often produce more electricity than your home or business uses during daylight hours."
+    },
+    {
+     "value": "2015, ; 2023",
+     "sentence": "Each has its own application process but follows NEPRA’s standardized Net Metering Regulations (2015, amended 2023)."
+    },
+    {
+     "value": "1–5",
+     "sentence": "Solarlink handles steps 1–5 on your behalf for all customers."
+    },
+    {
+     "value": "1kW ; 1MW",
+     "sentence": "Install an eligible solar system: Your system must be grid-tied and between 1kW and 1MW in capacity."
+    },
+    {
+     "value": "4–12 weeks",
+     "sentence": "In practice, SolarLink's experience across Lahore, Islamabad, Rawalpindi, and Sargodha shows that most approvals happen within 4–12 weeks from complete application submission."
+    },
+    {
+     "value": "",
+     "sentence": "DISCO grid capacity constraints — in some feeders, the DISCO may require a grid upgrade before approving net metering at a given size."
+    },
+    {
+     "value": "10 kW",
+     "sentence": "This is less common for residential systems under 10 kW."
+    },
+    {
+     "value": "4–12 weeks",
+     "sentence": "Most applications approved in 4–12 weeks."
+    },
+    {
+     "value": "4–12 weeks",
+     "sentence": "In SolarLink's experience, approvals typically take 4–12 weeks from the date of complete application submission."
+    },
+    {
+     "value": "20 kW",
+     "sentence": "Commercial and industrial consumers often install larger systems (20 kW and above) under net metering."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "Our team visits your site, analyses your electricity bills, and delivers a custom proposal — usually within 48 hours."
+    }
+   ],
+   "missing": [
+    "visible publish date or byline (JSON-LD only: 2025-03-01)",
+    "JSON-LD FAQPage markup",
+    "stated buy-back rate or per-unit tariff",
+    "licence period"
+   ]
+  },
+  {
+   "slug": "how-solar-works",
+   "url": "/how-solar-works.html",
+   "title_tag": "How Solar Panels Work in Pakistan – Simple Guide | Solarlink",
+   "meta_description": "Learn how solar panels generate electricity, what an inverter does, how net metering works in Pakistan, and how to size your system.",
+   "h1": "How Solar Works",
+   "subtitle": null,
+   "date_published": "2025-03-01",
+   "date_modified": "2025-06-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "How Solar Works"
+    },
+    {
+     "level": "h2",
+     "text": "How Solar Panels Work — Step by Step"
+    },
+    {
+     "level": "h2",
+     "text": "How Panels Generate Electricity"
+    },
+    {
+     "level": "h2",
+     "text": "Key Components of a Solar System"
+    },
+    {
+     "level": "h3",
+     "text": "1. Solar Panels (PV Modules)"
+    },
+    {
+     "level": "h3",
+     "text": "2. Inverter"
+    },
+    {
+     "level": "h3",
+     "text": "3. Mounting Structure"
+    },
+    {
+     "level": "h3",
+     "text": "4. Net Metering Meter (for on-grid systems)"
+    },
+    {
+     "level": "h3",
+     "text": "5. Battery Bank (hybrid/off-grid only)"
+    },
+    {
+     "level": "h2",
+     "text": "On-Grid vs Hybrid vs Off-Grid"
+    },
+    {
+     "level": "h3",
+     "text": "On-Grid vs Hybrid vs Off-Grid Solar — Which is Right for You?"
+    },
+    {
+     "level": "h2",
+     "text": "What Affects System Size?"
+    },
+    {
+     "level": "h2",
+     "text": "Maintenance & Lifespan"
+    },
+    {
+     "level": "h3",
+     "text": "Expected Lifespan"
+    },
+    {
+     "level": "h2",
+     "text": "5 Common Mistakes to Avoid"
+    },
+    {
+     "level": "h3",
+     "text": "1. Sizing by bill amount instead of kWh consumption"
+    },
+    {
+     "level": "h3",
+     "text": "2. Ignoring future load growth"
+    },
+    {
+     "level": "h3",
+     "text": "3. Choosing the cheapest inverter"
+    },
+    {
+     "level": "h3",
+     "text": "4. Skipping the net-metering application"
+    },
+    {
+     "level": "h3",
+     "text": "5. Delaying maintenance"
+    },
+    {
+     "level": "h2",
+     "text": "Frequently Asked Questions"
+    },
+    {
+     "level": "h2",
+     "text": "Get Your Free Solar Assessment"
+    }
+   ],
+   "faqs": [
+    {
+     "q": "How do solar panels produce electricity?",
+     "a": "Solar (photovoltaic) panels contain silicon cells. When photons from sunlight strike these cells they knock electrons loose, creating direct current (DC) electricity. An inverter then converts DC to the 220 V AC that your appliances use.",
+     "source": "dom"
+    },
+    {
+     "q": "What is the difference between an on-grid and hybrid solar system?",
+     "a": "An on-grid system sends surplus power to the national grid and earns net-metering credits; it shuts off during grid outages for safety reasons. A hybrid system adds batteries so you can store power for night use or outages while still exporting surplus to the grid.",
+     "source": "dom"
+    },
+    {
+     "q": "What system size do I need for my home?",
+     "a": "System size depends on your monthly kWh consumption (shown on your WAPDA/LESCO bill, not just the rupee amount). As a rough guide: a 5 kW system suits 400–600 kWh/month; 10 kW suits 800–1,200 kWh/month. SolarLink provides a free site assessment to calculate the right size.",
+     "source": "dom"
+    },
+    {
+     "q": "How long do solar panels last in Pakistan?",
+     "a": "Quality monocrystalline panels carry 25-year performance warranties and typically last 30+ years. Power output degrades roughly 0.5–0.7% per year, so after 25 years panels still produce ~83% of original capacity.",
+     "source": "dom"
+    },
+    {
+     "q": "Will my solar system work during load shedding?",
+     "a": "A standard on-grid system shuts off during grid outages by law (anti-islanding protection). A hybrid system with batteries continues running on stored energy. Off-grid systems operate independently of the grid at all times.",
+     "source": "dom"
+    },
+    {
+     "q": "How much do solar panels cost in Pakistan in 2025?",
+     "a": "Residential 5–10 kW on-grid systems typically range from PKR 750,000 to PKR 1,800,000 (2025 estimates), depending on panel brand, inverter type, and installation complexity. Contact SolarLink for an accurate, written quotation for your property.",
+     "source": "dom"
+    },
+    {
+     "q": "Do solar panels require a lot of maintenance?",
+     "a": "Solar panels have no moving parts and need minimal maintenance. Monthly visual inspections and quarterly cleaning (or after dust storms/rain) are recommended. SolarLink offers annual maintenance contracts that include performance checks and panel cleaning.",
+     "source": "dom"
+    },
+    {
+     "q": "Can I add batteries to an existing on-grid system?",
+     "a": "Yes — upgrading to a hybrid setup typically requires replacing or adding a hybrid inverter and a compatible battery bank. SolarLink can evaluate your existing system and advise on the most cost-effective upgrade path.",
+     "source": "dom"
+    }
+   ],
+   "tables": [
+    {
+     "caption": null,
+     "first_row": [
+      "Feature",
+      "On-Grid",
+      "Hybrid",
+      "Off-Grid"
+     ],
+     "row_count": 6,
+     "rows": [
+      [
+       "Feature",
+       "On-Grid",
+       "Hybrid",
+       "Off-Grid"
+      ],
+      [
+       "Works during load-shedding",
+       "❌ No",
+       "✅ Yes (battery)",
+       "✅ Yes"
+      ],
+      [
+       "Net metering eligible",
+       "✅ Yes",
+       "✅ Yes",
+       "❌ No"
+      ],
+      [
+       "Battery required",
+       "❌ No",
+       "✅ Yes",
+       "✅ Yes"
+      ],
+      [
+       "Cost",
+       "Lowest",
+       "Medium",
+       "Highest"
+      ],
+      [
+       "Best for",
+       "Low load-shedding areas",
+       "Most homes",
+       "Remote areas"
+      ]
+     ]
+    },
+    {
+     "caption": null,
+     "first_row": [
+      "Component",
+      "Warranty",
+      "Typical Lifespan"
+     ],
+     "row_count": 5,
+     "rows": [
+      [
+       "Component",
+       "Warranty",
+       "Typical Lifespan"
+      ],
+      [
+       "Monocrystalline panels",
+       "25-yr performance",
+       "30–35 years"
+      ],
+      [
+       "String / hybrid inverter",
+       "5–10 years",
+       "10–15 years"
+      ],
+      [
+       "LiFePO₄ batteries",
+       "10 years / 4,000 cycles",
+       "12–15 years"
+      ],
+      [
+       "Mounting structure",
+       "10 years",
+       "25+ years"
+      ]
+     ]
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/net-metering-guide.html",
+    "/projects/",
+    "/resources.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "external_links_out": [],
+   "word_count": 1875,
+   "summary": "A plain-language explainer from sunlight to bill: panels make DC, the inverter makes 220 V AC, and net metering turns exports into credits. It describes the five main components, compares on-grid, hybrid and off-grid in a table, and sizes systems by monthly kWh (for example 500-900 kWh/month suggests 5-8 kW). It adds maintenance advice (clean every 4-8 weeks in dusty areas), warranty and lifespan figures in a second table, and five common mistakes. Stated numbers include 4-6 year payback \"(2025 tariffs)\" and PKR 750,000 to 1,800,000 for 5-10 kW on-grid systems. An 8-question FAQ and a quote CTA close the page.",
+   "facts": [
+    {
+     "value": "25 ; 10–12 years",
+     "sentence": "Panels last 25+ years; inverters typically 10–12 years with proper maintenance."
+    },
+    {
+     "value": "5–10 kW ; 4–6 years ; 2025",
+     "sentence": "Most residential 5–10 kW systems in Pakistan pay back in 4–6 years (2025 tariffs)."
+    },
+    {
+     "value": "220V",
+     "sentence": "Inverter converts DC to AC: The inverter (Growatt or Fronus) converts DC into 220V AC electricity usable in your home."
+    },
+    {
+     "value": "10kW ; 40–50 units",
+     "sentence": "A 10kWp system produces approximately 40–50 units (kWh) of electricity per day in Pakistan's climate."
+    },
+    {
+     "value": "220 V ; 50 Hz",
+     "sentence": "On its own, DC electricity can't power a standard appliance — your ceiling fan, air conditioner, or refrigerator all run on alternating current (AC) at 220 V / 50 Hz (Pakistan grid standard)."
+    },
+    {
+     "value": "0.35–0.45% ; 25°C",
+     "sentence": "Temperature — panels lose ~0.35–0.45% efficiency per degree Celsius above 25°C, so ventilation matters."
+    },
+    {
+     "value": "25–30°",
+     "sentence": "The angle is typically fixed at 25–30° in Pakistan to balance summer and winter performance."
+    },
+    {
+     "value": "4,000–6,000",
+     "sentence": "Lithium iron phosphate (LiFePO₄) batteries are now the preferred choice — they offer 4,000–6,000 charge cycles, safe chemistry, and faster charging than older lead-acid batteries."
+    },
+    {
+     "value": "10 kW ; 6–8 hours",
+     "sentence": "A 10 kWh battery bank typically provides 6–8 hours of basic household backup."
+    },
+    {
+     "value": "2025,",
+     "sentence": "In Pakistan in 2025, on-grid with net metering is the most popular choice for urban homes and businesses."
+    },
+    {
+     "value": "580 W ; 5 kW ; 8–9",
+     "sentence": "A single panel might be 580 W, so a 5 kW system contains roughly 8–9 panels."
+    },
+    {
+     "value": "300–500 kW ; 3–5 kW",
+     "sentence": "300–500 kWh/month → 3–5 kW system"
+    },
+    {
+     "value": "500–900 kW ; 5–8 kW",
+     "sentence": "500–900 kWh/month → 5–8 kW system"
+    },
+    {
+     "value": "900–1,500 kW ; 8–12 kW",
+     "sentence": "900–1,500 kWh/month → 8–12 kW system"
+    },
+    {
+     "value": "1,500 ; 12 kW",
+     "sentence": "Commercial / 1,500+ kWh/month → 12 kW and above; a detailed load study is required."
+    },
+    {
+     "value": "10 kW ; 50–65 m²",
+     "sentence": "Available roof area — a 10 kW system typically needs 50–65 m² of unshaded roof."
+    },
+    {
+     "value": "2 years",
+     "sentence": "Future load growth — adding an EV charger or AC unit in 2 years?"
+    },
+    {
+     "value": "",
+     "sentence": "Solar systems have no moving parts, which makes them low-maintenance compared to diesel generators."
+    },
+    {
+     "value": "4–8 weeks",
+     "sentence": "Panel cleaning — every 4–8 weeks in dusty areas (common across Punjab and Sindh)."
+    },
+    {
+     "value": "10–20%",
+     "sentence": "Dust and bird droppings can reduce output by 10–20% if left uncleaned."
+    },
+    {
+     "value": "30–35 years",
+     "sentence": "30–35 years"
+    },
+    {
+     "value": "5–10 years",
+     "sentence": "5–10 years"
+    },
+    {
+     "value": "10–15 years",
+     "sentence": "10–15 years"
+    },
+    {
+     "value": "10 years ; 4,000 cycles",
+     "sentence": "10 years / 4,000 cycles"
+    },
+    {
+     "value": "12–15 years",
+     "sentence": "12–15 years"
+    },
+    {
+     "value": "10 years",
+     "sentence": "10 years"
+    },
+    {
+     "value": "",
+     "sentence": "Your actual load in kWh is the number that matters."
+    },
+    {
+     "value": "12 months",
+     "sentence": "Always ask for your last 12 months of kWh readings before sizing a system."
+    },
+    {
+     "value": "220 V",
+     "sentence": "An inverter then converts DC to the 220 V AC that your appliances use."
+    },
+    {
+     "value": "5 kW ; 400–600 kW ; 10 kW ; 800–1,200 kW",
+     "sentence": "As a rough guide: a 5 kW system suits 400–600 kWh/month; 10 kW suits 800–1,200 kWh/month."
+    },
+    {
+     "value": "25 ; 30",
+     "sentence": "Quality monocrystalline panels carry 25-year performance warranties and typically last 30+ years."
+    },
+    {
+     "value": "0.5–0.7% ; 25 years ; 83%",
+     "sentence": "Power output degrades roughly 0.5–0.7% per year, so after 25 years panels still produce ~83% of original capacity."
+    },
+    {
+     "value": "2025",
+     "sentence": "How much do solar panels cost in Pakistan in 2025?"
+    },
+    {
+     "value": "5–10 kW ; PKR 750,000 to PKR 1,800,000 ; 2025",
+     "sentence": "Residential 5–10 kW on-grid systems typically range from PKR 750,000 to PKR 1,800,000 (2025 estimates), depending on panel brand, inverter type, and installation complexity."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "Our team visits your site, analyses your electricity bills, and delivers a custom proposal — usually within 48 hours."
+    }
+   ],
+   "missing": [
+    "visible publish date or byline (JSON-LD only: 2025-03-01)",
+    "JSON-LD FAQPage markup",
+    "stated buy-back rate or per-unit tariff",
+    "licence period"
+   ]
+  }
+ ]
+}

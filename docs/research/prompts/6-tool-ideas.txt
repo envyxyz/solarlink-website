@@ -1,0 +1,13 @@
+Research the best interactive tools, calculators and 3D experiences on solar and home-energy company websites worldwide, to inspire a Pakistani installer's new website.
+
+Look at: Tesla (solar and Powerwall design tool), Sunrun, Enpal, 1KOMMA5, Otovo, Octopus Energy, Zolar, Svea Solar, Maxeon/SunPower, Aurora Solar demos, Google Project Sunroof, OpenSolar, PVWatts (NREL), Global Solar Atlas, Enphase system estimator, EnergySage calculator, Palmetto, Sunnova, Solar.com, and any award-listed (Awwwards, FWA, Godly, SiteInspire) energy or climate-tech sites that use WebGL or 3D.
+
+Part 1. For at least 15 of them: URL, what the tool does, inputs, outputs, number of steps, what makes it memorable, whether it uses 3D/WebGL, and how the result turns into a lead (email gate, WhatsApp, call, saved link).
+
+Part 2. Propose 25 original tool and feature ideas for a Pakistani solar installer. Context: load shedding, DISCO tariff slabs, net metering changing to net billing, tube wells, UPS and batteries, heavy appliances like ACs and motors, Urdu and Roman Urdu speakers, WhatsApp-first buyers, staff who explain systems to walk-in customers every day. For each idea: one-line description, inputs, outputs, why a customer would come back to it, how staff could use it daily with customers, data it needs, build difficulty (S/M/L), and the search query it could rank for. Mark the 8 you rate highest and say why.
+
+Part 3. Five simple 3D ideas that stay fast on a cheap Android phone (state the technique: CSS 3D, pre-rendered image sequence, small glTF with a poster fallback, SVG isometric).
+
+Write Markdown to C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/6-tool-ideas.md (up to 220 lines).
+
+Rules: use Google web search and open the real pages. Never invent a URL; write "unverified" where unsure. Do not modify any file other than the output file. End your reply with only: DONE <output file path> or FAILED <reason>.

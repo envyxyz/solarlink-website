@@ -1,0 +1,25 @@
+---
+// Bare document shell. Header, footer and page sections arrive in the build phases, after the design is approved.
+import BaseHead from "../components/seo/BaseHead.astro";
+
+interface Props {
+  title: string;
+  description: string;
+  ogImage?: string;
+  noindex?: boolean;
+  schema?: Record<string, unknown>[];
+  mono?: boolean;
+}
+
+const props = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-PK">
+  <head>
+    <BaseHead {...props} />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>

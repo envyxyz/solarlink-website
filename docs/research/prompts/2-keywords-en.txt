@@ -1,0 +1,14 @@
+Build an English keyword list for a solar installation company in Pakistan with branches in Lahore, Islamabad, Rawalpindi, Sargodha, Multan and Gilgit.
+
+Use the public Google suggest endpoint, signed out, for example:
+https://suggestqueries.google.com/complete/search?client=firefox&hl=en&gl=pk&q=QUERY
+
+Seeds: solar system, solar panel, solar panel price, solar inverter, solar battery, lithium battery, net metering, net billing, solar installation, solar company, solar calculator, solar system price, 5kw solar system, 10kw solar system, 3kw solar system, 15kw solar system, 20kw solar system, hybrid solar system, on grid solar system, off grid solar system, solar tube well, solar for home, commercial solar, industrial solar, solar financing, solar on installments, longi, jinko, canadian solar, growatt, fronus, knox, inverex, huawei inverter, solis.
+
+For each seed fetch: the seed alone; seed + " in pakistan"; seed + each city (lahore, islamabad, rawalpindi, sargodha, multan, gilgit); seed + " price"; and question prefixes (how, what, which, is, can, cost of). De-duplicate. Write a small script to do the fetching rather than doing it by hand.
+
+Write JSON to C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/2-keywords-en.json as an array of {"q": string, "seed": string, "intent": "transactional|commercial|informational|local|navigational", "topic": short cluster name}.
+
+Then write C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/2-keywords-en-summary.md (under 120 lines): the clusters with their 10 best queries each, and a proposed page type for each cluster. Do not include search volumes unless they come from a named source.
+
+Rules: never invent a query; every query in the JSON must have come back from the suggest endpoint. Do not modify any file other than the two output files (and your own temporary script in the same folder). End your reply with only: DONE <output file path> or FAILED <reason>.

@@ -1,0 +1,11 @@
+Read the Google Pakistan results (hl=en, gl=pk) for each of these queries and record what ranks:
+
+"solar company in lahore", "solar installation lahore", "solar system price in pakistan", "solar panel price in pakistan", "5kw solar system price in pakistan", "10kw solar system price in pakistan", "solar company in islamabad", "solar company in rawalpindi", "solar system in sargodha", "solar company in multan", "solar system in gilgit", "net metering in pakistan", "net metering lesco", "solar calculator pakistan", "solar inverter price in pakistan", "lithium battery price in pakistan", "solar tube well price in pakistan", "commercial solar pakistan", "hybrid vs on grid solar pakistan", "best solar company in pakistan".
+
+For each query: the top 10 organic results (position, domain, URL, title, page type: home / service / city page / price list / blog / marketplace / news / tool), the map-pack business names if shown, the People Also Ask questions if shown, and whether an AI Overview appears and which domains it cites.
+
+Write JSON to C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/4-serp.json shaped as {query: {organic:[...], mapPack:[...], paa:[...], aiOverview:[...]}}.
+
+Then write C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/4-serp-summary.md (under 130 lines): per query, the winning page type and what a new page must contain to compete; the domains that appear most across all queries (with counts); all People Also Ask questions de-duplicated.
+
+Rules: use Google web search and record only what you actually saw. Never invent a URL or title; write "unverified" where unsure. Do not modify any file other than the two output files. End your reply with only: DONE <output file path> or FAILED <reason>.

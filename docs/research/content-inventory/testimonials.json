@@ -1,0 +1,139 @@
+{
+  "_note": "Every testimonial/review quote found in the in-scope files (home, about, service pages, JSON-LD). 'google_evidence' records only what the file itself shows: no file contains a link to a Google review, a Google Business Profile URL, or a visible date. The old site's own labels (\"Verified Google Review\") are recorded but are unverified assertions.",
+  "summary": {
+    "named_visible_entries": 14,
+    "distinct_people": ["M. Usman", "S. Tariq", "A. Hussain", "Maiza Rajput", "Aslam Ali", "Areeb Amjad", "Anas Razzaq", "Mian Amir Farooq"],
+    "labelled_verified_google_review_in_file": ["Maiza Rajput", "Aslam Ali (about-us only)", "Areeb Amjad (about-us only)", "Anas Razzaq (about-us only)", "Mian Amir Farooq"],
+    "with_any_date": "Only 3 JSON-LD reviews (M. Usman 2024-11-15, S. Tariq 2025-01-20, A. Hussain 2025-02-10)",
+    "aggregate_claim": "4.8 out of 5, 47 reviews (about-us.html visible; JSON-LD aggregateRating); platform not named. get-quote.html says \"100% Daraz rating\".",
+    "integrity_flags": [
+      "The same person is quoted with different wording on index.html and about-us.html (Aslam Ali, Anas Razzaq/Mian Amir Farooq, M. Usman, S. Tariq) and again in JSON-LD with a third wording.",
+      "Aslam Ali: index.html says PWD, Rawalpindi 15kW Hybrid; about-us.html quote says he bought \"from Solarlink Lahore\".",
+      "The Mian Amir Farooq quote on index.html (Industrial, Gujranwala, \"DISCO coordination\") differs from the Mian Amir Farooq quote on about-us.html (\"Mr. Abdul Gaffar and his team\"); the index.html text resembles the Anas Razzaq text on about-us.html.",
+      "The anonymous residential case-study quote on services/residential-solar.html (Bahria Town, Lahore, Rs 52,000 to Rs 1,500) uses M. Usman's wording but S. Tariq's location and bill figures.",
+      "about-us.html says 'These are the same reviews published in Solarlink's site-wide business listing data.'"
+    ]
+  },
+  "testimonials": [
+    {
+      "id": "T01", "name": "M. Usman", "city": "Islamabad", "detail": "Sector I-14, Islamabad, 10kW System, Residential",
+      "text": "The system is a total game-changer! No more heavy bills and zero load-shedding during peak summer. SolarLink delivered exactly as promised in Islamabad.",
+      "bill_before_after": "Rs 45,000/mo -> Rs 800/mo", "rating_shown": "5 stars",
+      "source_file": "index.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "no evidence"}
+    },
+    {
+      "id": "T01b", "name": "M. Usman", "city": "Islamabad", "detail": "Islamabad - 10kW System",
+      "text": "The system's a game-changer! No more high bills.",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "no evidence"}
+    },
+    {
+      "id": "T01c", "name": "M. Usman", "city": null, "detail": "JSON-LD Review, rating 5",
+      "text": "The system is a game-changer! No more high bills, and the installation was a breeze. SolarLink delivered as promised.",
+      "source_file": "locations/lahore.html and services/*.html (JSON-LD, not visible)", "google_evidence": {"labelled_google": false, "link": null, "date": "2024-11-15 (datePublished in JSON-LD)", "verdict": "date only; no platform"}
+    },
+    {
+      "id": "T02", "name": "S. Tariq", "city": "Lahore", "detail": "Bahria Town, Lahore, 10kW On-Grid, Residential",
+      "text": "Best investment I have made for my household. SolarLink's engineering team was courteous, swift, and finished our 10kW rooftop installation in 2 days.",
+      "bill_before_after": "Rs 52,000/mo -> Rs 1,500/mo", "rating_shown": "5 stars",
+      "source_file": "index.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "no evidence"}
+    },
+    {
+      "id": "T02b", "name": "S. Tariq", "city": "Lahore", "detail": "Bahria Town, Lahore - 10kW On-Grid",
+      "text": "Best investment I've made for my family. SolarLink's team was professional from day one.",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "no evidence"}
+    },
+    {
+      "id": "T02c", "name": "S. Tariq", "city": "Lahore", "detail": "JSON-LD Review, rating 5",
+      "text": "Excellent service from start to finish. Our 10kW system in Bahria Town Lahore was installed within 3 days. Highly recommend Solarlink.",
+      "source_file": "locations/lahore.html and services/*.html (JSON-LD, not visible)", "google_evidence": {"labelled_google": false, "link": null, "date": "2025-01-20 (datePublished in JSON-LD)", "verdict": "date only; no platform"},
+      "note": "Says 3 days; the home page version of S. Tariq says 2 days."
+    },
+    {
+      "id": "T03", "name": "A. Hussain", "city": "Sargodha", "detail": "Sargodha, 30kW Commercial Array",
+      "text": "Our commercial facility power expenses dropped by 60%. Full capital payback achieved in 3.5 years. Outstanding engineering quality and after-sales support.",
+      "bill_before_after": "Rs 180,000/mo -> Rs 72,000/mo", "rating_shown": "5 stars",
+      "source_file": "index.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "no evidence"}
+    },
+    {
+      "id": "T03b", "name": "A. Hussain", "city": "Sargodha", "detail": "Sargodha - 30kW Commercial",
+      "text": "Our factory electricity costs dropped by 60%. Payback in about 4 years by our estimate.",
+      "source_file": "about-us.html; also JSON-LD on services/industrial-solar.html and others (dated 2025-02-10)", "google_evidence": {"labelled_google": false, "link": null, "date": "2025-02-10 (JSON-LD only)", "verdict": "date only; no platform"},
+      "note": "Home page says \"commercial facility ... payback 3.5 years\"; about/JSON-LD says \"factory ... about 4 years\"."
+    },
+    {
+      "id": "T04", "name": "Maiza Rajput", "city": "Lahore", "detail": "Residential, Lahore. Label: \"Verified Google Review - 5.0 Rating\"",
+      "text": "Best solar company experience! SolarLink team is knowledgeable. Canadian Solar panels and Growatt inverter installed with top notch quality and turnkey net metering.",
+      "bill_before_after": "Rs 68,000/mo -> Rs 2,100/mo", "rating_shown": "5 stars / 5.0",
+      "source_file": "index.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only; no link or date"},
+      "note": "Home page text is an English rewrite; about-us.html carries a Roman-Urdu original (T04b)."
+    },
+    {
+      "id": "T04b", "name": "Maiza Rajput", "city": null, "detail": "Verified Google Review",
+      "text": "Best solar company experience! Solar Link ki team bohat cooperative aur knowledgeable hai. Canadian Solar panels + Growatt inverter lagaye, quality top notch hai. Professional team, competitive price, aur smooth installation. Fully satisfied!",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only; mixed English/Roman-Urdu reads like an unedited original"}
+    },
+    {
+      "id": "T05", "name": "Aslam Ali", "city": "Rawalpindi", "detail": "PWD, Rawalpindi, 15kW Hybrid System, Residential",
+      "text": "Bought our entire solar setup from SolarLink. Highly skilled team, Tier-1 hardware, and smooth IESCO green meter documentation without any delays.",
+      "bill_before_after": "Rs 85,000/mo -> Rs 3,400/mo", "rating_shown": "5 stars",
+      "source_file": "index.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "no evidence on this page"}
+    },
+    {
+      "id": "T05b", "name": "Aslam Ali", "city": null, "detail": "Verified Google Review",
+      "text": "I bought my whole solar system, including installation, from Solarlink Lahore. Very professional in their field, and the equipment supplied was top of the line.",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only"},
+      "note": "Says Lahore; index.html places him in Rawalpindi."
+    },
+    {
+      "id": "T06", "name": "Mian Amir Farooq", "city": "Gujranwala", "detail": "Industrial, Gujranwala. Label: \"Verified Google Review - 5.0 Rating\"",
+      "text": "Truly professional by all means. The engineering proposal, structural customization, and DISCO coordination was seamless. Thank you SolarLink team.",
+      "bill_before_after": "Rs 350,000/mo -> Rs 110,000/mo", "rating_shown": "5 stars / 5.0",
+      "source_file": "index.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only; no link or date"}
+    },
+    {
+      "id": "T06b", "name": "Mian Amir Farooq", "city": null, "detail": "Verified Google Review",
+      "text": "I highly recommend Solar Link for their exceptional service and good quality solar energy solutions. Mr. Abdul Gaffar and his team were professional, efficient and courteous throughout the installation process.",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only"}
+    },
+    {
+      "id": "T07", "name": "Areeb Amjad", "city": null, "detail": "Verified Google Review",
+      "text": "Very good experience, I look forward to more future deals. Really impressive and extraordinary.",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only"}
+    },
+    {
+      "id": "T08", "name": "Anas Razzaq", "city": null, "detail": "Verified Google Review",
+      "text": "Truly professional by all means in the field of solar energy. The way of guiding from quotation to installation was impressive. Thank you Solarlink.",
+      "source_file": "about-us.html", "google_evidence": {"labelled_google": true, "link": null, "date": null, "verdict": "labelled only"}
+    },
+    {
+      "id": "C01", "name": null, "city": "Lahore", "detail": "Case study 'Real Result: Before & After' - Bahria Town, Lahore, 10kW On-Grid System",
+      "text": "The system's a game-changer! No more high bills and no more load-shedding stress.",
+      "bill_before_after": "Rs 52,000/mo -> Rs 1,500/mo",
+      "source_file": "services/residential-solar.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "anonymous; no evidence"},
+      "note": "Page copy says \"A real SolarLink customer story - no exaggerated claims.\""
+    },
+    {
+      "id": "C02", "name": null, "city": "Lahore", "detail": "Case study - Johar Town, Lahore, 30kW On-Grid System",
+      "text": "Our payback period was just over 3 years. The ROI has been outstanding.",
+      "bill_before_after": "Rs 210,000/mo -> Rs 65,000/mo",
+      "source_file": "services/commercial-solar.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "anonymous; no evidence"}
+    },
+    {
+      "id": "C03", "name": null, "city": "Sargodha", "detail": "Case study - Sargodha, Punjab, 10kW VFD System",
+      "text": "No more diesel, no more WAPDA headaches. The pump runs all day on sunlight.",
+      "bill_before_after": "Rs 45,000/mo -> Near Zero",
+      "source_file": "services/agricultural-solar.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "anonymous; no evidence"}
+    },
+    {
+      "id": "C04", "name": null, "city": "Islamabad", "detail": "Case study - Bahria Town Phase 6, Islamabad, 10kW On-Grid System",
+      "text": "SolarLink handled every step. My bi-directional meter was installed in 8 weeks.",
+      "bill_before_after": "Rs 45,000/mo -> Rs 1,200/mo",
+      "source_file": "services/net-metering-support.html", "google_evidence": {"labelled_google": false, "link": null, "date": null, "verdict": "anonymous; no evidence"}
+    }
+  ],
+  "js_testimonial_slider": {
+    "file": "js/testimonial-slider.js",
+    "note": "Presentation code only (carousel with arrows and dots). It contains no testimonial text; slides are read from the page markup."
+  },
+  "not_found_in_scope": ["No testimonial or review text on outlets/*.html, locations/*.html (apart from the JSON-LD reviews on locations/lahore.html), products/*.html, faqs.html, contact-us.html, get-quote.html"]
+}
