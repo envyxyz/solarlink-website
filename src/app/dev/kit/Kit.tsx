@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, type ReactNode } from "react";
-import { m } from "motion/react";
 import { ArrowRight, Phone } from "lucide-react";
 import kit from "@/content/kit";
 import hero from "../../../../design/img/hero.jpg";
@@ -19,7 +18,7 @@ import { Slider } from "@/components/ui/Slider";
 import { Stage } from "@/components/ui/Stage";
 import { StatBlock } from "@/components/ui/StatBlock";
 import { WhatsAppButton } from "@/components/ui/WhatsAppButton";
-import { spring, entry, pop, press } from "@/lib/motion";
+import { popIn, type SpringName } from "@/lib/spring";
 
 const Group = ({ title, children }: { title: string; children: ReactNode }) => (
   <section className="flex flex-col gap-6">
@@ -84,6 +83,11 @@ function Tokens() {
   );
 }
 
+/** Plays a spring pop when the element mounts (a new key remounts it). */
+const popRef = (name: SpringName) => (el: HTMLElement | null) => {
+  if (el) popIn(el, name, 0.6);
+};
+
 function MotionDemo() {
   const [round, setRound] = useState(0);
   return (
@@ -93,19 +97,17 @@ function MotionDemo() {
           {kit.motion.replay}
         </Button>
         {kit.motion.springs.map((name) => (
-          <m.div key={`${name}-${round}`} initial={{ scale: 0.6, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} transition={spring[name]} className="grid size-20 place-items-center rounded-card bg-lime text-ink">
+          <div key={`${name}-${round}`} ref={popRef(name)} className="grid size-20 place-items-center rounded-card bg-lime text-ink">
             <span className="text-caption">{name}</span>
-          </m.div>
+          </div>
         ))}
-        <m.div key={`entry-${round}`} {...entry} className="rounded-card bg-tone-surface p-4 text-small">
+        <div key={`entry-${round}`} data-reveal="" className="rounded-card bg-tone-surface p-4 text-small">
           {kit.motion.entry}
-        </m.div>
-        <m.div key={`pop-${round}`} {...pop} className="rounded-card bg-tone-surface p-4 text-small">
+        </div>
+        <div key={`pop-${round}`} ref={popRef("bubbly")} className="rounded-card bg-tone-surface p-4 text-small">
           {kit.motion.pop}
-        </m.div>
-        <m.div {...press} className="press rounded-card bg-tone-surface p-4 text-small">
-          {kit.motion.press}
-        </m.div>
+        </div>
+        <div className="press rounded-card bg-tone-surface p-4 text-small">{kit.motion.press}</div>
       </Row>
       <div className="grid gap-4 md:grid-cols-3">
         <Card interactive>

@@ -1,8 +1,8 @@
 "use client";
 
-import { m } from "motion/react";
+import { useLayoutEffect, useRef } from "react";
 import { hero } from "@/content/home";
-import { pop } from "@/lib/motion";
+import { popIn } from "@/lib/spring";
 import { cn } from "@/lib/cn";
 import { useSizing } from "./SizingProvider";
 
@@ -10,16 +10,23 @@ const row =
   "flex flex-col items-center rounded-tile bg-sunken px-1 py-3 text-center md:flex-row md:items-baseline md:justify-between md:px-4 md:text-left lg:rounded-none lg:bg-transparent lg:px-0 lg:py-2.5 lg:border-t lg:border-line lg:first:border-t-0";
 
 /** A figure that pops in with spring.bubbly when its text changes (not on first paint). */
-function Figure({ text, animate, className }: { text: string; animate: boolean; className?: string }) {
+function Figure({ text, className }: { text: string; className?: string }) {
+  const el = useRef<HTMLSpanElement>(null);
+  const shown = useRef(text);
+  useLayoutEffect(() => {
+    if (shown.current === text) return;
+    shown.current = text;
+    if (el.current) popIn(el.current);
+  }, [text]);
   return (
-    <m.span key={text} initial={animate ? pop.initial : false} animate={pop.animate} transition={pop.transition} className={cn("block", className)}>
+    <span ref={el} className={cn("block", className)}>
       {text}
-    </m.span>
+    </span>
   );
 }
 
 export function ResultCard() {
-  const { text, result, touched } = useSizing();
+  const { text, result } = useSizing();
   const figure = "text-stat";
   const label = "mt-1 whitespace-nowrap text-caption text-ink-2 md:mt-0";
   return (
@@ -32,15 +39,15 @@ export function ResultCard() {
       <p className="mb-3 hidden text-title lg:block">{hero.resultLabel}</p>
       <div className="grid grid-cols-3 gap-2 md:grid-cols-1 md:gap-0 lg:gap-0">
         <div className={row}>
-          <Figure text={text.kw} animate={touched} className={figure} />
+          <Figure text={text.kw} className={figure} />
           <span className={label}>{hero.stats.size}</span>
         </div>
         <div className={row}>
-          <Figure text={text.panels} animate={touched} className={figure} />
+          <Figure text={text.panels} className={figure} />
           <span className={label}>{hero.stats.panels}</span>
         </div>
         <div className={row}>
-          <Figure text={text.generation} animate={touched} className={figure} />
+          <Figure text={text.generation} className={figure} />
           <span className={label}>{hero.stats.units}</span>
         </div>
       </div>

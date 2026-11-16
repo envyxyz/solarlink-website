@@ -3,10 +3,8 @@
 import Link from "next/link";
 import type { ButtonHTMLAttributes, PointerEvent, ReactNode } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
-import { m, useMotionValue, useReducedMotion, useSpring } from "motion/react";
 import { ui } from "@/content/ui";
 import { cn } from "@/lib/cn";
-import { magnetPx, press, spring } from "@/lib/motion";
 import { icon } from "./icons";
 
 export type ButtonVariant = "primary" | "dark" | "quiet" | "text";
@@ -26,7 +24,7 @@ const sizes: Record<ButtonSize, string> = { md: "min-h-control px-5", lg: "min-h
 
 type Native = Omit<
   ButtonHTMLAttributes<HTMLButtonElement>,
-  "onDrag" | "onDragStart" | "onDragEnd" | "onAnimationStart" | "style" | "className"
+  "style" | "className"
 >;
 
 export type ButtonProps = Native & {
@@ -41,30 +39,25 @@ export type ButtonProps = Native & {
   children: ReactNode;
 };
 
-const MotionLink = m.create(Link);
+/** Primary buttons pull up to 4px toward a mouse pointer (translate only; CSS eases it back). */
+const MAGNET_PX = 4;
 
 /** http(s) links leave the site: new tab, no opener. tel: and mailto: stay as they are. */
 const external = (href: string) => (/^https?:/.test(href) ? { target: "_blank", rel: "noopener noreferrer" } : {});
 
-function useMagnet(enabled: boolean) {
-  const reduced = useReducedMotion();
-  const x = useMotionValue(0);
-  const y = useMotionValue(0);
-  const sx = useSpring(x, spring.snappy);
-  const sy = useSpring(y, spring.snappy);
-  const on = enabled && !reduced;
-  const clamp = (n: number) => Math.max(-magnetPx, Math.min(magnetPx, n));
+function magnetProps(enabled: boolean) {
+  if (!enabled) return {};
+  const clamp = (n: number) => Math.max(-MAGNET_PX, Math.min(MAGNET_PX, n));
   return {
-    style: on ? { x: sx, y: sy } : undefined,
     onPointerMove: (e: PointerEvent<HTMLElement>) => {
-      if (!on || e.pointerType !== "mouse") return;
+      if (e.pointerType !== "mouse" || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
       const r = e.currentTarget.getBoundingClientRect();
-      x.set(clamp(((e.clientX - (r.left + r.width / 2)) / r.width) * magnetPx * 2));
-      y.set(clamp(((e.clientY - (r.top + r.height / 2)) / r.height) * magnetPx * 2));
+      const x = clamp(((e.clientX - (r.left + r.width / 2)) / r.width) * MAGNET_PX * 2);
+      const y = clamp(((e.clientY - (r.top + r.height / 2)) / r.height) * MAGNET_PX * 2);
+      e.currentTarget.style.translate = `${x}px ${y}px`;
     },
-    onPointerLeave: () => {
-      x.set(0);
-      y.set(0);
+    onPointerLeave: (e: PointerEvent<HTMLElement>) => {
+      e.currentTarget.style.translate = "";
     },
   };
 }
@@ -81,9 +74,8 @@ export function Button({
   type = "button",
   ...rest
 }: ButtonProps) {
-  const magnet = useMagnet(variant === "primary");
   const inactive = disabled || loading;
-  const cls = cn(base, sizes[size], variantClass[variant], variant === "text" && "px-1", className);
+  const cls = cn(base, "press", sizes[size], variantClass[variant], variant === "text" && "px-1", className);
   const inner = (
     <>
       <span className={cn("inline-flex items-center gap-2", loading && "invisible")}>
@@ -95,22 +87,22 @@ export function Button({
       {loading && <Loader2 {...icon} aria-label={ui.loading} aria-hidden={false} className="absolute animate-spin" />}
     </>
   );
-  const common = { ...press, ...magnet, className: cls, "aria-busy": loading || undefined };
+  const common = { ...magnetProps(variant === "primary"), className: cls, "aria-busy": loading || undefined };
 
   const main = href ? (
     href.startsWith("/") ? (
-      <MotionLink href={href} {...common} aria-disabled={inactive || undefined}>
+      <Link href={href} {...common} aria-disabled={inactive || undefined}>
         {inner}
-      </MotionLink>
+      </Link>
     ) : (
-      <m.a href={href} {...external(href)} {...common} aria-disabled={inactive || undefined}>
+      <a href={href} {...external(href)} {...common} aria-disabled={inactive || undefined}>
         {inner}
-      </m.a>
+      </a>
     )
   ) : (
-    <m.button type={type} disabled={inactive} {...common} {...rest}>
+    <button type={type} disabled={inactive} {...common} {...rest}>
       {inner}
-    </m.button>
+    </button>
   );
 
   if (!twin) return main;
@@ -141,23 +133,26 @@ export type IconButtonProps = {
 export function IconButton({ variant = "quiet", size = "md", label, href, loading, disabled, onClick, className, children }: IconButtonProps) {
   const inactive = disabled || loading;
   const cls = cn(
-    "focus-ring relative inline-flex shrink-0 select-none items-center justify-center rounded-pill disabled:opacity-50 aria-disabled:opacity-50",
+    "focus-ring press relative inline-flex shrink-0 select-none items-center justify-center rounded-pill disabled:opacity-50 aria-disabled:opacity-50",
     size === "lg" ? "size-control-lg" : "size-control",
     variantClass[variant],
     className,
   );
   const inner = loading ? <Loader2 {...icon} className="animate-spin" /> : children;
   if (href) {
-    const Comp = href.startsWith("/") ? MotionLink : m.a;
-    return (
-      <Comp href={href} {...(Comp === MotionLink ? {} : external(href))} aria-label={label} aria-disabled={inactive || undefined} {...press} className={cls}>
+    return href.startsWith("/") ? (
+      <Link href={href} aria-label={label} aria-disabled={inactive || undefined} className={cls}>
         {inner}
-      </Comp>
+      </Link>
+    ) : (
+      <a href={href} {...external(href)} aria-label={label} aria-disabled={inactive || undefined} className={cls}>
+        {inner}
+      </a>
     );
   }
   return (
-    <m.button type="button" aria-label={label} aria-busy={loading || undefined} disabled={inactive} onClick={onClick} {...press} className={cls}>
+    <button type="button" aria-label={label} aria-busy={loading || undefined} disabled={inactive} onClick={onClick} className={cls}>
       {inner}
-    </m.button>
+    </button>
   );
 }

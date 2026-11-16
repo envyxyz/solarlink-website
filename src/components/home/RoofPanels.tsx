@@ -1,24 +1,28 @@
 "use client";
 
 import { memo, useEffect, useMemo, useRef, useState } from "react";
-import { m } from "motion/react";
 import { homography } from "@/lib/homography";
-import { spring } from "@/lib/motion";
+import { popIn, popOut } from "@/lib/spring";
 import { useSizing } from "./SizingProvider";
 
 const PANEL_TICK_MS = 30;
-const POP_FROM = 0.8;
 
 type Slot = { x: number; y: number };
 
 const Panel = memo(function Panel({ slot, w, h, on, face }: { slot: Slot; w: number; h: number; on: boolean; face: string }) {
+  const el = useRef<HTMLDivElement>(null);
+  const was = useRef(false);
+  useEffect(() => {
+    if (was.current === on || !el.current) return;
+    was.current = on;
+    if (on) popIn(el.current);
+    else popOut(el.current);
+  }, [on]);
   return (
-    <m.div
-      className="panel-face absolute"
+    <div
+      ref={el}
+      className="panel-face absolute opacity-0"
       style={{ left: slot.x, top: slot.y, width: w, height: h, backgroundImage: face, backgroundSize: "100% 100%" }}
-      initial={{ opacity: 0, scale: POP_FROM }}
-      animate={on ? { opacity: 1, scale: 1 } : { opacity: 0, scale: POP_FROM }}
-      transition={on ? spring.bubbly : { duration: 0.15, ease: "easeIn" }}
     />
   );
 });

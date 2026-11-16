@@ -134,12 +134,18 @@
   }
 }
 
-/* Press for elements that are not Motion components. */
+/* Press: scale on pointer down. translate carries the primary button's magnet pull. */
 @utility press {
-  transition-property: transform;
-  transition-duration: var(--dur-fast);
-  transition-timing-function: var(--ease-out);
+  transition: transform var(--dur-fast) var(--ease-out), translate var(--dur-snappy) var(--spring-snappy);
   &:active:not(:disabled) { transform: scale(var(--press-scale)); }
+}
+
+/* Logo belt item: hovered logo goes to full colour at 1.1 with the bubbly spring. */
+@utility logo-hover {
+  transition: transform var(--dur-bubbly) var(--spring-bubbly);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover { transform: scale(1.1); }
+  }
 }
 
 /* Marquee belt: faded edges, pauses on hover and on focus within. */
@@ -154,19 +160,112 @@
   }
 }
 
-/* Accordion: height opens and closes with the Radix measured height. */
-@keyframes accordion-open { from { height: 0; } to { height: var(--radix-accordion-content-height); } }
-@keyframes accordion-close { from { height: var(--radix-accordion-content-height); } to { height: 0; } }
-@utility accordion-panel {
-  overflow: hidden;
-  &[data-state="open"] { animation: accordion-open var(--dur-slow) var(--ease-out); }
-  &[data-state="closed"] { animation: accordion-close var(--dur) var(--ease-out); }
+/* Accordion: native details. The panel height animates where ::details-content exists. */
+@utility accordion {
+  @supports selector(::details-content) {
+    &::details-content {
+      block-size: 0;
+      overflow: clip;
+      transition: block-size var(--dur) var(--ease-out), content-visibility var(--dur) allow-discrete;
+    }
+    &[open]::details-content {
+      block-size: auto;
+      transition-duration: var(--dur-slow);
+    }
+  }
+}
+@utility accordion-summary {
+  list-style: none;
+  &::-webkit-details-marker { display: none; }
 }
 @utility turns-to-cross {
   transition-property: transform;
   transition-duration: var(--dur);
   transition-timing-function: var(--ease-out);
-  :is([data-state="open"]) > * > &, :is([data-state="open"]) > & { transform: rotate(45deg); }
+  :is(details[open]) > summary > & { transform: rotate(45deg); }
+}
+
+/* Entry: a block marked data-reveal rises and fades once; Reveal.tsx sets data-reveal="in". Children stagger with --i. */
+@media (scripting: enabled) {
+  [data-reveal] {
+    opacity: 0;
+    transform: translateY(calc(var(--spacing) * 6));
+    transition: opacity var(--dur-slow) var(--ease-out), transform var(--dur-slow) var(--ease-out);
+    transition-delay: calc(var(--i, 0) * var(--stagger));
+    @media (prefers-reduced-motion: reduce) { transform: none; }
+  }
+  [data-reveal="in"] { opacity: 1; transform: none; }
+}
+
+/* Slider: native range input. --p (0 to 1) places the lime fill under the thumb centre. */
+@utility slider {
+  --thumb: calc(var(--spacing) * 8);
+  --track: calc(var(--spacing) * 3);
+  --fill: calc(var(--thumb) / 2 + (100% - var(--thumb)) * var(--p, 0));
+  appearance: none;
+  display: block;
+  width: 100%;
+  height: var(--control-lg);
+  margin: 0;
+  background: transparent;
+  cursor: pointer;
+  &:disabled { opacity: 0.5; cursor: default; }
+  &::-webkit-slider-runnable-track {
+    height: var(--track);
+    border-radius: var(--r-pill);
+    background: linear-gradient(to right, var(--lime) var(--fill), var(--tone-sunken) var(--fill));
+  }
+  &::-moz-range-track {
+    height: var(--track);
+    border-radius: var(--r-pill);
+    background: linear-gradient(to right, var(--lime) var(--fill), var(--tone-sunken) var(--fill));
+  }
+  &::-webkit-slider-thumb {
+    appearance: none;
+    width: var(--thumb);
+    height: var(--thumb);
+    margin-top: calc((var(--track) - var(--thumb)) / 2);
+    border: 0;
+    border-radius: var(--r-pill);
+    background: var(--surface);
+    box-shadow: var(--float);
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+  &::-moz-range-thumb {
+    width: var(--thumb);
+    height: var(--thumb);
+    box-sizing: border-box;
+    border: 0;
+    border-radius: var(--r-pill);
+    background: var(--surface);
+    box-shadow: var(--float);
+    transition: transform var(--dur-fast) var(--ease-out);
+  }
+  &:hover:not(:disabled)::-webkit-slider-thumb { filter: brightness(0.95); }
+  &:hover:not(:disabled)::-moz-range-thumb { filter: brightness(0.95); }
+  &:active:not(:disabled)::-webkit-slider-thumb { transform: scale(var(--press-scale)); }
+  &:active:not(:disabled)::-moz-range-thumb { transform: scale(var(--press-scale)); }
+  &:focus-visible { outline: none; }
+  &:focus-visible::-webkit-slider-thumb { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
+  &:focus-visible::-moz-range-thumb { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
+}
+
+/* Segmented control: the active pill slides with a transform set from --i (index) and --n (count). */
+@utility segmented {
+  border: 0;
+  margin: 0;
+  min-width: 0;
+}
+@utility segmented-pill {
+  position: absolute;
+  inset-block: var(--spacing);
+  left: var(--spacing);
+  width: calc((100% - var(--spacing) * 2) / var(--n));
+  transform: translateX(calc(var(--i) * 100%));
+  transition: transform var(--dur-snappy) var(--spring-snappy);
+}
+@utility segmented-option {
+  &:has(input:focus-visible) { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
 }
 
 @keyframes marquee {
@@ -259,4 +358,7 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
   }
+  html { interpolate-size: allow-keywords; }
+  /* The phone menu is a modal dialog: lock the page behind it. */
+  body:has(dialog[open]) { overflow: hidden; }
 }

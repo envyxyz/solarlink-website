@@ -55,7 +55,7 @@ for (const view of VIEWS) {
   const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
   if (overflow > 0) errors.push(`${view.name}: horizontal overflow ${overflow}px`);
   if (route === "/") {
-    const slider = page.locator('[role="slider"]');
+    const slider = page.locator('input[type="range"]');
     if (await slider.count()) {
       await slider.focus();
       await page.keyboard.press("End");

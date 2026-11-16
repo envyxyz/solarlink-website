@@ -1,15 +1,13 @@
 "use client";
 
-import { ToggleGroup } from "radix-ui";
-import { m } from "motion/react";
+import { useId, type CSSProperties } from "react";
 import { cn } from "@/lib/cn";
-import { spring } from "@/lib/motion";
 
 export type Segment = { value: string; label: string };
 
 /**
- * Pill with one active element that slides between equal-width options (spring.snappy).
- * Radix ToggleGroup gives radio semantics and arrow-key movement.
+ * Pill with one active element that slides between equal-width options (spring.snappy, CSS transform
+ * driven by --i). A native radio group: arrow keys move and select, the fieldset legend names it.
  */
 export function SegmentedControl({
   label,
@@ -26,36 +24,28 @@ export function SegmentedControl({
   disabled?: boolean;
   className?: string;
 }) {
+  const name = useId();
   const index = Math.max(0, options.findIndex((o) => o.value === value));
   return (
-    <ToggleGroup.Root
-      type="single"
-      value={value}
-      onValueChange={(v) => v && onValueChange(v)}
-      aria-label={label}
+    <fieldset
       disabled={disabled}
-      className={cn("relative inline-grid grid-flow-col auto-cols-fr rounded-pill bg-tone-sunken p-1", disabled && "opacity-50", className)}
+      style={{ "--i": index, "--n": options.length } as CSSProperties}
+      className={cn("segmented relative inline-grid grid-flow-col auto-cols-fr rounded-pill bg-tone-sunken p-1", disabled && "opacity-50", className)}
     >
-      <m.span
-        aria-hidden
-        className="absolute inset-y-1 left-1 rounded-pill bg-surface shadow-float"
-        style={{ width: `calc((100% - var(--spacing) * 2) / ${options.length})` }}
-        animate={{ x: `${index * 100}%` }}
-        initial={false}
-        transition={spring.snappy}
-      />
+      <legend className="sr-only">{label}</legend>
+      <span aria-hidden className="segmented-pill rounded-pill bg-surface shadow-float" />
       {options.map((o) => (
-        <ToggleGroup.Item
+        <label
           key={o.value}
-          value={o.value}
           className={cn(
-            "focus-ring press relative z-10 inline-flex min-h-10 min-w-control items-center justify-center rounded-pill px-4 text-control",
+            "segmented-option press relative z-10 inline-flex min-h-10 min-w-control cursor-pointer items-center justify-center rounded-pill px-4 text-control",
             o.value === value ? "text-ink" : "text-tone-ink-2 hover:text-tone-ink",
           )}
         >
+          <input type="radio" name={name} value={o.value} checked={o.value === value} onChange={() => onValueChange(o.value)} className="sr-only" />
           {o.label}
-        </ToggleGroup.Item>
+        </label>
       ))}
-    </ToggleGroup.Root>
+    </fieldset>
   );
 }

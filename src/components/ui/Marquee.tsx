@@ -1,10 +1,6 @@
-"use client";
-
 import { Children, type ReactNode } from "react";
-import { m } from "motion/react";
 import { ui } from "@/content/ui";
 import { cn } from "@/lib/cn";
-import { spring } from "@/lib/motion";
 
 /**
  * A CSS transform belt with faded edges. It pauses on hover and on focus within.
@@ -33,13 +29,5 @@ export function Marquee({ children, variant = "plain", className }: { children: 
 }
 
 function LogoItem({ children }: { children: ReactNode }) {
-  return (
-    <m.span
-      whileHover={{ scale: 1.1 }}
-      transition={spring.bubbly}
-      className="inline-block opacity-80 grayscale hover:opacity-100 hover:grayscale-0"
-    >
-      {children}
-    </m.span>
-  );
+  return <span className="logo-hover inline-block opacity-80 grayscale hover:opacity-100 hover:grayscale-0">{children}</span>;
 }

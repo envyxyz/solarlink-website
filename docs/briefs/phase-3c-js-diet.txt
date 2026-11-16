@@ -1,0 +1,21 @@
+Phase 3b of the SolarLink website: cut the homepage JavaScript. Your working directory is the repo root (website/). Read CLAUDE.md, DESIGN.md and docs/PHASES.md first and follow CLAUDE.md's hard rules. Run pnpm as "npx pnpm". Check current library docs before using an API.
+
+Problem: the built homepage ships about 250 KB of gzipped JavaScript. The 130 KB budget was set before the framework baseline was measured. New rule: homepage JS (every script the built index.html loads, gzipped) must be at most the React and Next baseline plus 50 KB. Measure the baseline first (the same app with an empty page), write the number down, and put the new budget rule in CLAUDE.md rule 11 and docs/PRD.md.
+
+The look, layout, copy and behaviour must not change. Take homepage and kit screenshots before you start (scripts/shot.mjs) and compare after.
+
+A first pass (commit 6994034) measured the baseline (170.6 KB), added scripts/js-size.mjs and the budget rule, and then stopped without doing the swaps because the page was already inside the limit. That is not enough: nine more sections are coming, so the app's own code must shrink now. Do ALL of the steps below, in order, measuring after each. Target: the homepage total at most baseline plus 20 KB. Do not stop early.
+1. Slider primitive: a native <input type="range"> styled with tokens (pill track, lime fill through a CSS custom property set from the value, floating thumb, 52px touch height, focus ring). Native keyboard and screen-reader support replace the Radix slider. Keep aria-valuetext.
+2. SegmentedControl primitive: a native radio group (fieldset, visually hidden radios, labels as the segments) with the sliding active pill done in CSS with a transform driven by a custom property; arrow keys work natively.
+3. Phone menu: the native <dialog> element with showModal() (focus trap, Escape and inert background are built in) instead of Radix Dialog.
+4. Accordion: native <details name="..."> and <summary> with the existing CSS height animation where the browser supports it; content stays in the server HTML.
+5. Remove every Radix package that is no longer imported.
+6. Motion: keep the springs' look. Hero panels, chips and number pops use the Web Animations API with a sampled spring (as design/mock/hero.html does) through one small helper in src/lib/spring.ts, so the hero island does not import Motion. Section entry animation (rise 24px and fade once at 20% visible, 80ms stagger) becomes one small client helper with IntersectionObserver that toggles a data attribute, with the transition in CSS; no Motion. Press, hover lift, image zoom and the marquee stay CSS. If any Motion use remains (for example a shared-layout animation that CSS cannot do), load it with LazyMotion and the m components and the smallest feature set, in a chunk that loads after first paint. If none remains, remove the package and update DESIGN.md's Motion section line about libraries to say what is true.
+7. Lenis loads from a dynamic import after the page is idle (requestIdleCallback), only with a fine pointer and without reduced motion.
+8. Check that only the interactive parts are client components; the nav shell, footer, hero text and image, and the brand belt must be server components with small client leaves.
+
+Also fix one content error: the three outlet addresses (Lahore, Islamabad, Sargodha) were confirmed by the client on WhatsApp on 16 Nov 2026. Mark those address fields confirmed: true with that source. Phones, WhatsApp numbers, hours and postcodes stay unconfirmed.
+
+Done when: npx pnpm build, lint and typecheck pass; the sizing self-check passes; the kit page still shows every component in every state; before and after screenshots match (look at them); reduced-motion still works; the new JS total, the baseline and the size of each remaining chunk are reported; a dated entry is in docs/PHASES.md; one commit "phase 3b: JS diet" (do not push, no remote).
+
+Reply with only: DONE, baseline KB, new total KB, what was removed, and anything that changed visually or is not finished.

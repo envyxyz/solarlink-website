@@ -117,6 +117,13 @@
   --dur: 250ms;
   --dur-slow: 650ms;
   --dur-marquee: 48s;
+  --dur-snappy: 350ms; /* length of spring.snappy and spring.bubbly when played as CSS transitions */
+  --dur-bubbly: 700ms;
+  --stagger: 80ms;
+  /* spring easings: lib/spring.ts replaces these with sampled linear() curves after load */
+  --spring-snappy: ease-out;
+  --spring-bubbly: ease-out;
+  --spring-soft: ease-out;
   --press-scale: 0.97;
   --hover-zoom: 1.04;
   --ring-width: 2px;
@@ -152,6 +159,8 @@
   :root {
     --dur: var(--dur-fast);
     --dur-slow: var(--dur-fast);
+    --dur-snappy: var(--dur-fast);
+    --dur-bubbly: var(--dur-fast);
   }
 }
 
