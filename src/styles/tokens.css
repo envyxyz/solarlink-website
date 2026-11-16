@@ -33,6 +33,8 @@
   --link-shadow: drop-shadow(0 1px 1px rgb(11 15 10 / 0.3));
   --hero-height: min(92svh, 53.75rem);
   --hero-height-short: calc(100svh - 1.5rem); /* short desktop windows: the stage fills the window, 12px above and below */
+  --roll-slot: 0.88ch; /* width of one digit slot in a rolling number: a hair under the zero, so the figure fits its card (glyph side bearings are not clipped) */
+  --dock-overlap: 7rem; /* how far the hero dock overlaps the image; 5.5rem from 40rem */
   --t-figure-compact-size: 2.75rem;
   --t-stat-size: clamp(1.0625rem, 4.6vw, 1.375rem); /* result card figures; 1.5rem from 64rem */
   --t-stat-size-lg: 1.5rem;
@@ -160,6 +162,12 @@
   --tone-track: var(--night-track);
   --focus: var(--lime);
   color: var(--night-ink);
+}
+
+@media (min-width: 40rem) {
+  :root {
+    --dock-overlap: 5.5rem;
+  }
 }
 
 /* Reduced motion: every duration becomes the 150ms fade, loops stop. */
