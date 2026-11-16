@@ -3,6 +3,7 @@
 import { hero } from "@/content/home";
 import { ui } from "@/content/ui";
 import { Button, IconButton } from "@/components/ui/Button";
+import { RollingNumber } from "@/components/ui/RollingNumber";
 import { SegmentedControl } from "@/components/ui/SegmentedControl";
 import { Slider } from "@/components/ui/Slider";
 import { WhatsAppGlyph } from "@/components/ui/WhatsAppGlyph";
@@ -19,14 +20,14 @@ export const sizingSlot =
 export function SizingCard() {
   const { mode, value, setValue, setMode, range, text, href, whatsapp } = useSizing();
   return (
-    <section id="sizing" data-island aria-label={hero.sizingLabel} className={`${sizingSlot} scroll-mt-26`}>
+    <section id="sizing" data-island aria-label={hero.sizingLabel} className={`${sizingSlot} dock-hold scroll-mt-26`}>
       <div className="flex items-center justify-between gap-3">
         <p className="text-small">{hero.billLabel}</p>
         <SegmentedControl label={hero.unitLabel} options={hero.modes} value={mode} onValueChange={(v) => setMode(v as Mode)} />
       </div>
-      {/* Plain zeros: Mona Sans tabular figures have a dotted zero, so the figure stays proportional. The card is fixed width and nothing sits beside the number, so nothing shifts. */}
+      {/* Plain zeros: Mona Sans tabular figures have a dotted zero, so the digits roll in fixed 1ch slots instead, which gives the tabular effect. The card is fixed width and nothing sits beside the number, so nothing shifts. */}
       <p aria-hidden className="mb-1 mt-3 text-figure short:mb-0 short:mt-2 short:text-figure-compact">
-        {text.value}
+        <RollingNumber text={text.value} />
       </p>
       <Slider label={hero.sliderLabel} valueText={text.valueText} value={value} onValueChange={setValue} min={range.min} max={range.max} step={range.step} />
       <div className="mt-2 flex items-center gap-2 short:mt-0">

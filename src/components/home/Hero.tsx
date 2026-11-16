@@ -71,7 +71,7 @@ export function Hero() {
 
         <LinkLine />
 
-        <div className="relative z-4 -mt-28 flex flex-col gap-4 rounded-card bg-surface p-5 shadow-float sm:-mt-22 md:mx-6 md:flex-row md:items-start md:gap-6 lg:contents">
+        <div data-dock className="relative z-4 dock-lift flex flex-col gap-4 rounded-card bg-surface p-5 shadow-float md:mx-6 md:flex-row md:items-start md:gap-6 lg:contents">
           <ResultCard />
           <SizingCard />
           <noscript>

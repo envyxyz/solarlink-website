@@ -313,6 +313,50 @@
   &:has(input:focus-visible) { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
 }
 
+/* Rolling number: a digit slot is one --roll-slot wide and clips the digit that rolls through it. The lime copy lies over the ink digit and fades after the roll. */
+@utility roll-slot {
+  display: inline-block;
+  position: relative;
+  width: var(--roll-slot);
+  overflow: clip;
+  text-align: center;
+}
+@utility roll-in { display: block; position: relative; }
+@utility roll-out { position: absolute; inset: 0; opacity: 0; }
+@utility roll-lime { position: absolute; inset: 0; color: var(--lime); opacity: 0; }
+
+/* Roof cap message: the wrapper's rows run 0fr to 1fr (the one height animation, at the owner's request). Opening grows the rows, then fades the text in; closing fades the text, then shrinks the rows. */
+@utility cap-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur) var(--ease-out) var(--dur-fast);
+  &[data-open] {
+    grid-template-rows: 1fr;
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+@utility cap-text {
+  opacity: 0;
+  transition: opacity var(--dur-fast) linear;
+  [data-open] & {
+    opacity: 1;
+    transition: opacity var(--dur) var(--ease-out) var(--dur);
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+
+/* Side by side (48 to 64rem) the sizing card is top aligned in the dock, so it would rise with the dock's top edge: it is carried back down by the same amount. */
+@utility dock-hold {
+  @media (min-width: 48rem) and (max-width: 63.999rem) { transform: translateY(var(--dock-lift, 0px)); }
+}
+
+/* Hero dock on phones and tablets: it overlaps the image by --dock-overlap, and rises by --dock-lift (set from script) as the roof cap message opens, so the slider stays put. */
+@utility dock-lift {
+  margin-top: calc(-1 * var(--dock-overlap) - var(--dock-lift, 0px));
+  @media (min-width: 64rem) { --dock-lift: 0px; }
+}
+
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }
