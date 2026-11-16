@@ -1,4 +1,4 @@
-import { business, outlets, nav, ui, type OutletSlug } from "@/content";
+import { business, outlets, nav, outletsSection, ui, type OutletSlug } from "@/content";
 import { show } from "./facts";
 import { telHref, waHref } from "./phone";
 
@@ -10,5 +10,8 @@ export function outletWhatsApp(slug: OutletSlug, text: string = ui.whatsapp.mess
   const number = show(outlet.whatsapp);
   return number ? waHref(number, text) : nav.quote.href;
 }
+
+/** Google Maps search for an address (the confirmed address lines, city included). */
+export const mapsHref = (addressLines: string[]) => `${outletsSection.mapsSearch}${encodeURIComponent(addressLines.join(", "))}`;
 
 export const absoluteUrl = (path: string) => `${show(business.siteUrl)}${path}`;

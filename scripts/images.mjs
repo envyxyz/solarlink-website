@@ -4,19 +4,22 @@ import sharp from "sharp";
 import { mkdirSync, writeFileSync } from "node:fs";
 
 const JOBS = [
-  { key: "hero", src: "design/img/hero.jpg", widths: [1376, 768] },
-  { key: "panelTop", src: "design/img/panel-top.jpg", widths: [256] },
+  { key: "hero", name: "hero", src: "design/img/hero.jpg", widths: [1376, 768] },
+  { key: "panelTop", name: "panel-top", src: "design/img/panel-top.jpg", widths: [256] },
+  // Shop preview tiles: 1024px squares shown at most 384px wide, so 640 covers 1.5x screens.
+  { key: "productPanel", name: "product-panel", src: "design/img/product-panel.jpg", widths: [640] },
+  { key: "productInverter", name: "product-inverter", src: "design/img/product-inverter.jpg", widths: [640] },
+  { key: "productBattery", name: "product-battery", src: "design/img/product-battery.jpg", widths: [640] },
 ];
 const FORMATS = { avif: { quality: 55, effort: 6 }, webp: { quality: 78, effort: 6 } };
 
 mkdirSync("public/images", { recursive: true });
 const meta = {};
-for (const { key, src, widths } of JOBS) {
+for (const { key, name, src, widths } of JOBS) {
   const srcW = (await sharp(src).metadata()).width;
   meta[key] = {};
   for (const w of widths) {
     if (w > srcW) throw new Error(`${src}: ${w}px would upscale a ${srcW}px source`);
-    const name = key === "hero" ? "hero" : "panel-top";
     for (const [fmt, opts] of Object.entries(FORMATS)) {
       const file = `public/images/${name}-${w}.${fmt}`;
       const info = await sharp(src).resize({ width: w, withoutEnlargement: true })[fmt](opts).toFile(file);

@@ -9,7 +9,7 @@ const linkClass = "focus-ring dur-fast rounded-pill transition-colors hover:text
 /**
  * Night stage: shops (address, phone and hours only once the client confirms them), link columns for every
  * service, product, guide and company page, legal line, socials, and a giant faded wordmark that the
- * stage's bottom edge clips.
+ * full letters, faded, resting just inside the stage's bottom edge.
  */
 export function Footer() {
   const name = show(business.name) as string;
@@ -83,7 +83,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <p aria-hidden className="pointer-events-none mt-6 translate-y-1/4 select-none whitespace-nowrap text-center text-giant text-night-ink/10">
+        <p aria-hidden className="pointer-events-none mt-6 select-none whitespace-nowrap text-center text-giant text-night-ink/10">
           {name}
         </p>
       </Stage>

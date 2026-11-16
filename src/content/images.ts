@@ -16,6 +16,24 @@ export const images = {
       "height": 459
     }
   },
+  "productPanel": {
+    "640": {
+      "width": 640,
+      "height": 640
+    }
+  },
+  "productInverter": {
+    "640": {
+      "width": 640,
+      "height": 640
+    }
+  },
+  "productBattery": {
+    "640": {
+      "width": 640,
+      "height": 640
+    }
+  },
   "logo": {
     "width": 740,
     "height": 66

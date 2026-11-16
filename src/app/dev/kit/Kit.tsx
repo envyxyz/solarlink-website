@@ -2,7 +2,8 @@
 
 import { useState, type ReactNode } from "react";
 import { ArrowRight, Phone } from "lucide-react";
-import kit from "@/content/kit";
+import kit, { sampleGoogleUrl, sampleReviews } from "@/content/kit";
+import { Reviews } from "@/components/home/Reviews";
 import hero from "../../../../design/img/hero.jpg";
 import { Accordion } from "@/components/ui/Accordion";
 import { Button, IconButton } from "@/components/ui/Button";
@@ -291,6 +292,7 @@ export function Kit() {
         <h2 className="mb-8 text-h2">{kit.grounds.light}</h2>
         <Showcase />
       </div>
+      <Reviews items={sampleReviews} googleUrl={sampleGoogleUrl} />
       <Stage variant="night" className="p-6 md:p-12">
         <h2 className="mb-8 text-h2">{kit.grounds.night}</h2>
         <Showcase />

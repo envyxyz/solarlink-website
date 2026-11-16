@@ -12,4 +12,7 @@ export function show<T>(fact: Fact<T>): T | null {
 /** Same rule for flagged objects (services, brands). */
 export const isShown = (node: { confirmed: boolean }) => node.confirmed || !production;
 
+/** True when a dev or staging build shows something the client has not confirmed: the cue for an "Awaiting client" chip. */
+export const hasUnconfirmed = (items: { confirmed: boolean }[]) => items.some((i) => !i.confirmed);
+
 export const shownList = <T extends { confirmed: boolean }>(items: T[]): T[] => items.filter(isShown);

@@ -24,7 +24,7 @@ const TRUNK: [Key, Key][] = [["sun", "panel"], ["panel", "inverter"], ["inverter
 /** Left to right from 64rem: the trunk runs along one row, the battery sits above and right of the inverter. */
 const wide: Layout = {
   w: 1000,
-  h: 290,
+  h: 250,
   pos: { sun: [100, 130], panel: [300, 130], inverter: [500, 130], home: [700, 130], grid: [900, 130], battery: [608, 36] },
   side: { sun: "below", panel: "below", inverter: "below", home: "below", grid: "below", battery: "right" },
   branch: "M500 94 V56 Q500 36 520 36 H572",
@@ -118,14 +118,14 @@ export function LinkDiagram() {
   }, []);
   const text = link.modes.find((m) => m.value === mode)?.text;
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-8">
       <div data-reveal="" className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8">
         <SegmentedControl label={link.switchLabel} options={link.modes} value={mode} onValueChange={(v) => setMode(v as LinkMode)} />
         <p aria-live="polite" className="max-w-lead-wide text-small text-tone-ink-2">
           {text}
         </p>
       </div>
-      <div ref={root} data-reveal="" style={{ "--i": 1 } as CSSProperties} className="mx-auto w-full max-w-6xl">
+      <div ref={root} data-reveal="" style={{ "--i": 1 } as CSSProperties} className="w-full">
         <Diagram layout={wide} mode={mode} className="max-lg:hidden" />
         <Diagram layout={tall} mode={mode} className="mx-auto max-w-sm lg:hidden" />
       </div>

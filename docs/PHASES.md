@@ -113,3 +113,19 @@ Open:
 - Four service images are not generated yet (service-homes, -business, -farms, -netmetering).
 - Years, kW installed and projects completed are unconfirmed; the numbers grid appears when two stats are confirmed.
 - Outlet pages the cities link to are not built yet.
+
+## 16 Nov 2026: phase 4b, shop preview, projects, reviews, outlets, questions, closing call
+
+Done:
+- Homepage sections 6 to 11 after the link: `ShopPreview` (night stage, `ShopCarousel` island: category switch plus scroll-snap row with arrows that appear only when the row overflows; all four categories are in the server HTML), `Projects` (heading left from 1440, three 3:4 `ProjectCard`s with a glass caption), `Reviews` (renders only with three or more reviews that have text, name and date; there are none, so it is absent; proved on the dev kit page with sample data in `src/content/kit.ts`), `Outlets` (three cards, directions link built from the confirmed address, phone, WhatsApp and hours field by field), `Faq` (native details, answers in HTML) and `ClosingCall` (image stage, one glass card, the only lime button). New `ProductCard` and `ProjectCard` in `components/ui`; `Card` got an `ink` option; `CardImage` renders AVIF and WebP for a string source.
+- Content in `src/content/home/{shop,projects,reviews,outlets,faq,closing}.ts`, copy word for word from COPY-HOME. Product type has optional brand, price, price per watt, stock and warranty that the card prints when present. `googleReviewsUrl` is an unconfirmed fact. `hasUnconfirmed` in `lib/facts.ts` drives the "Awaiting client" chip on a section.
+- Production build leaves out: shop preview (all twelve products are samples), projects (facts come from pages that call themselves placeholders), reviews (none exist). Outlets show the confirmed address and a directions link only; phones, WhatsApp and hours appear when confirmed. The closing call's "Call the Lahore shop" button appears when the Lahore phone is confirmed. Questions show in production (judgment call: all five marked confirmed; Q5's DISCO filing detail was "website says" in the copy deck and mirrors the confirmed net metering service, so the client should confirm it).
+- `FAQPage` JSON-LD built from the same list as the visible accordion. No AggregateRating or Review. Sitemap lastmod stays 2026-11-16 (content changed today).
+- Product tiles: `scripts/images.mjs` now makes 640px AVIF and WebP for the panel, inverter and battery renders (the UPS has no render: empty well). The closing call uses the hero render until closing-dusk.jpg exists.
+- Review fixes to sections 3 to 5 and the footer, in the same commit: (1) text buttons have no horizontal padding, so their label sits flush with the text above (the primitive, not call sites); (2) About lead capped to `max-w-lead-wide`; (3) the link diagram spans the stage's inner width at every desktop size, vertical gaps tightened (stage and diagram gaps, diagram box height 250 units), and `SectionHeading` aligns its lead to the top of the heading; (4) footer wordmark no longer shifted down, so the full letters show with the baseline just inside the bottom edge; (5) Services unchanged except fix 1.
+- Homepage JS 153.3 KB (limit 182.0 KB). Production build, lint and typecheck pass. `scripts/seo/` does not exist in this repo, so no SEO snapshot was run.
+
+Open:
+- Real product stock, project photos and facts, review text and the Google reviews URL, shop phones, WhatsApp numbers and hours are all still with the client.
+- Service images, closing-dusk.jpg and the UPS render are not made.
+- The hero render is 1376px wide, soft on the 1800px closing stage.

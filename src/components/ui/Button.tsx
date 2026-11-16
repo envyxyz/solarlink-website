@@ -20,7 +20,7 @@ export const variantClass: Record<ButtonVariant, string> = {
 
 const base =
   "focus-ring group relative inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-pill text-control disabled:opacity-50 aria-disabled:opacity-50";
-const sizes: Record<ButtonSize, string> = { md: "min-h-control px-5", lg: "min-h-control-lg px-5" };
+const sizes: Record<ButtonSize, string> = { md: "min-h-control", lg: "min-h-control-lg" };
 
 type Native = Omit<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -75,7 +75,7 @@ export function Button({
   ...rest
 }: ButtonProps) {
   const inactive = disabled || loading;
-  const cls = cn(base, "press", sizes[size], variantClass[variant], variant === "text" && "px-1", className);
+  const cls = cn(base, "press", sizes[size], variantClass[variant], variant !== "text" && "px-5", className);
   const inner = (
     <>
       <span className={cn("inline-flex items-center gap-2", loading && "invisible")}>

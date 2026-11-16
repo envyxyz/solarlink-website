@@ -121,4 +121,12 @@ const kit = {
   whatsapp: { pill: "Pill with message", icon: "Icon only", loading: "Loading" },
 } as const;
 
+/** Temporary sample reviews to prove the Reviews section. Dev kit only: never imported by the homepage. */
+export const sampleReviews = [
+  { text: "Sample review text one, long enough to wrap onto a few lines so the card shows its shape.", name: "Sample Name One", date: "January 2026", outlet: "Lahore", confirmed: false, source: "Kit sample" },
+  { text: "Sample review text two, on the ink card in the middle, to check the light text on the dark ground.", name: "Sample Name Two", date: "February 2026", outlet: "Islamabad", confirmed: false, source: "Kit sample" },
+  { text: "Sample review text three.", name: "Sample Name Three", date: "March 2026", outlet: "Sargodha", confirmed: false, source: "Kit sample" },
+];
+export const sampleGoogleUrl = "https://www.google.com/";
+
 export default kit;

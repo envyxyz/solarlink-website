@@ -38,7 +38,7 @@ export function SegmentedControl({
         <label
           key={o.value}
           className={cn(
-            "segmented-option press relative z-10 inline-flex min-h-10 min-w-control cursor-pointer items-center justify-center rounded-pill px-4 text-control",
+            "segmented-option press relative z-10 inline-flex min-h-10 whitespace-nowrap min-w-control cursor-pointer items-center justify-center rounded-pill px-4 text-control",
             o.value === value ? "text-ink" : "text-tone-ink-2 hover:text-tone-ink",
           )}
         >

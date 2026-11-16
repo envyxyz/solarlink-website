@@ -72,6 +72,13 @@ export function localBusinessLd(outlet: Outlet) {
 
 export const allOutletsLd = () => outlets.map(localBusinessLd).filter(Boolean);
 
+/** FAQPage for exactly the questions the page shows. */
+export const faqLd = (items: { question: string; answer: string }[]) => ({
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: items.map((i) => ({ "@type": "Question", name: i.question, acceptedAnswer: { "@type": "Answer", text: i.answer } })),
+});
+
 /** BreadcrumbList for a trail of [label, path]. The home crumb is added here. */
 export function breadcrumbLd(trail: [label: string, path: string][]) {
   const items = [[ui.breadcrumb.home, "/"], ...trail] as [string, string][];

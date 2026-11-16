@@ -1,15 +1,24 @@
 import { JsonLd } from "@/components/JsonLd";
 import { About } from "@/components/home/About";
 import { BrandBelt } from "@/components/home/BrandBelt";
+import { ClosingCall } from "@/components/home/ClosingCall";
+import { Faq } from "@/components/home/Faq";
 import { Hero } from "@/components/home/Hero";
 import { LinkSection } from "@/components/home/LinkSection";
+import { Outlets } from "@/components/home/Outlets";
+import { Projects } from "@/components/home/Projects";
+import { Reviews } from "@/components/home/Reviews";
 import { Services } from "@/components/home/Services";
-import { allOutletsLd, breadcrumbLd, organizationLd, websiteLd } from "@/lib/jsonld";
+import { ShopPreview } from "@/components/home/ShopPreview";
+import { faqSection, reviewsSection } from "@/content";
+import { shownList } from "@/lib/facts";
+import { allOutletsLd, breadcrumbLd, faqLd, organizationLd, websiteLd } from "@/lib/jsonld";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata("home");
 
 export default function HomePage() {
+  const questions = shownList(faqSection.items);
   return (
     <main id="main">
       <Hero />
@@ -17,9 +26,13 @@ export default function HomePage() {
       <About />
       <Services />
       <LinkSection />
-      {/* Sections 6 to 11 (docs/HOMEPAGE.md) are added here by later phases. */}
-      <div id="home-sections" />
-      <JsonLd data={[organizationLd(), websiteLd(), ...allOutletsLd(), breadcrumbLd([])]} />
+      <ShopPreview />
+      <Projects />
+      <Reviews items={shownList(reviewsSection.items)} />
+      <Outlets />
+      <Faq />
+      <ClosingCall />
+      <JsonLd data={[organizationLd(), websiteLd(), ...allOutletsLd(), ...(questions.length ? [faqLd(questions)] : []), breadcrumbLd([])]} />
     </main>
   );
 }

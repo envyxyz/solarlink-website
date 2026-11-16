@@ -178,16 +178,10 @@ export const brands: Brand[] = brandRows.map(([name, wdth, weight]) => ({
   source: "Website says (brand strip). Which brands are stocked is unconfirmed",
 }));
 
-// Empty until the client supplies them. Shapes grow in the page phases.
-export type Product = { slug: string };
-export type Project = { slug: string };
-export type Review = { author: string };
-export type Faq = { id: string };
-export const products: Product[] = [];
-export const projects: Project[] = [];
-export const reviews: Review[] = [];
-export const faqs: Faq[] = [];
+// Products, projects, reviews and questions live in src/content/home/*.ts (re-exported below).
 export const reviewSummary = { rating: todo(), count: todo(), asOf: todo() };
+/** Where "Read our reviews on Google" points. Hidden until the client gives the Lahore listing's reviews URL. */
+export const googleReviewsUrl: Fact<string> = todo();
 
 export const sizing = {
   // Unconfirmed starting constants. Shown in production only because the hero labels the result as an
@@ -240,12 +234,24 @@ export { hero, belt } from "./content/home.ts";
 export { about } from "./content/home/about.ts";
 export { servicesSection } from "./content/home/services.ts";
 export { link } from "./content/home/link.ts";
+export { shopSection, type Product, type ShopCategory } from "./content/home/shop.ts";
+export { projectsSection, type ProjectItem } from "./content/home/projects.ts";
+export { reviewsSection, type ReviewItem } from "./content/home/reviews.ts";
+export { outletsSection } from "./content/home/outlets.ts";
+export { faqSection, type FaqItem } from "./content/home/faq.ts";
+export { closing } from "./content/home/closing.ts";
 import { ui, priceMode } from "./content/ui.ts";
 import { nav, footer } from "./content/nav.ts";
 import { hero, belt } from "./content/home.ts";
 import { about } from "./content/home/about.ts";
 import { servicesSection } from "./content/home/services.ts";
 import { link } from "./content/home/link.ts";
+import { shopSection } from "./content/home/shop.ts";
+import { projectsSection } from "./content/home/projects.ts";
+import { reviewsSection } from "./content/home/reviews.ts";
+import { outletsSection } from "./content/home/outlets.ts";
+import { faqSection } from "./content/home/faq.ts";
+import { closing } from "./content/home/closing.ts";
 
-export const content = { business, outlets, services, brands, products, projects, reviews, reviewSummary, faqs, sizing, aboutStats, nav, footer, hero, belt, about, servicesSection, link, seo, ui, priceMode };
+export const content = { business, outlets, services, brands, reviewSummary, googleReviewsUrl, sizing, aboutStats, nav, footer, hero, belt, about, servicesSection, link, shopSection, projectsSection, reviewsSection, outletsSection, faqSection, closing, seo, ui, priceMode };
 export default content;

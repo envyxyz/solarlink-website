@@ -8,7 +8,7 @@ import { LinkDiagram } from "./LinkDiagram";
 export function LinkSection() {
   return (
     <div className="mb-section">
-      <Stage className="flex flex-col gap-10 p-6 sm:p-10 lg:gap-14 lg:p-14">
+      <Stage className="flex flex-col gap-8 p-6 sm:p-10 lg:gap-10 lg:p-14">
         <div data-reveal="">
           <SectionHeading title={link.title} lead={link.lead} />
         </div>
