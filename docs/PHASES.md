@@ -85,3 +85,16 @@ Done:
 Open:
 - Button is still a client component (magnet pull) and is imported by the server nav; a delegated listener would make it server-only.
 - Kit screenshots now include the nav and footer (they were taken in phase 1, before the chrome existed).
+
+## 16 Nov 2026: chrome, logo in nav, wider page, belt label removed
+
+Done:
+- Nav shows the client's logo (wordmark of `logo-light.png`, tagline cropped, transparent; source `design/img/logo-light.png`, output `public/images/brand/logo.webp` and `.png`, 740x66, made by `scripts/images.mjs`), as a plain picture with width and height, alt from content, linked to `/`. 20px tall from 640px up, 14px on phones so the quote button and menu fit. DESIGN.md notes the logo's lime is exempt from "lime text only on night".
+- `--page-max` is 1800px (was 1320px); gutter unchanged. Checked at 1920, 1440 and 390: hero text keeps its measures, panels stay on the roof, cards and link line sit right, footer columns hold.
+- Brand belt: the "Equipment we install" label is gone (copy removed from content); the belt keeps its accessible name and spans the page width.
+- `scripts/shot.mjs` also captures 1920.
+
+Open:
+- The hero image is 1376px wide, so it is soft on the 1800px stage (known; not fixed here).
+- The footer's giant wordmark does not span the wider stage (left as it is).
+

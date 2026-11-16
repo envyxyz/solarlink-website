@@ -34,6 +34,5 @@ export const hero = {
 };
 
 export const belt = {
-  label: "Equipment we install",
   aria: "Solar equipment brands SolarLink installs",
 };

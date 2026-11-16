@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { Button } from "@/components/ui/Button";
+import { images } from "@/content/images";
 import { nav } from "@/content/nav";
 import { MenuSheet } from "./MenuSheet";
 import { NavShrink } from "./NavShrink";
@@ -18,8 +19,11 @@ export function Nav({ brand }: { brand: string }) {
         aria-label={nav.mainLabel}
         className="glass nav-width fixed left-1/2 top-6 z-50 flex origin-top -translate-x-1/2 items-center justify-between gap-4 rounded-pill py-2 pl-5 pr-2 transition-transform dur ease-out data-small:scale-97"
       >
-        <Link href="/" aria-label={nav.homeLabel} className="focus-ring press rounded-pill py-2 text-title">
-          {brand}
+        <Link href="/" aria-label={nav.homeLabel} className="focus-ring press flex items-center rounded-pill py-2">
+          <picture>
+            <source type="image/webp" srcSet="/images/brand/logo.webp" />
+            <img src="/images/brand/logo.png" width={images.logo.width} height={images.logo.height} alt={brand} draggable={false} className="h-3.5 w-auto select-none sm:h-5" />
+          </picture>
         </Link>
         <ul className="hidden gap-1 lg:flex">
           {nav.main.map((l) => (

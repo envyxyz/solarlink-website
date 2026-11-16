@@ -276,7 +276,7 @@
   @media (prefers-reduced-motion: reduce) { animation: none; }
 }
 
-/* Page edges: nav, stages and content share them (gutter inside the viewport, 1320px at most). */
+/* Page edges: nav, stages and content share them (gutter inside the viewport, 1800px at most). */
 @utility page-width {
   width: min(100% - 2 * var(--gutter), var(--page-max));
   margin-inline: auto;

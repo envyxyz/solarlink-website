@@ -56,7 +56,7 @@ Light is the base. Dark tokens are for dark sections, not a site-wide dark mode.
 | `--night-line` | `rgb(242 244 238 / 0.10)` | | hairlines on night |
 
 Rules:
-- Lime is a fill with `--ink` text on it (10.3:1). Lime text is allowed only on night (10.3:1). Lime text or lime icons on light surfaces fail contrast (1.7:1) and are banned.
+- Lime is a fill with `--ink` text on it (10.3:1). Lime text is allowed only on night (10.3:1). Lime text or lime icons on light surfaces fail contrast (1.7:1) and are banned. The one exception is the client's own logo in the nav (lime "LINK" on the light pill): it is a supplied brand asset, exempt from this rule.
 - Lime appears on the primary action and at most one other thing per screen: the active state, the link line or a key number on night.
 - No gradients on text or buttons. No yellow. No second accent.
 - Semantic colours (error `#C8321E`, success uses ink with a tick, not green) appear only in forms.
@@ -89,7 +89,7 @@ Rules:
 ## Space and layout
 
 - 4px base. Scale: 4, 8, 12, 16, 20, 24, 32, 40, 48, 64, 80, 96, 128, 160.
-- Container: max width 1320px, gutter `clamp(1rem, 4vw, 2.5rem)`. Nav and all content share the same two edges.
+- Container: max width 1800px, gutter `clamp(1rem, 4vw, 2.5rem)`. Nav and all content share the same two edges.
 - Section rhythm: `clamp(4.5rem, 9vw, 9rem)` between sections; 48 to 64px between a section heading and its content.
 - **Stages.** Large image or dark blocks are rounded panels inset by the gutter, never full-bleed rectangles. This is the page's recurring shape.
 - Section heading pattern: h2 on the left (max 14ch wide), one lead paragraph or a text link on the right or below. No label above it.
@@ -208,4 +208,4 @@ Other choices: the accordion panel height animates with a CSS keyframe on `--dur
 
 ## Added in phase 3 (chrome, hero, brand belt)
 
-No existing value changed. New tokens in `src/styles/tokens.css`: `--haze` (warm light wash over the hero image), `--panel-base`, `--panel-shadow` (roof panel object, drawn on the image), `--link-shadow` (legibility of the link line on the image), `--hero-height` (`min(92svh, 53.75rem)`), `--t-figure-compact-size` (2.75rem, big figure on short desktop windows), `--t-stat-size` and `--t-stat-size-lg` (result card figures), `--t-giant-*` (footer wordmark), `--measure-display` 11ch, `--measure-lead` 29ch, `--measure-lead-wide` 36ch. Utilities: `page-width` (nav, stages and content share the page edges: gutter inside the viewport, 1320px at most), `nav-width`, `hero-art`, `short:` variant (desktop windows 50rem high or less). Phase 3 components: `Nav` (native dialog sheet under 64rem), `Footer`, `Hero` with `SizingProvider`, `SizingCard`, `ResultCard`, `RoofPanels`, `LinkLine`, `BrandBelt`.
+No existing value changed. New tokens in `src/styles/tokens.css`: `--haze` (warm light wash over the hero image), `--panel-base`, `--panel-shadow` (roof panel object, drawn on the image), `--link-shadow` (legibility of the link line on the image), `--hero-height` (`min(92svh, 53.75rem)`), `--t-figure-compact-size` (2.75rem, big figure on short desktop windows), `--t-stat-size` and `--t-stat-size-lg` (result card figures), `--t-giant-*` (footer wordmark), `--measure-display` 11ch, `--measure-lead` 29ch, `--measure-lead-wide` 36ch. Utilities: `page-width` (nav, stages and content share the page edges: gutter inside the viewport, 1800px at most), `nav-width`, `hero-art`, `short:` variant (desktop windows 50rem high or less). Phase 3 components: `Nav` (native dialog sheet under 64rem), `Footer`, `Hero` with `SizingProvider`, `SizingCard`, `ResultCard`, `RoofPanels`, `LinkLine`, `BrandBelt`.

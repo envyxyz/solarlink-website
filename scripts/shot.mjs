@@ -30,6 +30,7 @@ const base = `http://localhost:${server.address().port}`;
 await mkdir(outDir, { recursive: true });
 
 const VIEWS = [
+  { name: "1920", width: 1920, height: 1080, mobile: false },
   { name: "1440", width: 1440, height: 900, mobile: false },
   { name: "1280", width: 1280, height: 720, mobile: false },
   { name: "390", width: 390, height: 844, mobile: true },

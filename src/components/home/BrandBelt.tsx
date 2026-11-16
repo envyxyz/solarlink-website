@@ -10,9 +10,8 @@ export function BrandBelt() {
   const list = shownList(brands);
   if (!list.length) return null;
   return (
-    <section aria-label={belt.aria} className="page-width mb-section mt-10 flex flex-col gap-5 lg:mt-16 md:flex-row md:items-center md:gap-8">
-      <p className="shrink-0 text-small text-ink-2">{belt.label}</p>
-      <Marquee variant="logo" className="min-w-0 flex-1 py-4">
+    <section aria-label={belt.aria} className="page-width mb-section mt-10 lg:mt-16">
+      <Marquee variant="logo" className="py-4">
         {list.map((b) => (
           <span
             key={b.name}

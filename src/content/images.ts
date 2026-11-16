@@ -15,5 +15,9 @@ export const images = {
       "width": 256,
       "height": 459
     }
+  },
+  "logo": {
+    "width": 740,
+    "height": 66
   }
 } as const;

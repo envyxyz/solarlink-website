@@ -53,7 +53,7 @@ WhatsApp message (prefilled, from content template): "Assalam o Alaikum SolarLin
 
 ## 2. Brand belt
 
-One line of small text on the left: "Equipment we install". Belt of brand logos, greyscale at 80% opacity, moving slowly, edges faded. Hover: the belt stops, the hovered logo turns full colour at 100% opacity and scale 1.1 with spring.bubbly. Brands come from content with `confirmed: false` until the client confirms the list (website says: Canadian Solar, Growatt, Fronus, LONGi, Huawei, GoodWe). Wordmarks set in type are used until official logo files are supplied.
+No visible label: the belt (accessible name from content) is the moving row across the page width. Brand logos, greyscale at 80% opacity, moving slowly, edges faded. Hover: the belt stops, the hovered logo turns full colour at 100% opacity and scale 1.1 with spring.bubbly. Brands come from content with `confirmed: false` until the client confirms the list (website says: Canadian Solar, Growatt, Fronus, LONGi, Huawei, GoodWe). Wordmarks set in type are used until official logo files are supplied.
 
 ## 3 to 12, in brief
 
