@@ -30,12 +30,19 @@
 
   /* hero (added in phase 3, see DESIGN.md) */
   --haze: radial-gradient(58% 55% at 12% 6%, rgb(255 246 230 / 0.55), rgb(255 246 230 / 0) 100%);
-  --panel-base: #101821;
-  --panel-shadow: inset 0 4px 0 rgb(255 255 255 / 0.22), 0 0 0 2px rgb(8 12 16 / 0.7),
-    14px 22px 22px -8px rgb(8 12 16 / 0.55);
+  --panel-frame: #8d96a0; /* roof panels (canvas): aluminium frame */
+  --panel-cell: #0d1622; /* cell area, dark blue-black */
+  --panel-edge: #4d565f; /* the thin front edge, suggests thickness */
+  --panel-line: rgb(150 175 205 / 0.32); /* cell lines */
+  --panel-sheen: rgb(255 244 224 / 0.34); /* one sweep across the whole array, from the sun side */
+  --panel-sheen-fade: rgb(255 244 224 / 0);
+  --panel-contact: rgb(8 12 16 / 0.5); /* contact shadow under the array */
+  --panel-contact-blur: 9px;
+  --panel-contact-x: 5px;
+  --panel-contact-y: 8px;
   --link-shadow: drop-shadow(0 1px 1px rgb(11 15 10 / 0.3));
-  --hero-height: min(92svh, 53.75rem);
-  --hero-height-short: calc(100svh - 1.5rem); /* short desktop windows: the stage fills the window, 12px above and below */
+  --hero-height: min(calc(100svh - 7.5rem), 53.75rem); /* the stage starts 12px under the floating nav (96px) and ends 24px above the window bottom */
+  --hero-height-short: calc(100svh - 6.75rem); /* short desktop windows: 96px above, 12px below */
   --t-figure-compact-size: 2.75rem;
   --t-stat-size: clamp(1.0625rem, 4.6vw, 1.375rem); /* result card figures; 1.5rem from 64rem */
   --t-stat-size-lg: 1.5rem;

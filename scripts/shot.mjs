@@ -40,7 +40,7 @@ const browser = await chromium.launch(process.env.SHOT_CHROME ? { executablePath
 const errors = [];
 
 async function open(view) {
-  const page = await browser.newPage({ viewport: { width: view.width, height: view.height }, deviceScaleFactor: 1, isMobile: view.mobile, hasTouch: view.mobile });
+  const page = await browser.newPage({ viewport: { width: view.width, height: view.height }, deviceScaleFactor: Number(process.env.SHOT_DSF ?? 1), isMobile: view.mobile, hasTouch: view.mobile });
   page.on("console", (m) => m.type() === "error" && !m.text().includes("status of 404") && errors.push(`${view.name} console: ${m.text()}`));
   page.on("pageerror", (e) => errors.push(`${view.name} pageerror: ${e.message}`));
   // Nav and footer link to pages later phases build; Next prefetches them, so those 404s are expected for now.

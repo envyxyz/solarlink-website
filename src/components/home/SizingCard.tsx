@@ -14,7 +14,7 @@ import { useSizing } from "./SizingProvider";
  * bottom left of the stage from 64rem. The no-JavaScript card in Hero uses the same slot.
  */
 export const sizingSlot =
-  "order-2 md:order-1 md:basis-0 md:grow-6 lg:glass lg:absolute lg:bottom-12 lg:left-12 lg:z-5 lg:w-100 lg:rounded-card lg:p-6 short:bottom-6 short:p-5";
+  "order-2 md:order-1 md:basis-0 md:grow-6 lg:glass lg:absolute lg:bottom-12 lg:left-12 lg:z-5 lg:w-100 lg:rounded-card lg:p-6 short:bottom-4 short:p-4";
 
 export function SizingCard() {
   const { mode, value, setValue, setMode, range, text, href, whatsapp } = useSizing();
