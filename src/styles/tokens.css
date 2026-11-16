@@ -13,6 +13,9 @@
   --ink-3: #7c8378;
   --line: rgb(11 15 10 / 0.08);
   --track: rgb(11 15 10 / 0.1); /* segmented-control track: reads on ground, surface, sunken and glass */
+  --project: 300ms; /* input physics: how far ahead a wheel or scroll speed is projected */
+  --slider-sweep: 600ms; /* the fastest the slider thumb may travel its full range */
+  --scroll-reach: 1.25; /* furthest a single flick may carry the page, in viewport heights */
   --night-track: rgb(242 244 238 / 0.16); /* the same on night */
   --lime: #7ed321;
   --lime-press: #6ac014;
