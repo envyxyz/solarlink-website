@@ -1,0 +1,196 @@
+@import "tailwindcss";
+@import "../styles/tokens.css";
+
+/* Type styles: size, width axis, weight, line height and tracking set together. */
+@utility text-display {
+  font-size: var(--t-display-size);
+  font-weight: var(--t-display-weight);
+  line-height: var(--t-display-lh);
+  letter-spacing: var(--t-display-track);
+  font-variation-settings: "wdth" var(--t-display-wdth);
+  text-wrap: balance;
+}
+@utility text-h2 {
+  font-size: var(--t-h2-size);
+  font-weight: var(--t-h2-weight);
+  line-height: var(--t-h2-lh);
+  letter-spacing: var(--t-h2-track);
+  font-variation-settings: "wdth" var(--t-h2-wdth);
+  text-wrap: balance;
+}
+@utility text-h3 {
+  font-size: var(--t-h3-size);
+  font-weight: var(--t-h3-weight);
+  line-height: var(--t-h3-lh);
+  letter-spacing: var(--t-h3-track);
+  font-variation-settings: "wdth" var(--t-h3-wdth);
+  text-wrap: balance;
+}
+@utility text-title {
+  font-size: var(--t-title-size);
+  font-weight: var(--t-title-weight);
+  line-height: var(--t-title-lh);
+  letter-spacing: var(--t-title-track);
+  font-variation-settings: "wdth" var(--t-title-wdth);
+  text-wrap: balance;
+}
+@utility text-lead {
+  font-size: var(--t-lead-size);
+  font-weight: var(--t-lead-weight);
+  line-height: var(--t-lead-lh);
+  letter-spacing: var(--t-lead-track);
+  font-variation-settings: "wdth" var(--t-lead-wdth);
+  text-wrap: pretty;
+}
+@utility text-body {
+  font-size: var(--t-body-size);
+  font-weight: var(--t-body-weight);
+  line-height: var(--t-body-lh);
+  letter-spacing: var(--t-body-track);
+  font-variation-settings: "wdth" var(--t-body-wdth);
+  text-wrap: pretty;
+}
+@utility text-small {
+  font-size: var(--t-small-size);
+  font-weight: var(--t-small-weight);
+  line-height: var(--t-small-lh);
+  letter-spacing: var(--t-small-track);
+  font-variation-settings: "wdth" var(--t-small-wdth);
+}
+@utility text-caption {
+  font-size: var(--t-caption-size);
+  font-weight: var(--t-caption-weight);
+  line-height: var(--t-caption-lh);
+  letter-spacing: var(--t-caption-track);
+  font-variation-settings: "wdth" var(--t-caption-wdth);
+}
+@utility text-figure {
+  font-size: var(--t-figure-size);
+  font-weight: var(--t-figure-weight);
+  line-height: var(--t-figure-lh);
+  letter-spacing: var(--t-figure-track);
+  font-variation-settings: "wdth" var(--t-figure-wdth);
+}
+@utility text-control {
+  font-size: var(--t-control-size);
+  font-weight: var(--t-control-weight);
+  line-height: var(--t-control-lh);
+  letter-spacing: var(--t-control-track);
+  font-variation-settings: "wdth" var(--t-control-wdth);
+}
+
+@utility tabular { font-variant-numeric: tabular-nums; }
+
+/* Focus: 2px ring, 2px offset. Ink on light, lime on night (--focus). */
+@utility focus-ring {
+  &:focus-visible {
+    outline: var(--ring-width) solid var(--focus);
+    outline-offset: var(--ring-offset);
+  }
+}
+
+/* Glass: for chrome that content passes under and cards on imagery. Never on glass. */
+@utility glass {
+  background: var(--surface);
+  box-shadow: var(--float);
+  @supports (backdrop-filter: blur(1px)) {
+    @media not (prefers-reduced-transparency: reduce) {
+      background: var(--glass-bg);
+      backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-edge), var(--float);
+    }
+  }
+}
+@utility glass-night {
+  background: var(--night-surface);
+  box-shadow: var(--float);
+  @supports (backdrop-filter: blur(1px)) {
+    @media not (prefers-reduced-transparency: reduce) {
+      background: var(--glass-night-bg);
+      backdrop-filter: var(--glass-blur);
+      box-shadow: var(--glass-night-edge), var(--float);
+    }
+  }
+}
+
+/* Motion helpers: only transform and opacity ever transition. */
+@utility dur-fast { transition-duration: var(--dur-fast); }
+@utility dur { transition-duration: var(--dur); }
+@utility dur-slow { transition-duration: var(--dur-slow); }
+@utility lift {
+  transition-property: transform;
+  transition-duration: var(--dur);
+  transition-timing-function: var(--ease-out);
+  @media (hover: hover) and (pointer: fine) {
+    &:hover { transform: translateY(calc(var(--spacing) * -1)); }
+  }
+}
+@utility zoom-on-hover {
+  transition-property: transform;
+  transition-duration: var(--dur);
+  transition-timing-function: var(--ease-out);
+  @media (hover: hover) and (pointer: fine) {
+    :is(.group:hover) & { transform: scale(var(--hover-zoom)); }
+  }
+}
+
+/* Press for elements that are not Motion components. */
+@utility press {
+  transition-property: transform;
+  transition-duration: var(--dur-fast);
+  transition-timing-function: var(--ease-out);
+  &:active:not(:disabled) { transform: scale(var(--press-scale)); }
+}
+
+/* Marquee belt: faded edges, pauses on hover and on focus within. */
+@utility marquee {
+  overflow: hidden;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  &:hover .marquee-track, &:focus-within .marquee-track { animation-play-state: paused; }
+}
+
+/* Accordion: height opens and closes with the Radix measured height. */
+@keyframes accordion-open { from { height: 0; } to { height: var(--radix-accordion-content-height); } }
+@keyframes accordion-close { from { height: var(--radix-accordion-content-height); } to { height: 0; } }
+@utility accordion-panel {
+  overflow: hidden;
+  &[data-state="open"] { animation: accordion-open var(--dur-slow) var(--ease-out); }
+  &[data-state="closed"] { animation: accordion-close var(--dur) var(--ease-out); }
+}
+@utility turns-to-cross {
+  transition-property: transform;
+  transition-duration: var(--dur);
+  transition-timing-function: var(--ease-out);
+  :is([data-state="open"]) > * > &, :is([data-state="open"]) > & { transform: rotate(45deg); }
+}
+
+@keyframes marquee {
+  to { transform: translateX(-50%); }
+}
+@utility marquee-track {
+  animation: marquee var(--dur-marquee) linear infinite;
+  @media (prefers-reduced-motion: reduce) { animation: none; }
+}
+
+@layer base {
+  html {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--font-sans);
+    -webkit-text-size-adjust: 100%;
+    scroll-padding-top: calc(var(--spacing) * 24);
+  }
+  body {
+    font-size: var(--t-body-size);
+    line-height: var(--t-body-lh);
+    font-variation-settings: "wdth" var(--t-body-wdth);
+    text-wrap: pretty;
+    min-height: 100svh;
+  }
+  :where(h1, h2, h3, h4) { text-wrap: balance; }
+  ::selection { background: var(--lime); color: var(--ink); }
+  :focus-visible { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+  }
+}

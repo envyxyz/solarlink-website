@@ -1,0 +1,197 @@
+/*
+  Every design token from DESIGN.md. This is the only file that holds raw colour,
+  radius, shadow, duration and type values. Everything else uses var(--token) or the
+  Tailwind utilities generated from the @theme block at the bottom.
+*/
+:root {
+  /* colour */
+  --ground: #f6f6f2;
+  --surface: #fdfdfb;
+  --sunken: #eeefe9;
+  --ink: #0b0f0a;
+  --ink-2: #565d53;
+  --ink-3: #7c8378;
+  --line: rgb(11 15 10 / 0.08);
+  --lime: #7ed321;
+  --lime-press: #6ac014;
+  --lime-wash: #e8f7d3;
+  --night: #0b0f0a;
+  --night-surface: #151a13;
+  --night-raised: #1e241b;
+  --night-ink: #f2f4ee;
+  --night-ink-2: #a6ad9f;
+  --night-line: rgb(242 244 238 / 0.1);
+  --error: #c8321e; /* forms only */
+
+  /* type: size, width axis, weight, line height, tracking */
+  --t-display-size: clamp(2.75rem, 1.55rem + 4.8vw, 5.5rem);
+  --t-display-wdth: 125;
+  --t-display-weight: 600;
+  --t-display-lh: 1.02;
+  --t-display-track: -0.03em;
+  --t-h2-size: clamp(2rem, 1.4rem + 2.4vw, 3.5rem);
+  --t-h2-wdth: 120;
+  --t-h2-weight: 600;
+  --t-h2-lh: 1.08;
+  --t-h2-track: -0.025em;
+  --t-h3-size: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --t-h3-wdth: 112;
+  --t-h3-weight: 600;
+  --t-h3-lh: 1.2;
+  --t-h3-track: -0.015em;
+  --t-title-size: 1.125rem;
+  --t-title-wdth: 105;
+  --t-title-weight: 600;
+  --t-title-lh: 1.3;
+  --t-title-track: -0.01em;
+  --t-lead-size: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  --t-lead-wdth: 100;
+  --t-lead-weight: 400;
+  --t-lead-lh: 1.5;
+  --t-lead-track: 0;
+  --t-body-size: 1.0625rem;
+  --t-body-wdth: 100;
+  --t-body-weight: 400;
+  --t-body-lh: 1.55;
+  --t-body-track: 0;
+  --t-small-size: 0.9375rem;
+  --t-small-wdth: 100;
+  --t-small-weight: 450;
+  --t-small-lh: 1.45;
+  --t-small-track: 0;
+  --t-caption-size: 0.8125rem;
+  --t-caption-wdth: 100;
+  --t-caption-weight: 500;
+  --t-caption-lh: 1.4;
+  --t-caption-track: 0.01em;
+  --t-figure-size: clamp(2.25rem, 1.6rem + 2.6vw, 4rem);
+  --t-figure-wdth: 118;
+  --t-figure-weight: 600;
+  --t-figure-lh: 1;
+  --t-figure-track: -0.03em;
+  --t-control-size: 0.9375rem;
+  --t-control-wdth: 105;
+  --t-control-weight: 600;
+  --t-control-lh: 1;
+  --t-control-track: 0;
+
+  /* space and layout (4px base; the scale is Tailwind's default steps) */
+  --page-max: 1320px;
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --section: clamp(4.5rem, 9vw, 9rem);
+  --control: 2.75rem; /* 44px */
+  --control-lg: 3.25rem; /* 52px */
+
+  /* shape */
+  --r-stage: clamp(1.5rem, 3vw, 2.5rem);
+  --r-card: 1.75rem;
+  --r-tile: 1.25rem;
+  --r-input: 1rem;
+  --r-pill: 999px;
+
+  /* depth */
+  --float: 0 1px 2px rgb(11 15 10 / 0.05), 0 4px 8px rgb(11 15 10 / 0.05),
+    0 12px 24px rgb(11 15 10 / 0.06), 0 32px 48px rgb(11 15 10 / 0.05);
+  --glass-bg: rgb(253 253 251 / 0.62);
+  --glass-edge: inset 0 1px 0 rgb(255 255 255 / 0.7);
+  --glass-night-bg: rgb(11 15 10 / 0.5);
+  --glass-night-edge: inset 0 1px 0 rgb(255 255 255 / 0.12);
+  --glass-blur: blur(20px) saturate(1.6);
+
+  /* motion */
+  --dur-fast: 150ms;
+  --dur: 250ms;
+  --dur-slow: 650ms;
+  --dur-marquee: 48s;
+  --press-scale: 0.97;
+  --hover-zoom: 1.04;
+  --ring-width: 2px;
+  --ring-offset: 2px;
+  --measure-heading: 14ch;
+
+  /* context tones: Stage night re-points these, so one component serves both grounds */
+  --tone-surface: var(--surface);
+  --tone-sunken: var(--sunken);
+  --tone-ink: var(--ink);
+  --tone-ink-2: var(--ink-2);
+  --tone-on-ink: var(--night-ink); /* text on an ink-coloured fill */
+  --tone-line: var(--line);
+  --focus: var(--ink);
+}
+
+.night {
+  --tone-surface: var(--night-surface);
+  --tone-sunken: var(--night-raised);
+  --tone-ink: var(--night-ink);
+  --tone-ink-2: var(--night-ink-2);
+  --tone-on-ink: var(--ink);
+  --tone-line: var(--night-line);
+  --focus: var(--lime);
+  color: var(--night-ink);
+}
+
+/* Reduced motion: every duration becomes the 150ms fade, loops stop. */
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur: var(--dur-fast);
+    --dur-slow: var(--dur-fast);
+  }
+}
+
+/* Map the tokens into Tailwind v4. The resets mean only token utilities exist. */
+@theme inline {
+  --color-*: initial;
+  --color-ground: var(--ground);
+  --color-surface: var(--surface);
+  --color-sunken: var(--sunken);
+  --color-ink: var(--ink);
+  --color-ink-2: var(--ink-2);
+  --color-ink-3: var(--ink-3);
+  --color-line: var(--line);
+  --color-lime: var(--lime);
+  --color-lime-press: var(--lime-press);
+  --color-lime-wash: var(--lime-wash);
+  --color-night: var(--night);
+  --color-night-surface: var(--night-surface);
+  --color-night-raised: var(--night-raised);
+  --color-night-ink: var(--night-ink);
+  --color-night-ink-2: var(--night-ink-2);
+  --color-night-line: var(--night-line);
+  --color-error: var(--error);
+  --color-tone-surface: var(--tone-surface);
+  --color-tone-sunken: var(--tone-sunken);
+  --color-tone-ink: var(--tone-ink);
+  --color-tone-ink-2: var(--tone-ink-2);
+  --color-tone-on-ink: var(--tone-on-ink);
+  --color-tone-line: var(--tone-line);
+
+  --radius-*: initial;
+  --radius-stage: var(--r-stage);
+  --radius-card: var(--r-card);
+  --radius-tile: var(--r-tile);
+  --radius-input: var(--r-input);
+  --radius-pill: var(--r-pill);
+
+  --shadow-*: initial;
+  --shadow-float: var(--float);
+
+  --text-*: initial;
+
+  --font-sans: var(--font-mona), "Mona Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+
+  --container-page: var(--page-max);
+  --container-heading: var(--measure-heading);
+  --spacing-gutter: var(--gutter);
+  --spacing-section: var(--section);
+  --spacing-control: var(--control);
+  --spacing-control-lg: var(--control-lg);
+
+  --breakpoint-2xl: 90rem;
+}
+
+/* Easing keeps its Tailwind name, so it lives in a static (always emitted) theme block. */
+@theme static {
+  --ease-*: initial;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.2, 1);
+}

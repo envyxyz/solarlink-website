@@ -1,0 +1,7 @@
+Generate images with your image generation tool. Use only built-in tools; no shell commands; do not read local files. Save PNG files into "C:\Users\Ameer Hussain\Desktop\personal\solarlink\website\design\img".
+
+Make 3 candidate images, files hero-a.png, hero-b.png, hero-c.png, each 16:9 landscape at the largest size available, from this brief (vary the house design and garden between the three, keep the camera and light the same):
+
+Photorealistic architectural CGI render with the clean, soft, premium look of a high-end product visualisation. High three-quarter aerial view, camera about 35 degrees above the horizon, of a modern two-storey family house in Lahore, Pakistan: a large FLAT concrete roof with a low parapet wall. The roof is completely empty and clean: no solar panels, no water tank, no stairs room, no clutter, nothing on it. The roof is one big rectangle, fully visible, unobstructed and evenly lit. Cream plaster walls with red-brick accents, a boundary wall and gate, a small lawn, one neem tree beside the house that does not cover the roof, a car in the porch. The house sits in the right 55 percent of the frame. The left 45 percent is calm: softly out-of-focus neighbourhood trees and a pale warm hazy morning sky, bright and low in contrast so dark text can sit on it. Early-morning golden light from the left, long soft shadows, gentle haze, natural colours with fresh greens. No people, no text, no logos, no watermark.
+
+End your reply with only: DONE <files> or FAILED <reason>.

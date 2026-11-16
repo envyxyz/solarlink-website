@@ -1,0 +1,637 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SolarLink hero mock</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mona+Sans:ital,wdth,wght@0,75..125,200..900;1,75..125,200..900&display=swap" rel="stylesheet">
+<style>
+:root {
+  /* colour */
+  --ground: #F6F6F2; --surface: #FDFDFB; --sunken: #EEEFE9;
+  --ink: #0B0F0A; --ink-2: #565D53; --ink-3: #7C8378;
+  --line: rgb(11 15 10 / 0.08);
+  --lime: #7ED321; --lime-press: #6AC014; --lime-wash: #E8F7D3;
+  --night: #0B0F0A; --night-surface: #151A13; --night-raised: #1E241B;
+  --night-ink: #F2F4EE; --night-ink-2: #A6AD9F; --night-line: rgb(242 244 238 / 0.10);
+  /* shape */
+  --r-stage: clamp(1.5rem, 3vw, 2.5rem); --r-card: 1.75rem; --r-tile: 1.25rem; --r-input: 1rem; --r-pill: 999px;
+  /* depth */
+  --float: 0 1px 2px rgb(11 15 10 / 0.05), 0 4px 8px rgb(11 15 10 / 0.05), 0 12px 24px rgb(11 15 10 / 0.06), 0 32px 48px rgb(11 15 10 / 0.05);
+  --glass-bg: rgb(253 253 251 / 0.62);
+  --glass-bg-hi: rgb(253 253 251 / 0.74);
+  --glass-shadow: inset 0 1px 0 rgb(255 255 255 / 0.7), var(--float);
+  --glass-filter: blur(20px) saturate(1.6);
+  /* motion */
+  --dur-fast: 150ms; --dur: 250ms; --dur-slow: 650ms;
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.45, 0, 0.2, 1);
+  --spring-snappy: ease-out;  /* replaced by JS with sampled linear() */
+  --spring-bubbly: ease-out;
+  --spring-soft: ease-out;
+  /* type */
+  --font: "Mona Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --fs-display: clamp(2.75rem, 1.55rem + 4.8vw, 5.5rem);
+  --fs-h2: clamp(2rem, 1.4rem + 2.4vw, 3.5rem);
+  --fs-h3: clamp(1.375rem, 1.2rem + 0.7vw, 1.75rem);
+  --fs-title: 1.125rem;
+  --fs-lead: clamp(1.125rem, 1.05rem + 0.3vw, 1.3125rem);
+  --fs-body: 1.0625rem;
+  --fs-small: 0.9375rem;
+  --fs-caption: 0.8125rem;
+  --fs-figure: clamp(2.25rem, 1.6rem + 2.6vw, 4rem);
+  --fs-control: 0.9375rem;
+  /* space and layout */
+  --gutter: clamp(1rem, 4vw, 2.5rem);
+  --container: 82.5rem;
+}
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--ground); color: var(--ink);
+  font-family: var(--font); font-size: var(--fs-body); line-height: 1.55;
+  font-variation-settings: "wdth" 100; -webkit-font-smoothing: antialiased;
+}
+h1, p { margin: 0; }
+a { color: inherit; text-decoration: none; }
+ul { margin: 0; padding: 0; list-style: none; }
+button, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+img { display: block; }
+
+/* type tokens */
+.t-display { font-size: var(--fs-display); font-variation-settings: "wdth" 125; font-weight: 600; line-height: 1.02; letter-spacing: -0.03em; text-wrap: balance; }
+.t-title   { font-size: var(--fs-title); font-variation-settings: "wdth" 105; font-weight: 600; line-height: 1.3; letter-spacing: -0.01em; }
+.t-lead    { font-size: var(--fs-lead); font-variation-settings: "wdth" 100; font-weight: 400; line-height: 1.5; text-wrap: pretty; }
+.t-small   { font-size: var(--fs-small); font-variation-settings: "wdth" 100; font-weight: 450; line-height: 1.45; }
+.t-caption { font-size: var(--fs-caption); font-variation-settings: "wdth" 100; font-weight: 500; line-height: 1.4; letter-spacing: 0.01em; }
+.t-figure  { font-size: var(--fs-figure); font-variation-settings: "wdth" 118; font-weight: 600; line-height: 1; letter-spacing: -0.03em; }
+.t-control { font-size: var(--fs-control); font-variation-settings: "wdth" 105; font-weight: 600; line-height: 1; }
+.num { font-variant-numeric: tabular-nums; }
+.t-figure.num, .stat-v.num { font-variant-numeric: normal; } /* Mona Sans tabular zero is dotted; figures keep the plain zero */
+
+/* focus, press */
+:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+.press { transition: transform 300ms var(--spring-snappy), translate 300ms var(--spring-snappy), background-color var(--dur-fast) var(--ease-out); }
+.press:active { transform: scale(0.97); }
+
+/* buttons */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem;
+  height: 2.75rem; padding: 0 1.25rem; border: 0; border-radius: var(--r-pill);
+  background: var(--sunken); color: var(--ink); white-space: nowrap;
+}
+.btn-primary { background: var(--lime); color: var(--ink); }
+.btn-primary:hover { background: var(--lime-press); }
+.btn-lg { height: 3.25rem; }
+.icon-btn {
+  display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; flex: none;
+  border: 0; border-radius: 50%; background: var(--sunken); color: var(--ink);
+}
+.icon-btn:hover { background: var(--lime-wash); }
+.icon-btn.dark { background: var(--ink); color: var(--night-ink); }
+.icon-btn.dark:hover { background: #20281d; }
+.icon-btn.lg { width: 3.25rem; height: 3.25rem; }
+svg.wa-ic { fill: currentColor; stroke: none; width: 1.5rem; height: 1.5rem; }
+svg.ic { width: 1.25rem; height: 1.25rem; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+
+/* glass */
+.glass { background: var(--glass-bg); backdrop-filter: var(--glass-filter); -webkit-backdrop-filter: var(--glass-filter); box-shadow: var(--glass-shadow); }
+@supports not ((backdrop-filter: blur(1px)) or (-webkit-backdrop-filter: blur(1px))) {
+  :root { --glass-bg: var(--surface); --glass-bg-hi: var(--surface); --glass-filter: none; }
+}
+@media (prefers-reduced-transparency: reduce) {
+  :root { --glass-bg: var(--surface); --glass-bg-hi: var(--surface); --glass-filter: none; }
+}
+
+/* nav */
+.nav {
+  position: fixed; z-index: 50; top: 1.5rem; left: 50%;
+  width: min(100% - 2 * var(--gutter), calc(var(--container) - 2rem));
+  translate: -50% 0;
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 1.25rem; border-radius: var(--r-pill);
+  transition: transform var(--dur) var(--ease-out);
+  transform-origin: 50% 0;
+}
+.nav.is-small { transform: scale(0.97); }
+.brand { font-size: 1.25rem; font-variation-settings: "wdth" 122; font-weight: 700; letter-spacing: -0.02em; line-height: 1; padding: 0.5rem 0; border-radius: var(--r-pill); }
+.nav-links { display: none; gap: 0.25rem; }
+.lbl-long { display: none; }
+@media (min-width: 40rem) { .lbl-long { display: inline; } .lbl-short { display: none; } }
+.nav-links a { display: inline-flex; align-items: center; height: 2.75rem; padding: 0 1rem; border-radius: var(--r-pill); transition: background-color var(--dur-fast) var(--ease-out); }
+.nav-links a:hover { background: rgb(11 15 10 / 0.07); }
+.nav-actions { display: flex; align-items: center; gap: 0.5rem; }
+.nav .menu-btn { background: rgb(11 15 10 / 0.07); }
+.sheet {
+  position: fixed; z-index: 49; top: 5.25rem; left: var(--gutter); right: var(--gutter);
+  background: var(--surface); border-radius: var(--r-card); box-shadow: var(--float); padding: 0.5rem;
+  display: none; flex-direction: column;
+}
+.sheet.open { display: flex; }
+.sheet a { padding: 0.875rem 1rem; border-radius: var(--r-tile); }
+.sheet a:hover { background: var(--sunken); }
+@media (min-width: 64rem) {
+  .nav-links { display: flex; }
+  .menu-btn { display: none; }
+  .sheet { display: none !important; }
+}
+
+/* hero */
+.hero { position: relative; width: min(100% - 2 * var(--gutter), var(--container)); margin: 0 auto; padding-top: 5.5rem; }
+.copy { padding: 0 0.25rem 1.25rem; }
+.copy h1 { max-width: 11ch; }
+.copy .lead { margin-top: 1rem; max-width: 29ch; color: var(--ink); }
+.stage { position: relative; overflow: hidden; border-radius: var(--r-stage); background: #e9dfc9; aspect-ratio: 4 / 5; isolation: isolate; }
+.art { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
+.art img { position: absolute; inset: 0; width: 100%; height: 100%; user-select: none; -webkit-user-drag: none; }
+.roof { position: absolute; inset: 0; pointer-events: none; }
+.grid { position: absolute; left: 0; top: 0; transform-origin: 0 0; }
+.slot, .panel { position: absolute; width: 100px; height: 200px; }
+.slot { display: none; border: 3px dashed rgb(255 0 200 / 0.9); }
+.panel {
+  background: #101821 url("../img/panel-top.jpg") center / 100% 100% no-repeat;
+  border-radius: 3px; opacity: 0; transform-origin: 50% 50%; will-change: transform, opacity;
+  box-shadow: inset 0 4px 0 rgb(255 255 255 / 0.22), 0 0 0 2px rgb(8 12 16 / 0.7), 14px 22px 22px -8px rgb(8 12 16 / 0.55);
+}
+.panel.on { opacity: 1; }
+.debug .slot { display: block; }
+.debug .grid { outline: 6px solid #ff00c8; }
+.quad { position: absolute; inset: 0; width: 100%; height: 100%; display: none; }
+.debug .quad { display: block; }
+.haze { position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(58% 55% at 12% 6%, rgb(255 246 230 / 0.55), rgb(255 246 230 / 0) 100%); }
+.linkline { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; overflow: visible; display: none; z-index: 6; }
+.linkline path { fill: none; stroke: var(--lime); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; filter: drop-shadow(0 1px 1px rgb(11 15 10 / 0.3)); }
+.linkline circle { fill: var(--lime); }
+
+/* dock: sizing + result */
+.dock {
+  position: relative; z-index: 4; margin: -5.5rem 0 0; background: var(--surface); border-radius: var(--r-card);
+  box-shadow: var(--float); padding: 1.25rem; display: flex; flex-direction: column; gap: 1rem;
+}
+.result { order: 1; }
+.sizing { order: 2; }
+.result-head { display: none; }
+.stats { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.5rem; }
+.dock .glass { background: none; box-shadow: none; backdrop-filter: none; -webkit-backdrop-filter: none; }
+.stat { background: var(--sunken); border-radius: var(--r-tile); padding: 0.75rem 0.25rem; text-align: center; }
+.stat-v { display: block; font-size: clamp(1.0625rem, 4.6vw, 1.375rem); font-variation-settings: "wdth" 112; font-weight: 600; line-height: 1.1; letter-spacing: -0.015em; transform-origin: 50% 50%; }
+.stat-l { display: block; color: var(--ink-2); margin-top: 0.25rem; white-space: nowrap; }
+.assume { color: var(--ink-2); margin-top: 0.75rem; }
+.roofnote { margin-top: 0.75rem; padding: 0.75rem 1rem; border-radius: var(--r-input); background: var(--lime-wash); }
+.roofnote[hidden] { display: none; }
+
+.row { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem; }
+.seg { position: relative; display: inline-grid; grid-template-columns: 1fr 1fr; padding: 0.25rem; border-radius: var(--r-pill); background: var(--sunken); }
+.seg input { position: absolute; opacity: 0; pointer-events: none; }
+.seg label { position: relative; z-index: 1; display: grid; place-items: center; min-width: 3.5rem; height: 2.25rem; padding: 0 0.875rem; border-radius: var(--r-pill); cursor: pointer; color: var(--ink-2); transition: color var(--dur-fast) var(--ease-out); }
+.seg label:hover { color: var(--ink); }
+.seg input:checked + label { color: var(--ink); }
+.seg input:focus-visible + label { outline: 2px solid var(--ink); outline-offset: 2px; }
+.seg .pill { position: absolute; z-index: 0; top: 0.25rem; bottom: 0.25rem; left: 0.25rem; width: calc(50% - 0.25rem); border-radius: var(--r-pill); background: var(--surface); box-shadow: 0 1px 2px rgb(11 15 10 / 0.12); transition: transform 350ms var(--spring-snappy); }
+.seg[data-mode="units"] .pill { transform: translateX(100%); }
+
+.value { margin: 0.75rem 0 0.25rem; transform-origin: 0 50%; }
+.slider-wrap { position: relative; height: 3.25rem; display: flex; align-items: center; }
+input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 3.25rem; margin: 0; background: transparent; cursor: pointer; --pct: 30%; }
+input[type="range"]::-webkit-slider-runnable-track { height: 0.75rem; border-radius: var(--r-pill); background: linear-gradient(to right, var(--lime) var(--pct), rgb(11 15 10 / 0.14) var(--pct)); }
+input[type="range"]::-moz-range-track { height: 0.75rem; border-radius: var(--r-pill); background: rgb(11 15 10 / 0.14); }
+input[type="range"]::-moz-range-progress { height: 0.75rem; border-radius: var(--r-pill); background: var(--lime); }
+input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; width: 1.75rem; height: 1.75rem; margin-top: -0.5rem; border-radius: 50%; border: 0; background: var(--surface); box-shadow: var(--float); transition: transform 300ms var(--spring-snappy); }
+input[type="range"]::-moz-range-thumb { width: 1.75rem; height: 1.75rem; border-radius: 50%; border: 0; background: var(--surface); box-shadow: var(--float); }
+input[type="range"]:hover::-webkit-slider-thumb { transform: scale(1.08); }
+input[type="range"]:active::-webkit-slider-thumb { transform: scale(0.97); }
+input[type="range"]:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: var(--r-pill); }
+.cta { display: flex; gap: 0.5rem; margin-top: 0.5rem; }
+.cta .btn { flex: 1; min-width: 0; }
+.cta-note { color: var(--ink-2); margin-top: 0.75rem; }
+.sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+
+@media (max-width: 39.999rem) {
+  .hero { padding-top: 6.5rem; }
+  .copy { padding: 0 0.25rem 0.75rem; }
+  .copy .lead { margin-top: 0.75rem; max-width: none; font-size: 0.9375rem; line-height: 1.45; }
+  .stage { aspect-ratio: 1 / 1; }
+  .dock { margin-top: -7rem; }
+  .assume { display: none; }
+}
+@media (min-width: 40rem) {
+  .stage { aspect-ratio: 16 / 10; }
+}
+@media (min-width: 48rem) {
+  .dock { margin-inline: 1.5rem; flex-direction: row; align-items: flex-start; gap: 1.5rem; }
+  .sizing { order: 1; flex: 1.2; }
+  .result { order: 2; flex: 1; }
+  .stats { grid-template-columns: 1fr; }
+  .stat { display: flex; justify-content: space-between; align-items: baseline; text-align: left; padding: 0.75rem 1rem; }
+  .stat-l { margin: 0; }
+}
+
+/* desktop */
+@media (min-width: 64rem) {
+  .hero { margin-top: 0.75rem; padding-top: 0; height: min(92svh, 53.75rem); }
+  .stage { position: absolute; inset: 0; aspect-ratio: auto; }
+  .copy { position: absolute; z-index: 5; top: 6.5rem; left: 3.5rem; padding: 0; }
+  .dock { display: contents; }
+  .dock .glass { background: var(--glass-bg); box-shadow: var(--glass-shadow); backdrop-filter: var(--glass-filter); -webkit-backdrop-filter: var(--glass-filter); }
+  .sizing, .result { position: absolute; z-index: 5; bottom: 3rem; border-radius: var(--r-card); padding: 1.5rem; margin: 0; flex: none; }
+  .dock .sizing.glass { background: var(--glass-bg-hi); }
+  .sizing { left: 3rem; width: 25rem; order: 0; }
+  .result { right: 3rem; width: 22.5rem; order: 0; }
+  .result-head { display: block; margin-bottom: 0.75rem; }
+  .stats { grid-template-columns: 1fr; gap: 0; }
+  .stat { background: transparent; border-radius: 0; padding: 0.625rem 0; border-top: 1px solid var(--line); }
+  .stat:first-child { border-top: 0; }
+  .stat-v { font-size: 1.5rem; }
+  .linkline { display: block; }
+}
+@media (min-width: 64rem) and (max-height: 50rem) {
+  .copy { top: 5.25rem; }
+  .copy .lead { max-width: 36ch; margin-top: 0.75rem; }
+  .sizing, .result { bottom: 1.5rem; padding: 1.25rem; }
+  .sizing .value { font-size: 2.75rem; margin: 0.5rem 0 0; }
+  .cta { margin-top: 0; }
+  .cta-note { margin-top: 0.5rem; }
+}
+
+/* brand belt */
+.belt { width: min(100% - 2 * var(--gutter), var(--container)); margin: clamp(2.5rem, 5vw, 4rem) auto clamp(4.5rem, 9vw, 9rem); display: flex; flex-direction: column; gap: 1.25rem; }
+.belt-label { color: var(--ink-2); flex: none; }
+.marquee { position: relative; overflow: hidden; flex: 1; min-width: 0; padding: 1rem 0;
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent);
+  mask-image: linear-gradient(to right, transparent, #000 12%, #000 88%, transparent); }
+.track { display: flex; width: max-content; animation: slide 36s linear infinite; }
+.marquee:hover .track, .marquee:focus-within .track { animation-play-state: paused; }
+.group { display: flex; flex: none; align-items: center; }
+.brand-item { flex: none; padding: 0 clamp(1.5rem, 3.5vw, 3rem); font-size: clamp(1.375rem, 1.1rem + 0.9vw, 1.875rem); line-height: 1; letter-spacing: -0.02em; white-space: nowrap; color: var(--ink-3); opacity: 0.8; filter: grayscale(1);
+  transition: transform 700ms var(--spring-bubbly), color var(--dur-fast) var(--ease-out), opacity var(--dur-fast) var(--ease-out); }
+.brand-item:hover { color: var(--ink); opacity: 1; transform: scale(1.1); }
+@keyframes slide { to { transform: translateX(-50%); } }
+@media (min-width: 48rem) {
+  .belt { flex-direction: row; align-items: center; gap: 2rem; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track { animation: none; }
+  .marquee { overflow-x: auto; }
+  .press, .seg .pill, .brand-item, input[type="range"]::-webkit-slider-thumb { transition-duration: 150ms !important; transition-timing-function: linear !important; }
+  .brand-item:hover { transform: none; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <nav class="nav glass" id="nav" aria-label="Main">
+    <a class="brand press" href="#" aria-label="SolarLink home">SolarLink</a>
+    <div class="nav-links t-control">
+      <a href="#">Solar for homes</a>
+      <a href="#">Business</a>
+      <a href="#">Products</a>
+      <a href="#">Projects</a>
+      <a href="#">Outlets</a>
+    </div>
+    <div class="nav-actions">
+      <a class="btn btn-primary t-control press magnetic" href="#sizing" aria-label="Get a free quote"><span class="lbl-long" aria-hidden="true">Get a free quote</span><span class="lbl-short" aria-hidden="true">Free quote</span></a>
+      <button class="icon-btn menu-btn press" id="menuBtn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="sheet">
+        <svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="sheet t-control" id="sheet">
+    <a href="#">Solar for homes</a><a href="#">Business</a><a href="#">Products</a><a href="#">Projects</a><a href="#">Outlets</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="hero">
+  <div class="copy">
+    <h1 class="t-display">Solar sized to your bill.</h1>
+    <p class="lead t-lead">Tell us what you pay each month. See the system that covers it, then send it to our team in one tap.</p>
+  </div>
+
+  <div class="stage" id="stage">
+    <div class="art" id="art">
+      <img id="heroImg" src="../img/hero.jpg" width="1376" height="768" alt="Render of a flat-roofed house with solar panels on its roof" fetchpriority="high">
+      <div class="roof"><div class="grid" id="grid"></div></div>
+      <svg class="quad" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><polygon id="quadPoly" fill="rgb(255 0 200 / 0.15)" stroke="#ff00c8" stroke-width="0.3" vector-effect="non-scaling-stroke"/></svg>
+    </div>
+    <div class="haze"></div>
+  </div>
+
+  <svg class="linkline" id="linkline" aria-hidden="true"><path id="linkpath" d=""/><circle id="linkdot" r="3" opacity="0"/></svg>
+
+  <div class="dock" id="sizing">
+    <section class="result glass" aria-label="Your system">
+      <p class="result-head t-title">Your system</p>
+      <div class="stats">
+        <div class="stat"><span class="stat-v num" id="kw">0 kW</span><span class="stat-l t-caption">System size</span></div>
+        <div class="stat"><span class="stat-v num" id="panelsOut">0</span><span class="stat-l t-caption">Panels</span></div>
+        <div class="stat"><span class="stat-v num" id="gen">0</span><span class="stat-l t-caption">Units a month</span></div>
+      </div>
+      <p class="roofnote t-small" id="roofnote" hidden>Larger than this roof: we will design a ground or multi-roof system.</p>
+      <p class="assume t-caption" id="assume"></p>
+    </section>
+
+    <section class="sizing glass" aria-label="Size your system">
+      <div class="row">
+        <label class="t-small" for="bill" id="billLabel">Your monthly bill</label>
+        <div class="seg" id="seg" data-mode="rs" role="radiogroup" aria-label="Bill unit">
+          <span class="pill" aria-hidden="true"></span>
+          <input type="radio" name="mode" id="m-rs" value="rs" checked><label class="t-control" for="m-rs">Rs</label>
+          <input type="radio" name="mode" id="m-units" value="units"><label class="t-control" for="m-units">Units</label>
+        </div>
+      </div>
+      <p class="value t-figure num" id="value" aria-live="off">Rs&nbsp;45,000</p>
+      <div class="slider-wrap"><input type="range" id="bill" min="5000" max="300000" step="1000" value="45000"></div>
+      <div class="cta">
+        <a class="btn btn-primary btn-lg t-control press magnetic" id="wa" href="https://wa.me/923218425777" target="_blank" rel="noopener">Send this system on WhatsApp</a>
+        <a class="icon-btn dark lg press" id="wa2" href="https://wa.me/923218425777" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+          <svg class="ic wa-ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.3-.15-1.263-.465-2.403-1.485-.888-.795-1.484-1.77-1.66-2.07-.174-.3-.019-.465.13-.615.136-.135.301-.345.451-.523.146-.181.194-.301.297-.496.1-.21.049-.375-.025-.524-.075-.15-.672-1.62-.922-2.206-.24-.584-.487-.51-.672-.51-.172-.015-.371-.015-.571-.015-.2 0-.523.074-.797.359-.273.3-1.045 1.02-1.045 2.475s1.07 2.865 1.219 3.075c.149.18 2.095 3.195 5.076 4.483.709.3 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
+        </a>
+      </div>
+      <p class="cta-note t-caption">Estimate only. A free site survey confirms the size.</p>
+    </section>
+  </div>
+</section>
+
+<section class="belt" aria-label="Equipment we install">
+  <p class="belt-label t-small">Equipment we install</p>
+  <div class="marquee" id="marquee">
+    <div class="track" id="track"></div>
+  </div>
+</section>
+</main>
+
+<script>
+"use strict";
+/* ---------- config ---------- */
+// UNCONFIRMED PLACEHOLDERS: every constant here is a starting value from the spec, not confirmed by the client.
+const SIZING = {
+  confirmed: false,
+  ratePerUnit: 50,
+  sunHours: 5,
+  performanceRatio: 0.78,
+  panelWatts: 580,
+  rs:    { min: 5000, max: 300000, step: 1000, start: 45000 },
+  units: { min: 100,  max: 5000,   step: 50 },
+  message: (bill, kw, panels) =>
+    `Assalam o Alaikum SolarLink. My monthly bill is about ${bill}. Your website sized a system of ${kw} (${panels}). Please arrange a free site survey.`,
+  whatsapp: "https://wa.me/923218425777"
+};
+// Roof quad inside the parapet, in percent of the image: left corner, back corner, right corner, front corner.
+const ROOF = { tl: [46.8, 25.2], tr: [65.6, 16.2], br: [94.4, 20.9], bl: [80.0, 37.6] };
+const IMG = { w: 1376, h: 768 };
+// Flat roof plane in plane units, and panel slots (portrait, 1:2).
+const PLANE = { w: 1000, h: 1180, pw: 100, ph: 200, gap: 10, cols: 8, rows: 5 };
+const BRANDS = [
+  ["Canadian Solar", 110, 650], ["Growatt", 125, 800], ["Fronus", 100, 700],
+  ["LONGi", 125, 800], ["Huawei", 90, 600], ["GoodWe", 105, 700]
+];
+
+const $ = id => document.getElementById(id);
+const params = new URLSearchParams(location.search);
+const reduced = matchMedia("(prefers-reduced-motion: reduce)").matches;
+if (params.get("debug") === "1") document.body.classList.add("debug");
+
+/* ---------- springs ---------- */
+function spring(k, c, m = 1) {
+  const w0 = Math.sqrt(k / m), z = c / (2 * Math.sqrt(k * m)), wd = w0 * Math.sqrt(1 - z * z);
+  return t => z < 1 ? 1 - Math.exp(-z * w0 * t) * (Math.cos(wd * t) + (z * w0 / wd) * Math.sin(wd * t)) : 1 - Math.exp(-w0 * t) * (1 + w0 * t);
+}
+function sample(fn, dur, n) { const a = []; for (let i = 0; i <= n; i++) a.push(fn(i / n * dur)); a[n] = 1; return a; }
+const S = {
+  snappy: sample(spring(400, 30), 0.5, 40),
+  bubbly: sample(spring(300, 18), 0.8, 56),
+  soft:   sample(spring(160, 24, 1.2), 1.0, 56)
+};
+const toLinear = a => "linear(" + a.map(v => +v.toFixed(4)).join(", ") + ")";
+if (!reduced) {
+  const r = document.documentElement.style;
+  r.setProperty("--spring-snappy", toLinear(S.snappy));
+  r.setProperty("--spring-bubbly", toLinear(S.bubbly));
+  r.setProperty("--spring-soft", toLinear(S.soft));
+} else {
+  const r = document.documentElement.style;
+  r.setProperty("--spring-snappy", "linear"); r.setProperty("--spring-bubbly", "linear"); r.setProperty("--spring-soft", "linear");
+}
+function popFrames(from = 0.8) {
+  return S.bubbly.map((p, i, a) => ({ transform: `scale(${from + (1 - from) * p})`, opacity: Math.min(1, p * 3 + 0.02), offset: i / (a.length - 1) }));
+}
+function pop(el, from = 0.8) {
+  if (reduced) return el.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, easing: "linear" });
+  return el.animate(popFrames(from), { duration: 800, easing: "linear" });
+}
+
+/* ---------- homography ---------- */
+// Solve the 3x3 projective map taking src[i] -> dst[i] (4 points), return CSS matrix3d string.
+function homography(src, dst) {
+  const A = [], b = [];
+  for (let i = 0; i < 4; i++) {
+    const [x, y] = src[i], [u, v] = dst[i];
+    A.push([x, y, 1, 0, 0, 0, -x * u, -y * u]); b.push(u);
+    A.push([0, 0, 0, x, y, 1, -x * v, -y * v]); b.push(v);
+  }
+  for (let i = 0; i < 8; i++) {                       // gaussian elimination with pivoting
+    let p = i; for (let r = i + 1; r < 8; r++) if (Math.abs(A[r][i]) > Math.abs(A[p][i])) p = r;
+    [A[i], A[p]] = [A[p], A[i]]; [b[i], b[p]] = [b[p], b[i]];
+    for (let r = i + 1; r < 8; r++) {
+      const f = A[r][i] / A[i][i];
+      for (let c = i; c < 8; c++) A[r][c] -= f * A[i][c];
+      b[r] -= f * b[i];
+    }
+  }
+  const h = new Array(8);
+  for (let i = 7; i >= 0; i--) { let s = b[i]; for (let c = i + 1; c < 8; c++) s -= A[i][c] * h[c]; h[i] = s / A[i][i]; }
+  const [a, bb, c, d, e, f, g, hh] = h;
+  return `matrix3d(${a},${d},0,${g}, ${bb},${e},0,${hh}, 0,0,1,0, ${c},${f},0,1)`;
+}
+
+/* ---------- layout: image (cover) + roof grid share one box ---------- */
+const stage = $("stage"), art = $("art"), grid = $("grid");
+function layoutArt() {
+  const W = stage.clientWidth, H = stage.clientHeight;
+  const wide = innerWidth >= 1024;
+  const pos = wide ? [1, 0.5] : innerWidth >= 640 ? [0.85, 0.4] : [0.78, 0.4];
+  const s = Math.max(W / IMG.w, H / IMG.h), aw = IMG.w * s, ah = IMG.h * s;
+  art.style.width = aw + "px"; art.style.height = ah + "px";
+  art.style.left = (W - aw) * pos[0] + "px"; art.style.top = (H - ah) * pos[1] + "px";
+  const pts = ["tl", "tr", "br", "bl"].map(k => [ROOF[k][0] / 100 * aw, ROOF[k][1] / 100 * ah]);
+  grid.style.width = PLANE.w + "px"; grid.style.height = PLANE.h + "px";
+  grid.style.transform = homography([[0, 0], [PLANE.w, 0], [PLANE.w, PLANE.h], [0, PLANE.h]], pts);
+  $("quadPoly").setAttribute("points", ["tl", "tr", "br", "bl"].map(k => ROOF[k].join(",")).join(" "));
+  drawLink();
+}
+
+/* ---------- panels ---------- */
+const panels = [];
+(function buildPanels() {
+  const totalW = PLANE.cols * PLANE.pw + (PLANE.cols - 1) * PLANE.gap;
+  const totalH = PLANE.rows * PLANE.ph + (PLANE.rows - 1) * PLANE.gap;
+  const ox = (PLANE.w - totalW) / 2, oy = (PLANE.h - totalH) / 2;
+  for (let r = 0; r < PLANE.rows; r++) for (let c = 0; c < PLANE.cols; c++) {
+    const x = ox + c * (PLANE.pw + PLANE.gap), y = oy + (PLANE.rows - 1 - r) * (PLANE.ph + PLANE.gap); // r = 0 is the row at the front corner
+    const slot = document.createElement("div"); slot.className = "slot"; slot.style.left = x + "px"; slot.style.top = y + "px";
+    const p = document.createElement("div"); p.className = "panel"; p.style.left = x + "px"; p.style.top = y + "px";
+    grid.append(slot, p); panels.push(p);
+  }
+})();
+const MAX_PANELS = panels.length;
+let shown = 0, target = 0, ticker = null;
+function tick() {
+  if (shown < target) {
+    const p = panels[shown++]; p.getAnimations().forEach(a => a.cancel()); p.classList.add("on"); pop(p);
+  } else if (shown > target) {
+    const p = panels[--shown];
+    const a = p.animate([{ transform: "scale(1)", opacity: 1 }, { transform: "scale(0.8)", opacity: 0 }], { duration: 150, easing: "ease-in" });
+    a.onfinish = () => { if (panels.indexOf(p) >= shown) p.classList.remove("on"); };
+  } else { clearInterval(ticker); ticker = null; }
+}
+function setPanels(n) { target = Math.min(n, MAX_PANELS); if (!ticker) ticker = setInterval(tick, 30); }
+
+/* ---------- sizing ---------- */
+const fmt = n => n.toLocaleString("en-US");
+const NB = " ";
+let mode = "rs";
+const input = $("bill");
+function compute(v) {
+  const units = mode === "rs" ? v / SIZING.ratePerUnit : v;
+  const base = 30 * SIZING.sunHours * SIZING.performanceRatio;
+  const kw = Math.ceil(units / base * 2) / 2;
+  const n = Math.ceil(kw * 1000 / SIZING.panelWatts);
+  const gen = Math.round(kw * base / 10) * 10;
+  return { kw, n, gen };
+}
+const lastText = {};
+function setText(id, text) {
+  const el = $(id);
+  if (lastText[id] === text) return;
+  const first = lastText[id] === undefined; lastText[id] = text; el.textContent = text;
+  if (!first) pop(el, 0.8);
+}
+function update() {
+  const v = +input.value, cfg = SIZING[mode];
+  input.style.setProperty("--pct", ((v - cfg.min) / (cfg.max - cfg.min) * 100) + "%");
+  const money = "Rs" + NB + fmt(v), unitsTxt = fmt(v) + NB + "units";
+  const shownVal = mode === "rs" ? money : unitsTxt;
+  $("value").textContent = shownVal;
+  input.setAttribute("aria-valuetext", (mode === "rs" ? "Rupees " + fmt(v) : fmt(v) + " units") + " a month");
+  const { kw, n, gen } = compute(v);
+  const kwTxt = fmt(kw) + NB + "kW", pnTxt = fmt(n), genTxt = fmt(gen);
+  setText("kw", kwTxt); setText("panelsOut", pnTxt); setText("gen", genTxt);
+  $("roofnote").hidden = n <= MAX_PANELS;
+  setPanels(n);
+  const msg = SIZING.message(mode === "rs" ? money : unitsTxt, kwTxt, pnTxt + NB + (n === 1 ? "panel" : "panels"));
+  const href = SIZING.whatsapp + "?text=" + encodeURIComponent(msg);
+  $("wa").href = href; $("wa2").href = href;
+}
+$("assume").textContent = `Placeholder assumptions: Rs${NB}${SIZING.ratePerUnit} a unit, ${SIZING.sunHours} sun hours a day, ${SIZING.panelWatts}${NB}W panels. Not yet confirmed.`;
+function applyMode(m, keep) {
+  const prevUnits = mode === "rs" ? +input.value / SIZING.ratePerUnit : +input.value;
+  mode = m; const cfg = SIZING[m];
+  $("seg").dataset.mode = m;
+  input.min = cfg.min; input.max = cfg.max; input.step = cfg.step;
+  if (!keep) {
+    const raw = m === "rs" ? prevUnits * SIZING.ratePerUnit : prevUnits;
+    const snapped = Math.round(raw / cfg.step) * cfg.step;
+    input.value = Math.min(cfg.max, Math.max(cfg.min, snapped));
+  }
+  $("billLabel").textContent = "Your monthly bill";
+  update();
+}
+input.addEventListener("input", update);
+document.querySelectorAll('input[name="mode"]').forEach(r => r.addEventListener("change", e => applyMode(e.target.value)));
+(function init() {
+  const b = parseFloat(params.get("bill"));
+  const cfg = SIZING.rs;
+  input.min = cfg.min; input.max = cfg.max; input.step = cfg.step;
+  input.value = Number.isFinite(b) ? Math.min(cfg.max, Math.max(cfg.min, Math.round(b / cfg.step) * cfg.step)) : cfg.start;
+})();
+
+/* ---------- link line ---------- */
+let linkDrawn = false, linkReady = false;
+function drawLink() {
+  const hero = $("hero"), result = document.querySelector(".result"), path = $("linkpath");
+  if (innerWidth < 1024 || !linkReady) { return; }
+  const hr = hero.getBoundingClientRect(), ar = art.getBoundingClientRect(), rr = result.getBoundingClientRect();
+  const sx = ar.left - hr.left + ROOF.bl[0] / 100 * ar.width, sy = ar.top - hr.top + ROOF.bl[1] / 100 * ar.height;
+  const ey = rr.top - hr.top;
+  const R = 16, m = Math.min(32, rr.width / 4);
+  const ex = Math.min(rr.right - hr.left - m, Math.max(rr.left - hr.left + m, sx));
+  if (Math.abs(ex - sx) < 1) {
+    path.setAttribute("d", "M " + sx + " " + sy + " V " + ey);
+  } else {
+    const dir = ex > sx ? 1 : -1, yTurn = sy + (ey - sy) * 0.4;
+    path.setAttribute("d", "M " + sx + " " + sy + " V " + (yTurn - R) + " Q " + sx + " " + yTurn + " " + (sx + dir * R) + " " + yTurn + " H " + (ex - dir * R) + " Q " + ex + " " + yTurn + " " + ex + " " + (yTurn + R) + " V " + ey);
+  }
+  const dot = $("linkdot"); dot.setAttribute("cx", ex); dot.setAttribute("cy", ey);
+  if (!linkDrawn) {
+    linkDrawn = true;
+    const len = path.getTotalLength();
+    path.style.strokeDasharray = len;
+    const dot2 = $("linkdot");
+    dot2.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, delay: reduced ? 0 : 1000, fill: "forwards" });
+    if (reduced) { path.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150 }); path.style.strokeDashoffset = 0; }
+    else {
+      path.style.strokeDashoffset = len;
+      path.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], { duration: 1100, easing: "cubic-bezier(0.16, 1, 0.3, 1)", fill: "forwards" });
+    }
+  } else {
+    path.style.strokeDasharray = "none"; path.style.strokeDashoffset = 0;
+    path.getAnimations().forEach(a => a.cancel());
+    $("linkdot").style.opacity = 1;
+  }
+}
+
+/* ---------- brand belt ---------- */
+(function belt() {
+  const track = $("track");
+  for (let g = 0; g < 4; g++) {
+    const ul = document.createElement("ul"); ul.className = "group";
+    if (g > 0) ul.setAttribute("aria-hidden", "true");
+    BRANDS.forEach(([n, wd, wt]) => {
+      const li = document.createElement("li"); li.className = "brand-item"; li.textContent = n;
+      li.style.fontVariationSettings = `"wdth" ${wd}`; li.style.fontWeight = wt;
+      ul.append(li);
+    });
+    track.append(ul);
+  }
+  // two copies make one loop; four groups so wide screens never show a gap
+  track.style.animationDuration = "60s";
+  const style = document.createElement("style");
+  style.textContent = "@keyframes slide { to { transform: translateX(-50%); } }";
+  document.head.append(style);
+})();
+
+/* ---------- nav, menu, magnetic ---------- */
+addEventListener("scroll", () => $("nav").classList.toggle("is-small", scrollY > 80), { passive: true });
+$("menuBtn").addEventListener("click", e => {
+  const open = $("sheet").classList.toggle("open"); e.currentTarget.setAttribute("aria-expanded", open);
+});
+if (matchMedia("(hover: hover) and (pointer: fine)").matches && !reduced) {
+  document.querySelectorAll(".magnetic").forEach(el => {
+    el.addEventListener("pointermove", e => {
+      const r = el.getBoundingClientRect();
+      const dx = Math.max(-4, Math.min(4, (e.clientX - (r.left + r.width / 2)) / r.width * 8));
+      const dy = Math.max(-4, Math.min(4, (e.clientY - (r.top + r.height / 2)) / r.height * 8));
+      el.style.translate = `${dx}px ${dy}px`;
+    });
+    el.addEventListener("pointerleave", () => { el.style.translate = ""; });
+  });
+}
+
+/* ---------- start ---------- */
+new ResizeObserver(layoutArt).observe(stage);
+addEventListener("resize", layoutArt);
+layoutArt();
+applyMode("rs", true);
+const img = $("heroImg");
+const go = () => setTimeout(() => { linkReady = true; drawLink(); }, 350);
+if (img.complete) go(); else img.addEventListener("load", go);
+(document.fonts && document.fonts.ready || Promise.resolve()).then(() => { layoutArt(); });
+</script>
+</body>
+</html>

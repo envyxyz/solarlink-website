@@ -1,0 +1,10 @@
+Generate 4 images with your image generation tool. Use only built-in tools; no shell commands; do not read local files. The tool saves into its own artifact folder: that is fine, do not try to move them. Name them product_panel, product_inverter, product_battery, closing_dusk.
+
+Images 1 to 3 share this style: photorealistic CGI product render, studio look, one object centred with generous margin on a seamless plain warm light-grey backdrop (colour close to #EEEFE9) that also forms the floor, soft even light from the upper left, one soft contact shadow, square 1:1. No text, no logos, no brand names, no labels, no watermark.
+1. product_panel: one modern monocrystalline solar panel standing upright and turned slightly, three-quarter view, black half-cut cells, thin dark aluminium frame.
+2. product_inverter: one generic wall-mount hybrid solar inverter, white rounded rectangular body with a small dark display strip and a dark lower cable cover, three-quarter view, completely unbranded.
+3. product_battery: one generic wall-mount lithium home battery, tall slim matt white cabinet with a thin vertical light strip, three-quarter view, completely unbranded.
+
+4. closing_dusk: landscape 16:9. Photorealistic architectural CGI render. High three-quarter aerial view of a modern two-storey family house in Lahore, Pakistan, cream plaster with red-brick panels, a large flat roof fully covered with neat rows of dark solar panels, boundary wall, gate, lawn, one tree, a car in the porch. Dusk: deep blue sky with a warm glow on the horizon, warm lights on inside the windows and on the porch, calm and quiet. The house sits in the right 55 percent of the frame; the left is dark soft trees and sky, low in contrast. No people, no text, no logos, no watermark.
+
+End your reply with only: DONE and the full paths of the saved files, or FAILED <reason>.

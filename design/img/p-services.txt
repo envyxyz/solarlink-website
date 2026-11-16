@@ -1,0 +1,10 @@
+Generate 4 images with your image generation tool. Use only built-in tools; no shell commands; do not read local files. The tool saves into its own artifact folder: that is fine, do not try to move them. Name them service_homes, service_business, service_farms, service_netmetering.
+
+Shared style for all four: photorealistic architectural CGI render with the clean, soft, premium look of a high-end product visualisation; early-morning golden light from the left, long soft shadows, gentle haze, natural colours with fresh greens, pale warm sky. Landscape 4:3. No people, no text, no logos, no brand names, no watermark. Set in Punjab, Pakistan.
+
+1. service_homes: close three-quarter aerial view of the flat concrete roof of a modern cream-plaster and red-brick family house in Lahore, with two neat rows of dark monocrystalline solar panels on a raised galvanised steel mounting structure, a low parapet wall, a neem tree beside the house.
+2. service_business: high aerial three-quarter view of a long factory building with a light metal roof covered by a large regular solar array in tidy blocks with walkways, a loading yard with two parked trucks, boundary wall, flat Punjab landscape beyond.
+3. service_farms: a green wheat field in Punjab with a ground-mounted solar array beside a small brick tubewell pump house; clear water pouring from a wide pipe into a concrete channel that runs along the field; a few trees on the horizon.
+4. service_netmetering: close view of a modern grey electricity meter in a weatherproof box mounted on a clean red-brick boundary wall, its small display blank, a conduit running up the wall; softly out of focus behind it, a flat roof with solar panels.
+
+End your reply with only: DONE and the full paths of the saved files, or FAILED <reason>.

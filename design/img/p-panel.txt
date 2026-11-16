@@ -1,0 +1,5 @@
+Generate one image with your image generation tool. Use only built-in tools; no shell commands; do not read local files. Save it as "C:\Users\Ameer Hussain\Desktop\personal\solarlink\website\design\img\panel-top.png".
+
+Brief: exact top-down orthographic view of ONE modern monocrystalline solar panel lying flat, portrait orientation with a 1:2 width-to-height ratio, filling the whole frame edge to edge with no margin. Deep black-blue half-cut cells in a regular grid with very fine silver busbar lines, a thin dark anodised aluminium frame, a soft diagonal sky reflection across the glass. Even soft daylight, no cast shadow, no background visible, no text, no logo, no watermark. Photorealistic CGI product render.
+
+End your reply with only: DONE <file> or FAILED <reason>.

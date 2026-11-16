@@ -1,0 +1,39 @@
+import type { Metadata, Viewport } from "next";
+import { Mona_Sans } from "next/font/google";
+import { business, ui } from "@/content";
+import { MotionProvider } from "@/components/providers/MotionProvider";
+import { siteUrl } from "@/lib/seo";
+import "./globals.css";
+
+// One family. The width axis (wdth 75 to 125) carries the type scale. Next builds the
+// size-adjusted fallback so the swap does not shift layout.
+const mona = Mona_Sans({
+  subsets: ["latin"],
+  axes: ["wdth"],
+  weight: "variable",
+  display: "swap",
+  variable: "--font-mona",
+});
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+  applicationName: business.name.value,
+};
+
+export const viewport: Viewport = { width: "device-width", initialScale: 1 };
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  return (
+    <html lang={business.locale} className={mona.variable}>
+      <body>
+        <a
+          href="#main"
+          className="focus-ring absolute left-4 top-4 z-50 -translate-y-24 rounded-pill bg-ink px-5 py-3 text-control text-night-ink focus:translate-y-0"
+        >
+          {ui.skipToContent}
+        </a>
+        <MotionProvider>{children}</MotionProvider>
+      </body>
+    </html>
+  );
+}

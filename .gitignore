@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# build output
+.next/
+out/
+
+# environment (keep the example)
+.env*
+!.env.example
+
+# Cloudflare
+.wrangler/
+
+# generated image logs
+design/img/*.log
+
+# OS and editor
+.DS_Store
+Thumbs.db
+*.tsbuildinfo
+next-env.d.ts
