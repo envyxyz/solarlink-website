@@ -1,10 +1,10 @@
 // Gzipped size of every script the built index.html loads (script src tags, noModule excluded: modern browsers skip it).
-// Budget: React and Next baseline (empty page, measured 16 Nov 2026) plus 50 KB. Usage: node scripts/js-size.mjs [out/index.html]
+// Budget: React and Next baseline (empty page, measured 16 Nov 2026: 132.0 KB; phase 3c target 152.0 KB) plus 50 KB. Usage: node scripts/js-size.mjs [out/index.html]
 import { readFileSync } from "node:fs";
 import { gzipSync } from "node:zlib";
 import { join } from "node:path";
 
-const BASELINE_KB = 170.6;
+const BASELINE_KB = 132.0;
 const LIMIT_KB = BASELINE_KB + 50;
 const file = process.argv[2] ?? "out/index.html";
 const root = file.replace(/index\.html$/, "");

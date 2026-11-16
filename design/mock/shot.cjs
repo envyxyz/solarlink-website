@@ -1,6 +1,8 @@
 // Mock screenshots. Run from the repo root: node design/mock/shot.cjs [name-prefix]
 // Uses the globally installed Playwright with the installed Chrome (no browser download).
-const { chromium } = require('C:/Users/Ameer Hussain/AppData/Roaming/npm/node_modules/@playwright/cli/node_modules/playwright');
+let chromium;
+try { ({ chromium } = require('playwright')); } catch { ({ chromium } = require('C:/Users/Ameer Hussain/AppData/Roaming/npm/node_modules/@playwright/cli/node_modules/playwright')); }
+const launchOptions = process.env.SHOT_CHROME ? { executablePath: process.env.SHOT_CHROME } : { channel: 'chrome' }; // Linux: SHOT_CHROME=/opt/pw-browsers/chromium
 const path = require('path');
 const url = 'file:///' + path.resolve(__dirname, 'hero.html').split(path.sep).join('/');
 const out = path.resolve(__dirname, 'shots');
@@ -16,7 +18,7 @@ const shots = [
   ['mobile-full', { width: 390, height: 844 }, 2, true, '?bill=90000'],
 ];
 (async () => {
-  const b = await chromium.launch({ channel: 'chrome' });
+  const b = await chromium.launch(launchOptions);
   for (const [name, viewport, deviceScaleFactor, isMobile, q] of shots) {
     const p = await b.newPage({ viewport, deviceScaleFactor, isMobile, hasTouch: isMobile });
     const errs = [];

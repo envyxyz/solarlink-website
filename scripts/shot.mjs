@@ -2,6 +2,8 @@
 // 1280x720 and 390x844 (first screen and full page) into design/shots/. Also, for the homepage:
 // the slider moved to the top with the keyboard, and the phone menu open. Prints console errors.
 // Usage: node scripts/shot.mjs [route=/]   (run `pnpm build` first; uses the installed Chrome)
+// Linux or CI: SHOT_CHROME=/opt/pw-browsers/chromium node scripts/shot.mjs  (that path is a symlink to the Chromium binary;
+// without SHOT_CHROME it launches the installed Chrome, channel "chrome").
 import { createServer } from "node:http";
 import { readFile, mkdir } from "node:fs/promises";
 import { extname, join, normalize } from "node:path";
@@ -32,7 +34,7 @@ const VIEWS = [
   { name: "1280", width: 1280, height: 720, mobile: false },
   { name: "390", width: 390, height: 844, mobile: true },
 ];
-const browser = await chromium.launch({ channel: "chrome" });
+const browser = await chromium.launch(process.env.SHOT_CHROME ? { executablePath: process.env.SHOT_CHROME } : { channel: "chrome" });
 const errors = [];
 
 async function open(view) {
@@ -41,7 +43,8 @@ async function open(view) {
   page.on("pageerror", (e) => errors.push(`${view.name} pageerror: ${e.message}`));
   // Nav and footer link to pages later phases build; Next prefetches them, so those 404s are expected for now.
   page.on("response", (r) => r.status() >= 400 && r.request().resourceType() !== "fetch" && !/_rsc|.txt|__next/.test(r.url()) && errors.push(`${view.name} ${r.status()}: ${r.url()}`));
-  page.on("requestfailed", (r) => errors.push(`${view.name} request failed: ${r.url()}`));
+  // Next link prefetches (resource type fetch) are aborted by the browser or Next when the target page is not built yet.
+  page.on("requestfailed", (r) => r.resourceType() !== "fetch" && errors.push(`${view.name} request failed: ${r.url()} ${r.failure()?.errorText}`));
   await page.goto(base + route, { waitUntil: "networkidle" });
   await page.waitForTimeout(3000); // roof panels pop in, link line draws
   return page;
@@ -65,7 +68,7 @@ for (const view of VIEWS) {
     if (view.mobile) {
       await page.reload({ waitUntil: "networkidle" });
       await page.waitForTimeout(800);
-      await page.locator("header nav button").click();
+      await page.locator("header nav button").first().click();
       await page.waitForTimeout(600);
       await shot(page, `${view.name}-menu`, false);
     }

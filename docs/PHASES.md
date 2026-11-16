@@ -70,3 +70,18 @@ Done:
 
 Open:
 - Headroom is thin (9.8 KB) for homepage sections 3 to 11. Radix (Slider, ToggleGroup, Dialog, Accordion) and Motion are the largest removable parts; do the diet steps when a section pushes the page over, or before then if Ameer wants more room.
+
+## 16 Nov 2026: phase 3c, JS diet (native controls, no motion library)
+
+Done:
+- Slider is a native `<input type="range">` (52px, pill track, lime fill from `--p`, floating thumb, `aria-valuetext`). SegmentedControl is a fieldset of radios with a CSS-driven sliding pill. Phone menu is a native `<dialog>` with `showModal()` (Escape, inert page, focus return; transparent backdrop so it looks as before). Accordion is `<details name>` with the content in the server HTML. Radix and Motion are removed from `package.json` and the lockfile; nothing in `src` imports them.
+- Springs: `src/lib/spring.ts` samples the three springs into CSS `linear()` easings and Web Animations API pops (panels, chips, result figures). Entry reveal is `Reveal.tsx` (one IntersectionObserver, data attribute, CSS transition; guarded by `scripting: enabled`, so no-JS visitors see everything). Lenis loads by dynamic import when idle, fine pointer, no reduced motion.
+- Server and client: nav shell, footer, hero text and image, brand belt are server components; client leaves are MenuSheet, NavShrink, Reveal, SmoothScroll, the sizing island, Button (magnet pull), Chip, Field. The h1 and hero image are in `out/index.html` and never animate.
+- Baseline corrected: measured again on this branch (empty layout and page, same Next 16.4.6 and React 19.3.0): **132.0 KB** gzipped, 5 scripts. The earlier 170.6 KB wrongly included the 38.6 KB `noModule` polyfill (132.0 + 38.6 = 170.6). Limit is now **182.0 KB**, phase 3c target 152.0 KB. Fixed in CLAUDE.md, PRD, `scripts/js-size.mjs`.
+- Homepage now **150.5 KB** in 8 scripts (70.0, 45.6, 12.6, 7.5, 5.5, 3.8, 3.5, 2.0), 1.5 KB under the target, 31.5 KB under the limit. (Phase 3b's 210.8 KB figure was with Radix and Motion.)
+- Checked by driving the page in Playwright (1440 and 390): slider keys, aria-valuetext, fill, 52px; radio arrows and pill position; panels pop in and out with the slider and chips update; dialog open, Escape, focus return, link click closes; h1 and image in HTML; no-JS page. Before and after screenshots match.
+- `scripts/shot.mjs`, `scripts/shots.cjs`, `design/mock/shot.cjs` use `SHOT_CHROME` as the browser path when set (Linux: `/opt/pw-browsers/chromium`), else Chrome. shot.mjs ignores aborted link prefetches and clicks the first nav button.
+
+Open:
+- Button is still a client component (magnet pull) and is imported by the server nav; a delegated listener would make it server-only.
+- Kit screenshots now include the nav and footer (they were taken in phase 1, before the chrome existed).

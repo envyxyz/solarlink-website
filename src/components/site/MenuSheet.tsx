@@ -24,7 +24,7 @@ export function MenuSheet() {
           const r = e.currentTarget.getBoundingClientRect();
           if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) close();
         }}
-        className="fixed inset-x-gutter bottom-auto top-21 m-0 w-auto max-w-none flex-col rounded-card border-0 bg-surface p-2 text-ink shadow-float open:flex lg:hidden"
+        className="fixed inset-x-gutter bottom-auto top-21 m-0 w-auto max-w-none flex-col rounded-card border-0 bg-surface p-2 text-ink shadow-float backdrop:bg-transparent open:flex lg:hidden"
       >
         <div className="flex items-center justify-between pl-4">
           <h2 id={titleId} className="text-title">

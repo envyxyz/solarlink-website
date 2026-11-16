@@ -38,9 +38,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <Reveal />
         <SmoothScroll />
-          <Nav brand={show(business.name) as string} />
-          {children}
-          <Footer />
+        <Nav brand={show(business.name) as string} />
+        {children}
+        <Footer />
       </body>
     </html>
   );
