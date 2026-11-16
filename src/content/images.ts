@@ -37,5 +37,9 @@ export const images = {
   "logo": {
     "width": 740,
     "height": 66
+  },
+  "emblem": {
+    "width": 111,
+    "height": 86
   }
 } as const;
