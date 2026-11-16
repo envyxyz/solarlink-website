@@ -24,11 +24,11 @@ export default function HomePage() {
       <Hero />
       <BrandBelt />
       <About />
-      <Services />
       <LinkSection />
+      <Services />
+      <Reviews items={shownList(reviewsSection.items)} />
       <ShopPreview />
       <Projects />
-      <Reviews items={shownList(reviewsSection.items)} />
       <Outlets />
       <Faq />
       <ClosingCall />

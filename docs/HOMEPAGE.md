@@ -4,7 +4,7 @@ Read `DESIGN.md` first. Facts come from `growth/Notes/Business Profile.md`; anyt
 
 ## Thesis
 
-SolarLink is the link between the sun and your meter: one company that sizes it, supplies it, installs it and files the net metering. The page proves that in order: size it yourself, see who trusts the kit, see what we do, see it built, come to a shop.
+SolarLink is the link between the sun and your meter: one company that sizes it, supplies it, installs it and files the net metering. The page proves that in order: size it yourself, see who trusts the kit, see how it links, see what we do, hear from customers, see it built, come to a shop.
 
 ## Order
 
@@ -14,15 +14,15 @@ SolarLink is the link between the sun and your meter: one company that sizes it,
 | 1 | Hero: live sizing | the signature; start a quote in the first screen | image stage with two glass cards | faers configurator + inspo-1 hero |
 | 2 | Brand belt | the equipment brands SolarLink installs | marquee, faded edges | business-alliance logo strip |
 | 3 | About and numbers | who we are in four numbers | text left, 2 by 2 stats right | business-alliance about |
-| 4 | What we do | four services | heading left, four cards right | nexarch services grid |
-| 5 | The link | how a system works, panel to grid | wide line diagram on a sunken stage | "what is faer" diagrams |
-| 6 | Shop preview | panels, inverters, batteries, UPS | night stage with a product carousel | creaenergy dark section + coat card |
-| 7 | Projects | built work | heading left, three tall image cards | nexarch "spaces that make a difference" |
-| 8 | Reviews | real Google reviews with date | row of cards, one inverted | nexarch testimonials |
+| 4 | The link | how a system works, panel to grid | wide line diagram on a sunken stage | "what is faer" diagrams |
+| 5 | What we do | four services | heading left, four cards right | nexarch services grid |
+| 6 | Reviews | what customers say | quote cards, row of three, middle one inverted; old-site testimonials stay unconfirmed until the client confirms them (preview only); no rating, count or schema | nexarch testimonials |
+| 7 | Shop preview | panels, inverters, batteries, UPS | night stage with a product carousel | creaenergy dark section + coat card |
+| 8 | Projects | built work | heading left, three tall image cards | nexarch "spaces that make a difference" |
 | 9 | Outlets | Lahore, Islamabad, Sargodha | three cards: address, phone, WhatsApp, directions | |
 | 10 | Questions | five most asked, link to the full FAQ | accordion | |
-| 11 | Closing call | one last quote prompt | image stage with a glass card | inspo-1 closing block |
-| 12 | Footer | everything else | night stage, giant faded wordmark | inspo-1 footer |
+| 11 | Closing call | one last quote prompt | full-width sunken stage: h2 and line on the left, quote and call buttons on the right; no image | inspo-1 closing block |
+| 12 | Footer | everything else | full-bleed night band, square corners, content in the page column, giant faded wordmark | inspo-1 footer |
 
 ## 1. Hero spec
 
@@ -58,15 +58,15 @@ No visible label: the belt (accessible name from content) is the moving row acro
 ## 3 to 12, in brief
 
 3. **About and numbers.** h2 "One company from survey to net metering." A lead paragraph from the business profile's medium description. Four `StatBlock`s, each with a source; unconfirmed ones render as a neutral dash in production builds. Candidates: founded year, cities, kW installed, projects.
-4. **What we do.** Four `Card`s: Homes, Business and industry, Farms and tubewells, Net metering. Each: a CGI image tile, a `title`, two lines, a text link.
-5. **The link.** `LinkDiagram` on a sunken stage: sun, panel, inverter, home, battery, grid, joined by the lime line; five short captions. A `SegmentedControl` switches On-grid | Hybrid | Off-grid and the line re-routes (battery and grid appear or drop out).
-6. **Shop preview.** Night stage. h2 "Panels, inverters and batteries, over the counter." `SegmentedControl` for the four categories, a row of `ProductCard`s, a text link to all products. Prices follow `priceMode`.
-7. **Projects.** Three `ProjectCard`s from content, link to all projects.
-8. **Reviews.** Real Google reviews typed into content with name, date and outlet, plus the rating and count with an as-of date. No review schema.
+4. **The link.** `LinkDiagram` on a sunken stage: sun, panel, inverter, home, battery, grid, joined by the lime line; five short captions. A `SegmentedControl` switches On-grid | Hybrid | Off-grid and the line re-routes (battery and grid appear or drop out).
+5. **What we do.** Four `Card`s: Homes, Business and industry, Farms and tubewells, Net metering. Each: a CGI image tile, a `title`, two lines, a text link.
+6. **Reviews.** Quote cards, row of three, middle one inverted; old-site testimonials stay unconfirmed until the client confirms them (preview only); no rating, count or schema.
+7. **Shop preview.** Night stage. h2 "Panels, inverters and batteries, over the counter." `SegmentedControl` for the four categories, a row of `ProductCard`s, a text link to all products. Prices follow `priceMode`.
+8. **Projects.** Three `ProjectCard`s from content, link to all projects.
 9. **Outlets.** Three cards from content. Lahore first, marked head office. Tap-to-call and WhatsApp per outlet.
 10. **Questions.** Five from the existing FAQ, rewritten to 40 to 60 word answers.
-11. **Closing call.** Image stage (dusk render of the same house, panels on, lights on) with a glass card: h2, primary button "Get a free quote", quiet button "Call the Lahore shop".
-12. **Footer.** Outlets, hours, link columns, socials, legal name and NTN when supplied, giant faded "SolarLink" wordmark clipped by the stage edge.
+11. **Closing call.** Full-width sunken stage: h2 and line on the left, quote and call buttons on the right; no image. The quote button is lime, the call button dark.
+12. **Footer.** Outlets, hours, link columns, socials, legal name and NTN when supplied, giant faded "SolarLink" wordmark sized to the page column. Full-bleed band, square corners, flush with the page bottom.
 
 ## Performance and SEO floor for this page
 
