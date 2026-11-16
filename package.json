@@ -13,6 +13,7 @@
     "check:claims": "node scripts/check-content.mjs --post",
     "check:sizing": "node scripts/sizing-check.mjs",
     "images": "node scripts/images.mjs",
+    "check:js": "node scripts/js-size.mjs",
     "shot": "node scripts/shot.mjs"
   },
   "dependencies": {

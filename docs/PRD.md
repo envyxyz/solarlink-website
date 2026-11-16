@@ -135,7 +135,7 @@ Components never hold literal text, phone, address, price or brand name.
 | LCP | 2.0 s (mid phone, 4G) |
 | CLS | 0 |
 | INP | 200 ms |
-| JavaScript, homepage | under 130 KB gzipped (motion and Lenis load after first paint) |
+| JavaScript, homepage | at most the React and Next baseline plus 50 KB, gzipped, every script `index.html` loads, `noModule` excluded. Baseline 170.6 KB (empty page, 16 Nov 2026), limit 220.6 KB. Checked by `node scripts/js-size.mjs`. Motion and Lenis load after first paint |
 | Lighthouse mobile | 95+ in all four categories |
 | Hero image | AVIF under 180 KB at 1440 wide, preloaded |
 | Font | one variable Mona Sans file, Latin subset, `swap`, size-adjusted fallback |

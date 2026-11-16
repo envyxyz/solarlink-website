@@ -71,6 +71,6 @@ One line of small text on the left: "Equipment we install". Belt of brand logos,
 ## Performance and SEO floor for this page
 
 - The server HTML holds the full h1, all section text and links. The sizing card works without JavaScript as a link to the quote page.
-- LCP is the hero image (preloaded AVIF, under 180 KB at 1440 wide) or the h1. Target LCP under 2.0 s on a mid phone, CLS 0, total JavaScript for the page under 130 KB gzipped.
+- LCP is the hero image (preloaded AVIF, under 180 KB at 1440 wide) or the h1. Target LCP under 2.0 s on a mid phone, CLS 0, total JavaScript for the page within the budget in CLAUDE.md rule 11 (React and Next baseline plus 50 KB).
 - One h1. Title, description, canonical, Open Graph, `SolarEnergyCompany` or `LocalBusiness` schema for each live outlet, `Organization`, `WebSite`, `BreadcrumbList`. No `AggregateRating`.
 - Motion and Lenis load after first paint; the page is complete and usable before they arrive.

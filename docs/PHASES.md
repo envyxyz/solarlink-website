@@ -58,3 +58,15 @@ Not done or open:
 - Nav and footer link to pages that are not built yet (404 until their phases).
 
 Next: homepage sections 3 to 11.
+
+## 16 Nov 2026: phase 3b, JS diet (budget rule only)
+
+Done:
+- Measured the baseline: the same app with an empty layout and page ships **170.6 KB** gzipped (React, Next and the Turbopack runtime; the 38.7 KB `noModule` polyfill chunk is excluded because modern browsers never load it). The earlier "about 120 KB" figure was wrong.
+- New rule (CLAUDE.md rule 11, `docs/PRD.md`, `docs/HOMEPAGE.md`, `PRODUCT.md`): homepage JS is at most baseline plus 50 KB, so **220.6 KB**. The old 130 KB figure is gone. `pnpm check:js` (`scripts/js-size.mjs`) sums every script `index.html` loads, skips `noModule`, and fails over the limit.
+- Current homepage: **210.8 KB** in 10 scripts, **9.8 KB under the limit**. The "about 250 KB" in the phase 3 note counted the `noModule` polyfill.
+- Because the page is already under budget with more than 5 KB spare, the swap steps (native range, radio group, dialog, details, Web Animations springs, Radix and Motion removal, idle Lenis) were **not done**: the stop rule applies before step 1. Screenshots were taken before and nothing visual changed.
+- Content: the three outlet address fields (Lahore, Islamabad, Sargodha) are now `confirmed: true`, source "Client, on WhatsApp, 16 Nov 2026". Phones, WhatsApp numbers, hours and postcodes stay unconfirmed.
+
+Open:
+- Headroom is thin (9.8 KB) for homepage sections 3 to 11. Radix (Slider, ToggleGroup, Dialog, Accordion) and Motion are the largest removable parts; do the diet steps when a section pushes the page over, or before then if Ameer wants more room.

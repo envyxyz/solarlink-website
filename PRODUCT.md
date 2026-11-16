@@ -45,7 +45,7 @@ Brands the old site names: Canadian Solar, Growatt, Fronus, LONGi, Huawei, GoodW
 ## Constraints
 
 - Static site on Cloudflare Workers free plan. One small Worker for `/api/*`. No server-side rendering at request time.
-- Budgets: LCP 2.0 s, CLS 0, INP 200 ms, JS under 130 KB gzipped on the homepage, Lighthouse mobile 95+.
+- Budgets: LCP 2.0 s, CLS 0, INP 200 ms, homepage JS within CLAUDE.md rule 11 (baseline plus 50 KB), Lighthouse mobile 95+.
 - No cart or checkout yet. Prices appear only when the client turns them on (`priceMode`).
 - Pages are built one at a time, in their own chats, homepage first.
 - Real install photos and logo files are not in hand. Early pages use CGI renders and type-set wordmarks.
