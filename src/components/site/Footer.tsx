@@ -16,7 +16,7 @@ export function Footer() {
   const socials = business.socials.map((s) => show(s)).filter((s) => s !== null);
   return (
     <div className="pb-gutter">
-      <Stage as="footer" variant="night" className="pt-10 lg:pt-14">
+      <Stage as="footer" variant="night" className="@container pt-10 lg:pt-14">
         <div aria-label={footer.label} className="px-6 lg:px-14">
           <h2 className="sr-only">{footer.label}</h2>
           <div className="grid gap-10 md:grid-cols-3">
@@ -83,7 +83,7 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <p aria-hidden className="pointer-events-none mt-6 translate-y-1/4 select-none whitespace-nowrap px-6 text-giant text-night-ink/10 lg:px-14">
+        <p aria-hidden className="pointer-events-none mt-6 translate-y-1/4 select-none whitespace-nowrap text-center text-giant text-night-ink/10">
           {name}
         </p>
       </Stage>

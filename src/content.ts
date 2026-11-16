@@ -43,6 +43,8 @@ export type Outlet = {
   phones: Fact<string[]>;
   whatsapp: Fact<string>;
   hours: Fact<string>;
+  /** The part of town, for the short area line on the homepage. */
+  area: Fact<string>;
   geo: Fact<{ lat: number; lng: number } | null>;
   mapUrl: Fact<string | null>;
   path: string;
@@ -62,6 +64,7 @@ export const outlets: Outlet[] = [
       ["Shop No. 05, Munawar Center", "Opp. State Bank Building, 30-The Mall Road", "Lahore"],
       "Client, on WhatsApp, 16 Nov 2026 (Munawar Center is the only Lahore shop)",
     ),
+    area: ok("The Mall", "Client, on WhatsApp, 16 Nov 2026 (Munawar Center, The Mall)"),
     postcode: web("54000", `${WEB}. Page text says 54000, schema says 54700: unresolved`),
     phones: web(["042-37117713", "042-37117714"]),
     whatsapp: web("0321-8425777"),
@@ -76,6 +79,7 @@ export const outlets: Outlet[] = [
     role: "outlet",
     status: "live",
     addressLines: ok(["House No. 514, North Service Road", "Sector I-14/3", "Islamabad"], "Client, on WhatsApp, 16 Nov 2026"),
+    area: ok("I-14", "Client, on WhatsApp, 16 Nov 2026 (Sector I-14/3)"),
     postcode: web("44000"),
     phones: web(["051-5204555"]),
     whatsapp: web("0339-3555000"),
@@ -90,6 +94,7 @@ export const outlets: Outlet[] = [
     role: "outlet",
     status: "live",
     addressLines: ok(["Block No. 05, Aslahy Wali Gali", "Near Company Bagh", "Sargodha"], "Client, on WhatsApp, 16 Nov 2026"),
+    area: ok("Company Bagh", "Client, on WhatsApp, 16 Nov 2026 (near Company Bagh)"),
     postcode: web("40100"),
     phones: web(["048-3720111"]),
     whatsapp: web("0313-7084973"),
@@ -136,6 +141,14 @@ export const business = {
     ),
   },
 };
+
+/** The homepage numbers (section 3). Only confirmed ones show as numbers; with fewer than two the section shows the cities instead. */
+export const aboutStats: { stat: Fact<string | number>; label: string }[] = [
+  { stat: ok(outlets.length, CLIENT), label: "Cities with a SolarLink shop" },
+  { stat: todo(), label: "Years installing solar" },
+  { stat: todo(), label: "kW installed" },
+  { stat: todo(), label: "Projects completed" },
+];
 
 export type Service = Flagged & { slug: string; title: string; short: string; path: string };
 
@@ -224,9 +237,15 @@ export const seo: Record<string, SeoEntry> = {
 export { ui, priceMode, type PriceMode } from "./content/ui.ts";
 export { nav, footer } from "./content/nav.ts";
 export { hero, belt } from "./content/home.ts";
+export { about } from "./content/home/about.ts";
+export { servicesSection } from "./content/home/services.ts";
+export { link } from "./content/home/link.ts";
 import { ui, priceMode } from "./content/ui.ts";
 import { nav, footer } from "./content/nav.ts";
 import { hero, belt } from "./content/home.ts";
+import { about } from "./content/home/about.ts";
+import { servicesSection } from "./content/home/services.ts";
+import { link } from "./content/home/link.ts";
 
-export const content = { business, outlets, services, brands, products, projects, reviews, reviewSummary, faqs, sizing, nav, footer, hero, belt, seo, ui, priceMode };
+export const content = { business, outlets, services, brands, products, projects, reviews, reviewSummary, faqs, sizing, aboutStats, nav, footer, hero, belt, about, servicesSection, link, seo, ui, priceMode };
 export default content;

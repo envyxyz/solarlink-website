@@ -48,9 +48,17 @@ async function open(view) {
   page.on("requestfailed", (r) => r.resourceType() !== "fetch" && errors.push(`${view.name} request failed: ${r.url()} ${r.failure()?.errorText}`));
   await page.goto(base + route, { waitUntil: "networkidle" });
   await page.waitForTimeout(3000); // roof panels pop in, link line draws
+  // Scroll down and back so every section's entry reveal has run before the full-page shot.
+  const height = await page.evaluate(() => document.documentElement.scrollHeight);
+  for (let y = 0; y < height; y += view.height / 2) {
+    await page.evaluate((top) => window.scrollTo(0, top), y);
+    await page.waitForTimeout(150);
+  }
+  await page.evaluate(() => window.scrollTo(0, 0));
+  await page.waitForTimeout(2500); // the wires draw
   return page;
 }
-const shot = (page, name, full) => page.screenshot({ path: join(outDir, `${slug}-${name}.jpg`), type: "jpeg", quality: 72, fullPage: full });
+const shot = (page, name, full) => page.screenshot({ path: join(outDir, `${slug}-${name}.jpg`), type: "jpeg", quality: 72, fullPage: full, animations: "disabled" });
 
 for (const view of VIEWS) {
   const page = await open(view);

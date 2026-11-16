@@ -10,7 +10,7 @@ export function Card({ interactive, className, children }: { interactive?: boole
   return <div className={cn("group rounded-card bg-tone-surface p-2 text-tone-ink", interactive && "lift", className)}>{children}</div>;
 }
 
-/** Image tile on the sunken tone; the image zooms to 1.04 when the card is hovered. */
+/** Image tile on the sunken tone; the image zooms to 1.04 when the card is hovered. Without a src it is an empty well (image pending). */
 export function CardImage({
   src,
   alt,
@@ -18,15 +18,15 @@ export function CardImage({
   height,
   className,
 }: {
-  src: string | StaticImageData;
+  src?: string | StaticImageData;
   alt: string;
-  width: number;
-  height: number;
+  width?: number;
+  height?: number;
   className?: string;
 }) {
   return (
     <div className={cn("overflow-hidden rounded-tile bg-tone-sunken", className)}>
-      <Image src={src} alt={alt} width={width} height={height} className="zoom-on-hover size-full object-cover" />
+      {src && <Image src={src} alt={alt} width={width} height={height} className="zoom-on-hover size-full object-cover" />}
     </div>
   );
 }

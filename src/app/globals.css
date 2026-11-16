@@ -197,6 +197,30 @@
   [data-reveal="in"] { opacity: 1; transform: none; }
 }
 
+/*
+  Link diagram wires: each path has pathLength 1. They draw once on entry, in sequence (--i), and retract when
+  a part is switched off. The route dot fades in once the wires have drawn.
+*/
+@keyframes wire-draw { from { stroke-dashoffset: 1; } }
+@keyframes dot-in { from { opacity: 0; } }
+@utility wire {
+  stroke-dasharray: 1;
+  transition: stroke-dashoffset var(--dur-slow) var(--ease-out);
+  &[data-off] {
+    stroke-dashoffset: 1;
+    opacity: 0;
+    transition: stroke-dashoffset var(--dur-slow) var(--ease-out), opacity var(--dur-fast) var(--dur-slow);
+  }
+  :is([data-reveal="in"]) & {
+    animation: wire-draw calc(var(--dur-slow) * 2) var(--ease-out) backwards;
+    animation-delay: calc(var(--i, 0) * var(--stagger) * 3);
+  }
+  @media (prefers-reduced-motion: reduce) { animation: none !important; }
+}
+@utility route-dot {
+  :is([data-reveal="in"]) & { animation: dot-in var(--dur-slow) var(--ease-out) calc(var(--dur-slow) * 3) backwards; }
+}
+
 /* Slider: native range input. --p (0 to 1) places the lime fill under the thumb centre. */
 @utility slider {
   --thumb: calc(var(--spacing) * 8);

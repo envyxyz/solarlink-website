@@ -19,7 +19,7 @@ export const sizingSlot =
 export function SizingCard() {
   const { mode, value, setValue, setMode, range, text, href } = useSizing();
   return (
-    <section data-island aria-label={hero.sizingLabel} className={sizingSlot}>
+    <section id="sizing" data-island aria-label={hero.sizingLabel} className={`${sizingSlot} scroll-mt-26`}>
       <div className="flex items-center justify-between gap-3">
         <p className="text-small">{hero.billLabel}</p>
         <SegmentedControl label={hero.unitLabel} options={hero.modes} value={mode} onValueChange={(v) => setMode(v as Mode)} />

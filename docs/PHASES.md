@@ -98,3 +98,18 @@ Open:
 - The hero image is 1376px wide, so it is soft on the 1800px stage (known; not fixed here).
 - The footer's giant wordmark does not span the wider stage (left as it is).
 
+
+## 16 Nov 2026: phase 4a, about, services and the link
+
+Done:
+- Homepage sections 3 to 5 after the brand belt: `About` (text left; right side shows the three shops as large city names with area line, each linking to its outlet page, because only one stat, "3 cities", is confirmed), `Services` (four cards, 2 by 2, one column on phones, 4:3 empty image wells marked `imagePending`, links to the final service URLs), `LinkSection` with `LinkDiagram` (hand-drawn SVG icons, lime wire that draws once on entry, On-grid / Hybrid / Off-grid switch that fades removed nodes to 25% and retracts their wire, one dot looping along the route with SVG animateMotion, paused under reduced motion and off screen; left to right from 64rem, top to bottom below). Only the diagram is a new client island.
+- Content: `src/content/home/{about,services,link}.ts`; `aboutStats` and the outlets' new `area` fact in `src/content.ts`; `ui.awaiting`. Copy word for word from COPY-HOME.
+- Facts: `shownList` already hides unconfirmed items in production, so no new helper. The farm card (unconfirmed service) is left out of a production build and shows an "Awaiting client" chip elsewhere. Sections 3 and 5 are always shown.
+- `CardImage` without a `src` renders the empty well. Footer wordmark now sizes from the stage width (the stage is a size container, `--t-giant-size: 20cqw`) and spans it at every width. `ResultCard` figures are in an `aria-live="polite"` region (it had none). Sizing card has `id="sizing"` for the "Size my system" link.
+- `scripts/shot.mjs` scrolls the page first so entry reveals have run, and captures with animations finished.
+- Homepage JS 152.7 KB (limit 182.0 KB).
+
+Open:
+- Four service images are not generated yet (service-homes, -business, -farms, -netmetering).
+- Years, kW installed and projects completed are unconfirmed; the numbers grid appears when two stats are confirmed.
+- Outlet pages the cities link to are not built yet.

@@ -13,6 +13,8 @@ export const ui = {
   loading: "Loading",
   skipToContent: "Skip to content",
   dash: "–",
+  /** Dev and staging builds only: marks a block a production build leaves out. */
+  awaiting: "Awaiting client",
   notFound: {
     body: "The link may be old. Start from the home page, or send us a message and we will point you to the right shop.",
     home: "Go to the home page",
