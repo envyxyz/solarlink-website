@@ -1,7 +1,6 @@
 import type { CSSProperties } from "react";
 import { preload } from "react-dom";
 import { hero, nav, outlets, seo, sizing } from "@/content";
-import { images } from "@/content/images";
 import { Button } from "@/components/ui/Button";
 import { show } from "@/lib/facts";
 import { heroFull, heroSizes, heroSrc, heroSrcSet, heroWidest } from "@/lib/picture";
@@ -10,9 +9,6 @@ import { ResultCard } from "./ResultCard";
 import { RoofPanels } from "./RoofPanels";
 import { SizingCard, sizingSlot } from "./SizingCard";
 import { SizingProvider, type SizingConfig } from "./SizingProvider";
-
-const panelWidth = Number(Object.keys(images.panelTop)[0]);
-const panelFace = `image-set(url(/images/panel-top-${panelWidth}.avif) type("image/avif"), url(/images/panel-top-${panelWidth}.webp) type("image/webp"))`;
 
 /** Without JavaScript the island hides and the card below (a link to the quote page) shows instead. */
 const noJsStyle = "*[data-island]{display:none}";
@@ -41,12 +37,12 @@ export function Hero() {
 
   return (
     <SizingProvider config={config}>
-      <section id="hero" className="relative page-width pt-26 lg:mt-3 lg:hero-height lg:pt-0 short:hero-height-short">
+      <section id="hero" className="relative page-width pt-26 lg:mt-24 lg:hero-height lg:pt-0 short:hero-height-short">
         <noscript>
           <style>{noJsStyle}</style>
         </noscript>
 
-        <div className="px-1 pb-3 sm:pb-5 lg:absolute lg:left-14 lg:top-26 lg:z-5 lg:p-0 short:top-24">
+        <div className="px-1 pb-3 sm:pb-5 lg:absolute lg:left-14 lg:top-14 lg:z-5 lg:p-0 short:top-6">
           <h1 className="max-w-display text-display">{seo.home.h1}</h1>
           <p className="mt-3 max-w-lead text-lead max-sm:max-w-none max-sm:text-small sm:mt-4 short:mt-2 short:max-w-lead-wide">{hero.lead}</p>
         </div>
@@ -68,7 +64,7 @@ export function Hero() {
                 className="absolute inset-0 size-full select-none"
               />
             </picture>
-            <RoofPanels face={panelFace} />
+            <RoofPanels />
           </div>
           <div className="bg-haze pointer-events-none absolute inset-0" />
         </div>

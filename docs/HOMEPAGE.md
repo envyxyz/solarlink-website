@@ -26,7 +26,7 @@ SolarLink is the link between the sun and your meter: one company that sizes it,
 
 ## 1. Hero spec
 
-Desktop (64rem and up): an image stage inset by the gutter, top edge 12px under the viewport top (the nav floats over it), height `min(92svh, 860px)`, radius `--r-stage`. Background: the CGI house render, house on the right, calm sky on the left.
+Desktop (64rem and up): an image stage inset by the gutter, top edge 12px below the floating nav (the stage starts at 96px; the nav bottom is at 84px), height `min(100svh - 120px, 860px)`, radius `--r-stage`. Background: the CGI house render, house on the right, calm sky on the left.
 
 - **Top left**, inside the stage with 48 to 64px padding: the h1 in `display`, ink colour, max 11ch. Under it one `lead` sentence, max 36ch. The h1 and image paint at once, no entry animation.
 - **Bottom left**: the sizing card, glass, 400px wide, radius `--r-card`, padding 24px.
@@ -35,7 +35,7 @@ Desktop (64rem and up): an image stage inset by the gutter, top edge 12px under 
   - Row 3: `Slider`. Rs mode 5,000 to 300,000 in steps of 1,000. Units mode 100 to 5,000 in steps of 50.
   - Row 4: primary `Button` 52px, full width: "Send this system on WhatsApp", with the round WhatsApp `IconButton` twin. Under it a `caption`: "Estimate only. A free site survey confirms the size."
 - **Bottom right**: the result card, glass, three `Chip stat` rows that pop with spring.bubbly when the value changes: system size (`10 kW`), panels (`18 panels`), monthly generation (`1,200 units`). A small `caption` names the assumptions.
-- **On the roof**: panels are real DOM elements laid on the roof plane. The roof's four corners are stored as percentages of the image in content; a homography (CSS `matrix3d`) maps a flat grid onto that quad, so the grid sits in correct perspective at every size. Each panel uses the top-down panel texture. Changing the value adds or removes panels one at a time, 30ms apart, each popping with spring.bubbly from `scale(0.8)`. Maximum panels = what fits the roof; above that the card says "Larger than this roof: we will design a ground or multi-roof system."
+- **On the roof**: panels are drawn on one `<canvas>` that fills the hero art box, on the roof plane. The roof's four corners are stored as percentages of the image in content; a homography maps a flat grid onto that quad, so the grid sits in correct perspective at every size. Each panel is projected and drawn as vectors at the device pixel ratio: aluminium frame, dark cell area, cell lines (only where their spacing is 3 device pixels or more), a thin front edge. One sheen gradient runs across the whole array and one contact shadow sits under it. Popping in and out are drawn on the canvas with the same spring and fade. Changing the value adds or removes panels one at a time, 30ms apart, each popping with spring.bubbly from `scale(0.8)`. Maximum panels = what fits the roof; above that the card says "Larger than this roof: we will design a ground or multi-roof system."
 - A thin lime link line runs from the roof edge down to the result card and draws once on load (after the image has painted).
 
 Phone (under 48rem): the stage is the image at 4:5 with the h1 above it on `--ground`; panels still pop on the roof; the sizing card sits under the image as a solid `--surface` card (no glass over nothing) with the three results as a row of chips above the slider. Primary button stays in the first screen at 390 by 844.

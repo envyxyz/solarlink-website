@@ -318,10 +318,6 @@
   letter-spacing: var(--t-figure-track);
   font-variation-settings: "wdth" var(--t-figure-wdth);
 }
-@utility panel-face {
-  background-color: var(--panel-base);
-  box-shadow: var(--panel-shadow);
-}
 
 /* Short desktop windows (1280 by 720): the hero tightens so both cards fit. */
 @custom-variant short (@media (min-width: 64rem) and (max-height: 50rem));
