@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState, type CSSProperties } from "react";
 import { cn } from "@/lib/cn";
 import { follower, project, velocity, type Follower } from "@/lib/momentum";
 import { tokenMs } from "@/lib/tokens";
@@ -75,7 +75,7 @@ export function Slider({
       onFrame(v) {
         const { min, max, onValueChange } = cfg.current;
         const p = Math.min(1, Math.max(0, (v - min) / (max - min)));
-        if (thumb.current) thumb.current.style.transform = `translateX(${p * 100}%)`;
+        if (thumb.current) thumb.current.style.setProperty("--p", String(p));
         if (fill.current) fill.current.style.transform = `scaleX(${p})`;
         const s = snap(cfg.current, v);
         if (s !== emitted.current) {
@@ -183,7 +183,7 @@ export function Slider({
   };
 
   return (
-    <div ref={wrap} className={cn("relative h-control-lg", disabled && "opacity-50", className)}>
+    <div ref={wrap} className={cn("@container relative h-control-lg", disabled && "opacity-50", className)}>
       <input
         ref={input}
         type="range"
@@ -202,7 +202,7 @@ export function Slider({
         <span className="absolute inset-y-0 left-0 w-4 bg-lime" />
         <span ref={fill} style={{ transform: `scaleX(${p0})` }} className="absolute inset-y-0 left-4 right-4 origin-left bg-lime" />
       </span>
-      <span aria-hidden ref={thumb} style={{ transform: `translateX(${p0 * 100}%)` }} className="slider-thumb">
+      <span aria-hidden ref={thumb} style={{ "--p": p0 } as CSSProperties} className="slider-thumb">
         <span className="slider-dot" />
       </span>
     </div>

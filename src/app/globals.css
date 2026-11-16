@@ -222,7 +222,8 @@
 }
 
 /* Slider: a transparent native range input (hit area, keyboard, aria) under sunken track, lime fill and thumb overlays.
-   The thumb overlay is one thumb narrower than the track, so translateX(p * 100%) lands it under the pointer. */
+   The thumb overlay is one thumb wide and travels the track less one thumb (--p is 0 to 1; cqw is the slider's own width,
+   its wrapper is a size container). It never grows the track's width, so a thumb at maximum cannot widen the page. */
 @utility slider {
   --thumb: calc(var(--spacing) * 8);
   --track: calc(var(--spacing) * 3);
@@ -276,7 +277,8 @@
   position: absolute;
   inset-block: 0;
   left: 0;
-  right: calc(var(--spacing) * 8);
+  width: calc(var(--spacing) * 8);
+  transform: translateX(calc(var(--p, 0) * (100cqw - var(--spacing) * 8)));
   pointer-events: none;
 }
 @utility slider-dot {
@@ -313,17 +315,17 @@
   &:has(input:focus-visible) { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
 }
 
-/* Rolling number: a digit slot is one --roll-slot wide and clips the digit that rolls through it. The lime copy lies over the ink digit and fades after the roll. */
+/* Rolling number: a digit slot is one --roll-slot wide, narrower than the digit's advance, so it clips only the block axis (the digit that rolls through it leaves by the top or bottom of the line box) and lets the glyph overhang the slot sideways. The digit is centred on the slot so the overhang is even. The lime copy lies over the ink digit and fades after the roll. */
 @utility roll-slot {
   display: inline-block;
   position: relative;
   width: var(--roll-slot);
-  overflow: clip;
-  text-align: center;
+  overflow-x: visible;
+  overflow-y: clip;
 }
-@utility roll-in { display: block; position: relative; }
-@utility roll-out { position: absolute; inset: 0; opacity: 0; }
-@utility roll-lime { position: absolute; inset: 0; color: var(--lime); opacity: 0; }
+@utility roll-in { display: flex; justify-content: center; position: relative; }
+@utility roll-out { display: flex; justify-content: center; position: absolute; inset: 0; opacity: 0; }
+@utility roll-lime { display: flex; justify-content: center; position: absolute; inset: 0; color: var(--lime); opacity: 0; }
 
 /* Roof cap message: the wrapper's rows run 0fr to 1fr (the one height animation, at the owner's request). Opening grows the rows, then fades the text in; closing fades the text, then shrinks the rows. */
 @utility cap-wrap {

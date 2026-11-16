@@ -93,7 +93,7 @@ export function ResultCard() {
       data-island
       data-hero-result
       aria-label={hero.resultLabel}
-      className="order-1 md:order-2 md:basis-0 md:grow-5 lg:glass lg:absolute lg:bottom-12 lg:right-12 lg:z-5 lg:w-90 lg:rounded-card lg:p-6 short:bottom-6 short:p-5"
+      className="order-1 md:order-2 md:basis-0 md:grow-5 lg:glass lg:absolute lg:bottom-12 lg:right-12 lg:z-5 lg:w-90 lg:rounded-card lg:p-6 short:bottom-4 short:p-5"
     >
       <p className="mb-3 hidden text-title lg:block">{hero.resultLabel}</p>
       <div className="grid grid-cols-3 gap-2 md:grid-cols-1 md:gap-0 lg:gap-0">

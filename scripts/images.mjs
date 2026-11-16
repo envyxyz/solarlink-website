@@ -5,7 +5,6 @@ import { mkdirSync, readFileSync, writeFileSync } from "node:fs";
 
 const JOBS = [
   { key: "hero", name: "hero", src: "design/img/hero.jpg", widths: [1376, 768] },
-  { key: "panelTop", name: "panel-top", src: "design/img/panel-top.jpg", widths: [256] },
   // Shop preview tiles: 1024px squares shown at most 384px wide, so 640 covers 1.5x screens.
   { key: "productPanel", name: "product-panel", src: "design/img/product-panel.jpg", widths: [640] },
   { key: "productInverter", name: "product-inverter", src: "design/img/product-inverter.jpg", widths: [640] },

@@ -10,12 +10,6 @@ export const images = {
       "height": 768
     }
   },
-  "panelTop": {
-    "256": {
-      "width": 256,
-      "height": 459
-    }
-  },
   "productPanel": {
     "640": {
       "width": 640,
