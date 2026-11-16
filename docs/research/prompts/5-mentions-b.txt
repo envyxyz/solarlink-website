@@ -1,0 +1,5 @@
+Find where solar installers in Pakistan get listed and mentioned. Do 6 searches: 'best solar companies in pakistan', 'top solar companies in lahore', 'AEDB certified solar installers list', 'PEC registered solar companies', 'solar company directory pakistan', 'reddit best solar installer pakistan'. Output: (1) a table of up to 12 directories or listing sites with name, URL, free or paid; (2) up to 8 listicle articles with URL and the companies each names; (3) the official installer registers (AEDB or PPIB, PEC) with URL and how a company gets listed; (4) up to 6 community threads or forums with URL. Only list URLs you opened.
+
+Write Markdown to: C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/5-mentions-b.md
+
+Rules: spend at most 8 minutes. Create the output file after the first item and append as you go, so partial work is saved. Use Google web search; open at most 2 pages per item. Never invent a URL, number or name; write "unverified" where unsure. Do not modify any other file. End your reply with only: DONE <output file path> or FAILED <reason>.

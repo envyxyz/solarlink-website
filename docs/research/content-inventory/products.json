@@ -1,0 +1,560 @@
+{
+ "note": "Section summaries are extractive (first sentences as written). Bullets and FAQs verbatim. Word count = main content excluding header/footer chrome.",
+ "pages": [
+  {
+   "slug": "products/index",
+   "file": "products/index.html",
+   "title_tag": "Solar Products in Pakistan | Solarlink",
+   "meta_description": "Tier-1 solar panels, inverters, batteries & accessories from Solarlink. Quality equipment for homes and businesses across Pakistan.",
+   "canonical": "https://solarlink.com.pk/products/",
+   "h1": "Solar Products in Pakistan",
+   "sections": [
+    {
+     "heading": "(intro)",
+     "level": 0,
+     "summary": "",
+     "bullets": [
+      "Home",
+      "› Products"
+     ],
+     "subheadings": [],
+     "questions": [],
+     "words": 0
+    },
+    {
+     "heading": "Solar Products in Pakistan",
+     "level": 1,
+     "summary": "Solarlink supplies and installs Tier-1 solar equipment across Lahore, Islamabad, Rawalpindi, and Sargodha — from panels and inverters to batteries and mounting accessories. Every product is backed by manufacturer warranty and Solarlink's local installation and after-sales support.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 37
+    },
+    {
+     "heading": "Browse Our Product Range",
+     "level": 2,
+     "summary": "Tier-1 panels, 25-year performance warranty. Learn More → Growatt & Fronus, best prices in Pakistan. Learn More → Storage solutions to keep power flowing.",
+     "bullets": [
+      "Canadian Solar & Tier-1 equivalents",
+      "25-year linear power warranty",
+      "High-efficiency monocrystalline cells",
+      "On-grid, off-grid & hybrid options",
+      "5-year standard warranty (extendable)",
+      "Reliable performance in load-shedding",
+      "Uninterrupted power during load-shedding",
+      "Lithium & lead-acid options",
+      "Sized to match your system and budget",
+      "UV-rated cables & connectors",
+      "Mounting structures for every roof type",
+      "Surge protectors for complete installations"
+     ],
+     "subheadings": [
+      "Solar Panels",
+      "Inverters",
+      "Batteries",
+      "Accessories"
+     ],
+     "questions": [],
+     "words": 36
+    }
+   ],
+   "faqs": [],
+   "ctas": [
+    {
+     "text": "Learn More →",
+     "href": "/products/solar-panels.html"
+    },
+    {
+     "text": "Learn More →",
+     "href": "/products/inverters.html"
+    },
+    {
+     "text": "Learn More →",
+     "href": "/products/batteries.html"
+    },
+    {
+     "text": "Learn More →",
+     "href": "/products/accessories.html"
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/products/solar-panels.html",
+    "/products/inverters.html",
+    "/products/batteries.html",
+    "/products/accessories.html"
+   ],
+   "external_and_tel_links": [],
+   "main_content_word_count": 164,
+   "json_ld_types": [
+    "WebPage",
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "brands_named": [
+    "Canadian Solar (as \"Canadian Solar & Tier-1 equivalents\")",
+    "Growatt",
+    "Fronus"
+   ],
+   "models_named": [],
+   "specs": [
+    "25-year linear power warranty",
+    "High-efficiency monocrystalline cells",
+    "5-year standard warranty (extendable) on inverters",
+    "On-grid, off-grid & hybrid options",
+    "Lithium & lead-acid batteries"
+   ],
+   "prices_shown": []
+  },
+  {
+   "slug": "products/solar-panels",
+   "file": "products/solar-panels.html",
+   "title_tag": "Tier-1 Solar Panels in Pakistan – Canadian & More | Solarlink",
+   "meta_description": "Canadian Solar, Tier-1 panels available in Pakistan. 25-year performance warranty. Contact Solarlink for pricing and installation.",
+   "canonical": "https://solarlink.com.pk/products/solar-panels/",
+   "h1": "Tier-1 Solar Panels in Pakistan",
+   "sections": [
+    {
+     "heading": "(intro)",
+     "level": 0,
+     "summary": "Products",
+     "bullets": [
+      "Home",
+      "› Products",
+      "› Solar Panels"
+     ],
+     "subheadings": [],
+     "questions": [],
+     "words": 1
+    },
+    {
+     "heading": "Tier-1 Solar Panels in Pakistan",
+     "level": 1,
+     "summary": "Tier-1 mono & polycrystalline panels from globally trusted manufacturers — selected for Pakistan's climate and priced for local budgets.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 25
+    },
+    {
+     "heading": "Why Tier-1 Panels?",
+     "level": 2,
+     "summary": "Tier-1 solar panels are manufactured by companies rated by Bloomberg NEF as financially bankable, using fully automated production lines. They deliver the best combination of efficiency, reliability, and long warranty coverage. SolarLink exclusively supplies panels from Tier-1 manufacturers — primarily Canadian Solar.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 56
+    }
+   ],
+   "faqs": [],
+   "ctas": [
+    {
+     "text": "Get a Free Quote",
+     "href": "/get-quote.html"
+    },
+    {
+     "text": "Contact Us",
+     "href": "/contact-us.html"
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/products/",
+    "/get-quote.html",
+    "/contact-us.html"
+   ],
+   "external_and_tel_links": [],
+   "main_content_word_count": 101,
+   "json_ld_types": [
+    "ItemList",
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "brands_named": [
+    "Canadian Solar (\"primarily Canadian Solar\")"
+   ],
+   "models_named": [
+    {
+     "model": "Canadian Solar HiHero 430W Mono Panel",
+     "visibility": "JSON-LD only, not visible on page",
+     "description": "430W monocrystalline panel with 25-year performance warranty"
+    },
+    {
+     "model": "Canadian Solar HiKu6 540W Mono-PERC Panel",
+     "visibility": "JSON-LD only",
+     "description": "ideal for residential rooftops in Pakistan"
+    },
+    {
+     "model": "Canadian Solar HiKu7 580W Mono Panel",
+     "visibility": "JSON-LD only",
+     "description": "large-format monocrystalline panel for high-yield installations"
+    },
+    {
+     "model": "Canadian Solar BiHiKu 540W Bifacial Panel",
+     "visibility": "JSON-LD only",
+     "description": "captures light on both sides for higher yield"
+    }
+   ],
+   "specs": [
+    "Tier-1 mono & polycrystalline panels (stated in intro)",
+    "Tier-1 defined as rated by Bloomberg NEF as financially bankable, fully automated production lines"
+   ],
+   "prices_shown": [],
+   "note": "Visible text has no models, wattages or prices (models above are JSON-LD only). \"Full product catalogue and pricing available on request.\" Panel spec \"580W\" and \"25-year linear power output warranty\" appear only on service pages and faqs.html."
+  },
+  {
+   "slug": "products/inverters",
+   "file": "products/inverters.html",
+   "title_tag": "Growatt & Fronus Inverters – Best Price Pakistan | Solarlink",
+   "meta_description": "Growatt and Fronus inverters available at Solarlink. Best prices in Lahore, Islamabad, Rawalpindi and Sargodha. Request a quote or visit our office.",
+   "canonical": "https://solarlink.com.pk/products/inverters/",
+   "h1": "Growatt & Fronus Inverters in Pakistan",
+   "sections": [
+    {
+     "heading": "(intro)",
+     "level": 0,
+     "summary": "Products",
+     "bullets": [
+      "Home",
+      "› Products",
+      "› Inverters"
+     ],
+     "subheadings": [],
+     "questions": [],
+     "words": 1
+    },
+    {
+     "heading": "Growatt & Fronus Inverters in Pakistan",
+     "level": 1,
+     "summary": "Hybrid, on-grid, and off-grid inverters engineered for Pakistan's grid conditions — backed by expert installation and genuine after-sales support.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 25
+    },
+    {
+     "heading": "Our Inverter Range",
+     "level": 2,
+     "summary": "SolarLink supplies Growatt and Fronus inverters — globally recognised brands with strong warranty and local support. Available in hybrid (battery-ready), on-grid, and off-grid configurations from 3kW to 100kW+. Full product catalogue and pricing available on request.",
+     "bullets": [],
+     "subheadings": [
+      "Fronus Inverter Models & Prices in Pakistan"
+     ],
+     "questions": [
+      "Is Growatt inverter good for Pakistan?",
+      "Growatt vs Fronus inverter — which is better?",
+      "What is the price of Growatt inverter in Pakistan?"
+     ],
+     "words": 279
+    }
+   ],
+   "faqs": [
+    {
+     "question": "Is Growatt inverter good for Pakistan?",
+     "answer": "Yes. Growatt is one of the world's largest solar inverter manufacturers and is widely regarded as an excellent choice for Pakistan. Growatt inverters handle voltage fluctuations common on the Pakistani grid, come with a 5-year warranty (extendable to 10), and have strong local service support in Lahore, Islamabad, and across Punjab."
+    },
+    {
+     "question": "Growatt vs Fronus inverter — which is better?",
+     "answer": "Both are reliable choices for Pakistan's conditions. Growatt is a global brand with greater international R&D investment and the most widely deployed inverter in Pakistan. Fronus is a local brand with strong after-sales service networks in Pakistan and competitive pricing. Solarlink recommends Growatt for export-heavy systems and Fronus for budget-conscious residential installations."
+    },
+    {
+     "question": "What is the price of Growatt inverter in Pakistan?",
+     "answer": "Growatt inverter prices in Pakistan range from approximately PKR 65,000 for a 3kW on-grid model to PKR 250,000+ for a 10kW hybrid model. Prices vary based on model, capacity, and whether it's a standard on-grid or hybrid (battery-ready) configuration. Contact Solarlink for the latest pricing tailored to your system size."
+    }
+   ],
+   "ctas": [
+    {
+     "text": "Get a Free Quote",
+     "href": "/get-quote.html"
+    },
+    {
+     "text": "Contact Us",
+     "href": "/contact-us.html"
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/products/",
+    "/get-quote.html",
+    "/contact-us.html"
+   ],
+   "external_and_tel_links": [],
+   "main_content_word_count": 358,
+   "json_ld_types": [
+    "ItemList",
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "brands_named": [
+    "Growatt",
+    "Fronus"
+   ],
+   "models_named": [
+    {
+     "model": "Fronus Platinum PV2200",
+     "visibility": "visible table + JSON-LD",
+     "capacity": "2.2kW",
+     "price_pkr": 59900,
+     "best_for": "Small homes"
+    },
+    {
+     "model": "Fronus Platinum PV3200",
+     "capacity": "3.2kW",
+     "price_pkr": 86900,
+     "best_for": "Medium homes"
+    },
+    {
+     "model": "Fronus Platinum PV5200",
+     "capacity": "5.2kW",
+     "price_pkr": 126900,
+     "best_for": "Standard homes"
+    },
+    {
+     "model": "Fronus Platinum PV7200",
+     "capacity": "7.2kW",
+     "price_pkr": 158900,
+     "best_for": "Large homes"
+    },
+    {
+     "model": "Growatt MIN 3000TL-X On-Grid Inverter",
+     "visibility": "JSON-LD only, no price",
+     "description": "3kW on-grid string inverter"
+    },
+    {
+     "model": "Growatt SPH5000 Hybrid Inverter",
+     "visibility": "JSON-LD only, no price",
+     "description": "5kW hybrid inverter, battery-ready"
+    },
+    {
+     "model": "Growatt SPH10000 Hybrid Inverter",
+     "visibility": "JSON-LD only, no price",
+     "description": "10kW hybrid inverter"
+    }
+   ],
+   "specs": [
+    "Hybrid (battery-ready), on-grid and off-grid configurations from 3kW to 100kW+",
+    "Growatt: 5-year warranty (extendable to 10)",
+    "Growatt \"handle voltage fluctuations common on the Pakistani grid\""
+   ],
+   "prices_shown": [
+    {
+     "item": "Fronus Platinum PV2200 (2.2kW)",
+     "price": "PKR 59,900",
+     "source": "table \"Fronus Inverter Models & Prices in Pakistan\" and Product JSON-LD offers (priceCurrency PKR, InStock)"
+    },
+    {
+     "item": "Fronus Platinum PV3200 (3.2kW)",
+     "price": "PKR 86,900",
+     "source": "same"
+    },
+    {
+     "item": "Fronus Platinum PV5200 (5.2kW)",
+     "price": "PKR 126,900",
+     "source": "same"
+    },
+    {
+     "item": "Fronus Platinum PV7200 (7.2kW)",
+     "price": "PKR 158,900",
+     "source": "same"
+    },
+    {
+     "item": "Growatt inverters (range)",
+     "price": "\"approximately PKR 65,000 for a 3kW on-grid model to PKR 250,000+ for a 10kW hybrid model\"",
+     "source": "FAQ \"What is the price of Growatt inverter in Pakistan?\""
+    }
+   ],
+   "note": "Only product page with model-level prices. Table has no date. JSON-LD marks the Fronus items availability InStock. \"Best price\" appears in title tag and meta description."
+  },
+  {
+   "slug": "products/batteries",
+   "file": "products/batteries.html",
+   "title_tag": "Solar Batteries & Storage Solutions Pakistan | Solarlink",
+   "meta_description": "Solar battery storage solutions for homes and businesses in Pakistan. Keep power flowing during load-shedding. Get a free quote from Solarlink.",
+   "canonical": "https://solarlink.com.pk/products/batteries/",
+   "h1": "Batteries",
+   "sections": [
+    {
+     "heading": "(intro)",
+     "level": 0,
+     "summary": "Products",
+     "bullets": [
+      "Home",
+      "› Products",
+      "› Batteries"
+     ],
+     "subheadings": [],
+     "questions": [],
+     "words": 1
+    },
+    {
+     "heading": "Batteries",
+     "level": 1,
+     "summary": "Lithium-ion and lead-acid storage batteries for reliable backup power — keep your home or business running through load-shedding and at night.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 27
+    },
+    {
+     "heading": "Battery Storage Options",
+     "level": 2,
+     "summary": "SolarLink supplies both lithium-ion (longer life, lighter weight, deeper discharge) and lead-acid (lower upfront cost) batteries. Our engineers will recommend the right solution based on your backup time requirements and budget. Full product catalogue and pricing available on request.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 45
+    }
+   ],
+   "faqs": [],
+   "ctas": [
+    {
+     "text": "Get a Free Quote",
+     "href": "/get-quote.html"
+    },
+    {
+     "text": "Contact Us",
+     "href": "/contact-us.html"
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/products/",
+    "/get-quote.html",
+    "/contact-us.html"
+   ],
+   "external_and_tel_links": [],
+   "main_content_word_count": 87,
+   "json_ld_types": [
+    "ItemList",
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "brands_named": [
+    "Growatt (JSON-LD only)",
+    "Osaka (JSON-LD only)",
+    "Phoenix (JSON-LD only)"
+   ],
+   "models_named": [
+    {
+     "model": "Growatt ARK 2.5H-A1 Lithium Battery (2.5kWh)",
+     "visibility": "JSON-LD only, no price"
+    },
+    {
+     "model": "Growatt ARK 5.0H-A1 Lithium Battery (5kWh)",
+     "visibility": "JSON-LD only, no price"
+    },
+    {
+     "model": "Osaka Titan Plus 200Ah AGM Battery",
+     "visibility": "JSON-LD only, no price",
+     "description": "lead-acid AGM for off-grid backup"
+    },
+    {
+     "model": "Phoenix UPS Plus 200Ah Tubular Battery",
+     "visibility": "JSON-LD only, no price",
+     "description": "deep-cycle tubular"
+    }
+   ],
+   "specs": [
+    "Lithium-ion: \"longer life, lighter weight, deeper discharge\"",
+    "Lead-acid: \"lower upfront cost\""
+   ],
+   "prices_shown": [],
+   "note": "Visible page text names no brands, capacities or prices; the models above exist only in structured data. Industrial page and home page logo strip mention TESVOLT / Tesvolt Energy Storage and Tesla Energy as logos, not as products offered here."
+  },
+  {
+   "slug": "products/accessories",
+   "file": "products/accessories.html",
+   "title_tag": "Solar Accessories & Mounting Structures | Solarlink",
+   "meta_description": "Mounting structures, UV-rated cables, surge protectors and all accessories for a complete solar installation in Pakistan. Contact Solarlink for pricing.",
+   "canonical": "https://solarlink.com.pk/products/accessories/",
+   "h1": "Solar Accessories",
+   "sections": [
+    {
+     "heading": "(intro)",
+     "level": 0,
+     "summary": "Products",
+     "bullets": [
+      "Home",
+      "› Products",
+      "› Accessories"
+     ],
+     "subheadings": [],
+     "questions": [],
+     "words": 1
+    },
+    {
+     "heading": "Solar Accessories",
+     "level": 1,
+     "summary": "Mounting structures, DC/AC cabling, surge protectors, and all the accessories needed for a complete, safe, and durable solar installation.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 25
+    },
+    {
+     "heading": "Complete Your System",
+     "level": 2,
+     "summary": "A high-quality solar installation requires more than panels and an inverter. SolarLink supplies galvanised steel and aluminium mounting structures, UV-rated DC cabling, AC isolators, surge protection devices (SPDs), earthing kits, and more. All accessories are selected to match your system's specifications.",
+     "bullets": [],
+     "subheadings": [],
+     "questions": [],
+     "words": 46
+    }
+   ],
+   "faqs": [],
+   "ctas": [
+    {
+     "text": "Get a Free Quote",
+     "href": "/get-quote.html"
+    },
+    {
+     "text": "Contact Us",
+     "href": "/contact-us.html"
+    }
+   ],
+   "internal_links_out": [
+    "/",
+    "/products/",
+    "/get-quote.html",
+    "/contact-us.html"
+   ],
+   "external_and_tel_links": [],
+   "main_content_word_count": 87,
+   "json_ld_types": [
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "brands_named": [],
+   "models_named": [],
+   "specs": [
+    "galvanised steel and aluminium mounting structures",
+    "UV-rated DC cabling",
+    "AC isolators",
+    "surge protection devices (SPDs)",
+    "earthing kits"
+   ],
+   "prices_shown": []
+  }
+ ],
+ "sitewide": {
+  "brand_mentions_across_scope": {
+   "Growatt": "inverters; named on home, about, get-quote, outlets/lahore+islamabad, all service pages, faqs, products",
+   "Fronus (also spelled \"Fronus\" only; llms.txt says \"Fronus inverters\")": "inverters; models and prices only on products/inverters.html",
+   "Canadian Solar": "panels; \"580W\" (service pages), \"Tier-1 BF\", 25-year linear power output warranty; faqs: \"10-year product workmanship warranty and a 25-year linear performance warranty\"",
+   "LONGi": "LONGi Hi-MO 6 panels (1,200 of them) in the 600kW MD Textile Gujranwala project on index.html and services/industrial-solar.html; logo on home, about, industrial",
+   "Huawei": "six 115kW Huawei on-grid inverters in the same project; logo on home and industrial page",
+   "GoodWe, Solis, Jinko Solar, Trina Solar, Schneider Electric, Tesvolt (TESVOLT), Tesla Energy": "logo strips only (home: all of them; about: Growatt, Canadian Solar, LONGi, GoodWe, Solis as \"Equipment Brand Partners\"; industrial: Growatt, Canadian Solar, LONGi, Huawei, Schneider Electric, TESVOLT, Solis). Industrial FAQ text names Growatt, Canadian Solar, Schneider Electric, TESVOLT."
+  },
+  "brand_list_conflicts": [
+   "llms.txt / about-us / get-quote / outlets: \"Growatt, Fronus, Canadian Solar\"",
+   "index.html hero: \"Growatt • Canadian • LONGi\"",
+   "about-us logos: Growatt, Canadian Solar, LONGi, GoodWe, Solis; index logos add Huawei, Jinko, Schneider Electric, Tesvolt, Trina, Tesla",
+   "Fronus is named on products/inverters, services pages and outlets but is absent from the home page brand strip and hero line"
+  ],
+  "wattage_specs": [
+   "Canadian Solar 580W (service pages)",
+   "\"A single 580W Tier-1 panel in Punjab generates approximately 2-2.5 kWh per day\" (faqs)"
+  ],
+  "other_prices_on_site_outside_products": "System cost ranges (PKR) appear on faqs.html cost guide table, service FAQs and outlet FAQs; see claims-to-confirm.md category price/cost."
+ }
+}

@@ -1,0 +1,998 @@
+{
+ "note": "Verbatim from visible page text, plus FAQPage JSON-LD where a page has it. source_page is the first page (alphabetical file order) where the question appears; alsoOn lists other pages; answer_variants holds differing answer text for the same question.",
+ "count": 132,
+ "faqs": [
+  {
+   "question": "What is a solar energy system?",
+   "answer": "A solar energy system converts sunlight into usable electricity using photovoltaic (PV) panels. The panels generate DC electricity, which an inverter converts to AC for use in your home or business. Surplus power can be exported to the national grid via net metering.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Is solar energy worthwhile in Pakistan?",
+   "answer": "Yes — Pakistan has some of the highest solar irradiance in the world, with 300+ sunny days per year across Punjab and Islamabad. Combined with sharply rising electricity tariffs, a properly sized solar system typically pays back its cost in 3–5 years and then generates free power for 20+ years.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What types of solar systems does SolarLink install?",
+   "answer": "SolarLink installs three main system types: On-Grid (grid-tied, most cost-effective, eligible for net metering), Off-Grid (battery-based, suitable for areas without reliable grid access), and Hybrid (grid-tied with battery backup — provides power even during load-shedding).",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long do solar panels last?",
+   "answer": "Quality Tier-1 solar panels carry a 25-year performance warranty and are designed to last 30+ years. Degradation is less than 0.5% per year, meaning panels typically retain over 87% of their original output at the 25-year mark.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much electricity does a solar panel generate per day?",
+   "answer": "A single 580W Tier-1 panel in Punjab generates approximately 2–2.5 kWh per day on average (accounting for seasonal variation). A 10-panel, 5.8kW system therefore produces roughly 20–25 kWh/day — enough for a medium-sized Pakistani household.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the difference between an on-grid and off-grid solar system?",
+   "answer": "An on-grid system is connected to the WAPDA/DISCO grid and uses the grid as a \"virtual battery\" — exporting surplus and drawing power at night. It requires no battery storage, making it the most affordable option. An off-grid system uses physical battery banks and operates completely independently of the grid, ideal for remote areas.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can a solar system power my home during load-shedding?",
+   "answer": "A standard on-grid system shuts down during load-shedding for safety reasons (anti-islanding protection). A hybrid system with battery backup continues to supply power to your home throughout load-shedding, keeping lights, fans, and appliances running.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What happens on cloudy or rainy days?",
+   "answer": "Solar panels generate electricity from daylight, not direct sunlight alone. On overcast days, output is reduced — typically to 10–25% of peak capacity — but the system still produces power. Rain is actually beneficial as it cleans dust from the panels, restoring full efficiency.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much does a solar system cost in Pakistan in 2026?",
+   "answer": "Residential solar systems are priced roughly by system size. Costs vary based on equipment brand, system type (on-grid vs hybrid), roof complexity, and your city. Contact SolarLink for a free custom quote — prices have been highly competitive since 2024 due to import duty reductions.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much can I save on my electricity bill with solar?",
+   "answer": "Most SolarLink residential customers save 80–100% on their monthly electricity bill. For example, a home previously paying ₨ 45,000/month typically brings that bill down to ₨ 500–1,500/month after installing a properly sized on-grid system with net metering.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the solar payback period in Lahore, Islamabad and Rawalpindi?",
+   "answer": "In Lahore, Islamabad, and Rawalpindi, the average payback period for a residential solar system is 3–5 years, after which you generate effectively free electricity for 20+ more years. Rising electricity tariffs — which increased over 150% between 2021 and 2024 — make payback faster every year.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the approximate cost of a 5kW solar system?",
+   "answer": "A 5kW on-grid system is suitable for smaller homes with bills up to around ₨ 20,000/month. Cost depends on equipment choice and site conditions. Request a no-obligation quote from SolarLink for an accurate figure.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the approximate cost of a 10kW solar system?",
+   "answer": "A 10kW on-grid system is the most popular size for mid-to-large homes in Punjab, typically covering bills of ₨ 30,000–60,000/month. It is also commonly used for small commercial premises. SolarLink provides free site assessments and detailed proposals at no cost.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the approximate cost of a 15kW solar system?",
+   "answer": "A 15kW system suits large homes, commercial offices, or high-consumption properties with bills above ₨ 60,000/month. Contact SolarLink for a customised quote — our team will assess your consumption data, shade conditions, and roof area.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does solar increase my property value?",
+   "answer": "Yes. Solar installations increase property value in Pakistan, particularly in high-tariff cities like Lahore and Islamabad. A fully commissioned system with net metering and a long-term performance warranty is an attractive selling point for future buyers.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Are there ongoing costs after solar installation?",
+   "answer": "Solar systems have very low running costs. Key ongoing items include: annual panel cleaning (can be done yourself or via a maintenance visit), occasional inverter monitoring, and net metering standing charges from your DISCO. There are no fuel costs and no regular servicing fees.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How do rising electricity tariffs affect my solar ROI?",
+   "answer": "Rising tariffs directly improve your solar return on investment. Every rupee increase in the per-unit electricity rate adds more value to the units your solar system generates. Customers who installed in 2020–2021 have seen their payback periods shrink significantly due to tariff increases since then.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Is solar cheaper than grid electricity in Pakistan right now?",
+   "answer": "Yes, for most consumers in the residential and commercial segments — particularly those paying high slab tariffs. The levelised cost of solar electricity over a 25-year system life is a fraction of current WAPDA peak tariff rates, making solar the most economical electricity source available.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does a solar installation take?",
+   "answer": "A standard residential installation (5–15kW) takes 1–3 working days on site. The full process — from initial contact through site survey, design approval, procurement, and commissioning — typically takes 2–4 weeks. Commercial projects may take longer depending on system size.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What happens during a site survey?",
+   "answer": "SolarLink's engineer visits your property to assess roof area and orientation, shading from trees or buildings, existing electrical setup, and meter/distribution board condition. The survey takes 30–60 minutes and is completely free with no obligation.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Will the installation damage my roof?",
+   "answer": "No. SolarLink uses industry-standard mounting structures designed to protect your roof. All penetration points are properly sealed and waterproofed. Our team inspects roof condition before installation and advises on any repairs needed beforehand. Pakistan's solar industry has a strong track record of damage-free installations.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Do I need to be home during installation?",
+   "answer": "We recommend someone responsible be present for the site survey and on the first day of installation to confirm placement and answer questions. The installation itself is clean and professional. Our teams work Monday–Saturday during regular working hours.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What permits or approvals does solar installation require?",
+   "answer": "For a basic on-grid solar system, you will need a net metering licence from your DISCO (Distribution Company). SolarLink handles the complete documentation and application process on your behalf, including single-line diagrams, NEPRA applications, and coordination with the DISCO.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How do you determine the right solar system size for my home?",
+   "answer": "We analyse your last 12 months of electricity bills to establish average consumption, then factor in your roof area, orientation, local shading, and budget. The goal is a system that offsets your highest-slab consumption first — delivering the maximum financial return per rupee invested.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can solar panels be installed on any type of roof?",
+   "answer": "Solar panels can be installed on most roof types common in Pakistan — RCC flat roofs (most common), sloped/truss roofs, and corrugated iron sheet roofs. Flat RCC roofs are the easiest and most common. Our survey will confirm suitability and the correct mounting structure for your specific roof.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What happens when the installation is complete?",
+   "answer": "After installation, SolarLink commissions the system, tests all connections, configures your inverter monitoring app, and submits the net metering application to your DISCO. You'll receive a full handover including system documents, warranty cards, and a walkthrough of your monitoring dashboard.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What solar panel brands does SolarLink use?",
+   "answer": "SolarLink exclusively uses Tier-1 solar panels, primarily Canadian Solar — a globally recognized Tier-1 manufacturer with a 25-year performance warranty track record. We do not install budget or unbranded panels. Tier-1 panels ensure maximum energy output, reliability, and bankable warranties.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What inverter brands does SolarLink use?",
+   "answer": "SolarLink installs Growatt and Fronus inverters — both internationally recognized brands with strong warranty support networks in Pakistan. Growatt is one of the world's largest inverter manufacturers by volume. We recommend the most appropriate brand for your specific system size and requirements.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is a Tier-1 solar panel?",
+   "answer": "Tier-1 solar panels are manufactured by companies that use fully automated robotic production, have been manufacturing for 5+ years, and are classified as financially bankable by Bloomberg NEF. They offer the best combination of output consistency, durability, and long-term manufacturer warranty. SolarLink only installs Tier-1 panels.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the difference between monocrystalline and polycrystalline solar panels?",
+   "answer": "Monocrystalline panels are cut from a single silicon crystal, giving them higher efficiency (20–22%) and better performance in high-heat and low-light conditions — making them better suited to Pakistani summers. Polycrystalline panels are slightly less efficient (16–18%) and lower cost. SolarLink primarily installs high-efficiency monocrystalline panels.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Do I need a battery with my solar system?",
+   "answer": "You do not need a battery for an on-grid system — the national grid acts as your storage. However, if you experience load-shedding in your area, a hybrid system with battery storage will keep your home powered through outages. We will assess your load-shedding frequency and recommend accordingly.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What battery brands does SolarLink supply?",
+   "answer": "SolarLink supplies lithium iron phosphate (LiFePO4) batteries, which are the safest and most cycle-stable chemistry available. Our battery solutions are matched to Growatt and Fronus hybrid inverters for seamless integration. Contact us for current available models and capacities.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What size inverter do I need?",
+   "answer": "Inverter sizing is matched to your panel array capacity and your peak household load. For example, a 10kW solar system uses a 10kW inverter. Our engineers calculate the correct size during the site survey taking into account panel layout, cable runs, and any planned expansion.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is a hybrid inverter and when do I need one?",
+   "answer": "A hybrid inverter manages both solar panels and a battery bank simultaneously — it charges the battery from solar, powers your home from solar, exports surplus to the grid, and switches to battery during load-shedding. You need a hybrid inverter if you want backup power during outages. Standard on-grid inverters do not supply power when the grid is down.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Are imported solar panels better than locally assembled ones?",
+   "answer": "SolarLink only supplies fully manufactured Tier-1 panels from internationally certified factories — not locally assembled units. Locally assembled panels often use lower-grade cells with inconsistent quality control, shorter lifespans, and no credible manufacturer warranty. The price difference does not justify the long-term risk.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is net metering and how does it work in Pakistan?",
+   "answer": "Net metering allows you to export surplus solar electricity to the national grid and receive credits on your electricity bill. When your panels produce more than you consume (e.g., midday), the excess flows to the grid. At night or on cloudy days, you draw from the grid as normal. Your bill shows the net difference between what you exported and imported.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Who is eligible for net metering in Pakistan?",
+   "answer": "Any consumer connected to a licensed DISCO (LESCO, IESCO, PESCO, GEPCO, FESCO, MEPCO, HESCO, SEPCO, QESCO, TESCO) can apply for net metering for a solar system sized between 1kW and 1,000kW. Both residential and commercial customers are eligible. The system must meet NEPRA technical standards.",
+   "source_page": "faqs.html",
+   "alsoOn": [
+    "services/net-metering-support.html"
+   ],
+   "answer_variants": [
+    {
+     "file": "services/net-metering-support.html",
+     "answer": "Any consumer with a grid-connected solar system (1kW to 1MW) is eligible for net metering in Pakistan. Residential, commercial, and industrial consumers can all apply. The system must be properly installed and inspected by a licensed solar company."
+    }
+   ]
+  },
+  {
+   "question": "How do I apply for net metering in Pakistan?",
+   "answer": "SolarLink handles the complete net metering application on your behalf. The process includes: preparation of single-line diagrams, technical documentation filing with your DISCO, site inspection coordination, and bi-directional meter installation. You do not need to visit any government office — we manage the entire process.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does the net metering process take?",
+   "answer": "The net metering process takes approximately 4–12 weeks after a complete application is submitted to your DISCO. Processing time varies by distribution company — LESCO (Lahore) and IESCO (Islamabad) are generally the fastest. SolarLink tracks applications and follows up on your behalf.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the net metering export tariff in Pakistan?",
+   "answer": "The net metering export tariff is regulated by NEPRA and is typically based on the consumer category and applicable DISCO tariff at the time of licensing. SolarLink will confirm the current applicable export rate for your distribution company during your consultation, as rates are periodically reviewed by NEPRA.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Which DISCOs support net metering?",
+   "answer": "All DISCOs operating under the NEPRA regulatory framework support net metering, including LESCO (Lahore), IESCO (Islamabad), GEPCO (Gujranwala), FESCO (Faisalabad), MEPCO (Multan), and others. SolarLink has completed net metering registrations for customers across multiple DISCOs throughout Punjab and Islamabad.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can I get net metering for a commercial solar system?",
+   "answer": "Yes. Commercial net metering is available for businesses, factories, and commercial properties connected to the DISCO grid. Commercial systems benefit from the same export credits as residential systems. SolarLink has experience completing net metering for commercial clients up to 500kW+.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is a bi-directional meter and why do I need one?",
+   "answer": "A bi-directional (or smart) meter records both the electricity you import from the grid and the electricity you export from your solar system separately. It replaces your standard meter and is required for net metering. Your DISCO installs the bi-directional meter as part of the net metering approval process — SolarLink coordinates this on your behalf.",
+   "source_page": "faqs.html",
+   "alsoOn": [
+    "services/net-metering-support.html"
+   ],
+   "answer_variants": [
+    {
+     "file": "services/net-metering-support.html",
+     "answer": "A bi-directional meter records both the electricity you consume from the grid and the surplus electricity you export back. It replaces your standard meter and is installed by the DISCO as part of the net metering approval process. SolarLink coordinates the meter replacement on your behalf."
+    }
+   ]
+  },
+  {
+   "question": "What warranty does SolarLink provide on installations?",
+   "answer": "SolarLink provides a workmanship warranty on all installations — covering the quality of mounting, wiring, and commissioning work. In addition, all equipment carries the full manufacturer's warranty. Full warranty terms are detailed in your installation contract.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the solar panel performance warranty?",
+   "answer": "Canadian Solar Tier-1 panels carry a 10-year product workmanship warranty and a 25-year linear performance warranty. The performance guarantee ensures panels output at least 87.4% of their rated power at year 25. This is backed by the manufacturer, not a local reseller.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the inverter warranty period?",
+   "answer": "Growatt inverters come with a standard 5-year warranty, extendable to 10 years. Fronus inverters carry a 2–5 year warranty depending on the model. Extended warranties are available and recommended — the inverter is the most likely component to require service over the system lifetime.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How do I make a warranty claim for my solar system?",
+   "answer": "Contact SolarLink directly — call our Lahore office on 042-37117713, Islamabad on 051-5204555, Rawalpindi on 051-5708488, or Sargodha on 048-3720111. Our team will diagnose the issue remotely where possible, or arrange a site visit. For equipment faults under manufacturer warranty, SolarLink coordinates the claim with the supplier on your behalf.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What after-sales support does SolarLink provide?",
+   "answer": "SolarLink offers ongoing support across offices in Lahore, Islamabad, Rawalpindi, and Sargodha. This includes inverter troubleshooting, system performance reviews, panel cleaning advice, and net metering billing queries. With local offices serving 4 cities across Punjab and Islamabad, we are always nearby.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How do I monitor my solar system's performance?",
+   "answer": "Growatt inverters connect to the ShinePhone mobile app, which shows real-time generation, consumption, and export data. Fronus also provides a monitoring app. SolarLink configures your monitoring account as part of the commissioning handover so you can track performance from day one.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What maintenance does a solar system need?",
+   "answer": "Solar systems require very little maintenance. Key tasks include: cleaning panels 2–4 times per year (more in dusty, dry seasons), checking inverter indicator lights monthly, and trimming any vegetation that may start shading panels. SolarLink recommends an annual inspection for systems above 15kW.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much does a 10kW solar system cost in Pakistan?",
+   "answer": "A 10kW solar system in Pakistan typically costs between PKR 1,200,000 and PKR 1,800,000 installed, including Tier-1 panels, inverter, mounting structure, and net metering support. Prices vary based on equipment brand and system type (on-grid vs hybrid). Contact Solarlink for a free custom quote.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is net metering in Pakistan?",
+   "answer": "Net metering in Pakistan is a NEPRA-approved policy that lets solar system owners export surplus electricity to the national grid (WAPDA/LESCO/IESCO) and receive bill credits in return. When your panels produce more than you use during the day, the excess reduces your bill. Solarlink handles the full application process.",
+   "source_page": "faqs.html",
+   "alsoOn": [
+    "services/net-metering-support.html"
+   ],
+   "answer_variants": [
+    {
+     "file": "services/net-metering-support.html",
+     "answer": "Net metering is a NEPRA-approved policy that allows solar system owners to export surplus electricity back to the national grid (WAPDA/LESCO/IESCO etc.) and receive credits on their electricity bill. When your system generates more than you need, you effectively sell it back — reducing or eliminating your bill."
+    }
+   ]
+  },
+  {
+   "question": "Which solar panel is best in Pakistan?",
+   "answer": "Canadian Solar Tier-1 monocrystalline panels are widely considered among the best for Pakistan. They offer 25-year performance warranties, high efficiency (20–22%), and proven reliability in Pakistan's hot climate. Solarlink exclusively installs Canadian Solar and other Tier-1 certified panels — never budget or unbranded alternatives.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How many units does a 10kW solar system produce per day?",
+   "answer": "A 10kW solar system in Pakistan produces approximately 40–50 units (kWh) per day on average, depending on location and season. In Punjab — which averages 5–5.5 peak sun hours per day — a 10kW system generates around 1,200–1,500 units per month, enough to eliminate most residential electricity bills.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Is solar energy profitable in Pakistan?",
+   "answer": "Yes. Solar energy is highly profitable in Pakistan with a typical payback period of 3–4 years and 20+ years of essentially free electricity after that. With electricity tariffs up over 155% since 2021 and still rising, the return on investment improves every year. Most Solarlink customers see 80–100% reduction in their electricity bills.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the life of solar panels in Pakistan?",
+   "answer": "Quality Tier-1 solar panels last 30–35 years in Pakistan's climate. Most carry a 25-year linear performance warranty, guaranteeing at least 87% of original output at year 25. Pakistan's sunny, dry climate is actually ideal for solar panels. Routine cleaning every 4–8 weeks maintains peak output.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How to apply for net metering in Pakistan?",
+   "answer": "To apply for net metering in Pakistan: install an eligible grid-tied solar system, submit an application to your DISCO (LESCO, IESCO, GEPCO, etc.) with technical documents, pass a site inspection, sign the net metering agreement, and get a bidirectional meter installed. Solarlink handles the entire process for all customers at no extra charge.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Which inverter is best for home use in Pakistan?",
+   "answer": "Growatt hybrid inverters are widely regarded as the best choice for Pakistani homes — they handle grid fluctuations well, provide backup power during load-shedding (with battery), and support net metering. Fronus inverters are also reliable and more affordable. Solarlink recommends Growatt for most residential installs and Fronus for budget-conscious buyers.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Is Growatt a good inverter for Pakistan?",
+   "answer": "Yes. Growatt is the world's largest solar inverter manufacturer by shipments and is an excellent choice for Pakistan. Growatt inverters are designed for unstable grid conditions, include anti-islanding protection, and come with a 5-year warranty (extendable to 10 years). Solarlink is an authorised Growatt installer with in-country service support.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What are the WAPDA net metering requirements?",
+   "answer": "WAPDA net metering (under LESCO, MEPCO, FESCO, GEPCO etc.) requires: a grid-tied solar system of 1kW–1MW installed by a NEPRA-licensed contractor, submission of technical documents including a single-line diagram and equipment datasheets, a DISCO site inspection, signing of the net metering agreement, and installation of a bidirectional meter. Solarlink manages all of this for you.",
+   "source_page": "faqs.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much does a typical solar installation cost in Pakistan?",
+   "answer": "A typical 10kW residential system costs PKR 12 to 16 lakh installed, including certified Tier-1 panels and smart on-grid inverters. SolarLink provides free site surveys and customized design proposals with zero obligation.",
+   "source_page": "index.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Will my solar system work during WAPDA load-shedding?",
+   "answer": "A hybrid system with battery storage keeps your home seamlessly powered during grid outages. Standard grid-tied systems pause during load-shedding for anti-islanding lineman safety. Our engineers will recommend the ideal architecture for your load requirements.",
+   "source_page": "index.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the payback period for solar in Punjab?",
+   "answer": "With current electricity tariffs exceeding Rs 65+/kWh, most SolarLink residential and commercial customers achieve full capital payback within 2.5 to 4 years, followed by 20+ years of free electricity generation.",
+   "source_page": "index.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How does net metering work and who handles DISCO paperwork?",
+   "answer": "Net metering allows you to export excess units back to WAPDA and accumulate bill credits. SolarLink handles 100% of the turnkey paperwork, PEC engineer certification, and DISCO approval with LESCO, IESCO, and GEPCO.",
+   "source_page": "index.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does the installation process take?",
+   "answer": "Residential rooftop installations are typically completed within 1 to 2 days after system design sign-off. Commercial arrays take 1 to 3 weeks depending on capacity and structural customization.",
+   "source_page": "index.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Which solar company is best in Islamabad?",
+   "answer": "Solarlink operates a dedicated office in Islamabad at North Service Road, Sector I-14/3. They serve Islamabad and Rawalpindi with residential and commercial solar installations and offer flexible installment payment plans for solar in Islamabad and Rawalpindi.",
+   "source_page": "locations/islamabad.html",
+   "alsoOn": [
+    "outlets/islamabad.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Does Solarlink offer installments in Islamabad?",
+   "answer": "Yes. Solarlink offers installment payment plans for solar systems in Islamabad and Rawalpindi. This makes solar installation accessible without a large upfront investment. Contact our Islamabad & Rawalpindi office at 051-5204555 to learn about available financing options.",
+   "source_page": "locations/islamabad.html",
+   "alsoOn": [
+    "outlets/islamabad.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Where is Solarlink's Islamabad office?",
+   "answer": "Solarlink's Islamabad office is located at House No. 514, North Service Road, Sector I-14/3, Islamabad 44000. Office hours are Monday to Saturday, 9AM to 6PM. Call 051-5204555.",
+   "source_page": "locations/islamabad.html",
+   "alsoOn": [
+    "outlets/islamabad.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "How many solar panels are needed for a home in Islamabad?",
+   "answer": "An average home in Islamabad with 2–3 air conditioners typically needs an 8kW to 10kW solar system (16–20 panels). Solarlink's engineers provide a free site survey to calculate the exact requirement based on your energy consumption and IESCO meter readings.",
+   "source_page": "locations/islamabad.html",
+   "alsoOn": [
+    "outlets/islamabad.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Is net metering available in Islamabad?",
+   "answer": "Yes. Net metering is available in Islamabad through IESCO (Islamabad Electric Supply Company). Solarlink handles the complete IESCO net metering application process for all Islamabad customers at no extra charge.",
+   "source_page": "locations/islamabad.html",
+   "alsoOn": [
+    "outlets/islamabad.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Which is the best solar company in Lahore?",
+   "answer": "Solarlink is one of Lahore's most established solar installation companies, operating since 2018 with a physical head office on Mall Road, Lahore. They offer residential and commercial solar systems across all Lahore neighbourhoods including DHA, Bahria Town Lahore, Johar Town, and Gulberg.",
+   "source_page": "locations/lahore.html",
+   "alsoOn": [
+    "outlets/lahore.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Where is Solarlink's office in Lahore?",
+   "answer": "Solarlink's Lahore head office is located at Shop 5, Munawer Center, Opposite State Bank Building, Mall Road, Lahore, Punjab 54700. Office hours are Monday to Saturday, 9AM to 6PM. Call 042-37117713 or mobile 0321-8425777.",
+   "source_page": "locations/lahore.html",
+   "alsoOn": [
+    "outlets/lahore.html"
+   ],
+   "answer_variants": [
+    {
+     "file": "outlets/lahore.html",
+     "answer": "Solarlink's Lahore head office is located at Shop No. 05, Munawar Center, Opposite State Bank Building, Mall Road, Lahore. Office hours are Monday to Saturday, 9AM to 6PM. Call 042-37117713 or mobile 0321-8425777."
+    }
+   ]
+  },
+  {
+   "question": "How much does solar installation cost in Lahore?",
+   "answer": "In Lahore, a 5kW residential solar system costs approximately PKR 600,000–900,000 installed. A 10kW system costs PKR 1,200,000–1,800,000. Prices include Tier-1 equipment, installation, and net metering assistance. LESCO net metering paperwork is handled by Solarlink. Get a free custom quote by calling 042-37117713.",
+   "source_page": "locations/lahore.html",
+   "alsoOn": [
+    "outlets/lahore.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Does Solarlink serve DHA and Bahria Town Lahore?",
+   "answer": "Yes. Solarlink has completed hundreds of solar installations across DHA Lahore (Phase 1–9), Bahria Town Lahore (all phases), Johar Town, Gulberg, and all major Lahore areas. Contact 042-37117713 for a free site survey anywhere in Lahore.",
+   "source_page": "locations/lahore.html",
+   "alsoOn": [
+    "outlets/lahore.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "How quickly can solar be installed in Lahore?",
+   "answer": "Solarlink's local Lahore team can typically begin installation within 1–2 weeks of quote approval. Most residential solar installations in Lahore are completed in 2–5 days. Call 042-37117713 or WhatsApp 0321-8425777 to get started.",
+   "source_page": "locations/lahore.html",
+   "alsoOn": [
+    "outlets/lahore.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Does Solarlink have an office in Sargodha?",
+   "answer": "Yes. Solarlink has a dedicated Sargodha office at Aslahy Wali Gali, Block 5, Sargodha, Punjab. Call 048-3720111 or mobile 0313-7084973, Monday to Saturday 9AM–6PM. Our local Sargodha team handles residential, commercial, and agricultural solar installations across the district.",
+   "source_page": "locations/sargodha.html",
+   "alsoOn": [
+    "outlets/sargodha.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Does Solarlink offer solar tubewell installation in Sargodha?",
+   "answer": "Yes. Solarlink specialises in solar tubewell and agricultural solar installations for farms across the Sargodha district. We install solar-powered tubewell systems from 7.5HP to 30HP+, eliminating diesel costs and providing reliable irrigation power year-round.",
+   "source_page": "locations/sargodha.html",
+   "alsoOn": [
+    "outlets/sargodha.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "How much does a solar tubewell cost in Sargodha?",
+   "answer": "A solar tubewell system in Sargodha starts at approximately PKR 800,000 for a 7.5HP system. A 10HP tubewell solar system typically costs PKR 1,000,000–1,400,000. Contact Solarlink Sargodha at 048-3720111 for a free site assessment and custom quotation.",
+   "source_page": "locations/sargodha.html",
+   "alsoOn": [
+    "outlets/sargodha.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Is net metering available in Sargodha?",
+   "answer": "Yes. Net metering is available in Sargodha through GEPCO (Gujranwala Electric Power Company). Solarlink handles the complete GEPCO net metering application process for all Sargodha customers.",
+   "source_page": "locations/sargodha.html",
+   "alsoOn": [
+    "outlets/sargodha.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Which areas in Sargodha does Solarlink serve?",
+   "answer": "Solarlink serves all of Sargodha city and the surrounding district including Bhalwal, Bhera, Kot Momin, Shahpur, Sillanwali, and agricultural areas throughout Sargodha district. Call 048-3720111 to arrange a free site visit.",
+   "source_page": "locations/sargodha.html",
+   "alsoOn": [
+    "outlets/sargodha.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "Is Growatt inverter good for Pakistan?",
+   "answer": "Yes. Growatt is one of the world's largest solar inverter manufacturers and is widely regarded as an excellent choice for Pakistan. Growatt inverters handle voltage fluctuations common on the Pakistani grid, come with a 5-year warranty (extendable to 10), and have strong local service support in Lahore, Islamabad, and across Punjab.",
+   "source_page": "products/inverters.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Growatt vs Fronus inverter — which is better?",
+   "answer": "Both are reliable choices for Pakistan's conditions. Growatt is a global brand with greater international R&D investment and the most widely deployed inverter in Pakistan. Fronus is a local brand with strong after-sales service networks in Pakistan and competitive pricing. Solarlink recommends Growatt for export-heavy systems and Fronus for budget-conscious residential installations.",
+   "source_page": "products/inverters.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the price of Growatt inverter in Pakistan?",
+   "answer": "Growatt inverter prices in Pakistan range from approximately PKR 65,000 for a 3kW on-grid model to PKR 250,000+ for a 10kW hybrid model. Prices vary based on model, capacity, and whether it's a standard on-grid or hybrid (battery-ready) configuration. Contact Solarlink for the latest pricing tailored to your system size.",
+   "source_page": "products/inverters.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What does kW or kWp mean?",
+   "answer": "kWp (Kilowatt Peak) is the unit used to measure solar system size. It refers to the maximum power output under ideal sunlight conditions. A 10kWp system produces approximately 40–50 units (kWh) of electricity per day in Pakistan's climate.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How does agricultural solar work for tubewells in Pakistan?",
+   "answer": "Agricultural solar systems power irrigation tubewells directly from solar panels, eliminating WAPDA electricity costs entirely. The system is sized based on your tubewell motor capacity (typically 7.5–30HP). On sunny days, the pump runs on solar; a hybrid system can add battery backup or grid connection for cloudy days.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the cost of a solar tubewell system in Pakistan?",
+   "answer": "A solar tubewell system for a 10HP motor typically costs PKR 8–15 lakh depending on panel brand and system type. The payback period is usually 2–4 years given the high cost of agricultural electricity in Pakistan.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does SolarLink serve rural areas for agricultural solar?",
+   "answer": "Yes. SolarLink serves agricultural customers across Punjab including areas around Lahore, Sargodha, and surrounding rural districts. Contact our Sargodha office (048-3720111) for agricultural enquiries in central Punjab.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can agricultural solar systems run at night or during cloudy weather?",
+   "answer": "Standard on-grid agricultural systems only run during daylight. For night or cloudy-day operation, a hybrid system with battery storage or net metering can provide continuous power. SolarLink's engineers will help you select the best solution for your farming needs.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is a VFD solar pump system and how is it different?",
+   "answer": "A VFD (Variable Frequency Drive) solar pump system uses a drive to control motor speed based on available solar power — making it more efficient in partially cloudy conditions compared to standard direct-coupled systems. SolarLink recommends VFD-based systems for most agricultural applications.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can I get net metering for an agricultural solar system?",
+   "answer": "Agricultural consumers connected to the grid are eligible for net metering under NEPRA regulations. SolarLink can install a net-metered agricultural system so that any surplus power generated during low-irrigation periods earns bill credits.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much does a solar tubewell system cost in Pakistan?",
+   "answer": "A solar tubewell system in Pakistan typically costs between PKR 400,000 and PKR 1,200,000 depending on pump size and depth. The system pays for itself within 2–3 years by eliminating diesel and electricity costs.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can solar panels run a tubewell 24 hours a day?",
+   "answer": "Solar tubewells run during daylight hours (6–10 hours per day depending on season). For 24-hour operation, a battery backup or hybrid system is required. Most farmers find daytime operation sufficient for irrigation needs.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the best solar system size for a tubewell in Punjab?",
+   "answer": "Most agricultural tubewells in Punjab require a 7.5HP to 15HP motor, which needs a 7kW to 15kW solar system. Solarlink provides free site surveys to recommend the exact system size for your tubewell and crop requirements.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does agricultural solar work on cloudy days in Punjab?",
+   "answer": "Yes. Solar panels still generate 15–25% of peak power on cloudy days. Punjab averages over 300 sunny days per year, making solar highly reliable for agricultural use throughout most crop seasons.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does Solarlink install solar tubewells in rural Punjab?",
+   "answer": "Yes. Solarlink installs agricultural solar and tubewell systems across Punjab including Sargodha, Lahore, and surrounding areas. Call our Sargodha office at 048-3720111 for agricultural solar consultations.",
+   "source_page": "services/agricultural-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is an On-Grid Solar System?",
+   "answer": "An on-grid (grid-tied) solar system is connected to the national electricity grid. It uses solar power during the day and draws from the grid at night. On-grid systems qualify for net metering but do not provide power during load-shedding unless paired with battery backup.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [
+    "services/residential-solar.html"
+   ],
+   "answer_variants": []
+  },
+  {
+   "question": "How much can a business save with solar in Pakistan?",
+   "answer": "Commercial solar systems typically reduce electricity costs by 40–70%. A business paying PKR 200,000/month can expect savings of PKR 80,000–140,000 per month after installation. The payback period for commercial systems is typically 3–5 years.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": [
+    {
+     "file": "services/commercial-solar.html",
+     "answer": "Businesses with monthly bills of PKR 100,000+ typically see savings of 70–90% after installing solar. A 25kW commercial system can save a business over PKR 1,000,000 per year, with full payback in 3–4 years."
+    }
+   ]
+  },
+  {
+   "question": "What size commercial solar system do I need?",
+   "answer": "Commercial systems range from 15kW to 100kW+ depending on your consumption. SolarLink engineers conduct a thorough energy audit of your premises to recommend a correctly sized system that maximises return on investment.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can I get net metering for my business?",
+   "answer": "Yes. Commercial properties in Pakistan are fully eligible for net metering under NEPRA regulations. SolarLink handles the complete net metering application process for your business.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does commercial solar installation take?",
+   "answer": "Commercial installations typically take 3–10 days depending on system size and complexity. The full project — from survey to commissioning — takes approximately 3–6 weeks.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": [
+    {
+     "file": "services/commercial-solar.html",
+     "answer": "Commercial solar installations by Solarlink typically take 1 to 2 weeks depending on system size and site conditions. We handle all permitting, civil work, electrical work, and net metering paperwork."
+    }
+   ]
+  },
+  {
+   "question": "Is commercial solar suitable for rented business premises?",
+   "answer": "Solar can be installed on rented premises with the landlord's written consent. Many businesses negotiate this into their lease. SolarLink can advise on the legal and practical considerations for your specific situation.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What happens to business operations during installation?",
+   "answer": "SolarLink schedules commercial installations to minimise disruption — typically during off-hours or weekends. Grid power remains active throughout. A brief 1–2 hour outage is only needed for final grid connection.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What size solar system does a commercial building need?",
+   "answer": "Commercial solar system sizes typically range from 15kW to 100kW+, depending on energy consumption. A small office may need 15–25kW, while a factory or large commercial facility may require 50kW–500kW. Solarlink provides a free energy audit to determine the right size.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Is solar viable for businesses in Pakistan given frequent load-shedding?",
+   "answer": "Yes. A hybrid commercial solar system with battery backup provides continuous power even during load-shedding. This eliminates reliance on expensive diesel generators, reducing both fuel costs and downtime.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does net metering apply to commercial solar systems?",
+   "answer": "Yes. Commercial solar systems qualify for net metering in Pakistan. Businesses can sell excess electricity back to WAPDA/LESCO during peak generation hours and draw from the grid at night, significantly reducing net bills.",
+   "source_page": "services/commercial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What size industrial solar system do I need?",
+   "answer": "Industrial systems typically range from 100kW to 500kW+ depending on a facility's load profile and available roof or ground space. SolarLink conducts a free on-site load audit to size the correct system for your factory, plant, or warehouse.",
+   "source_page": "services/industrial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can industrial and large commercial facilities get net metering in Pakistan?",
+   "answer": "Yes. Commercial and industrial properties are eligible for net metering under NEPRA regulations: the same DISCO application process SolarLink already manages for its commercial clients applies at industrial scale, handled end-to-end by our team.",
+   "source_page": "services/industrial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How is installation phased to avoid production downtime?",
+   "answer": "For active factories and plants, SolarLink schedules installation in phases around your production shifts wherever possible, and coordinates the final grid-tie connection for a short planned window rather than an extended shutdown.",
+   "source_page": "services/industrial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What equipment is used for large-scale industrial systems?",
+   "answer": "SolarLink installs Tier-1 solar panels together with industrial-grade inverter, switchgear, and storage brands, including Growatt, Canadian Solar, Schneider Electric, and TESVOLT, sized for high-capacity commercial and industrial systems.",
+   "source_page": "services/industrial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does an industrial solar project take from survey to commissioning?",
+   "answer": "Timelines for industrial-scale systems depend on site complexity, civil works, and equipment lead times. Your dedicated project engineer provides an exact schedule as part of your custom proposal after the site survey.",
+   "source_page": "services/industrial-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does the net metering approval take in Pakistan?",
+   "answer": "The net metering approval process from distribution companies (LESCO, IESCO, MEPCO, etc.) typically takes 4–12 weeks. SolarLink handles the complete application, documentation, and follow-up on your behalf.",
+   "source_page": "services/net-metering-support.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What documents are needed for a net metering application?",
+   "answer": "Required documents include: CNIC copy, electricity bill copy, property documents, single-line diagram, equipment specifications, commissioner/notary affidavit, and inspection certificate from SolarLink. We handle all documentation for our customers.",
+   "source_page": "services/net-metering-support.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can I apply for net metering myself or do I need SolarLink?",
+   "answer": "You can apply independently, but working with a licensed installer like SolarLink is strongly recommended. We manage the complete process — from design approval to DISCO inspection to meter replacement — saving you months of paperwork and repeated follow-up visits.",
+   "source_page": "services/net-metering-support.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does net metering work with LESCO, IESCO, MEPCO, and GEPCO?",
+   "answer": "Yes. Net metering is available under all major electricity distribution companies in Pakistan including LESCO (Lahore), IESCO (Islamabad), MEPCO (Multan/Faisalabad), and GEPCO (Gujranwala). SolarLink has experience handling applications across all of these DISCOs.",
+   "source_page": "services/net-metering-support.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is Net Metering?",
+   "answer": "Net metering is a billing arrangement that allows solar system owners to send excess electricity back to the national grid. Your electricity meter runs backward when you produce more than you use, reducing your WAPDA/LESCO bill or earning credits. In Pakistan, net metering is regulated by NEPRA.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is a Hybrid Solar System?",
+   "answer": "A hybrid solar system combines solar panels with battery storage and remains connected to the grid. It stores excess energy in batteries for use during load-shedding or at night, providing uninterrupted power supply (UPS) functionality along with the bill savings of solar.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What are Tier-1 Solar Panels?",
+   "answer": "Tier-1 solar panels come from manufacturers with a proven 5+ year track record, strong financial ratings, and fully automated production processes. They offer the highest reliability, consistent output, and the strongest long-term warranties. Solarlink uses only Tier-1 panels including Canadian Solar.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How much does a residential solar system cost in Pakistan?",
+   "answer": "A residential solar system in Pakistan typically costs between PKR 8–25 lakh depending on system size (5–15kW). A 10kW on-grid system costs approximately PKR 12–16 lakh installed. SolarLink provides free site surveys and custom proposals with no obligation.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What size solar system do I need for my home?",
+   "answer": "For most homes in Punjab with monthly bills of PKR 20,000–50,000, a 5–10kW system is recommended. For bills above PKR 50,000, a 10–15kW system may be needed. SolarLink engineers assess your consumption, roof space, and budget to recommend the ideal size.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How long does residential solar installation take?",
+   "answer": "Typical residential installation takes 1–3 days. The complete process from inquiry to commissioning — including site survey, design, procurement, and installation — takes approximately 2–4 weeks.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Will I really get a zero electricity bill?",
+   "answer": "With a correctly sized on-grid or hybrid solar system, your net metered bill can drop to near zero or generate credits. Many SolarLink customers in Lahore, Islamabad, Rawalpindi, and Sargodha report monthly bills under PKR 1,000 after installation.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What happens to my solar system during load-shedding?",
+   "answer": "A standard on-grid system shuts down during load-shedding for safety. To maintain power during outages, a hybrid system with battery storage is recommended. SolarLink can help you choose the right option for your needs and budget.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does SolarLink help with net metering for residential customers?",
+   "answer": "Yes. SolarLink handles the complete net metering application process for LESCO, IESCO, MEPCO, and GEPCO — from documentation to DISCO inspection to bi-directional meter installation.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What warranty does SolarLink provide?",
+   "answer": "SolarLink provides a 2-year workmanship warranty on all installations. Growatt inverters come with 5-year standard warranty (extendable to 10) and Canadian Solar panels carry a 25-year linear power output warranty.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How many solar panels do I need for my home?",
+   "answer": "For an average Pakistani home paying PKR 20,000–30,000 per month in electricity, a 5kW to 8kW system (10–16 panels) is typically sufficient. Homes with 3+ air conditioners usually need 10kW or more. A free site survey gives the exact recommendation.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the payback period for solar in Pakistan?",
+   "answer": "The typical payback period for solar in Pakistan is 3 to 4 years. After that, you enjoy essentially free electricity for the remaining 20+ years of your system's life. Rising electricity tariffs are making payback periods shorter every year.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Will my solar system work during load-shedding?",
+   "answer": "On-grid solar systems automatically shut down during load-shedding for safety. For uninterrupted power, Solarlink recommends a hybrid system with battery backup, which keeps your home powered even when the grid is down.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Does Solarlink provide after-sales support?",
+   "answer": "Yes. Solarlink provides a 1-year warranty on all installation work and offers ongoing maintenance and after-sales support. Our team is reachable by phone or WhatsApp from offices across Lahore, Islamabad, Rawalpindi, and Sargodha.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can I get net metering for my home solar system?",
+   "answer": "Yes. Any grid-connected solar system above 1kW qualifies for net metering in Pakistan. Solarlink handles the full application process with WAPDA/LESCO on your behalf. Approval typically takes 4–8 weeks.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "How many solar panels do I need for a 3-bedroom house in Pakistan?",
+   "answer": "A 3-bedroom house in Pakistan with 2 air conditioners typically requires a 6kW to 8kW system — approximately 12 to 16 panels of 580W each. Homes with larger load profiles or 3+ ACs may need 10kW. Solarlink provides a free site survey to calculate the exact requirement.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "Can solar panels run AC in Pakistan?",
+   "answer": "Yes. Solar panels can run air conditioners in Pakistan. A 1.5-ton AC consumes approximately 1.5kW per hour. A 10kW solar system can comfortably run 4–6 air conditioners simultaneously during peak sun hours. Hybrid systems with battery backup also power ACs during load-shedding.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  },
+  {
+   "question": "What is the best solar system for home in Pakistan?",
+   "answer": "For most Pakistani homes, a hybrid solar system with net metering is the best option. It reduces bills by 70–100% using net metering, and the battery backup keeps your home powered during load-shedding. Solarlink recommends Growatt hybrid inverters with Canadian Solar Tier-1 panels for maximum reliability.",
+   "source_page": "services/residential-solar.html",
+   "alsoOn": [],
+   "answer_variants": []
+  }
+ ]
+}

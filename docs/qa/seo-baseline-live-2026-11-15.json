@@ -1,0 +1,989 @@
+{
+ "site": "https://solarlink.com.pk",
+ "fetchedFrom": "https://solarlink.com.pk",
+ "recorded": "2026-11-14T23:39:19.971Z",
+ "problems": [
+  {
+   "level": "WARN",
+   "path": "/",
+   "msg": "title 70 chars (Google shows ~600px, about 55-65)"
+  },
+  {
+   "level": "WARN",
+   "path": "/",
+   "msg": "description 171 chars"
+  },
+  {
+   "level": "FAIL",
+   "path": "/about-us/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/",
+   "msg": "hreflang x-default -> https://solarlink.com.pk/ has no return link"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/growatt-vs-fronus-inverter-comparison/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/how-to-size-solar-system-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/net-metering-common-mistakes-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/net-metering-lesco-application-guide/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/net-metering-vs-battery-storage-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/on-grid-vs-hybrid-vs-off-grid-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/solar-installation-red-flags-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/solar-panel-brands-comparison-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/solar-panel-cleaning-maintenance-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/blog/solar-roi-payback-period-pakistan/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/contact-us/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/get-quote/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/how-solar-works/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/net-metering-guide/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/gilgit.html",
+   "msg": "description 15 chars"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/gilgit.html",
+   "msg": "thin: 22 words in main"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/gilgit.html",
+   "msg": "no og:image"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/islamabad.html",
+   "msg": "description 9 chars"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/lahore.html",
+   "msg": "description 9 chars"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/multan.html",
+   "msg": "description 15 chars"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/multan.html",
+   "msg": "thin: 22 words in main"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/multan.html",
+   "msg": "no og:image"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/rawalpindi.html",
+   "msg": "description 15 chars"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/sargodha.html",
+   "msg": "description 15 chars"
+  },
+  {
+   "level": "FAIL",
+   "path": "/products/",
+   "msg": "hreflang x-default -> https://solarlink.com.pk/ has no return link"
+  },
+  {
+   "level": "FAIL",
+   "path": "/products/accessories/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/products/batteries/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/products/inverters/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/products/solar-panels/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "WARN",
+   "path": "/projects/",
+   "msg": "description 16 chars"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/",
+   "msg": "hreflang x-default -> https://solarlink.com.pk/ has no return link"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/bahria-town-phase-2-lahore-10kw/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/bahria-town-phase-6-islamabad-10kw/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/company-bagh-sargodha-10kw-farm/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/company-bagh-sargodha-4-5kw/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/dha-phase-5-lahore-15kw/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/gulberg-iii-lahore-20kw-commercial/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/johar-town-lahore-4-5kw/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/model-town-lahore-6kw/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/pwd-rawalpindi-12kw-hybrid/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/projects/sector-i14-islamabad-8kw-hybrid/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/resources/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/services/",
+   "msg": "hreflang x-default -> https://solarlink.com.pk/ has no return link"
+  },
+  {
+   "level": "FAIL",
+   "path": "/services/agricultural-solar/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/services/commercial-solar/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/services/net-metering-support/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/services/residential-solar/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/sitemap/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "FAIL",
+   "path": "/solar-calculator/",
+   "msg": "status 404 (listed in sitemap)"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/gilgit.html",
+   "msg": "orphan: no internal link from another sitemap page"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/multan.html",
+   "msg": "orphan: no internal link from another sitemap page"
+  },
+  {
+   "level": "WARN",
+   "path": "/outlets/rawalpindi.html",
+   "msg": "orphan: no internal link from another sitemap page"
+  },
+  {
+   "level": "WARN",
+   "path": "/products/",
+   "msg": "orphan: no internal link from another sitemap page"
+  },
+  {
+   "level": "WARN",
+   "path": "/services/",
+   "msg": "orphan: no internal link from another sitemap page"
+  }
+ ],
+ "pages": [
+  {
+   "path": "/",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solarlink — Premier Solar Solutions & Tier-1 Installations in Pakistan",
+   "description": "Power your home, business, or farm with Solarlink. Premium Tier-1 solar systems, net-metering approvals, zero-bill savings, and lifetime support across Punjab & Islamabad.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/",
+   "hreflang": {
+    "en-PK": "https://solarlink.com.pk/",
+    "x-default": "https://solarlink.com.pk/"
+   },
+   "h1": [
+    "Custom Solar Systems for Punjab Homes & Businesses"
+   ],
+   "words": 1022,
+   "internalLinks": [
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/projects/",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "LocalBusiness",
+    "SolarEnergyCompany",
+    "WebSite",
+    "HowTo",
+    "FAQPage",
+    "WebPage",
+    "Organization",
+    "WebPage"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/brand/og-banner.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/about-us/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Energy Blog – Tips, News & Guides | Solarlink",
+   "description": "Practical solar guides for Pakistan — system sizing, net metering applications, equipment comparisons, and buying advice from Solarlink",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/blog/",
+   "hreflang": {
+    "en-PK": "https://solarlink.com.pk/blog/",
+    "x-default": "https://solarlink.com.pk/"
+   },
+   "h1": [
+    "Solar Energy Tips, Net Metering News & Pakistan Buying Guides"
+   ],
+   "words": 276,
+   "internalLinks": [
+    "/",
+    "/blog/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/projects/",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/blog/growatt-vs-fronus-inverter-comparison/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/how-to-size-solar-system-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/net-metering-common-mistakes-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/net-metering-lesco-application-guide/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/net-metering-vs-battery-storage-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/on-grid-vs-hybrid-vs-off-grid-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/solar-installation-red-flags-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/solar-panel-brands-comparison-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/solar-panel-cleaning-maintenance-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/blog/solar-roi-payback-period-pakistan/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/contact-us/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/faqs.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Frequently Asked Questions (FAQs) | Solarlink",
+   "description": "Everything you need to know about solar energy in Pakistan — answered by Solarlink",
+   "robots": "index, follow",
+   "canonical": "https://solarlink.com.pk/faqs.html",
+   "hreflang": {},
+   "h1": [
+    "Frequently Asked Questions About Solar in Pakistan"
+   ],
+   "words": 3636,
+   "internalLinks": [
+    "/",
+    "/blog/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/products/batteries.html",
+    "/products/inverters.html",
+    "/products/solar-panels.html",
+    "/projects/",
+    "/resources.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/get-quote/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/how-solar-works/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/net-metering-guide/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/outlets/gilgit.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "SolarLink Gilgit | Gilgit Branch",
+   "description": "Visit SolarLink",
+   "robots": "index, follow",
+   "canonical": "https://solarlink.com.pk/outlets/gilgit.html",
+   "hreflang": {},
+   "h1": [
+    "SolarLink Gilgit"
+   ],
+   "words": 22,
+   "internalLinks": [
+    "/blog/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html"
+   ],
+   "jsonLd": [],
+   "ogImage": null,
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/outlets/islamabad.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Installation in Islamabad | SolarLink — Islamabad Outlet",
+   "description": "SolarLink",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/outlets/islamabad.html",
+   "hreflang": {},
+   "h1": [
+    "Solar Installation in Islamabad"
+   ],
+   "words": 1203,
+   "internalLinks": [
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/net-metering-guide/",
+    "/outlets/lahore.html",
+    "/outlets/sargodha.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/installment-plans/",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "LocalBusiness",
+    "SolarEnergyCompany",
+    "FAQPage"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/outlets/lahore.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Installation in Lahore | SolarLink — Lahore",
+   "description": "SolarLink",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/outlets/lahore.html",
+   "hreflang": {},
+   "h1": [
+    "Solar Installation in Lahore"
+   ],
+   "words": 1239,
+   "internalLinks": [
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/net-metering-guide/",
+    "/outlets/islamabad.html",
+    "/outlets/sargodha.html",
+    "/projects/",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "LocalBusiness",
+    "SolarEnergyCompany",
+    "FAQPage"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/outlets/multan.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "SolarLink Multan | Multan Branch",
+   "description": "Visit SolarLink",
+   "robots": "index, follow",
+   "canonical": "https://solarlink.com.pk/outlets/multan.html",
+   "hreflang": {},
+   "h1": [
+    "SolarLink Multan"
+   ],
+   "words": 22,
+   "internalLinks": [
+    "/blog/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html"
+   ],
+   "jsonLd": [],
+   "ogImage": null,
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/outlets/rawalpindi.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Installation in Rawalpindi | SolarLink — Rawalpindi Branch",
+   "description": "Visit SolarLink",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/outlets/rawalpindi.html",
+   "hreflang": {},
+   "h1": [
+    "Solar Installation in Rawalpindi"
+   ],
+   "words": 314,
+   "internalLinks": [
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/installment-plans/",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "LocalBusiness",
+    "SolarEnergyCompany"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/outlets/sargodha.html",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Installation in Sargodha | SolarLink — Sargodha Branch",
+   "description": "Visit SolarLink",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/outlets/sargodha.html",
+   "hreflang": {},
+   "h1": [
+    "Solar Installation in Sargodha"
+   ],
+   "words": 1231,
+   "internalLinks": [
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/net-metering-guide/",
+    "/outlets/islamabad.html",
+    "/outlets/lahore.html",
+    "/projects/",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/installment-plans/",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "LocalBusiness",
+    "SolarEnergyCompany",
+    "FAQPage"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/products/",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Products in Pakistan | Solarlink",
+   "description": "Tier-1 solar panels, inverters, batteries & accessories from Solarlink. Quality equipment for homes and businesses across Pakistan.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/products/",
+   "hreflang": {
+    "en-PK": "https://solarlink.com.pk/products/",
+    "x-default": "https://solarlink.com.pk/"
+   },
+   "h1": [
+    "Solar Products in Pakistan"
+   ],
+   "words": 261,
+   "internalLinks": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/products/accessories.html",
+    "/products/batteries.html",
+    "/products/inverters.html",
+    "/products/solar-panels.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "WebPage",
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/products/accessories/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/products/batteries/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/products/inverters/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/products/solar-panels/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Installation Projects in Punjab & Islamabad | Solarlink",
+   "description": "Browse Solarlink",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/projects/",
+   "hreflang": {
+    "en-PK": "https://solarlink.com.pk/projects/",
+    "x-default": "https://solarlink.com.pk/"
+   },
+   "h1": [
+    "Recent Installations Across Punjab & Islamabad"
+   ],
+   "words": 547,
+   "internalLinks": [
+    "/",
+    "/blog/",
+    "/contact-us.html",
+    "/faqs.html",
+    "/get-quote.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/projects/bahria-town-phase-2-lahore-10kw.html",
+    "/projects/bahria-town-phase-6-islamabad-10kw.html",
+    "/projects/company-bagh-sargodha-10kw-farm.html",
+    "/projects/company-bagh-sargodha-4-5kw.html",
+    "/projects/dha-phase-5-lahore-15kw.html",
+    "/projects/gulberg-iii-lahore-20kw-commercial.html",
+    "/projects/johar-town-lahore-4-5kw.html",
+    "/projects/model-town-lahore-6kw.html",
+    "/projects/pwd-rawalpindi-12kw-hybrid.html",
+    "/projects/sector-i14-islamabad-8kw-hybrid.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "ogImage": "https://solarlink.com.pk/og-image.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/projects/bahria-town-phase-2-lahore-10kw/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/bahria-town-phase-6-islamabad-10kw/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/company-bagh-sargodha-10kw-farm/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/company-bagh-sargodha-4-5kw/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/dha-phase-5-lahore-15kw/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/gulberg-iii-lahore-20kw-commercial/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/johar-town-lahore-4-5kw/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/model-town-lahore-6kw/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/pwd-rawalpindi-12kw-hybrid/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/projects/sector-i14-islamabad-8kw-hybrid/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/resources/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/services/",
+   "status": 200,
+   "location": null,
+   "xRobots": null,
+   "lang": "en-PK",
+   "title": "Solar Services in Pakistan | Solarlink",
+   "description": "Residential, commercial & agricultural solar installation across Lahore, Islamabad, Rawalpindi & Sargodha. Free site survey and custom quote.",
+   "robots": "index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1",
+   "canonical": "https://solarlink.com.pk/services/",
+   "hreflang": {
+    "en-PK": "https://solarlink.com.pk/services/",
+    "x-default": "https://solarlink.com.pk/"
+   },
+   "h1": [
+    "Solar Services in Pakistan"
+   ],
+   "words": 300,
+   "internalLinks": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/how-solar-works.html",
+    "/net-metering-guide.html",
+    "/services/agricultural-solar.html",
+    "/services/commercial-solar.html",
+    "/services/industrial-solar.html",
+    "/services/net-metering-support.html",
+    "/services/residential-solar.html",
+    "/solar-calculator.html"
+   ],
+   "jsonLd": [
+    "WebPage",
+    "Organization",
+    "BreadcrumbList"
+   ],
+   "ogImage": "https://solarlink.com.pk/images/hero/solar-installation-lahore-dha.jpg",
+   "imgNoAlt": 0
+  },
+  {
+   "path": "/services/agricultural-solar/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/services/commercial-solar/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/services/net-metering-support/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/services/residential-solar/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/sitemap/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  },
+  {
+   "path": "/solar-calculator/",
+   "status": 404,
+   "location": null,
+   "xRobots": null
+  }
+ ]
+}

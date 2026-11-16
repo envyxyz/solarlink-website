@@ -1,0 +1,1808 @@
+[
+  {
+    "q": "solar panel ki qeemat in",
+    "script": "roman",
+    "seed": "solar system ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki keemat",
+    "script": "roman",
+    "seed": "solar system ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar system games for kids",
+    "script": "roman",
+    "seed": "solar system ki qeemat",
+    "intent": "informational",
+    "topic": "educational"
+  },
+  {
+    "q": "solar system explained for kids",
+    "script": "roman",
+    "seed": "solar system ki qeemat",
+    "intent": "informational",
+    "topic": "educational"
+  },
+  {
+    "q": "solar system name hindi",
+    "script": "roman",
+    "seed": "solar system ki qeemat",
+    "intent": "informational",
+    "topic": "educational"
+  },
+  {
+    "q": "solar panel ki price",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price kya hai",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "informational",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price list",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "commercial",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price 585",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price 2026",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price pakistani",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price today",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel 585 watt ki price",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel kit price",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki price pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ka rate in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ke rate in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel kit price in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel aaj ka rate in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki kimat price in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "pakistan mein solar panel ki price",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "585 watt solar panel ki price in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar system panel price in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "how much is solar panels in pakistan",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar control panel price",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar price per panel",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel cost by year",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "cost of 12 panel solar system",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "solar panel ki price kitni hai",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ka price kitna hai",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel ki cost kitni hai",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "ek solar panel ki price kitni hoti hai",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "3 kilowatt solar panel ki price kitni hai",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "what is the price of 1 solar panel",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "informational",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "how much is one panel of solar",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "informational",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "cost of one solar panel in india",
+    "script": "roman",
+    "seed": "solar panel ki price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar lagwane ka kharcha kitna aata hai",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar panel lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar system lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar panel lagwane ka kharcha kitna aata hai",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "3kw solar lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "solar light lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar plant lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar pump lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "ghar par solar lagwane ka kharcha",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar system lagwane ka kitna kharcha aata hai",
+    "script": "roman",
+    "seed": "solar lagwane ka kharcha",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar system kitne ka hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar panel kitne ka hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel kitne ka hai price",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar power kitne ka hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar panel kitne ka hai ek",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar system kitne ka lagta hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "hybrid solar system kitne ka hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar system kitne ka milta hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar system kitne kilometre ka hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "educational"
+  },
+  {
+    "q": "solar system kitne ka padta hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar panel kitne kitne ka hai",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar system amount",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar system limit",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar system kitne hote hain",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "transactional",
+    "topic": "educational"
+  },
+  {
+    "q": "solar system capacity",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "solar panel kitne watt ka hai kaise pata kare",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "informational",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel kitne volt ka hai kaise pata kare",
+    "script": "roman",
+    "seed": "solar system kitne ka hai",
+    "intent": "informational",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "5 kw solar system kitne ka hai",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw solar system kitne ka lagega",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw solar panel kitne ka lagega",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw solar panel kitne ka hai",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw solar panel kitne ka padega",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw solar panel kitne ka aata hai",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw solar panel kitne ka aaega",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw ka solar panel kitne ka padta hai",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw ka solar system kitne unit banata hai",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "5 kw ka solar system kitne mein lagta hai",
+    "script": "roman",
+    "seed": "5kw solar system kitne ka",
+    "intent": "transactional",
+    "topic": "system-sizing"
+  },
+  {
+    "q": "net metering kya hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering kya hai in hindi",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering solar kya hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering agreement kya hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "virtual net metering kya hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering yojana kya hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering system kya hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering kaise hota hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net meter kya hota hai in hindi",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net meter kaisa dikhta hai",
+    "script": "roman",
+    "seed": "net metering kya hai",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net meter lagane ka tarika",
+    "script": "roman",
+    "seed": "net metering ka tarika",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering example",
+    "script": "roman",
+    "seed": "net metering ka tarika",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering rules",
+    "script": "roman",
+    "seed": "net metering ka tarika",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering explained",
+    "script": "roman",
+    "seed": "net metering ka tarika",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering bill example",
+    "script": "roman",
+    "seed": "net metering ka tarika",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "net metering explanation",
+    "script": "roman",
+    "seed": "net metering ka tarika",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "solar panel konsa acha hai",
+    "script": "roman",
+    "seed": "solar panel konsa acha hai",
+    "intent": "commercial",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel konsa acha hota hai",
+    "script": "roman",
+    "seed": "solar panel konsa acha hai",
+    "intent": "commercial",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "sabse acha solar panel konsa hai",
+    "script": "roman",
+    "seed": "solar panel konsa acha hai",
+    "intent": "commercial",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar inverter konsa best hai",
+    "script": "roman",
+    "seed": "solar inverter konsa best hai",
+    "intent": "commercial",
+    "topic": "inverters"
+  },
+  {
+    "q": "solar inverter sabse best kaun sa hai",
+    "script": "roman",
+    "seed": "solar inverter konsa best hai",
+    "intent": "commercial",
+    "topic": "inverters"
+  },
+  {
+    "q": "top 10 solar inverters",
+    "script": "roman",
+    "seed": "solar inverter konsa best hai",
+    "intent": "commercial",
+    "topic": "inverters"
+  },
+  {
+    "q": "which solar inverter is best",
+    "script": "roman",
+    "seed": "solar inverter konsa best hai",
+    "intent": "commercial",
+    "topic": "inverters"
+  },
+  {
+    "q": "which solar inverter is best for home use",
+    "script": "roman",
+    "seed": "solar inverter konsa best hai",
+    "intent": "commercial",
+    "topic": "inverters"
+  },
+  {
+    "q": "top 10 solar inverter in world",
+    "script": "roman",
+    "seed": "solar inverter konsa best hai",
+    "intent": "commercial",
+    "topic": "inverters"
+  },
+  {
+    "q": "solar battery ka price",
+    "script": "roman",
+    "seed": "solar battery ki qeemat",
+    "intent": "transactional",
+    "topic": "batteries"
+  },
+  {
+    "q": "solar battery price in karachi",
+    "script": "roman",
+    "seed": "solar battery ki qeemat",
+    "intent": "local",
+    "topic": "batteries"
+  },
+  {
+    "q": "12 volt solar battery price",
+    "script": "roman",
+    "seed": "solar battery ki qeemat",
+    "intent": "transactional",
+    "topic": "batteries"
+  },
+  {
+    "q": "how much does solar with battery cost",
+    "script": "roman",
+    "seed": "solar battery ki qeemat",
+    "intent": "transactional",
+    "topic": "batteries"
+  },
+  {
+    "q": "bijli ka bill kam karne ka tarika",
+    "script": "roman",
+    "seed": "bijli ka bill kam karne ka tarika",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "bijli ka bill kam karne ka tarika pakistan",
+    "script": "roman",
+    "seed": "bijli ka bill kam karne ka tarika",
+    "intent": "local",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "bijli ka bill information",
+    "script": "roman",
+    "seed": "bijli ka bill kam karne ka tarika",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "solar tubewell scheme",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell price in pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell scheme 2026",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell inverter price in pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell loan in pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell price",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "transactional",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell scheme 2026 last date",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell scheme in punjab pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell scheme phase 2",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell scheme in pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar borewell motor price in pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell vfd price in pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell price in punjab pakistan",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell scheme 2026 registration",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "punjab solar tubewell scheme 2026",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell connection in haryana 2026",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell connection in haryana 2026 price",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "punjab solar tubewell scheme 2026 registration",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "local",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "cm solar tubewell scheme 2026",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar water heater tube size",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar tubewell kaise lagaye",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar panel se tubewell kaise chalaye",
+    "script": "roman",
+    "seed": "solar tubewell",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "solar plate price in pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan 585",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan today",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan 585 watt jinko",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan 585 watt",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in karachi",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan 300 watt",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price in pakistan today 585",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price pakistan today",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price pakistan 585",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price pakistan 585 w",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price pakistan 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price pakistani",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price pakistan today",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar plate pakistan price 580 watt",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price pakistan 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar plate price lahore",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price lahore today",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price lahore",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price lahore today",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price lahore 585 watt",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price lahore installment plan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "financing"
+  },
+  {
+    "q": "solar plate for sale in lahore",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate rate lahore",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price lahore 580 watt",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price lahore 550 watt",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price islamabad",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price islamabad today",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel islamabad price list",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar plate price in islamabad",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price in islamabad pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar plate price in lahore",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate stand price in pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price 2026 in pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price 2026 in pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price 2026 in india",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel rate 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price increase 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price chart 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "commercial",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price list 2026",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "commercial",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel price increase 2026 in india",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar plate kitne price",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel kitne price",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel kitne price ka aata hai",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar panel kitne rate ka hai",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar plate kitne ki hai price in pakistan",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price list",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "commercial",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar system plate price",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar panel price kaise lagaye",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "informational",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "solar energy plate price",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price rate",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate price india",
+    "script": "roman",
+    "seed": "solar plate price",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate ki qeemat",
+    "script": "roman",
+    "seed": "solar plate ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate ki keemat",
+    "script": "roman",
+    "seed": "solar plate ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate ki price",
+    "script": "roman",
+    "seed": "solar plate ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate ka price",
+    "script": "roman",
+    "seed": "solar plate ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "solar plate kitne ki hai",
+    "script": "roman",
+    "seed": "solar plate ki qeemat",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر سسٹم معلومات",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم معلومات price",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم رجسٹریشن",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم لگانے کا طریقہ",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم معلومات حکومت",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم کی قیمت",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "transactional",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم اپلائی",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-system"
+  },
+  {
+    "q": "سولر سسٹم قسطوں پر",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "transactional",
+    "topic": "financing"
+  },
+  {
+    "q": "سولر سسٹم ٹیوب ویل",
+    "script": "urdu",
+    "seed": "سولر سسٹم",
+    "intent": "informational",
+    "topic": "solar-tubewell"
+  },
+  {
+    "q": "سولر پینل قیمت",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت 585",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت پاکستان 2026",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت پاکستان",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت 2026",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت 2025",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت پاکستان 2025",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت پاکستان 2024",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "جنکو سولر پینل کی قیمت",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "transactional",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "سولر پینل کی قیمت 585 price in pakistan",
+    "script": "urdu",
+    "seed": "سولر پینل قیمت",
+    "intent": "local",
+    "topic": "solar-panels"
+  },
+  {
+    "q": "نیٹ میٹرنگ",
+    "script": "urdu",
+    "seed": "نیٹ میٹرنگ",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "نیٹ میٹرنگ پالیسی",
+    "script": "urdu",
+    "seed": "نیٹ میٹرنگ",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "نیٹ میٹرنگ کیا ہے",
+    "script": "urdu",
+    "seed": "نیٹ میٹرنگ",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "نیٹ میٹرنگ ختم",
+    "script": "urdu",
+    "seed": "نیٹ میٹرنگ",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "سولر نیٹ میٹرنگ",
+    "script": "urdu",
+    "seed": "نیٹ میٹرنگ",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "نئی نیٹ میٹرنگ پالیسی",
+    "script": "urdu",
+    "seed": "نیٹ میٹرنگ",
+    "intent": "informational",
+    "topic": "net-metering"
+  },
+  {
+    "q": "سولر انورٹر کی قیمت",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "transactional",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر انورٹر کی سیٹنگ",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر انورٹر",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر انورٹر سیٹنگ",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر انورٹر کی قیمت لاہور",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "local",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر انورٹر لگانے کا طریقہ",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر انورٹر بنانے کا طریقہ",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر میکس انورٹر",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "دیسی سولر انورٹر",
+    "script": "urdu",
+    "seed": "سولر انورٹر",
+    "intent": "informational",
+    "topic": "inverters"
+  },
+  {
+    "q": "سولر بیٹری کی قیمت",
+    "script": "urdu",
+    "seed": "سولر بیٹری",
+    "intent": "transactional",
+    "topic": "batteries"
+  },
+  {
+    "q": "سولر بیٹری",
+    "script": "urdu",
+    "seed": "سولر بیٹری",
+    "intent": "informational",
+    "topic": "batteries"
+  },
+  {
+    "q": "سولر بیٹری چارجر",
+    "script": "urdu",
+    "seed": "سولر بیٹری",
+    "intent": "informational",
+    "topic": "batteries"
+  },
+  {
+    "q": "سولر بیٹری لگانے کا طریقہ",
+    "script": "urdu",
+    "seed": "سولر بیٹری",
+    "intent": "informational",
+    "topic": "batteries"
+  },
+  {
+    "q": "سولر والی بیٹری",
+    "script": "urdu",
+    "seed": "سولر بیٹری",
+    "intent": "informational",
+    "topic": "batteries"
+  },
+  {
+    "q": "بجلی کا بل",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چیک کرنا 2026",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چیک کرنا",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چیک",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چیک کرنا bill check",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چیک کرنا pakistan",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "local",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل ان لائن",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل ان لائن چیک",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چیک کرنا bill",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل چک",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل 2026",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "بجلی کا بل آن لائن چیک 2026",
+    "script": "urdu",
+    "seed": "بجلی کا بل",
+    "intent": "informational",
+    "topic": "electricity-bill"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت آج",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 580",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 650",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 585",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 180",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 2026",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ پروگرام",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "informational",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 585 price in pakistan",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "local",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ کی قیمت 585 واٹ",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "transactional",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "informational",
+    "topic": "solar-plates"
+  },
+  {
+    "q": "سولر پلیٹ 585 price in pakistan",
+    "script": "urdu",
+    "seed": "سولر پلیٹ",
+    "intent": "local",
+    "topic": "solar-plates"
+  }
+]

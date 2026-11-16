@@ -1,0 +1,17 @@
+Build a Roman Urdu and Urdu-script keyword list for solar buyers in Pakistan.
+
+Use the public Google suggest endpoint, signed out:
+https://suggestqueries.google.com/complete/search?client=firefox&hl=ur&gl=pk&q=QUERY (Urdu script)
+https://suggestqueries.google.com/complete/search?client=firefox&hl=en&gl=pk&q=QUERY (Roman Urdu)
+
+Seeds (Roman Urdu): solar system ki qeemat, solar panel ki price, solar lagwane ka kharcha, solar system kitne ka hai, 5kw solar system kitne ka, net metering kya hai, net metering ka tarika, solar panel konsa acha hai, solar inverter konsa best hai, solar battery ki qeemat, bijli ka bill kam karne ka tarika, solar tubewell, solar qiston par, solar plate price, solar plate ki qeemat.
+
+Seeds (Urdu script): سولر سسٹم, سولر پینل قیمت, نیٹ میٹرنگ, سولر انورٹر, سولر بیٹری, بجلی کا بل, سولر پلیٹ.
+
+For each seed fetch the seed alone and with: pakistan, lahore, islamabad, 2026, kitne, kaise. Write a small script to do the fetching.
+
+Write JSON to C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/3-keywords-ur.json as an array of {"q": string, "script": "roman|urdu", "seed": string, "intent": string, "topic": string}.
+
+Then write C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/3-keywords-ur-summary.md (under 80 lines): the phrases people really type, grouped by topic, and which kind of English page each should be mentioned on.
+
+Rules: keep dialect spellings exactly as Google returned them; do not correct them. Never invent a query. Do not modify any file other than the two output files (and your own temporary script in the same folder). End your reply with only: DONE <output file path> or FAILED <reason>.

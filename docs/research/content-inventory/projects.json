@@ -1,0 +1,595 @@
+{
+ "source": "solarlink-2.0/projects/*.html",
+ "note": "All 10 detail pages are templated. Before/after bills are explicitly labelled \"Placeholder\" on each page; all gallery images are /projects/placeholder.svg; index page nonetheless says \"Every card below is a real SolarLink project\". datePublished 2026-01-01 appears in JSON-LD only, identical on all 10.",
+ "index_page": {
+  "title_tag": "Solar Installation Projects in Punjab & Islamabad | Solarlink",
+  "meta_description": "Browse Solarlink's completed solar installations across Lahore, Islamabad, Rawalpindi, and Sargodha. Real before/after bill data, equipment details, and customer testimonials.",
+  "h1": "Recent Installations Across Punjab & Islamabad",
+  "intro": "Every card below is a real SolarLink project — system specs, actual bill savings, and customer feedback. See why families and businesses across Punjab trust us.",
+  "card_count": 10,
+  "images_all_placeholder": true,
+  "filter_by_city": true
+ },
+ "projects": [
+  {
+   "slug": "bahria-town-phase-2-lahore-10kw",
+   "url": "/projects/bahria-town-phase-2-lahore-10kw.html",
+   "title_tag": "Bahria Town Phase 2, Lahore — 10kW On-Grid Solar | SolarLink",
+   "meta_description": "10kW on-grid residential system that slashed the monthly bill by over 98%. Installed by SolarLink in Bahria Town Phase 2, Lahore. Before: ₨ 45,000 / month → After: ₨ 800 / month.",
+   "h1": "Bahria Town Phase 2, Lahore — 10kW On-Grid",
+   "area": "Bahria Town Phase 2",
+   "city": "Lahore",
+   "system_size_kw": 10,
+   "system_type": "On-Grid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, Bahria Town Ph-2",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 45,000 / month",
+    "after_monthly_bill": "₨ 800 / month",
+    "percentage_claim_in_text": "98%",
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Game-changer! We went from dreading the electricity bill to barely noticing it. SolarLink handled everything professionally.\"",
+    "attribution": "Homeowner, Bahria Town Ph-2",
+    "verified_label": "Verified SolarLink Customer — Bahria Town Phase 2, Lahore"
+   },
+   "narrative_summary": "10kW on-grid residential system that slashed the monthly bill by over 98%. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Bahria Town Phase 2, Lahore, a 10kW On-Grid residential system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 45,000 / month\" before and \"₨ 800 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Game-changer! We went from dreading the electricity bill to barely noticing it. SolarLink handled everything professionally.\" (Homeowner, Bahria Town Ph-2).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "10kW on-grid solar installation at Bahria Town Phase 2, Lahore — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 261,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "bahria-town-phase-6-islamabad-10kw",
+   "url": "/projects/bahria-town-phase-6-islamabad-10kw.html",
+   "title_tag": "Bahria Town Phase 6, Islamabad — 10kW On-Grid Solar | SolarLink",
+   "meta_description": "10kW on-grid system in Bahria Islamabad — over 97% bill reduction achieved. Installed by SolarLink in Bahria Town Phase 6, Islamabad. Before: ₨ 42,000 / month → After: ₨ 1,200 / month.",
+   "h1": "Bahria Town Phase 6, Islamabad — 10kW On-Grid",
+   "area": "Bahria Town Phase 6",
+   "city": "Islamabad",
+   "system_size_kw": 10,
+   "system_type": "On-Grid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, Bahria Town Ph-6",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 42,000 / month",
+    "after_monthly_bill": "₨ 1,200 / month",
+    "percentage_claim_in_text": "97%",
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"The system's a game-changer! No more high bills and the load-shedding no longer bothers us.\"",
+    "attribution": "Homeowner, Bahria Town Ph-6",
+    "verified_label": "Verified SolarLink Customer — Bahria Town Phase 6, Islamabad"
+   },
+   "narrative_summary": "10kW on-grid system in Bahria Islamabad — over 97% bill reduction achieved. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Bahria Town Phase 6, Islamabad, a 10kW On-Grid residential system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 42,000 / month\" before and \"₨ 1,200 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"The system's a game-changer! No more high bills and the load-shedding no longer bothers us.\" (Homeowner, Bahria Town Ph-6).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "10kW on-grid solar installation at Bahria Town Phase 6, Islamabad — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 260,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "company-bagh-sargodha-10kw-farm",
+   "url": "/projects/company-bagh-sargodha-10kw-farm.html",
+   "title_tag": "Near Company Bagh, Sargodha — 10kW On-Grid Solar | SolarLink",
+   "meta_description": "10kW agricultural on-grid system powering a tubewell — eliminating fuel & grid costs. Installed by SolarLink in Near Company Bagh, Sargodha. Before: WAPDA-dependent (high tubewell costs) → After: Solar-powered (near-zero running cost).",
+   "h1": "Near Company Bagh, Sargodha — 10kW On-Grid",
+   "area": "Near Company Bagh",
+   "city": "Sargodha",
+   "system_size_kw": 10,
+   "system_type": "On-Grid",
+   "category": "Agricultural",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Farmer, Sargodha",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "WAPDA-dependent (high tubewell costs)",
+    "after_monthly_bill": "Solar-powered (near-zero running cost)",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Our tubewell now runs on sunlight. Irrigation costs dropped to almost nothing.\"",
+    "attribution": "Farmer, Sargodha",
+    "verified_label": "Verified SolarLink Customer — Near Company Bagh, Sargodha"
+   },
+   "narrative_summary": "10kW agricultural on-grid system powering a tubewell — eliminating fuel & grid costs. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Near Company Bagh, Sargodha, a 10kW On-Grid agricultural system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"WAPDA-dependent (high tubewell costs)\" before and \"Solar-powered (near-zero running cost)\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Our tubewell now runs on sunlight. Irrigation costs dropped to almost nothing.\" (Farmer, Sargodha).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "10kW agricultural on-grid solar installation near Company Bagh, Sargodha — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 253,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "company-bagh-sargodha-4-5kw",
+   "url": "/projects/company-bagh-sargodha-4-5kw.html",
+   "title_tag": "Near Company Bagh, Sargodha — 4.5kW On-Grid Solar | SolarLink",
+   "meta_description": "4.5kW on-grid residential system close to Sargodha's Company Bagh area. Installed by SolarLink in Near Company Bagh, Sargodha. Before: ₨ 16,000 / month → After: ₨ 350 / month.",
+   "h1": "Near Company Bagh, Sargodha — 4.5kW On-Grid",
+   "area": "Near Company Bagh",
+   "city": "Sargodha",
+   "system_size_kw": 4.5,
+   "system_type": "On-Grid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Fronus",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, Near Company Bagh",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 16,000 / month",
+    "after_monthly_bill": "₨ 350 / month",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Affordable, efficient, and professionally installed. My neighbours are all enquiring now.\"",
+    "attribution": "Homeowner, Near Company Bagh",
+    "verified_label": "Verified SolarLink Customer — Near Company Bagh, Sargodha"
+   },
+   "narrative_summary": "4.5kW on-grid residential system close to Sargodha's Company Bagh area. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Near Company Bagh, Sargodha, a 4.5kW On-Grid residential system. Equipment is shown only as brand tags (Fronus, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 16,000 / month\" before and \"₨ 350 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Affordable, efficient, and professionally installed. My neighbours are all enquiring now.\" (Homeowner, Near Company Bagh).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "4.5kW on-grid solar installation near Company Bagh, Sargodha — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 248,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "dha-phase-5-lahore-15kw",
+   "url": "/projects/dha-phase-5-lahore-15kw.html",
+   "title_tag": "DHA Phase 5, Lahore — 15kW On-Grid Solar | SolarLink",
+   "meta_description": "Large 15kW on-grid system for a premium DHA villa — virtually zero bill. Installed by SolarLink in DHA Phase 5, Lahore. Before: ₨ 65,000 / month → After: ₨ 1,500 / month.",
+   "h1": "DHA Phase 5, Lahore — 15kW On-Grid",
+   "area": "DHA Phase 5",
+   "city": "Lahore",
+   "system_size_kw": 15,
+   "system_type": "On-Grid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, DHA Phase 5",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 65,000 / month",
+    "after_monthly_bill": "₨ 1,500 / month",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": "Testimonial: \"Payback in under 4 years\"",
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Best investment I've made in years. Payback in under 4 years and the system looks great on the roof.\"",
+    "attribution": "Homeowner, DHA Phase 5",
+    "verified_label": "Verified SolarLink Customer — DHA Phase 5, Lahore"
+   },
+   "narrative_summary": "Large 15kW on-grid system for a premium DHA villa — virtually zero bill. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as DHA Phase 5, Lahore, a 15kW On-Grid residential system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 65,000 / month\" before and \"₨ 1,500 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Best investment I've made in years. Payback in under 4 years and the system looks great on the roof.\" (Homeowner, DHA Phase 5).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "15kW on-grid solar installation at DHA Phase 5, Lahore — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 262,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "gulberg-iii-lahore-20kw-commercial",
+   "url": "/projects/gulberg-iii-lahore-20kw-commercial.html",
+   "title_tag": "Gulberg III, Lahore — 20kW On-Grid Solar | SolarLink",
+   "meta_description": "20kW commercial on-grid installation cutting business operating costs by 70%. Installed by SolarLink in Gulberg III, Lahore. Before: ₨ 95,000 / month → After: ₨ 28,000 / month.",
+   "h1": "Gulberg III, Lahore — 20kW On-Grid",
+   "area": "Gulberg III",
+   "city": "Lahore",
+   "system_size_kw": 20,
+   "system_type": "On-Grid",
+   "category": "Commercial",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Business Owner, Gulberg III",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 95,000 / month",
+    "after_monthly_bill": "₨ 28,000 / month",
+    "percentage_claim_in_text": "70%",
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Our electricity overheads dropped by more than two-thirds overnight. The ROI is extraordinary.\"",
+    "attribution": "Business Owner, Gulberg III",
+    "verified_label": "Verified SolarLink Customer — Gulberg III, Lahore"
+   },
+   "narrative_summary": "20kW commercial on-grid installation cutting business operating costs by 70%. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Gulberg III, Lahore, a 20kW On-Grid commercial system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 95,000 / month\" before and \"₨ 28,000 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Our electricity overheads dropped by more than two-thirds overnight. The ROI is extraordinary.\" (Business Owner, Gulberg III).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "20kW commercial on-grid solar installation at Gulberg III, Lahore — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 246,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "johar-town-lahore-4-5kw",
+   "url": "/projects/johar-town-lahore-4-5kw.html",
+   "title_tag": "Johar Town, Lahore — 4.5kW On-Grid Solar | SolarLink",
+   "meta_description": "Compact 4.5kW on-grid system perfectly sized for a mid-size Johar Town home. Installed by SolarLink in Johar Town, Lahore. Before: ₨ 18,000 / month → After: ₨ 400 / month.",
+   "h1": "Johar Town, Lahore — 4.5kW On-Grid",
+   "area": "Johar Town",
+   "city": "Lahore",
+   "system_size_kw": 4.5,
+   "system_type": "On-Grid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Fronus",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, Johar Town",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 18,000 / month",
+    "after_monthly_bill": "₨ 400 / month",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Installed within two days and I was generating power by the third morning. Highly recommended.\"",
+    "attribution": "Homeowner, Johar Town",
+    "verified_label": "Verified SolarLink Customer — Johar Town, Lahore"
+   },
+   "narrative_summary": "Compact 4.5kW on-grid system perfectly sized for a mid-size Johar Town home. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Johar Town, Lahore, a 4.5kW On-Grid residential system. Equipment is shown only as brand tags (Fronus, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 18,000 / month\" before and \"₨ 400 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Installed within two days and I was generating power by the third morning. Highly recommended.\" (Homeowner, Johar Town).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "4.5kW on-grid solar installation at Johar Town, Lahore — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 251,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "model-town-lahore-6kw",
+   "url": "/projects/model-town-lahore-6kw.html",
+   "title_tag": "Model Town, Lahore — 6kW On-Grid Solar | SolarLink",
+   "meta_description": "6kW on-grid residential system for a Model Town household with net metering. Installed by SolarLink in Model Town, Lahore. Before: ₨ 24,000 / month → After: ₨ 600 / month.",
+   "h1": "Model Town, Lahore — 6kW On-Grid",
+   "area": "Model Town",
+   "city": "Lahore",
+   "system_size_kw": 6,
+   "system_type": "On-Grid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Fronus",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, Model Town",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 24,000 / month",
+    "after_monthly_bill": "₨ 600 / month",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"SolarLink's team was transparent from day one — no hidden costs, everything delivered on time.\"",
+    "attribution": "Homeowner, Model Town",
+    "verified_label": "Verified SolarLink Customer — Model Town, Lahore"
+   },
+   "narrative_summary": "6kW on-grid residential system for a Model Town household with net metering. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Model Town, Lahore, a 6kW On-Grid residential system. Equipment is shown only as brand tags (Fronus, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 24,000 / month\" before and \"₨ 600 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"SolarLink's team was transparent from day one — no hidden costs, everything delivered on time.\" (Homeowner, Model Town).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "6kW on-grid solar installation at Model Town, Lahore — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 251,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "pwd-rawalpindi-12kw-hybrid",
+   "url": "/projects/pwd-rawalpindi-12kw-hybrid.html",
+   "title_tag": "PWD Housing Scheme, Rawalpindi — 12kW Hybrid Solar | SolarLink",
+   "meta_description": "12kW hybrid system with battery storage for uninterrupted power in Rawalpindi. Installed by SolarLink in PWD Housing Scheme, Rawalpindi. Before: ₨ 52,000 / month → After: ₨ 1,100 / month.",
+   "h1": "PWD Housing Scheme, Rawalpindi — 12kW Hybrid",
+   "area": "PWD Housing Scheme",
+   "city": "Rawalpindi",
+   "system_size_kw": 12,
+   "system_type": "Hybrid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, PWD Housing Scheme",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 52,000 / month",
+    "after_monthly_bill": "₨ 1,100 / month",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"Finally free from WAPDA's schedule. The backup keeps the AC running through load-shedding.\"",
+    "attribution": "Homeowner, PWD Housing Scheme",
+    "verified_label": "Verified SolarLink Customer — PWD Housing Scheme, Rawalpindi"
+   },
+   "narrative_summary": "12kW hybrid system with battery storage for uninterrupted power in Rawalpindi. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as PWD Housing Scheme, Rawalpindi, a 12kW Hybrid residential system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 52,000 / month\" before and \"₨ 1,100 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"Finally free from WAPDA's schedule. The backup keeps the AC running through load-shedding.\" (Homeowner, PWD Housing Scheme).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "12kW hybrid solar installation at PWD Housing Scheme, Rawalpindi — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 252,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  },
+  {
+   "slug": "sector-i14-islamabad-8kw-hybrid",
+   "url": "/projects/sector-i14-islamabad-8kw-hybrid.html",
+   "title_tag": "Sector I-14/3, Islamabad — 8kW Hybrid Solar | SolarLink",
+   "meta_description": "8kW hybrid system with battery backup — full independence from load-shedding. Installed by SolarLink in Sector I-14/3, Islamabad. Before: ₨ 35,000 / month → After: ₨ 900 / month.",
+   "h1": "Sector I-14/3, Islamabad — 8kW Hybrid",
+   "area": "Sector I-14/3",
+   "city": "Islamabad",
+   "system_size_kw": 8,
+   "system_type": "Hybrid",
+   "category": "Residential",
+   "equipment_brands_named": [
+    "Growatt",
+    "Canadian Solar"
+   ],
+   "equipment_models_named": null,
+   "panel_count": null,
+   "date_visible_on_page": null,
+   "date_in_jsonld": {
+    "datePublished": "2026-01-01",
+    "dateModified": "2026-02-24"
+   },
+   "customer_name": null,
+   "customer_descriptor": "Homeowner, Sector I-14/3",
+   "savings_or_generation_figures": {
+    "before_monthly_bill": "₨ 35,000 / month",
+    "after_monthly_bill": "₨ 900 / month",
+    "percentage_claim_in_text": null,
+    "generation_kwh": null,
+    "payback_stated": null,
+    "page_says_figures_are_placeholder": true
+   },
+   "testimonial": {
+    "quote": "\"We haven't had a single power interruption since installation. Worth every rupee.\"",
+    "attribution": "Homeowner, Sector I-14/3",
+    "verified_label": "Verified SolarLink Customer — Sector I-14/3, Islamabad"
+   },
+   "narrative_summary": "8kW hybrid system with battery backup — full independence from load-shedding. SolarLink's team handled the complete installation — from initial site survey and system design through to commissioning and net metering registration. The page lists the location as Sector I-14/3, Islamabad, a 8kW Hybrid residential system. Equipment is shown only as brand tags (Growatt, Canadian Solar), with generic text that only Tier-1 equipment is used and brands may vary. The Before & After block shows \"₨ 35,000 / month\" before and \"₨ 900 / month\" after, but the page itself labels both as \"Placeholder\". The testimonial reads: \"We haven't had a single power interruption since installation. Worth every rupee.\" (Homeowner, Sector I-14/3).",
+   "images": [
+    {
+     "path": "/projects/placeholder.svg",
+     "alt": "8kW hybrid solar installation at Sector I-14/3, Islamabad — photo 1",
+     "file_exists": true,
+     "is_placeholder": true
+    }
+   ],
+   "all_images_are_placeholders": true,
+   "gallery_img_count": 3,
+   "word_count": 246,
+   "missing": [
+    "customer_name",
+    "panel_count",
+    "equipment_models",
+    "install_date",
+    "generation_kwh",
+    "real_photos"
+   ]
+  }
+ ]
+}

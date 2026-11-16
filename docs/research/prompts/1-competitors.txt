@@ -1,0 +1,9 @@
+Research the websites of the leading solar installation companies in Pakistan (Punjab and Islamabad focus). Find the 10 strongest by search visibility for queries like "solar company in Lahore", "solar installation Islamabad", "solar system price in Pakistan" (examples to check if they rank: Reon Energy, SkyElectric, Premier Energy, Zi Solar, Beacon Energy, Alpha Solar, Sympl Energy, Inverex, Shams Power, Pantera Energy, Solar Citizen, Ecostar, and others you find).
+
+For each of the 10: domain, full top-level sitemap (page types and counts: services, city pages, product pages, blog, calculators/tools, project pages), homepage section order, primary CTA wording, quote form field count and steps, WhatsApp use, trust signals shown, whether prices are shown, any calculator or interactive tool (describe inputs and outputs), any 3D or notable motion, chat widget, languages, schema types in the HTML (view source), title tag pattern of the home page and one service page.
+
+Then a synthesis: (a) the common sitemap, (b) top 10 conversion techniques seen, (c) gaps nobody covers well (content, tools, city coverage, Urdu), (d) what the 3 best sites do that the rest do not.
+
+Write Markdown to: C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/1-competitors.md
+
+Rules: use Google web search and open the real pages. Never invent a URL, number or name; if you could not verify something write "unverified". Do not modify any file other than the output file named here. Keep the output under 180 lines. End your reply with only: DONE <output file path> or FAILED <reason>.

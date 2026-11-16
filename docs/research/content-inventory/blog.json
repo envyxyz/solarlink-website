@@ -1,0 +1,798 @@
+{
+ "source": "solarlink-2.0/blog/*.html",
+ "note": "ALL 10 posts are stubs (\"Article in progress\", ~200 words each, identical body). No real blog content exists to carry over; only the title tag, meta description, h1 and subtitle describe the intended topic. The JSON-LD BlogPosting says datePublished and dateModified 2026-02-01 for every post, author Organization \"Solarlink\". Blog index says \"Publishing Soon - 10 articles in progress\".",
+ "index": {
+  "slug": "index",
+  "url": "/blog/index.html",
+  "title_tag": "Solar Energy Blog – Tips, News & Guides | Solarlink",
+  "meta_description": "Practical solar guides for Pakistan — system sizing, net metering applications, equipment comparisons, and buying advice from Solarlink's technical team.",
+  "h1": "Solar Energy Tips, Net Metering News & Pakistan Buying Guides",
+  "subtitle": null,
+  "date_published": null,
+  "date_modified": null,
+  "author": null,
+  "visible_dates_or_byline": [],
+  "outline": [
+   {
+    "level": "h1",
+    "text": "Solar Energy Tips, Net Metering News & Pakistan Buying Guides"
+   },
+   {
+    "level": "h2",
+    "text": "Blog posts launching soon"
+   },
+   {
+    "level": "h2",
+    "text": "Start learning here"
+   },
+   {
+    "level": "h2",
+    "text": "Have a specific question? Ask our engineers directly."
+   }
+  ],
+  "faqs": [],
+  "tables": [],
+  "internal_links_out": [
+   "/",
+   "/contact-us.html",
+   "/faqs.html",
+   "/get-quote.html",
+   "/how-solar-works.html",
+   "/net-metering-guide.html",
+   "/projects/",
+   "/services/residential-solar.html"
+  ],
+  "external_links_out": [],
+  "word_count": 276,
+  "summary": "The blog index announces that 10 articles are publishing soon, lists three planned topic areas (system sizing, net metering deep dives, equipment comparisons) and links six existing resources (How Solar Works, Net Metering Guide, FAQs with \"57 questions answered across 7 categories\", Residential Solar, Projects, contact). It ends with a prompt to ask engineers directly with a \"2 hours\" reply promise and a claim of \"hundreds of systems\" installed.",
+  "facts": [
+   {
+    "value": "",
+    "sentence": "Equipment comparisons — inverters, panel brands, and battery options available in Pakistan"
+   },
+   {
+    "value": "2 hours",
+    "sentence": "We respond within 2 hours."
+   }
+  ],
+  "is_stub": false,
+  "missing": [
+   "visible dates",
+   "author"
+  ]
+ },
+ "posts": [
+  {
+   "slug": "growatt-vs-fronus-inverter-comparison",
+   "url": "/blog/growatt-vs-fronus-inverter-comparison.html",
+   "title_tag": "Growatt vs Fronus Inverter: Which Should You Choose for Pakistan? — Coming Soon | SolarLink",
+   "meta_description": "Head-to-head comparison of Growatt and Fronus hybrid and on-grid inverters — features, warranties, price points, and which suits load-shedding-heavy areas.",
+   "h1": "Growatt vs Fronus Inverter: Which Should You Choose for Pakistan?",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "Growatt vs Fronus Inverter: Which Should You Choose for Pakistan?"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 202,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: Head-to-head comparison of Growatt and Fronus hybrid and on-grid inverters — features, warranties, price points, and which suits load-shedding-heavy areas.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "how-to-size-solar-system-pakistan",
+   "url": "/blog/how-to-size-solar-system-pakistan.html",
+   "title_tag": "How to Size a Solar System in Pakistan: kW Calculator & Rules of Thumb — Coming Soon | SolarLink",
+   "meta_description": "Calculate the exact kW capacity your home or business needs based on monthly kWh consumption — not just your bill amount. Includes worked examples for Lahore and Islamabad.",
+   "h1": "How to Size a Solar System in Pakistan: kW Calculator & Rules of Thumb",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "How to Size a Solar System in Pakistan: kW Calculator & Rules of Thumb"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 217,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: Calculate the exact kW capacity your home or business needs based on monthly kWh consumption — not just your bill amount. Includes worked examples for Lahore and Islamabad.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "net-metering-common-mistakes-pakistan",
+   "url": "/blog/net-metering-common-mistakes-pakistan.html",
+   "title_tag": "7 Net Metering Mistakes That Delay Your Application in Pakistan — Coming Soon | SolarLink",
+   "meta_description": "The most common documentation and procedural errors that slow down DISCO approvals — and exactly how to avoid each one.",
+   "h1": "7 Net Metering Mistakes That Delay Your Application in Pakistan",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "7 Net Metering Mistakes That Delay Your Application in Pakistan"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 201,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: The most common documentation and procedural errors that slow down DISCO approvals — and exactly how to avoid each one.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "net-metering-lesco-application-guide",
+   "url": "/blog/net-metering-lesco-application-guide.html",
+   "title_tag": "LESCO Net Metering Application: Documents, Process & Timeline (2026) — Coming Soon | SolarLink",
+   "meta_description": "Step-by-step guide to submitting your net metering application with LESCO — required documents, inspection stages, and how long approval actually takes.",
+   "h1": "LESCO Net Metering Application: Documents, Process & Timeline (2026)",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "LESCO Net Metering Application: Documents, Process & Timeline (2026)"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 202,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: Step-by-step guide to submitting your net metering application with LESCO — required documents, inspection stages, and how long approval actually takes.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "net-metering-vs-battery-storage-pakistan",
+   "url": "/blog/net-metering-vs-battery-storage-pakistan.html",
+   "title_tag": "Net Metering vs Battery Storage: Which Saves More Money in Pakistan? — Coming Soon | SolarLink",
+   "meta_description": "Side-by-side comparison of earning net metering credits versus storing surplus energy in a battery — with real-world payback calculations for 2026 tariff rates.",
+   "h1": "Net Metering vs Battery Storage: Which Saves More Money in Pakistan?",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "Net Metering vs Battery Storage: Which Saves More Money in Pakistan?"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 205,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: Side-by-side comparison of earning net metering credits versus storing surplus energy in a battery — with real-world payback calculations for 2026 tariff rates.",
+   "facts": [
+    {
+     "value": "2026",
+     "sentence": "Side-by-side comparison of earning net metering credits versus storing surplus energy in a battery — with real-world payback calculations for 2026 tariff rates."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "on-grid-vs-hybrid-vs-off-grid-pakistan",
+   "url": "/blog/on-grid-vs-hybrid-vs-off-grid-pakistan.html",
+   "title_tag": "On-Grid vs Hybrid vs Off-Grid Solar: Which is Right for Pakistan in 2026? — Coming Soon | SolarLink",
+   "meta_description": "A plain-English breakdown of the three solar system types — how each handles load-shedding, net metering, and battery backup — with cost comparisons.",
+   "h1": "On-Grid vs Hybrid vs Off-Grid Solar: Which is Right for Pakistan in 2026?",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "On-Grid vs Hybrid vs Off-Grid Solar: Which is Right for Pakistan in 2026?"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 209,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: A plain-English breakdown of the three solar system types — how each handles load-shedding, net metering, and battery backup — with cost comparisons.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "solar-installation-red-flags-pakistan",
+   "url": "/blog/solar-installation-red-flags-pakistan.html",
+   "title_tag": "10 Red Flags When Choosing a Solar Company in Pakistan — Coming Soon | SolarLink",
+   "meta_description": "How to tell a reliable solar installer from a fly-by-night operator — documentation gaps, vague proposals, and warranty tricks to watch out for.",
+   "h1": "10 Red Flags When Choosing a Solar Company in Pakistan",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "10 Red Flags When Choosing a Solar Company in Pakistan"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 207,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: How to tell a reliable solar installer from a fly-by-night operator — documentation gaps, vague proposals, and warranty tricks to watch out for.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "solar-panel-brands-comparison-pakistan",
+   "url": "/blog/solar-panel-brands-comparison-pakistan.html",
+   "title_tag": "Tier-1 Solar Panel Brands in Pakistan 2026: Canadian Solar, JA Solar & More — Coming Soon | SolarLink",
+   "meta_description": "What \"Tier-1 solar panel\" actually means, which brands are commonly used by reputable installers in Pakistan, and what to check on any equipment proposal.",
+   "h1": "Tier-1 Solar Panel Brands in Pakistan 2026: Canadian Solar, JA Solar & More",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "Tier-1 Solar Panel Brands in Pakistan 2026: Canadian Solar, JA Solar & More"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 212,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: What \"Tier-1 solar panel\" actually means, which brands are commonly used by reputable installers in Pakistan, and what to check on any equipment proposal.",
+   "facts": [
+    {
+     "value": "1 ; 2026",
+     "sentence": "› Tier-1 Solar Panel Brands in Pakistan 2026: Can..."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "solar-panel-cleaning-maintenance-pakistan",
+   "url": "/blog/solar-panel-cleaning-maintenance-pakistan.html",
+   "title_tag": "Solar Panel Cleaning & Maintenance in Pakistan: What You Actually Need to Do — Coming Soon | SolarLink",
+   "meta_description": "How often to clean solar panels in Punjab, what to check each year, and which maintenance tasks SolarLink handles vs. what you can do yourself.",
+   "h1": "Solar Panel Cleaning & Maintenance in Pakistan: What You Actually Need to Do",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "Solar Panel Cleaning & Maintenance in Pakistan: What You Actually Need to Do"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 208,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: How often to clean solar panels in Punjab, what to check each year, and which maintenance tasks SolarLink handles vs. what you can do yourself.",
+   "facts": [
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  },
+  {
+   "slug": "solar-roi-payback-period-pakistan",
+   "url": "/blog/solar-roi-payback-period-pakistan.html",
+   "title_tag": "Solar ROI in Pakistan 2026: Real Payback Period Calculations — Coming Soon | SolarLink",
+   "meta_description": "How to calculate your actual return on investment for a solar system in Pakistan — accounting for current tariff rates, net metering credits, and system degradation.",
+   "h1": "Solar ROI in Pakistan 2026: Real Payback Period Calculations",
+   "subtitle": null,
+   "date_published": "2026-02-01",
+   "date_modified": "2026-02-01",
+   "author": {
+    "name": "Solarlink",
+    "type": "Organization"
+   },
+   "visible_dates_or_byline": [
+    "Published by Solarlink"
+   ],
+   "outline": [
+    {
+     "level": "h1",
+     "text": "Solar ROI in Pakistan 2026: Real Payback Period Calculations"
+    },
+    {
+     "level": "h2",
+     "text": "Article in progress"
+    }
+   ],
+   "faqs": [],
+   "tables": [],
+   "internal_links_out": [
+    "/",
+    "/blog/",
+    "/faqs.html",
+    "/get-quote.html"
+   ],
+   "external_links_out": [],
+   "word_count": 208,
+   "summary": "The page is a placeholder. The body shows a \"Key Takeaways\" box with three lines saying the article is being finalised, an \"Article in progress\" heading, and a paragraph telling the reader to use the resources below or send a question, with a reply promised within 2 hours. It has a call-to-action block offering a no-obligation proposal within 48 hours and a \"Published by Solarlink\" footer saying the company has operated since 2018 from Lahore, Islamabad, Rawalpindi and Sargodha. No guide content, tables or FAQs exist, although the page head declares a BlogPosting dated 2026-02-01. Intended topic per the page head: How to calculate your actual return on investment for a solar system in Pakistan — accounting for current tariff rates, net metering credits, and system degradation.",
+   "facts": [
+    {
+     "value": "2026",
+     "sentence": "› Solar ROI in Pakistan 2026: Real Payback Period..."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "Call or message us directly — we answer solar questions within 2 hours."
+    },
+    {
+     "value": "2 hours",
+     "sentence": "In the meantime, explore the resources below or send us your question directly — we typically respond within 2 hours."
+    },
+    {
+     "value": "48 hours",
+     "sentence": "SolarLink's engineers assess your consumption, roof layout, and budget — and deliver a transparent, no-obligation proposal within 48 hours."
+    },
+    {
+     "value": "2018",
+     "sentence": "Solarlink is an independent solar installation company based in Lahore, Pakistan, operating since 2018 with offices in Lahore, Islamabad, Rawalpindi, and Sargodha."
+    }
+   ],
+   "is_stub": true,
+   "key_takeaways_text": [
+    "This article is being finalised by our technical team.",
+    "Explore the Popular Resources section below for immediate guidance.",
+    "Call or message us directly — we answer solar questions within 2 hours."
+   ],
+   "intro_line": null,
+   "missing": [
+    "article body",
+    "h2/h3 outline beyond placeholder heading",
+    "FAQs",
+    "tables",
+    "visible publish date or byline (only JSON-LD dates and Organization author)",
+    "real facts/tariffs"
+   ],
+   "meta_description_is_the_intro": true
+  }
+ ]
+}

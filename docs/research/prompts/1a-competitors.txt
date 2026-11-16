@@ -1,0 +1,5 @@
+For these 4 Pakistani solar company websites: reonenergy.com, skyelectric.com, premierenergy.com.pk, zisolar.com. For each, open the home page and one service page and record in a table row: main menu items (the sitemap), homepage section order, primary call-to-action wording, quote form field count, WhatsApp button yes/no, whether prices are shown, any calculator or interactive tool (inputs and outputs), any 3D or notable motion, chat widget, languages, home page title tag. Then 5 bullets: what these sites do well, and 5 bullets: what none of them does.
+
+Write Markdown to: C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/1a-competitors.md
+
+Rules: spend at most 8 minutes. Create the output file after the first item and append as you go, so partial work is saved. Use Google web search; open at most 2 pages per item. Never invent a URL, number or name; write "unverified" where unsure. Do not modify any other file. End your reply with only: DONE <output file path> or FAILED <reason>.

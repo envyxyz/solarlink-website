@@ -1,0 +1,14 @@
+Collect current, sourced public facts about solar in Pakistan that are needed to build honest calculators. Every row needs a source URL from an official or primary source (NEPRA, Power Division, DISCO sites such as LESCO, IESCO, MEPCO, FESCO, AEDB/PPIB, Global Solar Atlas, World Bank, NREL PVWatts) and the date of that source. If two sources disagree, show both.
+
+Topics:
+1. Current residential electricity tariff slabs (protected and unprotected, per-unit rates, from the latest NEPRA notification), plus commercial (A-2), industrial (B) and agricultural tube-well (D) tariffs; and the taxes and surcharges usually added on a bill (GST, FPA, QTA, FC surcharge, TV fee, electricity duty).
+2. Net metering rules now: the current regulation name and date, the buy-back rate, whether it has changed to net billing or gross metering, maximum system size versus sanctioned load, licence validity, who it applies to (existing versus new consumers). Cover the 2025 and 2026 changes carefully and quote the regulation text where possible.
+3. Net metering application steps and the usual documents for LESCO, IESCO, MEPCO and FESCO, and whether Gilgit-Baltistan has net metering at all.
+4. Specific yield (PVOUT, kWh per kWp per year) and peak sun hours for Lahore, Islamabad, Rawalpindi, Sargodha, Multan and Gilgit from Global Solar Atlas.
+5. Typical panel wattages sold now and the standard system losses used in sizing; panel degradation rates from manufacturer warranty documents.
+6. Any current tax on solar panels or inverters (for example GST on imported panels), with source.
+7. Load-shedding or outage statistics by DISCO, if published.
+
+Write Markdown tables to C:/obsidian/05-PROJECTS/ah-growth/SolarLink/solarlink-website/docs/research/agy/7-pk-facts.md (under 200 lines). Add a final section "Could not verify" listing anything you were unsure of.
+
+Rules: use Google web search and open the real pages. Never invent a number or URL. Do not modify any file other than the output file. End your reply with only: DONE <output file path> or FAILED <reason>.

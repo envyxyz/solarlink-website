@@ -1,0 +1,187 @@
+{
+  "_note": "Company facts exactly as the old static site (solarlink-2.0) states them. Every value carries a source (file + short quote). Nothing here has been verified with the client. Old-repo paths are relative to solarlink-2.0/.",
+  "company": {
+    "name_spellings": [
+      {"value": "Solarlink", "used_for": "legal name / Organization name in JSON-LD, page titles, llms.txt, about copy, footer copyright", "source": {"file": "about-us.html", "quote": "\"name\":\"Solarlink\",\"alternateName\":\"SolarLink\""}},
+      {"value": "SolarLink", "used_for": "headings, nav (aria-label \"SolarLink Home\"), README, most body copy", "source": {"file": "README.md", "quote": "SolarLink is a premier solar energy company in Pakistan, founded in 2018."}},
+      {"value": "Solar Link", "used_for": "one customer review only", "source": {"file": "about-us.html", "quote": "I highly recommend Solar Link for their exceptional service"}},
+      {"value": "Solarlink Company Official", "used_for": "YouTube handle", "source": {"file": "js/nav.js / footer", "quote": "https://www.youtube.com/@Solarlinkcompanyofficial"}}
+    ],
+    "legal_name": {"value": "Solarlink", "source": {"file": "services/residential-solar.html", "quote": "\"legalName\":\"Solarlink\" (JSON-LD LocalBusiness)"}, "note": "No registered company type (Pvt) Ltd, NTN or SECP number appears anywhere in scope"},
+    "tagline": [
+      {"value": "Punjab's Trusted Solar Company", "source": {"file": "footer (all pages) / about-us.html title", "quote": "Punjab's Trusted Solar Company"}},
+      {"value": "Punjab's trusted solar company since 2018", "source": {"file": "js/nav.js", "quote": "Our Story ... Punjab's trusted solar company since 2018"}},
+      {"value": "Punjab's Local Solar Experts", "source": {"file": "about-us.html", "quote": "About Solarlink – Punjab's Local Solar Experts"}},
+      {"value": "Premier Solar Solutions & Tier-1 Installations in Pakistan", "source": {"file": "index.html", "quote": "Solarlink — Premier Solar Solutions & Tier-1 Installations in Pakistan"}},
+      {"value": "Custom Solar Systems for Punjab Homes & Businesses", "source": {"file": "index.html", "quote": "Custom Solar Systems for Punjab Homes & Businesses"}}
+    ],
+    "founded": {"value": 2018, "place": "Lahore", "source": {"file": "index.html footer/about-us.html", "quote": "Founded 2018 in Lahore, Pakistan."}},
+    "description_long": {"value": "Pakistan-based solar energy company founded in 2018. Designs and installs residential, commercial, and agricultural solar systems across Punjab and Islamabad. Head office in Lahore, with branches in Islamabad, Rawalpindi, and Sargodha.", "source": {"file": "llms.txt", "quote": "Pakistan-based solar energy company founded in 2018."}},
+    "employees": {"value": "51-200", "source": {"file": "about-us.html", "quote": "has grown to 51–200 professionals"}, "also": "JSON-LD numberOfEmployees minValue 51 maxValue 200 (service pages); llms.txt: \"51–200 employees\""},
+    "email": {"value": "info@solarlink.com.pk", "source": {"file": "footer (all pages), locations/lahore.html", "quote": "info@solarlink.com.pk"}},
+    "website": "https://solarlink.com.pk",
+    "social": [
+      {"platform": "YouTube", "url": "https://www.youtube.com/@Solarlinkcompanyofficial", "source": {"file": "footer", "quote": "Follow SolarLink"}},
+      {"platform": "Facebook", "url": "https://www.facebook.com/solarlinkpk", "source": {"file": "footer"}},
+      {"platform": "TikTok", "url": "https://www.tiktok.com/@solarlink.pk", "source": {"file": "footer"}, "note": "in footer only, not in JSON-LD sameAs"},
+      {"platform": "Instagram", "url": "https://www.instagram.com/solarlinkpk", "source": {"file": "footer"}},
+      {"platform": "LinkedIn", "url": "https://www.linkedin.com/company/solarlinkpk", "source": {"file": "footer"}},
+      {"platform": "Pinterest", "url": "https://www.pinterest.com/solarlinkpk", "source": {"file": "footer"}, "note": "in footer only, not in JSON-LD sameAs"}
+    ],
+    "opening_hours_all_outlets": {"value": "Mon-Sat 9:00 AM - 6:00 PM; Sunday closed", "source": {"file": "outlets/lahore.html", "quote": "Mon – Sat: 9:00 AM – 6:00 PM Sunday: Closed"}, "also": "JSON-LD openingHoursSpecification Monday-Saturday 09:00-18:00 on service pages"},
+    "payment_and_price_range_jsonld": {"paymentAccepted": "Cash, Bank Transfer, Installment", "priceRange": "PKR PKR PKR", "currenciesAccepted": "PKR", "source": {"file": "services/residential-solar.html", "quote": "JSON-LD LocalBusiness"}},
+    "jsonld_aggregate_rating": {"ratingValue": "4.8", "reviewCount": "47", "source": {"file": "services/*.html, locations/lahore.html", "quote": "\"aggregateRating\":{\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"ratingCount\":\"47\",\"reviewCount\":\"47\"}"}, "note": "Same fixed values in every JSON-LD block; no platform named. get-quote.html instead says \"100% Daraz rating\"."},
+    "equipment_brands_claimed": {"value": "Growatt, Fronus, Canadian Solar (about, get-quote, llms.txt, outlets); home hero: Growatt, Canadian, LONGi", "source": {"file": "llms.txt", "quote": "Equipment: Growatt inverters, Fronus inverters, Canadian Solar panels"}},
+    "warranty_on_installation": {"value": "conflicting: 1 year vs 2 years", "source": {"file": "llms.txt / about-us.html: 1-year; services & outlets: 2-year"}}
+  },
+  "whatsapp_and_forms": {
+    "numbers_in_forms_js": {"Lahore": "923218425777", "Islamabad": "923393555000", "Rawalpindi": "923235551795", "Sargodha": "923137084973", "default_fallback": "923218425777 (Lahore)", "source": {"file": "js/forms.js", "quote": "var DEFAULT_WA_NUMBER = '923218425777';"}},
+    "routing": "Forms are static; submit builds a wa.me deep link by the selected City field and opens it in a new tab. City 'Other' or none goes to Lahore.",
+    "message_templates": [
+      {"form_id": "contact-form", "heading": "New message from SolarLink website:", "source": {"file": "js/forms.js"}},
+      {"form_id": "get-quote-form", "heading": "New free quote request from SolarLink website:", "source": {"file": "js/forms.js"}},
+      {"form_id": "homepage-quote-form", "heading": "New free quote request from SolarLink website:"},
+      {"form_id": "sp-quote-form", "heading": "New free quote request from SolarLink website:", "note": "side-panel form on the four main service pages"},
+      {"form_id": "isb-quote-form", "heading": "New free quote request from SolarLink Islamabad page:"},
+      {"form_id": "lahore-quote-form", "heading": "New free quote request from SolarLink Lahore page:"},
+      {"form_id": "sgd-quote-form", "heading": "New free quote request from SolarLink Sargodha page:"},
+      {"form_id": "landing-quote-form", "heading": "New free quote request from SolarLink Meta Ads landing page:"}
+    ],
+    "message_fields_in_order": ["Name", "Phone", "City", "Area", "Monthly Bill (PKR)", "Solar Need", "Message", "Ad Source (utm_source)", "Ad Campaign (utm_campaign)"],
+    "prefilled_chat_links": [
+      {"text": "Hi, I need solar consultation.", "number": "923218425777", "source": "index.html utility bar"},
+      {"text": "Hi, I need solar consultation in Islamabad.", "number": "923393555000", "source": "index.html utility bar"},
+      {"text": "Hi, I'd like to get a free solar quote.", "number": "923218425777", "source": "footer floating WhatsApp button"}
+    ]
+  },
+  "outlets": {
+    "lahore": {
+      "role": "Head office / founding outlet",
+      "city": "Lahore",
+      "address": {"value": "Shop No. 05, Munawar Center, Opp. State Bank Building, 30-The Mall Road, Lahore 54000", "source": {"file": "outlets/lahore.html, footer, contact-us.html", "quote": "Shop No. 05, Munawar Center, Opp. State Bank Building, 30-The Mall Road, Lahore 54000"}},
+      "address_variant_locations_and_jsonld": {"value": "Shop 5, Munawer Center, Opp. State Bank Building, Mall Road, Lahore, Punjab 54700", "source": {"file": "locations/lahore.html and JSON-LD on services/*.html", "quote": "Shop 5, Munawer Center, Opp. State Bank Building, Mall Road"}},
+      "landline": [{"value": "042-37117713", "source": {"file": "outlets/lahore.html, nav.js, footer", "quote": "042-37117713"}}, {"value": "042-37117714", "source": {"file": "outlets/lahore.html, footer, contact-us.html", "quote": "042-37117714"}, "note": "second line, not in nav bar, forms.js or llms.txt"}],
+      "mobile_whatsapp": {"value": "0321-8425777", "wa_me": "https://wa.me/923218425777", "source": {"file": "outlets/lahore.html", "quote": "+92 321 8425777 (WhatsApp)"}},
+      "hours": {"value": "Mon-Sat 9:00 AM - 6:00 PM, Sunday closed", "source": {"file": "outlets/lahore.html", "quote": "Mon – Sat: 9:00 AM – 6:00 PM"}},
+      "map_link": {"value": "https://maps.google.com/?q=Shop+5+Munawar+Center+Mall+Road+Lahore", "source": {"file": "outlets/lahore.html, contact-us.html"}},
+      "coordinates": {"jsonld_geo": {"lat": 31.5651, "lng": 74.3578, "source": "services/*.html and locations/lahore.html LocalBusiness JSON-LD"}, "embed_centre": [{"lat": 31.5651, "lng": 74.3552, "file": "outlets/lahore.html iframe"}, {"lat": 31.5651, "lng": 74.3289, "file": "locations/lahore.html iframe"}, {"lat": 31.5497, "lng": 74.3100, "file": "contact-us.html iframe"}], "note": "four different Lahore coordinates; none confirmed against Google Business Profile"},
+      "areas_served": {"value": ["DHA Lahore (Phase 1-9)", "Bahria Town Lahore (All Phases)", "Johar Town", "Gulberg", "Model Town", "Garden Town", "Wapda Town", "Cantt / Askari", "Iqbal Town", "Valencia Town", "Shadman", "Faisal Town", "Township", "Cavalry Ground", "Allama Iqbal Town", "Pak Arab Housing Society", "Raiwind Road", "Bedian Road", "And all other Lahore areas"], "source": {"file": "outlets/lahore.html", "quote": "Areas We Serve in Lahore"}},
+      "staff": [
+        {"name": "Usman Ali", "role": "Branch Manager", "photo_path": null, "photo_file_exists_unwired": "/images/team/usman-ali.jpg", "bio": "Leading the Lahore operations with over 10 years of experience in renewable energy solutions.", "source": {"file": "js/employees.js", "quote": "name: \"Usman Ali\", designation: \"Branch Manager\", picture: \"\""}},
+        {"name": "Fatima Tariq", "role": "Site Engineer", "photo_path": null, "photo_file_exists_unwired": "/images/team/fatima-tariq.jpg", "bio": "Expert in system design and structural integrity, ensuring every installation meets premium standards.", "source": {"file": "js/employees.js"}},
+        {"name": "Bilal Ahmed", "role": "Installation Lead", "photo_path": null, "photo_file_exists_unwired": "/images/team/bilal-ahmed.jpg", "bio": "Oversees on-site execution, managing crews to deliver flawless zero-downtime installations.", "source": {"file": "js/employees.js"}}
+      ],
+      "hero_image": "/images/hero/solar-installation-lahore-dha.jpg"
+    },
+    "islamabad": {
+      "role": "Islamabad branch; also covers Rawalpindi per its page, llms.txt and the Islamabad outlet FAQ",
+      "city": "Islamabad",
+      "address": {"value": "House No. 514, North Service Road, Sector I-14/3, Islamabad 44000", "source": {"file": "outlets/islamabad.html, footer, contact-us.html", "quote": "House No. 514, North Service Road, Sector I-14/3, Islamabad 44000"}},
+      "landline": [{"value": "051-5204555", "source": {"file": "outlets/islamabad.html, nav.js", "quote": "051-5204555"}}],
+      "mobile_whatsapp": {"value": "0339-3555000", "wa_me": "https://wa.me/923393555000", "source": {"file": "outlets/islamabad.html", "quote": "+92 339 3555000 (WhatsApp)"}},
+      "hours": {"value": "Mon-Sat 9:00 AM - 6:00 PM, Sunday closed", "source": {"file": "outlets/islamabad.html", "quote": "Mon – Sat: 9:00 AM – 6:00 PM"}},
+      "map_link": {"value": "https://maps.google.com/?q=House+514+North+Service+Road+Sector+I-14/3+Islamabad", "source": {"file": "outlets/islamabad.html"}, "locations_variant": "https://maps.google.com/?q=I-14/3+North+Service+Road+Islamabad+Pakistan (locations/islamabad.html, about-us.html)"},
+      "coordinates": {"embed_centre": [{"lat": 33.6333, "lng": 72.9833, "file": "outlets/islamabad.html iframe (Sector I-14/3)"}, {"lat": 33.6844, "lng": 73.0479, "file": "locations/islamabad.html iframe (labelled PWD Road, Islamabad)"}], "jsonld_geo": null},
+      "areas_served": {"value": ["F-6, F-7, F-8", "F-10, F-11", "G-9, G-10", "G-11, G-13", "E-7, E-11", "Bahria Town Islamabad (Phase 1-8)", "DHA Islamabad", "PWD Colony", "Gulberg Islamabad", "Park View City", "Rawalpindi: Bahria Town Ph. 1-7", "Chaklala", "Satellite Town", "Saddar", "Rawalpindi Cantt", "And all surrounding areas"], "source": {"file": "outlets/islamabad.html", "quote": "Areas We Serve in Islamabad & Rawalpindi"}},
+      "staff": [
+        {"name": "Hamza Malik", "role": "Branch Manager", "photo_path": null, "photo_file_exists_unwired": "/images/team/hamza-malik.jpg", "bio": "Leading Islamabad operations with extensive experience in IESCO grid integrations and renewable solutions.", "source": {"file": "js/employees.js"}},
+        {"name": "Ayesha Khan", "role": "Site Engineer", "photo_path": null, "photo_file_exists_unwired": "/images/team/ayesha-khan.jpg", "bio": "Specialist in structural rooftop design and electrical safety compliance across Islamabad sectors.", "source": {"file": "js/employees.js"}},
+        {"name": "Tariq Mahmood", "role": "Installation Lead", "photo_path": null, "photo_file_exists_unwired": "/images/team/tariq-mahmood.jpg", "bio": "Oversees on-site installation crews delivering zero-downtime rooftop solar installations.", "source": {"file": "js/employees.js"}}
+      ],
+      "hero_image": "/images/hero/solar-installation-islamabad.jpg"
+    },
+    "rawalpindi": {
+      "city": "Rawalpindi",
+      "address": {"value": "Shop No. 05, PWD Main Road, Opp. Shaafi Hospital, Rawalpindi 45400", "source": {"file": "outlets/rawalpindi.html, footer, contact-us.html", "quote": "Shop No. 05, PWD Main Road, Opposite Shaafi Hospital, Rawalpindi"}},
+      "landline": [{"value": "051-5708488", "source": {"file": "outlets/rawalpindi.html, nav.js"}}],
+      "mobile_whatsapp": {"value": "0323-5551795", "wa_me": "https://wa.me/923235551795", "source": {"file": "outlets/rawalpindi.html", "quote": "+92 323 5551795 (WhatsApp)"}},
+      "hours": {"value": "Mon-Sat 9:00 AM - 6:00 PM, Sunday closed", "source": {"file": "outlets/rawalpindi.html"}},
+      "map_link": {"value": "https://maps.google.com/?q=Shop+5+PWD+Main+Road+Opp+Shaafi+Hospital+Rawalpindi", "source": {"file": "outlets/rawalpindi.html"}, "about_us_variant": "https://maps.google.com/?q=PWD+Main+Road+Shaafi+Hospital+Rawalpindi+Pakistan"},
+      "coordinates": {"embed_centre": [{"lat": 33.5822, "lng": 73.1492, "file": "outlets/rawalpindi.html iframe"}], "jsonld_geo": null},
+      "areas_served": null,
+      "areas_served_note": "No area list on the Rawalpindi page; the Islamabad page lists Rawalpindi areas (Bahria Town Ph. 1-7, Chaklala, Satellite Town, Saddar, Rawalpindi Cantt). Rawalpindi page text only says \"twin-city homes and businesses\" and \"PWD housing schemes\".",
+      "staff": [
+        {"name": "Tariq Mahmood", "role": "Branch Manager", "photo_path": null, "bio": "Leading Rawalpindi operations with over 10 years of experience in solar energy & flexible financing solutions.", "source": {"file": "js/employees.js"}},
+        {"name": "Fatima Tariq", "role": "Site Engineer", "photo_path": null, "bio": "Expert in structural design and electrical safety compliance across Rawalpindi & PWD housing schemes.", "source": {"file": "js/employees.js"}},
+        {"name": "Bilal Ahmed", "role": "Installation Lead", "photo_path": null, "bio": "Oversees on-site execution, managing crews to deliver flawless zero-downtime installations.", "source": {"file": "js/employees.js"}}
+      ],
+      "hero_image": "/images/hero/solar-installation-rawalpindi.jpg"
+    },
+    "sargodha": {
+      "city": "Sargodha",
+      "address": {"value": "Block No. 05, Aslahy Wali Gali, Near Company Bagh, Sargodha 40100", "source": {"file": "outlets/sargodha.html, footer, contact-us.html", "quote": "Block No. 05, Aslahy Wali Gali, Near Company Bagh, Sargodha"}},
+      "address_variant_locations": {"value": "Aslahy Wali Gali, Block 5, Sargodha, Punjab, Pakistan", "source": {"file": "locations/sargodha.html"}},
+      "landline": [{"value": "048-3720111", "source": {"file": "outlets/sargodha.html, nav.js"}}],
+      "mobile_whatsapp": {"value": "0313-7084973", "wa_me": "https://wa.me/923137084973", "source": {"file": "outlets/sargodha.html", "quote": "+92 313 7084973 (WhatsApp)"}},
+      "hours": {"value": "Mon-Sat 9:00 AM - 6:00 PM, Sunday closed", "source": {"file": "outlets/sargodha.html"}},
+      "map_link": {"value": "https://maps.google.com/?q=Block+5+Aslahy+Wali+Gali+Near+Company+Bagh+Sargodha", "source": {"file": "outlets/sargodha.html"}, "variants": ["https://maps.google.com/?q=Aslahy+Wali+Gali+Block+5+Sargodha+Punjab (locations/sargodha.html)", "https://maps.google.com/?q=Aslahy+Wali+Gali+Company+Bagh+Sargodha+Pakistan (about-us.html)"]},
+      "coordinates": {"embed_centre": [{"lat": 32.0836, "lng": 72.6711, "file": "outlets/sargodha.html and locations/sargodha.html iframes"}], "jsonld_geo": null},
+      "areas_served": {"value": ["Sargodha City", "Bhalwal", "Bhera", "Kot Momin", "Shahpur", "Sillanwali", "Sahiwal (Sargodha)", "Sahiwal Block", "Chak Jhumra area", "Agricultural zones", "Local farms & tubewells", "And all surrounding Sargodha areas"], "source": {"file": "outlets/sargodha.html", "quote": "Areas We Serve in Sargodha"}},
+      "staff": [
+        {"name": "Hamza Malik", "role": "Branch Manager", "photo_path": null, "bio": "Leading Sargodha operations with deep expertise in agricultural solar projects & FESCO grid interconnections.", "source": {"file": "js/employees.js"}},
+        {"name": "Ayesha Khan", "role": "Site Engineer", "photo_path": null, "bio": "Specialist in agricultural tube-well VFD design, land mounting structures, and high-yield rooftop arrays.", "source": {"file": "js/employees.js"}},
+        {"name": "Usman Ali", "role": "Solar Specialist", "photo_path": null, "bio": "Oversees field execution, pump synchronization, and flawless zero-downtime turnkeys across Sargodha.", "source": {"file": "js/employees.js"}}
+      ],
+      "hero_image": "/images/hero/solar-installation-sargodha.jpg"
+    },
+    "multan": {
+      "status": "stub page only",
+      "page_text": "Full outlet details for our Multan branch are coming soon. Contact us in the meantime.",
+      "nav_label": "Coming soon",
+      "address": null, "landline": null, "mobile_whatsapp": null, "hours": null, "map_link": null, "coordinates": null, "areas_served": null, "staff": [],
+      "source": {"file": "outlets/multan.html, js/nav.js", "quote": "{ href: '/outlets/multan.html', label: 'Multan', icon: 'multan', sub: 'Coming soon' }"}
+    },
+    "gilgit": {
+      "status": "stub page only",
+      "page_text": "Full outlet details for our Gilgit branch are coming soon. Contact us in the meantime.",
+      "nav_label": "Coming soon",
+      "address": null, "landline": null, "mobile_whatsapp": null, "hours": null, "map_link": null, "coordinates": null, "areas_served": null, "staff": [],
+      "source": {"file": "outlets/gilgit.html, js/nav.js"}
+    }
+  },
+  "locations_folder_content_not_in_outlets": {
+    "note": "locations/* is the older duplicate set (canonical now points to outlets/). Only content that outlets/ lacks is listed.",
+    "locations/lahore.html": ["Different title tag: \"Solar Installation in Lahore – Best Solar Company | Solarlink\"", "Different meta description (\"...Call 042-37117713.\")", "Address variant \"Shop 5, Munawer Center ... Punjab 54700\"", "Visible email line info@solarlink.com.pk and \"Mobile / WhatsApp: 0321-8425777\" as tel: link", "Inline quote form (\"Area in Lahore\", \"Monthly LESCO Bill (PKR)\") promising \"Our Lahore team will contact you within 24 hours.\"", "Breadcrumb and a copy line \"Bring your recent LESCO bills and our team will calculate your exact solar savings on the spot.\"", "LocalBusiness JSON-LD with geo, hours, 4.8/47 rating and two dated reviews (M. Usman 2024-11-15; S. Tariq 2025-01-20)", "No team section, no \"Calculate Your Savings\" hero CTA, no \"#1 Lahore Installer\" badge (the 500+ figure still appears)"],
+    "locations/islamabad.html": ["Combined title \"Solar Installation in Islamabad & Rawalpindi | Solarlink\"", "Intro sentence \"physical office on North Service Road, Sector I-14/3 ... all Rawalpindi areas\"", "Quote form (\"Area\", \"Monthly IESCO Bill\") with promise \"Our Islamabad team will contact you within 24 hours.\"", "BUG: the page's WhatsApp Us link points to wa.me/923218425777 (the Lahore number), not Islamabad's 923393555000", "Map link variant https://maps.google.com/?q=I-14/3+North+Service+Road+Islamabad+Pakistan"],
+    "locations/sargodha.html": ["Title \"Solar Installation in Sargodha – Local Experts | Solarlink\"", "Quote form with \"Solar Need\" select (Residential / Commercial / Agricultural-Tubewell), promise \"within 24 hours\"", "BUG: its WhatsApp Us button (quote section) points to wa.me/923218425777 (Lahore) while the page text gives 0313-7084973", "Address without postcode: \"Aslahy Wali Gali, Block 5, Sargodha, Punjab, Pakistan\""],
+    "locations/rawalpindi.html, gilgit.html, multan.html": ["Same content as outlets/ version (canonical points to outlets/); nothing extra"]
+  },
+  "nav_structure": {
+    "source": "js/nav.js",
+    "top_level": ["Home /", "Solutions (dropdown)", "Projects /projects/", "Products (dropdown)", "Resources (dropdown)", "About Us (dropdown)", "Locations/Outlets (dropdown)", "Get Free Quote CTA /get-quote.html"],
+    "solutions": [["Residential Solar", "/services/residential-solar.html", "Solar systems for homes & villas"], ["Commercial Solar", "/services/commercial-solar.html", "Offices, factories & businesses"], ["Industrial & Large-Scale", "/services/industrial-solar.html", "100kW+ factories & plants"], ["Agricultural Solar", "/services/agricultural-solar.html", "Tube-wells & farm operations"], ["Net Metering Support", "/services/net-metering-support.html", "DISCO approval & export billing"]],
+    "products": [["Solar Panels", "/products/solar-panels.html", "Tier-1 mono & poly panels"], ["Inverters", "/products/inverters.html", "Hybrid, on-grid & off-grid"], ["Batteries", "/products/batteries.html", "Lithium & lead-acid storage"], ["Accessories", "/products/accessories.html", "Mounting, cabling & protection"]],
+    "resources": [["Solar Calculator", "/solar-calculator.html", "Instant ROI & sizing estimator"], ["How Solar Works", "/how-solar-works.html", "Understand your solar system"], ["Net Metering Guide", "/net-metering-guide.html", "Step-by-step DISCO guide"], ["FAQs", "/faqs.html", "Common questions answered"], ["Blog", "/blog/", "Tips, news & case studies"]],
+    "about": [["Our Story", "/about-us.html", "Punjab's trusted solar company since 2018"], ["Contact Us", "/contact-us.html", "Visit our 4 branch offices or message on WhatsApp"]],
+    "outlets": [["Lahore", "/outlets/lahore.html", "Mall Road"], ["Islamabad", "/outlets/islamabad.html", "Sector I-14/3"], ["Rawalpindi", "/outlets/rawalpindi.html", "PWD Main Road"], ["Sargodha", "/outlets/sargodha.html", "Company Bagh"], ["Multan", "/outlets/multan.html", "Coming soon"], ["Gilgit", "/outlets/gilgit.html", "Coming soon"]],
+    "utility_bar": "Office phones for Lahore 042-37117713, Islamabad 051-5204555, Rawalpindi 051-5708488, Sargodha 048-3720111; WhatsApp links for Lahore, Islamabad, Rawalpindi, Sargodha",
+    "footer_columns": ["Follow SolarLink (6 social icons)", "Resources (FAQs, How Solar Works, Net Metering Guide, Blog, Solar Calculator)", "Services (Residential, Commercial, Agricultural, Net Metering Support, Industrial & Large-Scale)", "Offices (Lahore, Islamabad, Rawalpindi, Sargodha with address, phone, WhatsApp)", "Copyright line: \"© 2026 Solarlink. All rights reserved. · Founded 2018 in Lahore, Pakistan.\" + email + \"Punjab's Trusted Solar Company\""],
+    "url_quirks": ["Links use .html (e.g. /services/residential-solar.html) while canonical tags use trailing slash (/services/residential-solar/)", "nav.js mobile CTA uses /get-quote/ while desktop uses /get-quote.html", "terms.html is only a meta-refresh redirect to /terms/ (no terms content exists in scope); outlet pages link to /services/installment-plans/ which is not among the audited files"]
+  },
+  "conflicts": [
+    {"field": "Number of branches/offices", "values": [{"value": "4 branch offices / 4 major cities / 4 outlet locations", "files": ["js/nav.js", "contact-us.html", "faqs.html", "about-us.html (Our Offices)", "index.html stat \"4 Branch Cities\""]}, {"value": "five locations / 5 physical offices / 5 Locations", "files": ["about-us.html", "get-quote.html", "meta description of about-us.html"]}, {"value": "5 regional outlet branches", "files": ["index.html"]}, {"value": "6 outlet pages (incl. Multan, Gilgit stubs)", "files": ["js/nav.js dropdown"]}], "note": "Only four addresses exist anywhere (Lahore, Islamabad, Rawalpindi, Sargodha)."},
+    {"field": "Lahore address spelling and postcode", "values": [{"value": "Munawar Center, 30-The Mall Road, Lahore 54000", "files": ["outlets/lahore.html", "footer", "contact-us.html"]}, {"value": "Munawer Center, Mall Road, Lahore, Punjab 54700", "files": ["locations/lahore.html", "JSON-LD on services/*.html"]}]},
+    {"field": "Lahore phone numbers", "values": [{"value": "042-37117713 only", "files": ["js/nav.js", "llms.txt", "JSON-LD"]}, {"value": "042-37117713 and 042-37117714", "files": ["footer", "contact-us.html", "outlets/lahore.html"]}]},
+    {"field": "Islamabad WhatsApp on locations/islamabad.html and locations/sargodha.html", "values": [{"value": "wa.me/923218425777 (Lahore number)", "files": ["locations/islamabad.html", "locations/sargodha.html"]}, {"value": "923393555000 / 923137084973 respectively", "files": ["outlets pages", "js/forms.js", "js/nav.js"]}]},
+    {"field": "Sargodha net-metering DISCO", "values": [{"value": "GEPCO (Gujranwala Electric Power Company)", "files": ["outlets/sargodha.html text, FAQ and install table"]}, {"value": "FESCO", "files": ["outlets/sargodha.html (service card \"Full FESCO licensing liaison\", hero stat \"FESCO Net-Metering\")", "js/employees.js Sargodha manager bio"]}], "note": "Same page contradicts itself."},
+    {"field": "Rawalpindi coverage", "values": [{"value": "Own branch on PWD Main Road", "files": ["outlets/rawalpindi.html"]}, {"value": "Served from the Islamabad I-14/3 office (\"For Rawalpindi customers ... from our North Service Road, I-14/3 Islamabad office\")", "files": ["outlets/islamabad.html", "llms.txt"]}], "note": "Islamabad page claims 400+ installs in Islamabad & Rawalpindi; Rawalpindi page claims its own 400+; Islamabad page also claims 350+ Islamabad installs."},
+    {"field": "Staff names reused across outlets", "values": [{"value": "Tariq Mahmood = Installation Lead (Islamabad) and Branch Manager (Rawalpindi)"}, {"value": "Fatima Tariq = Site Engineer in both Lahore and Rawalpindi"}, {"value": "Bilal Ahmed = Installation Lead in both Lahore and Rawalpindi, identical bio"}, {"value": "Hamza Malik = Branch Manager Islamabad and Sargodha; Ayesha Khan = Site Engineer Islamabad and Sargodha"}, {"value": "Usman Ali = Branch Manager Lahore and Solar Specialist Sargodha"}], "files": ["js/employees.js"], "note": "Looks like placeholder data. about-us.html says \"Team profiles will be updated with verified names and roles.\" All picture fields are empty; six JPGs exist in /images/team/ but are not wired."},
+    {"field": "Years in business / experience", "values": [{"value": "7+ years"}, {"value": "since 2018 (7 years from 2018 is a 2025 figure; site footer says 2026)"}, {"value": "over 10 years of experience (individual managers, Lahore and Rawalpindi bios)"}], "files": ["index.html", "about-us.html", "js/employees.js"]},
+    {"field": "Employees", "values": [{"value": "51-200 (about-us, llms.txt, JSON-LD)"}, {"value": "no per-outlet counts"}]},
+    {"field": "Customer rating source", "values": [{"value": "4.8 out of 5, 47 reviews (about-us, JSON-LD, industrial page \"47 verified customer reviews\")"}, {"value": "100% Daraz rating (get-quote.html)"}, {"value": "5.0 Rating Verified Google Review (per-review labels on index.html)"}]},
+    {"field": "Map coordinates for Lahore", "values": [{"value": "31.5651, 74.3578 (JSON-LD)"}, {"value": "31.5651, 74.3552 (outlets iframe)"}, {"value": "31.5651, 74.3289 (locations iframe)"}, {"value": "31.5497, 74.3100 (contact-us iframe)"}]},
+    {"field": "Warranty on installation work", "values": [{"value": "1-year (llms.txt, about-us.html, residential FAQ \"Does Solarlink provide after-sales support?\")"}, {"value": "2-year workmanship (residential, agricultural, outlets/lahore, residential FAQ \"What warranty does SolarLink provide?\")"}], "note": "Residential page contradicts itself (two FAQs)."}
+  ],
+  "missing": [
+    "Hours for Multan and Gilgit (stub pages)",
+    "Address, phones and WhatsApp for Multan and Gilgit",
+    "Staff photo paths for every employee (picture fields empty in js/employees.js; six JPG files exist in /images/team/ but are not referenced)",
+    "Staff for Multan and Gilgit (empty arrays)",
+    "Areas served for Rawalpindi, Multan, Gilgit",
+    "JSON-LD geo coordinates for any outlet other than Lahore",
+    "Registered company name, NTN/SECP number, AEDB / PEC / NEPRA licence numbers (none stated anywhere in scope)",
+    "Terms and conditions content (terms.html is only a redirect to /terms/)",
+    "Dates for visible reviews (only 3 JSON-LD reviews carry a datePublished) and links to any Google Business Profile",
+    "A second WhatsApp or mobile for the Lahore head office other than 0321-8425777; any Rawalpindi/Sargodha second landline"
+  ]
+}
