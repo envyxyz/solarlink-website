@@ -308,6 +308,76 @@
 @utility nav-width {
   width: min(100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
 }
+/* The nav pill becomes an island on scroll: width springs to --nav-island (px, measured by NavShrink), capped at the full width.
+   The one deliberate exception to "only transform and opacity", at the owner's request. Never under reduced motion. */
+@utility nav-island {
+  width: min(var(--nav-island, 100vw), 100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
+}
+@utility nav-morph {
+  transition: width var(--dur-snappy) var(--spring-snappy);
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+/* Focus ring drawn on a child when its parent .group link has keyboard focus. */
+@utility focus-ring-group {
+  .group:focus-visible > & {
+    outline: var(--ring-width) solid var(--focus);
+    outline-offset: var(--ring-offset);
+  }
+}
+/* Nav menu (under 64rem): the pill grows downward into a panel. The width and the grid-row height are the owner-requested
+   exceptions to "only transform and opacity". Open: panel and lines start together, links arrive one by one after half the spring.
+   Close: NavMenu sets data-closing, links fade at once, then data-open goes and the panel shrinks. */
+@utility menu-icon {
+  position: relative;
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  & > span {
+    position: absolute;
+    inset-inline: 0;
+    top: calc(50% - var(--ring-width) / 2);
+    height: var(--ring-width);
+    border-radius: var(--r-pill);
+    background: currentColor;
+    transition: transform var(--dur-snappy) var(--spring-snappy), opacity var(--dur-fast) var(--ease-out);
+  }
+  & > span:nth-child(1) { transform: translateY(-0.3125rem); }
+  & > span:nth-child(3) { transform: translateY(0.3125rem); }
+  [data-nav][data-open] & > span:nth-child(1) { transform: rotate(45deg); }
+  [data-nav][data-open] & > span:nth-child(2) { opacity: 0; }
+  [data-nav][data-open] & > span:nth-child(3) { transform: rotate(-45deg); }
+  @media (prefers-reduced-motion: reduce) { & > span { transition: none; } }
+}
+@utility nav-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows var(--dur-snappy) var(--spring-snappy), visibility var(--dur-snappy) step-end;
+  [data-nav][data-open] & {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows var(--dur-snappy) var(--spring-snappy), visibility var(--dur-snappy) step-start;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+/* The panel never outgrows the window: 100svh less the nav's 1.5rem top offset, its 3.75rem row and 1.5rem to spare. */
+@utility nav-panel-max { max-height: calc(100svh - 6.75rem); }
+@utility nav-item {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+  [data-nav][data-open] & {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--dur-snappy) / 2 + var(--i, 0) * var(--stagger));
+  }
+  [data-nav][data-closing] & {
+    opacity: 0;
+    transition: opacity var(--dur-fast) var(--ease-out);
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none !important; }
+}
 @utility hero-height { height: var(--hero-height); }
 @utility hero-height-short { height: var(--hero-height-short); }
 @utility bg-haze { background: var(--haze); }
