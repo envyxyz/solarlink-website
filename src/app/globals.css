@@ -147,6 +147,11 @@
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
   &:hover .marquee-track, &:focus-within .marquee-track { animation-play-state: paused; }
+  /* Reduced motion: the belt is static, so it scrolls by hand and the second copy goes away. */
+  @media (prefers-reduced-motion: reduce) {
+    overflow-x: auto;
+    & .marquee-clone { display: none; }
+  }
 }
 
 /* Accordion: height opens and closes with the Radix measured height. */
@@ -170,6 +175,67 @@
 @utility marquee-track {
   animation: marquee var(--dur-marquee) linear infinite;
   @media (prefers-reduced-motion: reduce) { animation: none; }
+}
+
+/* Page edges: nav, stages and content share them (gutter inside the viewport, 1320px at most). */
+@utility page-width {
+  width: min(100% - 2 * var(--gutter), var(--page-max));
+  margin-inline: auto;
+}
+@utility nav-width {
+  width: min(100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
+}
+@utility hero-height { height: var(--hero-height); }
+@utility bg-haze { background: var(--haze); }
+@utility text-figure-compact {
+  font-size: var(--t-figure-compact-size);
+  font-weight: var(--t-figure-weight);
+  line-height: var(--t-figure-lh);
+  letter-spacing: var(--t-figure-track);
+  font-variation-settings: "wdth" var(--t-figure-wdth);
+}
+@utility panel-face {
+  background-color: var(--panel-base);
+  box-shadow: var(--panel-shadow);
+}
+
+/* Short desktop windows (1280 by 720): the hero tightens so both cards fit. */
+@custom-variant short (@media (min-width: 64rem) and (max-height: 50rem));
+
+/*
+  Hero art: the image box, sized like object-fit cover inside the stage (container units) and nudged by
+  --art-x and --art-y. The roof panels live in this box, so percent coordinates of the image stay true.
+  --ratio is the image width over its height (src/content/images.ts).
+*/
+@utility hero-stage { container-type: size; }
+@utility hero-art {
+  --aw: max(100cqw, calc(100cqh * var(--ratio)));
+  --art-x: 0.78;
+  --art-y: 0.4;
+  position: absolute;
+  width: var(--aw);
+  aspect-ratio: var(--ratio);
+  left: calc((100cqw - var(--aw)) * var(--art-x));
+  top: calc((100cqh - var(--aw) / var(--ratio)) * var(--art-y));
+  @media (min-width: 40rem) { --art-x: 0.85; }
+  @media (min-width: 64rem) { --art-x: 1; --art-y: 0.5; }
+}
+
+@utility text-stat {
+  font-size: var(--t-stat-size);
+  font-weight: var(--t-h3-weight);
+  line-height: 1.1;
+  letter-spacing: var(--t-h3-track);
+  font-variation-settings: "wdth" var(--t-h3-wdth);
+  @media (min-width: 64rem) { font-size: var(--t-stat-size-lg); }
+}
+@utility link-shadow { filter: var(--link-shadow); }
+@utility text-giant {
+  font-size: var(--t-giant-size);
+  font-weight: var(--t-giant-weight);
+  line-height: var(--t-giant-lh);
+  letter-spacing: var(--t-display-track);
+  font-variation-settings: "wdth" var(--t-display-wdth);
 }
 
 @layer base {

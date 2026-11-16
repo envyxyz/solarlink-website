@@ -281,11 +281,11 @@ function Showcase() {
 export function Kit() {
   return (
     <main id="main" className="flex flex-col gap-section py-section">
-      <div className="mx-auto w-full max-w-page px-gutter">
+      <div className="page-width">
         <h1 className="text-display">{kit.title}</h1>
         <p className="mt-4 max-w-prose text-lead text-ink-2">{kit.note}</p>
       </div>
-      <div className="mx-auto w-full max-w-page px-gutter">
+      <div className="page-width">
         <h2 className="mb-8 text-h2">{kit.grounds.light}</h2>
         <Showcase />
       </div>

@@ -205,3 +205,7 @@ No value above changed. These tokens were missing and are now in `src/styles/tok
 | `--tone-surface`, `--tone-sunken`, `--tone-ink`, `--tone-ink-2`, `--tone-on-ink`, `--tone-line`, `--focus` | aliases | point at the light tokens, and at the night tokens inside a night Stage, so one component serves both grounds (`bg-tone-surface`, `text-tone-ink`) |
 
 Other choices: the accordion panel height animates with a CSS keyframe on `--dur-slow` and `--ease-out` (the spring.soft look, not a true spring). Select is the native `<select>` styled as a well.
+
+## Added in phase 3 (chrome, hero, brand belt)
+
+No existing value changed. New tokens in `src/styles/tokens.css`: `--haze` (warm light wash over the hero image), `--panel-base`, `--panel-shadow` (roof panel object, drawn on the image), `--link-shadow` (legibility of the link line on the image), `--hero-height` (`min(92svh, 53.75rem)`), `--t-figure-compact-size` (2.75rem, big figure on short desktop windows), `--t-stat-size` and `--t-stat-size-lg` (result card figures), `--t-giant-*` (footer wordmark), `--measure-display` 11ch, `--measure-lead` 29ch, `--measure-lead-wide` 36ch. Utilities: `page-width` (nav, stages and content share the page edges: gutter inside the viewport, 1320px at most), `nav-width`, `hero-art`, `short:` variant (desktop windows 50rem high or less). Phase 3 components: `Nav` (Radix Dialog sheet under 64rem), `Footer`, `Hero` with `SizingProvider`, `SizingCard`, `ResultCard`, `RoofPanels`, `LinkLine`, `BrandBelt`.

@@ -23,6 +23,20 @@
   --night-line: rgb(242 244 238 / 0.1);
   --error: #c8321e; /* forms only */
 
+  /* hero (added in phase 3, see DESIGN.md) */
+  --haze: radial-gradient(58% 55% at 12% 6%, rgb(255 246 230 / 0.55), rgb(255 246 230 / 0) 100%);
+  --panel-base: #101821;
+  --panel-shadow: inset 0 4px 0 rgb(255 255 255 / 0.22), 0 0 0 2px rgb(8 12 16 / 0.7),
+    14px 22px 22px -8px rgb(8 12 16 / 0.55);
+  --link-shadow: drop-shadow(0 1px 1px rgb(11 15 10 / 0.3));
+  --hero-height: min(92svh, 53.75rem);
+  --t-figure-compact-size: 2.75rem;
+  --t-stat-size: clamp(1.0625rem, 4.6vw, 1.375rem); /* result card figures; 1.5rem from 64rem */
+  --t-stat-size-lg: 1.5rem;
+  --t-giant-size: clamp(2.75rem, 16vw, 16rem); /* footer wordmark */
+  --t-giant-weight: 700;
+  --t-giant-lh: 0.8;
+
   /* type: size, width axis, weight, line height, tracking */
   --t-display-size: clamp(2.75rem, 1.55rem + 4.8vw, 5.5rem);
   --t-display-wdth: 125;
@@ -108,6 +122,9 @@
   --ring-width: 2px;
   --ring-offset: 2px;
   --measure-heading: 14ch;
+  --measure-display: 11ch;
+  --measure-lead: 29ch;
+  --measure-lead-wide: 36ch;
 
   /* context tones: Stage night re-points these, so one component serves both grounds */
   --tone-surface: var(--surface);
@@ -181,6 +198,9 @@
 
   --container-page: var(--page-max);
   --container-heading: var(--measure-heading);
+  --container-display: var(--measure-display);
+  --container-lead: var(--measure-lead);
+  --container-lead-wide: var(--measure-lead-wide);
   --spacing-gutter: var(--gutter);
   --spacing-section: var(--section);
   --spacing-control: var(--control);

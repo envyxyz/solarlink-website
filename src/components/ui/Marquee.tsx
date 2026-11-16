@@ -14,7 +14,7 @@ import { spring } from "@/lib/motion";
 export function Marquee({ children, variant = "plain", className }: { children: ReactNode; variant?: "plain" | "logo"; className?: string }) {
   const items = Children.toArray(children);
   const row = (hidden: boolean) => (
-    <ul aria-hidden={hidden || undefined} className="flex shrink-0 items-center gap-12 pr-12">
+    <ul aria-hidden={hidden || undefined} className={cn("flex shrink-0 items-center gap-12 pr-12", hidden && "marquee-clone")}>
       {items.map((item, i) => (
         <li key={i} className="shrink-0">
           {variant === "logo" ? <LogoItem>{item}</LogoItem> : item}

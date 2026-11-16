@@ -6,7 +6,16 @@
   This file is read by Node directly (type stripping): use `import type` and relative `.ts` imports only.
 */
 
-export type Fact<T = string> = { value: T; confirmed: boolean; source: string };
+export type Fact<T = string> = {
+  value: T;
+  confirmed: boolean;
+  source: string;
+  /**
+   * An unconfirmed value that production may show because the UI labels the result as an estimate and
+   * names the assumption (the sizing constants). check-content and show() both honour it.
+   */
+  shownAsEstimate?: boolean;
+};
 /** A content object that is itself a claim (a service, a brand). Same rule as a Fact. */
 export type Flagged = { confirmed: boolean; source: string };
 
@@ -19,6 +28,7 @@ const TODO = "Business Profile: nothing on file. Ask the client";
 
 const ok = <T>(value: T, source: string): Fact<T> => ({ value, confirmed: true, source });
 const web = <T>(value: T, source = WEB): Fact<T> => ({ value, confirmed: false, source });
+const estimate = <T>(value: T, source: string): Fact<T> => ({ value, confirmed: false, shownAsEstimate: true, source });
 const todo = (): Fact<string> => ({ value: PLACEHOLDER, confirmed: false, source: TODO });
 
 export type OutletSlug = "lahore" | "islamabad" | "sargodha";
@@ -137,9 +147,20 @@ export const services: Service[] = [
   { slug: "net-metering-support", title: "Net metering support", short: "The application, approval and commissioning, filed for you.", path: "/services/net-metering-support/", confirmed: true, source: AMEER },
 ];
 
-export type Brand = Flagged & { name: string };
-export const brands: Brand[] = ["Canadian Solar", "Growatt", "Fronus", "LONGi", "Huawei", "GoodWe"].map((name) => ({
+/** `wdth` and `weight` set the wordmark's type (Mona Sans axes) until official logo files arrive. */
+export type Brand = Flagged & { name: string; wdth: number; weight: number };
+const brandRows: [string, number, number][] = [
+  ["Canadian Solar", 110, 650],
+  ["Growatt", 125, 800],
+  ["Fronus", 100, 700],
+  ["LONGi", 125, 800],
+  ["Huawei", 90, 600],
+  ["GoodWe", 105, 700],
+];
+export const brands: Brand[] = brandRows.map(([name, wdth, weight]) => ({
   name,
+  wdth,
+  weight,
   confirmed: false,
   source: "Website says (brand strip). Which brands are stocked is unconfirmed",
 }));
@@ -156,21 +177,19 @@ export const faqs: Faq[] = [];
 export const reviewSummary = { rating: todo(), count: todo(), asOf: todo() };
 
 export const sizing = {
-  ratePerUnit: web(50, "docs/HOMEPAGE.md starting constant. Client has not confirmed rates"),
-  sunHours: web(5, "docs/HOMEPAGE.md starting constant, unconfirmed"),
-  performanceRatio: web(0.78, "docs/HOMEPAGE.md starting constant, unconfirmed"),
-  panelWatts: web(580, "Business Profile: Canadian Solar 580 W, website says"),
-};
-
-export const nav = {
-  main: [
-    { label: "Services", href: "/services/" },
-    { label: "Products", href: "/products/" },
-    { label: "Projects", href: "/projects/" },
-    { label: "Outlets", href: "/outlets/" },
-    { label: "Resources", href: "/resources/" },
-  ],
-  quote: { label: "Get a free quote", href: "/get-quote/" },
+  // Unconfirmed starting constants. Shown in production only because the hero labels the result as an
+  // estimate and names these assumptions (hero.assumptions in content/home.ts).
+  ratePerUnit: estimate(50, "docs/HOMEPAGE.md starting constant. Client has not confirmed rates"),
+  sunHours: estimate(5, "docs/HOMEPAGE.md starting constant, unconfirmed"),
+  performanceRatio: estimate(0.78, "docs/HOMEPAGE.md starting constant, unconfirmed"),
+  panelWatts: estimate(580, "Business Profile: Canadian Solar 580 W, website says"),
+  // Slider ranges (docs/HOMEPAGE.md section 1).
+  rs: { min: 5000, max: 300000, step: 1000, start: 45000 },
+  units: { min: 100, max: 5000, step: 50 },
+  /** Roof corners inside the parapet, percent of the hero image: left, back, right, front. */
+  roof: { tl: [46.8, 25.2], tr: [65.6, 16.2], br: [94.4, 20.9], bl: [80.0, 37.6] } as const,
+  /** Flat roof plane in plane units; panels are portrait 1:2. Fill order starts at the front corner. */
+  grid: { w: 1000, h: 1180, panelW: 100, panelH: 200, gap: 10, cols: 8, rows: 5 },
 };
 
 export type SeoEntry = {
@@ -188,7 +207,7 @@ export const seo: Record<string, SeoEntry> = {
     path: "/",
     title: "Solar Solutions in Pakistan | SolarLink",
     description: business.descriptions.short.value,
-    h1: "Solar solutions in Pakistan",
+    h1: "Solar sized to your bill.",
     lastmod: "2026-11-16",
     indexable: true,
   },
@@ -203,8 +222,11 @@ export const seo: Record<string, SeoEntry> = {
 };
 
 export { ui, priceMode, type PriceMode } from "./content/ui.ts";
+export { nav, footer } from "./content/nav.ts";
+export { hero, belt } from "./content/home.ts";
 import { ui, priceMode } from "./content/ui.ts";
+import { nav, footer } from "./content/nav.ts";
+import { hero, belt } from "./content/home.ts";
 
-
-export const content = { business, outlets, services, brands, products, projects, reviews, reviewSummary, faqs, sizing, nav, seo, ui, priceMode };
+export const content = { business, outlets, services, brands, products, projects, reviews, reviewSummary, faqs, sizing, nav, footer, hero, belt, seo, ui, priceMode };
 export default content;

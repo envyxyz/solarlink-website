@@ -47,5 +47,5 @@ export function Stage({
         {children}
       </Tag>
   );
-  return nested ? panel : <div className="mx-auto w-full max-w-page px-gutter">{panel}</div>;
+  return nested ? panel : <div className="page-width">{panel}</div>;
 }

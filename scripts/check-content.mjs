@@ -49,7 +49,7 @@ function leaves(v, out = []) {
   if (v == null) return out;
   if (typeof v === "string" || typeof v === "number") out.push(String(v));
   else if (Array.isArray(v)) v.forEach((x) => leaves(x, out));
-  else if (typeof v === "object") for (const [k, x] of Object.entries(v)) if (!["confirmed", "source", "slug", "path"].includes(k)) leaves(x, out);
+  else if (typeof v === "object") for (const [k, x] of Object.entries(v)) if (!["confirmed", "source", "slug", "path", "shownAsEstimate"].includes(k)) leaves(x, out);
   return out;
 }
 
@@ -61,7 +61,9 @@ function walk(v, path) {
   if (isNode(v)) {
     if (typeof v.source !== "string" || v.source.trim().length < 5) fail(`${path}: fact has no source`);
     const own = leaves(v);
-    own.forEach((s) => (v.confirmed ? publicStrings.add(s) : unconfirmed.add(s)));
+    // shownAsEstimate: unconfirmed, but the UI labels the result an estimate and names the assumption.
+    const shown = v.confirmed || v.shownAsEstimate === true;
+    own.forEach((s) => (shown ? publicStrings.add(s) : unconfirmed.add(s)));
     textLeaves.push(...own.map((s) => [path, s]));
     // Children inside a flagged node that are themselves facts inherit nothing: walk them too.
     return;

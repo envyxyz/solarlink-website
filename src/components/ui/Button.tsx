@@ -22,7 +22,7 @@ export const variantClass: Record<ButtonVariant, string> = {
 
 const base =
   "focus-ring group relative inline-flex select-none items-center justify-center gap-2 whitespace-nowrap rounded-pill text-control disabled:opacity-50 aria-disabled:opacity-50";
-const sizes: Record<ButtonSize, string> = { md: "min-h-control px-5", lg: "min-h-control-lg px-7" };
+const sizes: Record<ButtonSize, string> = { md: "min-h-control px-5", lg: "min-h-control-lg px-5" };
 
 type Native = Omit<
   ButtonHTMLAttributes<HTMLButtonElement>,
@@ -42,6 +42,9 @@ export type ButtonProps = Native & {
 };
 
 const MotionLink = m.create(Link);
+
+/** http(s) links leave the site: new tab, no opener. tel: and mailto: stay as they are. */
+const external = (href: string) => (/^https?:/.test(href) ? { target: "_blank", rel: "noopener noreferrer" } : {});
 
 function useMagnet(enabled: boolean) {
   const reduced = useReducedMotion();
@@ -100,7 +103,7 @@ export function Button({
         {inner}
       </MotionLink>
     ) : (
-      <m.a href={href} {...common} aria-disabled={inactive || undefined}>
+      <m.a href={href} {...external(href)} {...common} aria-disabled={inactive || undefined}>
         {inner}
       </m.a>
     )
@@ -123,6 +126,7 @@ export function Button({
 
 export type IconButtonProps = {
   variant?: ButtonVariant;
+  size?: ButtonSize;
   /** Accessible name. Required: an icon has no text. */
   label: string;
   href?: string;
@@ -134,10 +138,11 @@ export type IconButtonProps = {
 };
 
 /** 44px circle, same variants as Button. */
-export function IconButton({ variant = "quiet", label, href, loading, disabled, onClick, className, children }: IconButtonProps) {
+export function IconButton({ variant = "quiet", size = "md", label, href, loading, disabled, onClick, className, children }: IconButtonProps) {
   const inactive = disabled || loading;
   const cls = cn(
-    "focus-ring relative inline-flex size-control shrink-0 select-none items-center justify-center rounded-pill disabled:opacity-50 aria-disabled:opacity-50",
+    "focus-ring relative inline-flex shrink-0 select-none items-center justify-center rounded-pill disabled:opacity-50 aria-disabled:opacity-50",
+    size === "lg" ? "size-control-lg" : "size-control",
     variantClass[variant],
     className,
   );
@@ -145,7 +150,7 @@ export function IconButton({ variant = "quiet", label, href, loading, disabled, 
   if (href) {
     const Comp = href.startsWith("/") ? MotionLink : m.a;
     return (
-      <Comp href={href} aria-label={label} aria-disabled={inactive || undefined} {...press} className={cls}>
+      <Comp href={href} {...(Comp === MotionLink ? {} : external(href))} aria-label={label} aria-disabled={inactive || undefined} {...press} className={cls}>
         {inner}
       </Comp>
     );

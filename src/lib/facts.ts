@@ -1,10 +1,12 @@
 import type { Fact } from "@/content";
 
-const production = process.env.NODE_ENV === "production";
+// SOLARLINK_PREVIEW=1 shows unconfirmed facts in a static build, for screenshots only. `pnpm build` runs
+// check-content --post, which fails if an unconfirmed fact reaches out/, so a preview build cannot ship.
+const production = process.env.NODE_ENV === "production" && !process.env.SOLARLINK_PREVIEW;
 
-/** The value of a fact, or null when it is unconfirmed in a production build. */
+/** The value of a fact, or null when it is unconfirmed in a production build (estimates excepted). */
 export function show<T>(fact: Fact<T>): T | null {
-  return fact.confirmed || !production ? fact.value : null;
+  return fact.confirmed || fact.shownAsEstimate || !production ? fact.value : null;
 }
 
 /** Same rule for flagged objects (services, brands). */

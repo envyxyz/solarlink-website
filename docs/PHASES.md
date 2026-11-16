@@ -40,3 +40,21 @@ Not done or open:
 - Pre-launch SEO snapshot still needs the live site and Search Console access.
 
 Next: chrome (nav, footer), then the homepage.
+
+## 16 Nov 2026: phase 3, chrome, hero and brand belt
+
+Done:
+- Images: `scripts/images.mjs` (sharp) writes AVIF and WebP to `public/images/` (hero 1376 and 768 wide, panel 256 wide, no upscaling) and `src/content/images.ts` with real sizes.
+- Content: `src/content/nav.ts` (nav, footer), `src/content/home.ts` (hero, belt), sizing constants, ranges, roof quad and grid in `src/content.ts`. New `shownAsEstimate` flag on facts: the four sizing constants are `confirmed: false` but may ship because the hero labels the result an estimate and names the assumptions. `show()` and `check-content` honour it; the leak check is not weakened for any other fact. Home h1 is now "Solar sized to your bill."
+- Nav (glass pill, shrinks after 80px, lazy Radix sheet on phones), Footer (night stage, giant clipped wordmark), Hero (server h1, lead and preloaded AVIF image; client island: slider, Rs or Units, result card, roof panels via homography, link line), BrandBelt (Marquee primitive). Homepage JSON-LD from content.
+- Primitives fixed, not call sites: Button and IconButton open http links in a new tab, IconButton has `size`, Marquee is static under reduced motion, Stage uses `page-width`, `WhatsAppGlyph` is its own file, phone helpers split into `src/lib/phone.ts` so client code never imports the facts module.
+- `src/lib/sizing.ts` plus `scripts/sizing-check.mjs` (runs first in `pnpm build`). `scripts/shot.mjs` captures `design/shots/home-*`.
+- `SOLARLINK_PREVIEW=1` shows unconfirmed facts in a build for screenshots only; `pnpm build` fails its post check if they reach `out/`.
+
+Not done or open:
+- In a production build the brand belt, WhatsApp number, outlet addresses, phones, hours and socials are hidden (all unconfirmed); the CTA opens `/get-quote/`. Screenshots use the preview build.
+- Homepage JS is about 250 KB gzipped (React and Next about 120, Motion and Radix the rest), over the 130 KB budget. Needs a pass: drop Radix Slider and ToggleGroup for lighter native controls, or trim Motion.
+- Link line dot is static (as in the approved mock), not travelling.
+- Nav and footer link to pages that are not built yet (404 until their phases).
+
+Next: homepage sections 3 to 11.

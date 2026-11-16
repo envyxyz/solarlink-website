@@ -2,6 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { Mona_Sans } from "next/font/google";
 import { business, ui } from "@/content";
 import { MotionProvider } from "@/components/providers/MotionProvider";
+import { Footer } from "@/components/site/Footer";
+import { Nav } from "@/components/site/Nav";
+import { show } from "@/lib/facts";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -28,11 +31,15 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a
           href="#main"
-          className="focus-ring absolute left-4 top-4 z-50 -translate-y-24 rounded-pill bg-ink px-5 py-3 text-control text-night-ink focus:translate-y-0"
+          className="focus-ring absolute left-4 top-4 z-60 -translate-y-24 rounded-pill bg-ink px-5 py-3 text-control text-night-ink focus:translate-y-0"
         >
           {ui.skipToContent}
         </a>
-        <MotionProvider>{children}</MotionProvider>
+        <MotionProvider>
+          <Nav brand={show(business.name) as string} />
+          {children}
+          <Footer />
+        </MotionProvider>
       </body>
     </html>
   );
