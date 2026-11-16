@@ -9,6 +9,8 @@ const SPRINGS = {
   /** large things that settle */
   soft: { k: 160, c: 24, m: 1.2, secs: 1, steps: 56, ms: 900 },
 } as const;
+/** Stiffness of a spring, for the physics followers in momentum.ts. */
+export const springStiffness = (name: keyof typeof SPRINGS) => SPRINGS[name].k;
 export type SpringName = keyof typeof SPRINGS;
 
 const POP_FROM = 0.8;
