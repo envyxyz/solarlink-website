@@ -11,11 +11,11 @@ export function BrandBelt() {
   if (!list.length) return null;
   return (
     <section aria-label={belt.aria} className="page-width mb-section mt-10 lg:mt-16">
-      <Marquee variant="logo" className="py-4">
+      <Marquee variant="logo" pause={belt.pause} className="py-4">
         {list.map((b) => (
           <span
             key={b.name}
-            className="dur-fast block whitespace-nowrap text-h3 text-ink-3 transition-colors hover:text-ink"
+            className="dur-fast block whitespace-nowrap text-h3 text-ink-2 transition-colors hover:text-ink"
             style={{ fontVariationSettings: `"wdth" ${b.wdth}`, fontWeight: b.weight }}
           >
             {b.name}

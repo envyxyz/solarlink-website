@@ -8,13 +8,14 @@ export type PriceMode = "show" | "ask" | "hidden";
 /** Site-wide price switch. Launch default is ask until the client confirms rates. */
 export const priceMode: PriceMode = "ask";
 
+/** Review builds only: marks a block a production build leaves out. A named export outside `ui`, so client code that imports `ui` never bundles it; check-content --post fails if it reaches out/. */
+export const awaiting = "Awaiting client";
+
 export const ui = {
   brandAlt: "SolarLink",
   loading: "Loading",
   skipToContent: "Skip to content",
   dash: "–",
-  /** Dev and staging builds only: marks a block a production build leaves out. */
-  awaiting: "Awaiting client",
   notFound: {
     body: "The link may be old. Start from the home page, or send us a message and we will point you to the right shop.",
     home: "Go to the home page",
@@ -26,6 +27,5 @@ export const ui = {
     message: "Assalam o Alaikum SolarLink. I would like a free site survey and quote.",
   },
   accordion: { open: "Open", close: "Close" },
-  marquee: { hint: "Moving list. Hover or focus to pause." },
   breadcrumb: { home: "Home" },
 };

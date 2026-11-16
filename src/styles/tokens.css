@@ -12,6 +12,8 @@
   --ink-2: #565d53;
   --ink-3: #7c8378;
   --line: rgb(11 15 10 / 0.08);
+  --track: rgb(11 15 10 / 0.1); /* segmented-control track: reads on ground, surface, sunken and glass */
+  --night-track: rgb(242 244 238 / 0.16); /* the same on night */
   --lime: #7ed321;
   --lime-press: #6ac014;
   --lime-wash: #e8f7d3;
@@ -30,6 +32,7 @@
     14px 22px 22px -8px rgb(8 12 16 / 0.55);
   --link-shadow: drop-shadow(0 1px 1px rgb(11 15 10 / 0.3));
   --hero-height: min(92svh, 53.75rem);
+  --hero-height-short: calc(100svh - 1.5rem); /* short desktop windows: the stage fills the window, 12px above and below */
   --t-figure-compact-size: 2.75rem;
   --t-stat-size: clamp(1.0625rem, 4.6vw, 1.375rem); /* result card figures; 1.5rem from 64rem */
   --t-stat-size-lg: 1.5rem;
@@ -117,6 +120,9 @@
   --dur: 250ms;
   --dur-slow: 650ms;
   --dur-marquee: 48s;
+  --dur-draw: 1100ms; /* the hero link line draws */
+  --delay-draw: 350ms; /* after the hero image has painted */
+  --dur-route: 9s; /* one loop of the dot on the link diagram */
   --dur-snappy: 350ms; /* length of spring.snappy and spring.bubbly when played as CSS transitions */
   --dur-bubbly: 700ms;
   --stagger: 80ms;
@@ -140,6 +146,7 @@
   --tone-ink-2: var(--ink-2);
   --tone-on-ink: var(--night-ink); /* text on an ink-coloured fill */
   --tone-line: var(--line);
+  --tone-track: var(--track);
   --focus: var(--ink);
 }
 
@@ -150,6 +157,7 @@
   --tone-ink-2: var(--night-ink-2);
   --tone-on-ink: var(--ink);
   --tone-line: var(--night-line);
+  --tone-track: var(--night-track);
   --focus: var(--lime);
   color: var(--night-ink);
 }
@@ -190,6 +198,7 @@
   --color-tone-ink-2: var(--tone-ink-2);
   --color-tone-on-ink: var(--tone-on-ink);
   --color-tone-line: var(--tone-line);
+  --color-tone-track: var(--tone-track);
 
   --radius-*: initial;
   --radius-stage: var(--r-stage);

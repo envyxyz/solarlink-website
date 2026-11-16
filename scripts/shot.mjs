@@ -1,7 +1,7 @@
 // Screenshots of a built route. Serves out/ on a local port and captures the route at 1440x900,
 // 1280x720 and 390x844 (first screen and full page) into design/shots/. Also, for the homepage:
 // the slider moved to the top with the keyboard, and the phone menu open. Prints console errors.
-// Usage: node scripts/shot.mjs [route=/]   (run `pnpm build` first; uses the installed Chrome)
+// Usage: node scripts/shot.mjs [route=/] [prefix]   (prefix goes before the file name: "prod-" gives prod-home-1440-first.jpg)   (run `pnpm build` first; uses the installed Chrome)
 // Linux or CI: SHOT_CHROME=/opt/pw-browsers/chromium node scripts/shot.mjs  (that path is a symlink to the Chromium binary;
 // without SHOT_CHROME it launches the installed Chrome, channel "chrome").
 import { createServer } from "node:http";
@@ -10,7 +10,8 @@ import { extname, join, normalize } from "node:path";
 import { chromium } from "playwright";
 
 const route = process.argv[2] ?? "/";
-const slug = route === "/" ? "home" : route.replaceAll("/", "-").replace(/^-|-$/g, "");
+const prefix = process.argv[3] ?? "";
+const slug = prefix + (route === "/" ? "home" : route.replaceAll("/", "-").replace(/^-|-$/g, ""));
 const root = join(process.cwd(), "out");
 const outDir = join(process.cwd(), "design", "shots");
 const TYPES = { ".html": "text/html", ".js": "text/javascript", ".css": "text/css", ".json": "application/json", ".svg": "image/svg+xml", ".avif": "image/avif", ".webp": "image/webp", ".woff2": "font/woff2", ".txt": "text/plain", ".xml": "application/xml" };

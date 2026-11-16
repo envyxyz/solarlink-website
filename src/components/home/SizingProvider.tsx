@@ -26,10 +26,10 @@ type Sizing = {
   range: Range;
   result: SizingResult;
   maxPanels: number;
-  /** True once the visitor has changed something: result figures pop only after that. */
-  touched: boolean;
   text: { value: string; valueText: string; kw: string; panels: string; generation: string; assumptions: string };
   href: string;
+  /** False while the Lahore WhatsApp number is not shown: the CTA is then the quote link and must not say WhatsApp. */
+  whatsapp: boolean;
 };
 
 const Ctx = createContext<Sizing | null>(null);
@@ -44,7 +44,6 @@ export function useSizing() {
 export function SizingProvider({ config, children }: { config: SizingConfig; children: ReactNode }) {
   const [mode, setModeState] = useState<Mode>("rs");
   const [value, setValueState] = useState(config.rs.start);
-  const [touched, setTouched] = useState(false);
 
   const value$ = useMemo<Sizing>(() => {
     const { constants: c } = config;
@@ -60,20 +59,15 @@ export function SizingProvider({ config, children }: { config: SizingConfig; chi
       config,
       mode,
       value,
-      setValue: (v) => {
-        setTouched(true);
-        setValueState(v);
-      },
+      setValue: setValueState,
       setMode: (next) => {
         if (next === mode) return;
-        setTouched(true);
         setValueState(convertValue(mode, next, value, c, ranges));
         setModeState(next);
       },
       range: ranges[mode],
       result,
       maxPanels,
-      touched,
       text: {
         value: display,
         valueText: fill(mode === "rs" ? hero.valueTextRs : hero.valueTextUnits, { n }),
@@ -83,8 +77,9 @@ export function SizingProvider({ config, children }: { config: SizingConfig; chi
         assumptions: fill(hero.assumptions, { rate: c.ratePerUnit, sun: c.sunHours, watts: c.panelWatts }),
       },
       href: config.whatsapp ? waHref(config.whatsapp, message) : config.quoteHref,
+      whatsapp: config.whatsapp !== null,
     };
-  }, [config, mode, value, touched]);
+  }, [config, mode, value]);
 
   return <Ctx.Provider value={value$}>{children}</Ctx.Provider>;
 }

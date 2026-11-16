@@ -110,6 +110,7 @@ function checkOut(c) {
   if (existsSync("out/dev")) fail("out/dev exists: dev routes must not ship");
   const leakable = [...unconfirmed].filter((s) => s.length >= 4 && s !== PLACEHOLDER && !publicStrings.has(s));
   const leakRes = leakable.map((s) => [s, new RegExp(`(?<![\\w.-])${s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}(?![\\w-])`)]);
+  const awaiting = c.awaiting;
   const canonicalRe = /<link rel="canonical" href="([^"]*)"/g;
   let pages = 0;
   for (const p of files("out")) {
@@ -117,6 +118,7 @@ function checkOut(c) {
     const text = readFileSync(p, "utf8");
     const rel = p.replace(/\\/g, "/");
     if (text.includes(PLACEHOLDER)) fail(`${rel}: contains ${PLACEHOLDER}`);
+    if (awaiting && text.includes(awaiting)) fail(`${rel}: contains the "${awaiting}" chip (review builds only)`);
     for (const [s, re] of leakRes) if (re.test(text)) fail(`${rel}: unconfirmed fact shown: ${s}`);
     if (/\.(html|txt|xml)$/.test(p)) claimsIn(text, rel);
     if (p.endsWith(".html")) {

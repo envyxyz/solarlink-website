@@ -4,8 +4,16 @@ Sections 2 to 12 of `HOMEPAGE.md`. Hero is final (h1 "Solar sized to your bill."
 
 ## Page meta
 
-- Title (45): `Solar company in Pakistan | SolarLink, Lahore`
-- Meta description (148): `SolarLink sizes, supplies and installs solar for homes, businesses and farms. Shops in Lahore, Islamabad and Sargodha. Get a free site survey.`
+- Title (55): `Solar Company in Pakistan | Solar Solutions | SolarLink` (the primary query from `KEYWORD-MAP.md`, then the old title's phrase)
+- Meta description (146): `SolarLink sizes, supplies and installs solar for homes, businesses and industry. Shops in Lahore, Islamabad and Sargodha. Get a free site survey.` ("industry", not "farms": the farm service is unconfirmed)
+- Share image: `/images/brand/og-banner.jpg`, 1200 by 630 (the live site's banner, kept at its live path). Alt: "SolarLink: Solar Solution & Installation"
+
+## 1. Hero (lines added or changed after QA)
+
+- Estimate line under the result figures, shown at every width: "Estimate. Assumes Rs 50 a unit, 5 sun hours a day and 580 W panels. Your own bill's rate may differ." The numbers are filled from the sizing constants in content.
+- Main button: "Send this system on WhatsApp" with the round WhatsApp twin once the Lahore WhatsApp number is confirmed. Until then the button reads "Get a free quote" (the no-JavaScript label), goes to the quote page, and there is no twin.
+- Screen readers hear one line half a second after the slider rests: "{size} system, {n} panels, {units} units a month."
+- Brand belt (when shown): pause and play button, labels "Pause the brand list" and "Play the brand list".
 
 ## 2. Brand belt
 
@@ -16,7 +24,7 @@ Sections 2 to 12 of `HOMEPAGE.md`. Hero is final (h1 "Solar sized to your bill."
 ## 3. About and numbers
 
 - h2: One company from survey to net metering.
-- Lead: Cut your bill and stop worrying about load-shedding. SolarLink sizes your system, supplies the panels, inverters and batteries, installs them and files your net metering. One team from the first visit to the last form.
+- Lead: SolarLink is a solar company in Pakistan with shops in Lahore, Islamabad and Sargodha. Cut your bill and stop worrying about load-shedding. SolarLink sizes your system, supplies the panels, inverters and batteries, installs them and files your net metering. One team from the first visit to the last form.
 - Button: See what we do (link to section 4)
 
 | value | label | source | confirmed |
@@ -54,7 +62,8 @@ Sections 2 to 12 of `HOMEPAGE.md`. Hero is final (h1 "Solar sized to your bill."
 - Lead: Walk in, or send us the spec you want. We reply with today's rate.
 - Price slot on every card: Ask for today's rate
 - Card button: Ask on WhatsApp. Link: See all products
-- Tab labels: Solar panels | Inverters | Batteries | UPS and backup
+- Tab labels: Solar panels | Inverters | Batteries | UPS and backup. Phone labels (under 40rem): Panels | Inverters | Batteries | UPS
+- Sample spec lines no longer repeat the name: panels "Half-cut cells, aluminium frame" or "Aluminium frame, tempered glass"; inverters "Battery-ready, wall mounted" or "No battery needed, wall mounted"; batteries "Wall or floor mounted" or "Floor standing"; UPS "Plug-in backup for lights and fans", "Plug-in backup for a few rooms", "Can pair with solar panels". All still samples.
 - All 12 items are `sample: true` (generic, no brand, price, warranty or stock). Replace with real stock before launch.
 
 | Category | Sample items | Alt text |
@@ -89,7 +98,7 @@ Photos: [confirm with client] (live pages say real photography is "coming soon";
 ## 9. Outlets
 
 - h2: Visit a shop.
-- Lead: Three shops. Walk in, call or message.
+- Lead: Three shops. Walk in, call or message. While no shop shows a phone or WhatsApp number (production until confirmed): "Three shops. Walk in and talk to us."
 - Card buttons: Call this shop | Message on WhatsApp | Get directions
 
 | Field | Lahore (head office) | Islamabad | Sargodha | confirmed |
@@ -122,19 +131,20 @@ Photos: [confirm with client] (live pages say real photography is "coming soon";
 - h2: Send your bill. Get your system size.
 - Body: Tell us what you pay each month. We size the system and book a free site survey.
 - Buttons: Get a free quote (primary) | Call the Lahore shop (quiet)
-- Image alt: "A house at dusk with solar panels on the roof and the lights on"
+- Image alt: "A house at dusk with solar panels on the roof and the lights on" is for closing-dusk.jpg when it exists. Until then the hero render stands in, with its own alt: "Render of a flat-roofed house seen from the street in soft morning light, its roof still bare"
 
 ## 12. Footer
 
-- Column headings: Shop | Solar | Company | Outlets | Hours | Follow us
-- Shop links: Solar panels, Inverters, Batteries, UPS and backup, All products
+- Column headings: Shop | Solar | Company | Outlets | Hours | Follow us (Outlets and Hours are the shop block above the columns; Hours show per shop once confirmed; Follow us shows once the handles are confirmed)
+- Shop links: Solar panels, Inverters, Batteries, Accessories, All products (UPS and backup has no page in `src/routes.ts` yet, so no link; Accessories is the nearest page that exists)
 - Solar links: Home solar, Business solar, Farm solar, Net metering, Projects
-- Company links: About SolarLink, Questions, Guides, Contact, Get a free quote
+- Company links: About SolarLink, Questions, Guides, Blog, Contact, Get a free quote
 - Outlets: Lahore (head office), Islamabad, Sargodha (as section 9)
 - Hours: Mon to Sat 9:00 AM to 6:00 PM, Sunday closed (unconfirmed)
 - Socials: Facebook, Instagram, LinkedIn, TikTok, YouTube (from Business Profile; Pinterest optional)
-- Legal line: "SolarLink is a trading name of [confirm with client]. NTN [confirm with client]."
-- Wordmark: SolarLink (decorative, aria-hidden)
+- Legal links: Privacy (`/privacy-policy/`), Sitemap (`/sitemap/`)
+- Legal line: "SolarLink is a trading name of [confirm with client]. NTN [confirm with client]." Shown only once both facts are confirmed. Until then the line is "(c) 2026 SolarLink. All rights reserved."
+- Wordmark: SolarLink (decorative; drawn by a CSS pseudo-element, so assistive tech does not see it)
 
 ## Unconfirmed items used
 

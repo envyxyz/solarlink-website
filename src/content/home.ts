@@ -24,7 +24,10 @@ export const hero = {
   panelOne: "{n} panel",
   panelMany: "{n} panels",
   roofCap: "Larger than this roof: we will design a ground or multi-roof system.",
-  assumptions: "Placeholder assumptions: Rs {rate} a unit, {sun} sun hours a day, {watts} W panels. Not yet confirmed.",
+  /** Names the starting constants plainly; the numbers come from content.sizing. */
+  assumptions: "Estimate. Assumes Rs {rate} a unit, {sun} sun hours a day and {watts} W panels. Your own bill's rate may differ.",
+  /** Said once, after the slider stops: {kw}, {panels} (already with its unit word) and {units}. */
+  announce: "{kw} system, {panels}, {units} units a month.",
   cta: "Send this system on WhatsApp",
   note: "Estimate only. A free site survey confirms the size.",
   /** Sent to the Lahore number until the visitor picks a city. */
@@ -35,4 +38,6 @@ export const hero = {
 
 export const belt = {
   aria: "Solar equipment brands SolarLink installs",
+  /** Labels of the pause and play button beside the moving belt. */
+  pause: { pause: "Pause the brand list", play: "Play the brand list" },
 };

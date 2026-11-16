@@ -4,17 +4,13 @@ import { hero, nav, outlets, seo, sizing } from "@/content";
 import { images } from "@/content/images";
 import { Button } from "@/components/ui/Button";
 import { show } from "@/lib/facts";
+import { heroFull, heroSizes, heroSrc, heroSrcSet, heroWidest } from "@/lib/picture";
 import { LinkLine } from "./LinkLine";
 import { ResultCard } from "./ResultCard";
 import { RoofPanels } from "./RoofPanels";
 import { SizingCard, sizingSlot } from "./SizingCard";
 import { SizingProvider, type SizingConfig } from "./SizingProvider";
 
-const SIZES = "(min-width: 64rem) 1376px, 768px";
-const WIDTHS = ([1376, 768] as const).slice().sort((a, b) => a - b);
-const widest = 1376;
-const heroSrc = (w: number, ext: "avif" | "webp") => `/images/hero-${w}.${ext}`;
-const srcSet = (ext: "avif" | "webp") => WIDTHS.map((w) => `${heroSrc(w, ext)} ${w}w`).join(", ");
 const panelWidth = Number(Object.keys(images.panelTop)[0]);
 const panelFace = `image-set(url(/images/panel-top-${panelWidth}.avif) type("image/avif"), url(/images/panel-top-${panelWidth}.webp) type("image/webp"))`;
 
@@ -23,9 +19,9 @@ const noJsStyle = "*[data-island]{display:none}";
 
 export function Hero() {
   // The hero image is the LCP element: preload the AVIF with high priority.
-  preload(heroSrc(widest, "avif"), { as: "image", imageSrcSet: srcSet("avif"), imageSizes: SIZES, type: "image/avif", fetchPriority: "high" });
+  preload(heroSrc(heroWidest, "avif"), { as: "image", imageSrcSet: heroSrcSet("avif"), imageSizes: heroSizes, type: "image/avif", fetchPriority: "high" });
 
-  const full = images.hero[widest];
+  const full = heroFull;
   const lahore = outlets.find((o) => o.slug === "lahore") ?? outlets[0];
   const config: SizingConfig = {
     constants: {
@@ -45,24 +41,24 @@ export function Hero() {
 
   return (
     <SizingProvider config={config}>
-      <section id="hero" className="relative page-width pt-26 sm:pt-22 lg:mt-3 lg:hero-height lg:pt-0">
+      <section id="hero" className="relative page-width pt-26 lg:mt-3 lg:hero-height lg:pt-0 short:hero-height-short">
         <noscript>
           <style>{noJsStyle}</style>
         </noscript>
 
-        <div className="px-1 pb-3 sm:pb-5 lg:absolute lg:left-14 lg:top-26 lg:z-5 lg:p-0 short:top-21">
+        <div className="px-1 pb-3 sm:pb-5 lg:absolute lg:left-14 lg:top-26 lg:z-5 lg:p-0 short:top-24">
           <h1 className="max-w-display text-display">{seo.home.h1}</h1>
-          <p className="mt-3 max-w-lead text-lead max-sm:max-w-none max-sm:text-small sm:mt-4 short:mt-3 short:max-w-lead-wide">{hero.lead}</p>
+          <p className="mt-3 max-w-lead text-lead max-sm:max-w-none max-sm:text-small sm:mt-4 short:mt-2 short:max-w-lead-wide">{hero.lead}</p>
         </div>
 
         <div className="hero-stage relative isolate aspect-square overflow-hidden rounded-stage bg-sunken sm:aspect-16/10 lg:absolute lg:inset-0 lg:aspect-auto">
           <div data-hero-art className="hero-art" style={artStyle}>
             <picture>
-              <source type="image/avif" srcSet={srcSet("avif")} sizes={SIZES} />
-              <source type="image/webp" srcSet={srcSet("webp")} sizes={SIZES} />
+              <source type="image/avif" srcSet={heroSrcSet("avif")} sizes={heroSizes} />
+              <source type="image/webp" srcSet={heroSrcSet("webp")} sizes={heroSizes} />
               {/* A plain img inside picture: static export has no image optimiser, and the sources are pre-sized. */}
               <img
-                src={heroSrc(widest, "webp")}
+                src={heroSrc(heroWidest, "webp")}
                 width={full.width}
                 height={full.height}
                 alt={hero.imageAlt}

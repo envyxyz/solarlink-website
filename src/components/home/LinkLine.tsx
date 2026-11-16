@@ -1,11 +1,10 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import { tokenEase, tokenMs } from "@/lib/tokens";
 import { useSizing } from "./SizingProvider";
 
 const DESKTOP = "(min-width: 64rem)";
-const DRAW_MS = 1100;
-const START_DELAY_MS = 350;
 const CORNER = 16;
 
 /**
@@ -31,6 +30,8 @@ export function LinkLine() {
     if (!svgEl || !pathEl || !dotEl || !hero || !art || !result || !img) return;
     const wide = window.matchMedia(DESKTOP);
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    const drawMs = tokenMs("--dur-draw");
+    const fastMs = tokenMs("--dur-fast");
     let ready = false;
     let drawn = false;
     let timer = 0;
@@ -61,15 +62,15 @@ export function LinkLine() {
         drawn = true;
         const len = pathEl.getTotalLength();
         pathEl.style.strokeDasharray = String(len);
-        dotEl.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150, delay: reduced ? 0 : DRAW_MS - 100, fill: "forwards" });
+        dotEl.animate([{ opacity: 0 }, { opacity: 1 }], { duration: fastMs, delay: reduced ? 0 : drawMs - fastMs, fill: "forwards" });
         if (reduced) {
           pathEl.style.strokeDashoffset = "0";
-          pathEl.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 150 });
+          pathEl.animate([{ opacity: 0 }, { opacity: 1 }], { duration: fastMs });
         } else {
           pathEl.style.strokeDashoffset = String(len);
           pathEl.animate([{ strokeDashoffset: len }, { strokeDashoffset: 0 }], {
-            duration: DRAW_MS,
-            easing: "cubic-bezier(0.16, 1, 0.3, 1)",
+            duration: drawMs,
+            easing: tokenEase("--ease-out"),
             fill: "forwards",
           });
         }
@@ -87,7 +88,7 @@ export function LinkLine() {
       timer = window.setTimeout(() => {
         ready = true;
         draw();
-      }, START_DELAY_MS);
+      }, tokenMs("--delay-draw"));
     };
     if (img.complete) start();
     else img.addEventListener("load", start, { once: true });

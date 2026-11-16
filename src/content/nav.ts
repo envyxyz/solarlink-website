@@ -23,56 +23,52 @@ export const nav = {
   menu: { open: "Open menu", close: "Close menu", title: "Menu" },
 };
 
+/** Footer: columns and legal line follow docs/COPY-HOME.md section 12. Every href is a path in src/routes.ts. */
 export const footer = {
-  label: "Site footer",
-  outletsTitle: "Our shops",
+  outletsTitle: "Outlets",
   headOffice: "Head office",
   hoursTitle: "Hours",
   callLabel: "Call",
   columns: [
     {
-      title: "Services",
-      links: [
-        { label: "Solar for homes", href: "/services/residential-solar/" },
-        { label: "Solar for business", href: "/services/commercial-solar/" },
-        { label: "Solar for industry", href: "/services/industrial-solar/" },
-        { label: "Solar for farms and tubewells", href: "/services/agricultural-solar/" },
-        { label: "Net metering support", href: "/services/net-metering-support/" },
-      ],
-    },
-    {
-      title: "Products",
+      title: "Shop",
       links: [
         { label: "Solar panels", href: "/products/solar-panels/" },
         { label: "Inverters", href: "/products/inverters/" },
         { label: "Batteries", href: "/products/batteries/" },
         { label: "Accessories", href: "/products/accessories/" },
+        { label: "All products", href: "/products/" },
       ],
     },
     {
-      title: "Learn",
+      title: "Solar",
       links: [
-        { label: "Solar calculator", href: "/solar-calculator/" },
-        { label: "How solar works", href: "/how-solar-works/" },
-        { label: "Net metering guide", href: "/net-metering-guide/" },
-        { label: "FAQs", href: "/faqs/" },
-        { label: "Resources", href: "/resources/" },
+        { label: "Home solar", href: "/services/residential-solar/" },
+        { label: "Business solar", href: "/services/commercial-solar/" },
+        { label: "Farm solar", href: "/services/agricultural-solar/" },
+        { label: "Net metering", href: "/services/net-metering-support/" },
+        { label: "Projects", href: "/projects/" },
       ],
     },
     {
       title: "Company",
       links: [
-        { label: "About us", href: "/about-us/" },
-        { label: "Projects", href: "/projects/" },
-        { label: "Contact us", href: "/contact-us/" },
+        { label: "About SolarLink", href: "/about-us/" },
+        { label: "Questions", href: "/faqs/" },
+        { label: "Guides", href: "/resources/" },
+        { label: "Blog", href: "/blog/" },
+        { label: "Contact", href: "/contact-us/" },
         { label: "Get a free quote", href: "/get-quote/" },
       ],
     },
   ],
   legal: [
-    { label: "Privacy", href: "/privacy/" },
+    { label: "Privacy", href: "/privacy-policy/" },
     { label: "Sitemap", href: "/sitemap/" },
   ],
-  legalLine: "© 2026 SolarLink. All rights reserved.",
+  /** Shown while the legal name and NTN are unconfirmed. */
+  copyright: "\u00a9 2026 SolarLink. All rights reserved.",
+  /** {brand}, {legal} and {ntn}. Shown once both facts are confirmed. */
+  legalLine: "{brand} is a trading name of {legal}. NTN {ntn}.",
   socialsTitle: "Follow us",
 };

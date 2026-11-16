@@ -25,6 +25,8 @@ export type Product = {
 export type ShopCategory = {
   slug: string;
   label: string;
+  /** Compact label for phones, so the four-way switch fits. */
+  short: string;
   alt: string;
   imagePending: boolean;
   image?: { src: string; width: number; height: number };
@@ -37,48 +39,52 @@ const categories: ShopCategory[] = [
   {
     slug: "panels",
     label: "Solar panels",
+    short: "Panels",
     alt: "A solar panel, front view",
     imagePending: false,
     image: { src: "/images/product-panel-640.webp", width: 640, height: 640 },
     products: [
-      sample("panel-580", "580 W N-type panel", "N-type, 580 W"),
-      sample("panel-550", "550 W mono panel", "Mono, 550 W"),
-      sample("panel-450", "450 W mono panel", "Mono, 450 W"),
+      sample("panel-580", "580 W N-type panel", "Half-cut cells, aluminium frame"),
+      sample("panel-550", "550 W mono panel", "Aluminium frame, tempered glass"),
+      sample("panel-450", "450 W mono panel", "Aluminium frame, tempered glass"),
     ],
   },
   {
     slug: "inverters",
     label: "Inverters",
+    short: "Inverters",
     alt: "A solar inverter on a wall",
     imagePending: false,
     image: { src: "/images/product-inverter-640.webp", width: 640, height: 640 },
     products: [
-      sample("inverter-5", "5 kW hybrid inverter", "Hybrid, 5 kW"),
-      sample("inverter-10", "10 kW on-grid inverter", "On-grid, 10 kW"),
-      sample("inverter-12", "12 kW hybrid inverter", "Hybrid, 12 kW"),
+      sample("inverter-5", "5 kW hybrid inverter", "Battery-ready, wall mounted"),
+      sample("inverter-10", "10 kW on-grid inverter", "No battery needed, wall mounted"),
+      sample("inverter-12", "12 kW hybrid inverter", "Battery-ready, wall mounted"),
     ],
   },
   {
     slug: "batteries",
     label: "Batteries",
+    short: "Batteries",
     alt: "A lithium battery unit",
     imagePending: false,
     image: { src: "/images/product-battery-640.webp", width: 640, height: 640 },
     products: [
-      sample("battery-5", "5 kWh lithium battery", "Lithium, 5 kWh"),
-      sample("battery-10", "10 kWh lithium battery", "Lithium, 10 kWh"),
-      sample("battery-200", "200 Ah lead-acid battery", "Lead-acid, 200 Ah"),
+      sample("battery-5", "5 kWh lithium battery", "Wall or floor mounted"),
+      sample("battery-10", "10 kWh lithium battery", "Wall or floor mounted"),
+      sample("battery-200", "200 Ah lead-acid battery", "Floor standing"),
     ],
   },
   {
     slug: "ups",
     label: "UPS and backup",
+    short: "UPS",
     alt: "A home UPS unit",
     imagePending: true,
     products: [
-      sample("ups-1", "1 kVA home UPS", "Home UPS, 1 kVA"),
-      sample("ups-3", "3 kVA home UPS", "Home UPS, 3 kVA"),
-      sample("ups-5", "5 kVA solar-ready UPS", "Solar-ready UPS, 5 kVA"),
+      sample("ups-1", "1 kVA home UPS", "Plug-in backup for lights and fans"),
+      sample("ups-3", "3 kVA home UPS", "Plug-in backup for a few rooms"),
+      sample("ups-5", "5 kVA solar-ready UPS", "Can pair with solar panels"),
     ],
   },
 ];

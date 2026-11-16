@@ -34,6 +34,23 @@
 /outlets/rawalpindi.html /outlets/islamabad/ 301
 /outlets/multan.html /outlets/ 301
 /outlets/gilgit.html /outlets/ 301
+/home_facelift.html / 301
+/solar-quote-punjab.html /get-quote/ 301
+/outlets/multan/ /outlets/ 301
+/locations/multan.html /outlets/ 301
+/locations/multan/ /outlets/ 301
+/outlets/gilgit/ /outlets/ 301
+/locations/gilgit.html /outlets/ 301
+/locations/gilgit/ /outlets/ 301
+/locations/lahore.html /outlets/lahore/ 301
+/locations/lahore/ /outlets/lahore/ 301
+/locations/islamabad.html /outlets/islamabad/ 301
+/locations/islamabad/ /outlets/islamabad/ 301
+/outlets/rawalpindi/ /outlets/islamabad/ 301
+/locations/rawalpindi.html /outlets/islamabad/ 301
+/locations/rawalpindi/ /outlets/islamabad/ 301
+/locations/sargodha.html /outlets/sargodha/ 301
+/locations/sargodha/ /outlets/sargodha/ 301
 # Blog stubs: remove each line the day its real post is published, and redirect to the post instead
 /blog/growatt-vs-fronus-inverter-comparison.html /blog/ 301
 /blog/how-to-size-solar-system-pakistan.html /blog/ 301

@@ -1,5 +1,5 @@
 import type { OutletSlug } from "@/content";
-import { ui } from "@/content/ui";
+import { nav, ui } from "@/content";
 
 import { outletWhatsApp } from "@/lib/links";
 import { Button, IconButton, type ButtonVariant } from "./Button";
@@ -8,8 +8,9 @@ import { WhatsAppGlyph } from "./WhatsAppGlyph";
 export { WhatsAppGlyph };
 
 /**
- * Routes to the chosen outlet's WhatsApp number from content (Lahore by default) with a prefilled
- * message. If the number is not confirmed for production, the link falls back to the quote page.
+ * Routes to the chosen outlet's WhatsApp number from content (Lahore by default) with a prefilled message.
+ * While that number is not shown (unconfirmed, production), nothing says WhatsApp: the pill becomes the quote
+ * button with its own label and the icon-only form is left out.
  */
 export function WhatsAppButton({
   outlet = "lahore",
@@ -30,6 +31,13 @@ export function WhatsAppButton({
   children?: string;
 }) {
   const href = outletWhatsApp(outlet, message);
+  if (!href) {
+    return iconOnly ? null : (
+      <Button variant={variant} size={size} href={nav.quote.href} loading={loading}>
+        {nav.quote.label}
+      </Button>
+    );
+  }
   if (iconOnly) {
     return (
       <IconButton variant={variant} label={children ?? ui.whatsapp.openLabel} href={href} loading={loading}>

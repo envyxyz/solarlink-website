@@ -32,7 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <a
           href="#main"
-          className="focus-ring absolute left-4 top-4 z-60 -translate-y-24 rounded-pill bg-ink px-5 py-3 text-control text-night-ink focus:translate-y-0"
+          className="focus-ring absolute left-4 top-4 z-60 inline-flex min-h-control -translate-y-24 items-center rounded-pill bg-ink px-5 text-control text-night-ink focus:translate-y-0"
         >
           {ui.skipToContent}
         </a>

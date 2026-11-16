@@ -1,4 +1,4 @@
-import { business, outlets, ui, type Outlet } from "@/content";
+import { business, logo, outlets, ui, type Outlet } from "@/content";
 import { show } from "./facts";
 import { canonical, siteUrl } from "./seo";
 import { absoluteUrl, telHref } from "./links";
@@ -22,6 +22,7 @@ export function organizationLd() {
     "@id": ORG_ID,
     name,
     url: `${siteUrl}/`,
+    logo: absoluteUrl(logo.path),
     legalName: show(business.legalName),
     email: show(business.email),
     sameAs: sameAs.length ? sameAs : undefined,

@@ -7,7 +7,7 @@ import { icon } from "@/components/ui/icons";
 import { SegmentedControl } from "@/components/ui/SegmentedControl";
 import { cn } from "@/lib/cn";
 
-type Tab = { slug: string; label: string; cards: ReactNode };
+type Tab = { slug: string; label: string; short: string; cards: ReactNode };
 
 /**
  * The shop's interactive part: the category switch, and a scroll-snap row with arrows that move one card. Every
@@ -57,7 +57,7 @@ export function ShopCarousel({
       <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between md:gap-12">
         {intro}
         <div className="-m-1 max-w-full overflow-x-auto p-1 md:shrink-0">
-          <SegmentedControl label={switchLabel} options={tabs.map((t) => ({ value: t.slug, label: t.label }))} value={active} onValueChange={setActive} className="w-max" />
+          <SegmentedControl label={switchLabel} options={tabs.map((t) => ({ value: t.slug, label: t.label, short: t.short }))} value={active} onValueChange={setActive} className="w-full sm:w-max" />
         </div>
       </div>
       <div ref={row} className="-mx-2 flex snap-x snap-mandatory gap-4 overflow-x-auto px-2 pb-2">

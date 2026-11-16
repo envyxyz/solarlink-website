@@ -199,6 +199,17 @@ export const sizing = {
   grid: { w: 1000, h: 1180, panelW: 100, panelH: 200, gap: 10, cols: 8, rows: 5 },
 };
 
+/** The brand wordmark for structured data (Organization logo). */
+export const logo = { path: "/images/brand/logo.png" };
+
+/** The share image (Open Graph and Twitter). The live site's own banner, kept at its live path. */
+export const ogImage = {
+  path: "/images/brand/og-banner.jpg",
+  width: 1200,
+  height: 630,
+  alt: "SolarLink: Solar Solution & Installation",
+};
+
 export type SeoEntry = {
   path: string;
   title: string;
@@ -212,8 +223,9 @@ export type SeoEntry = {
 export const seo: Record<string, SeoEntry> = {
   home: {
     path: "/",
-    title: "Solar Solutions in Pakistan | SolarLink",
-    description: business.descriptions.short.value,
+    title: "Solar Company in Pakistan | Solar Solutions | SolarLink",
+    description:
+      "SolarLink sizes, supplies and installs solar for homes, businesses and industry. Shops in Lahore, Islamabad and Sargodha. Get a free site survey.",
     h1: "Solar sized to your bill.",
     lastmod: "2026-11-16",
     indexable: true,
@@ -228,7 +240,7 @@ export const seo: Record<string, SeoEntry> = {
   },
 };
 
-export { ui, priceMode, type PriceMode } from "./content/ui.ts";
+export { ui, awaiting, priceMode, type PriceMode } from "./content/ui.ts";
 export { nav, footer } from "./content/nav.ts";
 export { hero, belt } from "./content/home.ts";
 export { about } from "./content/home/about.ts";
@@ -240,7 +252,7 @@ export { reviewsSection, type ReviewItem } from "./content/home/reviews.ts";
 export { outletsSection } from "./content/home/outlets.ts";
 export { faqSection, type FaqItem } from "./content/home/faq.ts";
 export { closing } from "./content/home/closing.ts";
-import { ui, priceMode } from "./content/ui.ts";
+import { ui, awaiting, priceMode } from "./content/ui.ts";
 import { nav, footer } from "./content/nav.ts";
 import { hero, belt } from "./content/home.ts";
 import { about } from "./content/home/about.ts";
@@ -253,5 +265,5 @@ import { outletsSection } from "./content/home/outlets.ts";
 import { faqSection } from "./content/home/faq.ts";
 import { closing } from "./content/home/closing.ts";
 
-export const content = { business, outlets, services, brands, reviewSummary, googleReviewsUrl, sizing, aboutStats, nav, footer, hero, belt, about, servicesSection, link, shopSection, projectsSection, reviewsSection, outletsSection, faqSection, closing, seo, ui, priceMode };
+export const content = { business, outlets, services, brands, reviewSummary, googleReviewsUrl, sizing, aboutStats, nav, footer, hero, belt, about, servicesSection, link, shopSection, projectsSection, reviewsSection, outletsSection, faqSection, closing, seo, ogImage, logo, ui, awaiting, priceMode };
 export default content;

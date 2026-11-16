@@ -4,5 +4,6 @@ export const closing = {
   body: "Tell us what you pay each month. We size the system and book a free site survey.",
   quote: "Get a free quote",
   call: "Call the Lahore shop",
-  image: { src: "/images/hero-1376.webp", width: 1376, height: 768 },
+  /** The hero render stands in (bare roof, no panels drawn), so the alt describes what it shows. */
+  image: { src: "/images/hero-1376.webp", width: 1376, height: 768, alt: "Render of a flat-roofed house seen from the street in soft morning light, its roof still bare" },
 };

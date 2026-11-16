@@ -1,5 +1,5 @@
 import type { CSSProperties } from "react";
-import { shopSection as shop, ui } from "@/content";
+import { shopSection as shop, awaiting } from "@/content";
 import { Button } from "@/components/ui/Button";
 import { Chip } from "@/components/ui/Chip";
 import { ProductCard } from "@/components/ui/ProductCard";
@@ -19,14 +19,14 @@ export function ShopPreview() {
   const pending = categories.some((c) => hasUnconfirmed(c.products));
   return (
     <div id={shop.id} className="mb-section">
-      <Stage variant="night" className="flex flex-col gap-8 p-6 sm:p-10 lg:gap-10 lg:p-14">
+      <Stage variant="night" className="flex flex-col gap-8 p-4 sm:p-10 lg:gap-10 lg:p-14">
         <ShopCarousel
           switchLabel={shop.switchLabel}
           prev={shop.prev}
           next={shop.next}
           intro={
             <div data-reveal="" className="flex flex-col items-start gap-6">
-              {pending && <Chip>{ui.awaiting}</Chip>}
+              {pending && <Chip>{awaiting}</Chip>}
               <h2 className="max-w-heading text-h2">{shop.title}</h2>
               <p className="max-w-lead-wide text-lead text-tone-ink-2">{shop.lead}</p>
             </div>
@@ -34,8 +34,9 @@ export function ShopPreview() {
           tabs={categories.map((c) => ({
             slug: c.slug,
             label: c.label,
+            short: c.short,
             cards: c.products.map((p, i) => (
-              <li key={p.slug} data-reveal="" style={{ "--i": i } as CSSProperties} className="w-72 shrink-0 snap-start sm:w-80 lg:w-auto lg:min-w-72 lg:max-w-lg lg:flex-1 lg:shrink">
+              <li key={p.slug} data-reveal="" style={{ "--i": i } as CSSProperties} className="w-64 shrink-0 snap-start sm:w-80 lg:w-auto lg:min-w-72 lg:max-w-lg lg:flex-1 lg:shrink">
                 <ProductCard product={p} category={c} />
               </li>
             )),

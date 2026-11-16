@@ -4,7 +4,7 @@
 */
 export const about = {
   title: "One company from survey to net metering.",
-  lead: "Cut your bill and stop worrying about load-shedding. SolarLink sizes your system, supplies the panels, inverters and batteries, installs them and files your net metering. One team from the first visit to the last form.",
+  lead: "SolarLink is a solar company in Pakistan with shops in Lahore, Islamabad and Sargodha. Cut your bill and stop worrying about load-shedding. SolarLink sizes your system, supplies the panels, inverters and batteries, installs them and files your net metering. One team from the first visit to the last form.",
   cta: "See what we do",
   ctaHref: "#what-we-do",
 };

@@ -34,7 +34,7 @@ export type ButtonProps = Native & {
   /** A path renders a link (next/link for internal, anchor for external). */
   href?: string;
   /** Round icon twin beside the pill (the product-card pair). */
-  twin?: { icon: ReactNode; label: string; href?: string; onClick?: () => void };
+  twin?: { icon: ReactNode; label: string; href?: string; onClick?: () => void; redundant?: boolean };
   className?: string;
   children: ReactNode;
 };
@@ -109,7 +109,7 @@ export function Button({
   return (
     <span className="inline-flex items-center gap-2">
       {main}
-      <IconButton variant={variant === "text" ? "quiet" : variant} label={twin.label} href={twin.href} onClick={twin.onClick}>
+      <IconButton variant={variant === "text" ? "quiet" : variant} label={twin.label} href={twin.href} onClick={twin.onClick} redundant={twin.redundant}>
         {twin.icon}
       </IconButton>
     </span>
@@ -125,12 +125,14 @@ export type IconButtonProps = {
   loading?: boolean;
   disabled?: boolean;
   onClick?: () => void;
+  /** The same action is already one tab stop away (the round twin of a pill): out of the tab order and the accessibility tree. */
+  redundant?: boolean;
   className?: string;
   children: ReactNode;
 };
 
 /** 44px circle, same variants as Button. */
-export function IconButton({ variant = "quiet", size = "md", label, href, loading, disabled, onClick, className, children }: IconButtonProps) {
+export function IconButton({ variant = "quiet", size = "md", label, href, loading, disabled, onClick, redundant, className, children }: IconButtonProps) {
   const inactive = disabled || loading;
   const cls = cn(
     "focus-ring press relative inline-flex shrink-0 select-none items-center justify-center rounded-pill disabled:opacity-50 aria-disabled:opacity-50",
@@ -139,19 +141,20 @@ export function IconButton({ variant = "quiet", size = "md", label, href, loadin
     className,
   );
   const inner = loading ? <Loader2 {...icon} className="animate-spin" /> : children;
+  const twin = redundant ? { tabIndex: -1, "aria-hidden": true } : {};
   if (href) {
     return href.startsWith("/") ? (
-      <Link href={href} aria-label={label} aria-disabled={inactive || undefined} className={cls}>
+      <Link href={href} aria-label={label} aria-disabled={inactive || undefined} className={cls} {...twin}>
         {inner}
       </Link>
     ) : (
-      <a href={href} {...external(href)} aria-label={label} aria-disabled={inactive || undefined} className={cls}>
+      <a href={href} {...external(href)} aria-label={label} aria-disabled={inactive || undefined} className={cls} {...twin}>
         {inner}
       </a>
     );
   }
   return (
-    <button type="button" aria-label={label} aria-busy={loading || undefined} disabled={inactive} onClick={onClick} className={cls}>
+    <button type="button" aria-label={label} aria-busy={loading || undefined} disabled={inactive} onClick={onClick} className={cls} {...twin}>
       {inner}
     </button>
   );

@@ -148,11 +148,11 @@
   }
 }
 
-/* Marquee belt: faded edges, pauses on hover and on focus within. */
+/* Marquee belt: faded edges, pauses on hover and on focus within, and by the pause button (data-paused). */
 @utility marquee {
   overflow: hidden;
   mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  &:hover .marquee-track, &:focus-within .marquee-track { animation-play-state: paused; }
+  &:hover .marquee-track, &:focus-within .marquee-track, &[data-paused] .marquee-track { animation-play-state: paused; }
   /* Reduced motion: the belt is static, so it scrolls by hand and the second copy goes away. */
   @media (prefers-reduced-motion: reduce) {
     overflow-x: auto;
@@ -309,6 +309,7 @@
   width: min(100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
 }
 @utility hero-height { height: var(--hero-height); }
+@utility hero-height-short { height: var(--hero-height-short); }
 @utility bg-haze { background: var(--haze); }
 @utility text-figure-compact {
   font-size: var(--t-figure-compact-size);
@@ -351,6 +352,37 @@
   letter-spacing: var(--t-h3-track);
   font-variation-settings: "wdth" var(--t-h3-wdth);
   @media (min-width: 64rem) { font-size: var(--t-stat-size-lg); }
+}
+/* A 44px hit area for a link that is smaller: the pseudo-element grows the target, the look stays. */
+@utility hit-area {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    inset-inline: 0;
+    inset-block: min(0px, calc((100% - var(--control)) / 2));
+  }
+}
+
+/* Stretched link: the link's own text stays the one tab stop, its pseudo-element covers the whole card (the card is position: relative). */
+@utility stretched {
+  &:is(a)::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+  }
+  &:is(a) { position: static; }
+  &:is(a):focus-visible:focus-visible { outline: none; }
+}
+/* The card shows the focus ring when anything inside it has keyboard focus. */
+@utility card-focus {
+  position: relative;
+  &:has(:focus-visible) { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
+}
+
+/* The giant footer wordmark: text in a data attribute, drawn by a pseudo-element, so assistive tech and axe do not see it. */
+@utility wordmark {
+  &::before { content: attr(data-text); }
 }
 @utility link-shadow { filter: var(--link-shadow); }
 @utility text-giant {

@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type CSSProperties } from "react";
 import { link, type LinkMode } from "@/content/home/link";
 import { SegmentedControl } from "@/components/ui/SegmentedControl";
 import { cn } from "@/lib/cn";
+import { tokenMs } from "@/lib/tokens";
 
 type Key = keyof typeof link.nodes;
 type Pt = readonly [number, number];
@@ -64,7 +65,7 @@ function labelStyle(l: Layout, key: Key): CSSProperties {
     const left = x + R + 14;
     return { left: `${(left / l.w) * 100}%`, top: `${(y / l.h) * 100}%`, width: `${((l.w - left - 6) / l.w) * 100}%`, transform: "translateY(-50%)" };
   }
-  return { top: `${((y + R + 14) / l.h) * 100}%`, left: `${(x / l.w) * 100}%`, width: "20%", transform: "translateX(-50%)" };
+  return { top: `${((y + R + 14) / l.h) * 100}%`, left: `${(x / l.w) * 100}%`, width: "17%", transform: "translateX(-50%)" };
 }
 
 function Diagram({ layout: l, mode, className }: { layout: Layout; mode: LinkMode; className?: string }) {
@@ -80,17 +81,18 @@ function Diagram({ layout: l, mode, className }: { layout: Layout; mode: LinkMod
         ))}
         <path d={l.branch} pathLength={1} strokeWidth={2} data-off={!on.battery || undefined} style={{ "--i": TRUNK.length } as CSSProperties} className="wire stroke-lime" />
         <circle r={5} className="route-dot fill-lime">
-          <animateMotion key={route} path={route} dur="9s" repeatCount="indefinite" />
+          {/* An SVG attribute cannot read CSS: the loop length is the --dur-route token, set when the element mounts (no dur, no motion, until then). */}
+          <animateMotion key={route} ref={(a) => a?.setAttribute("dur", `${tokenMs("--dur-route")}ms`)} path={route} repeatCount="indefinite" />
         </circle>
         {keys.map((k) => (
-          <g key={k} transform={`translate(${l.pos[k][0]} ${l.pos[k][1]})`} className={cn("dur transition-opacity", off(k) && "opacity-25")}>
+          <g key={k} transform={`translate(${l.pos[k][0]} ${l.pos[k][1]})`} className={cn("dur transition-opacity", off(k) && "opacity-40")}>
             <circle r={R} className="fill-surface" />
             <path d={icons[k]} transform={`translate(${-ICON / 2} ${-ICON / 2})`} strokeWidth={1.75} className="stroke-ink" />
           </g>
         ))}
       </svg>
       {keys.map((k) => (
-        <div key={k} style={labelStyle(l, k)} className={cn("dur absolute transition-opacity", off(k) && "opacity-25", l.side[k] !== "right" && "text-center")}>
+        <div key={k} style={labelStyle(l, k)} className={cn("dur absolute transition-opacity", off(k) && "opacity-40", l.side[k] !== "right" && "text-center")}>
           <p className="text-title">{link.nodes[k].name}</p>
           <p className="text-small text-tone-ink-2">{link.nodes[k].caption}</p>
         </div>

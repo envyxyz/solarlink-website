@@ -1,4 +1,5 @@
 /** Springs from DESIGN.md "Motion", sampled once into CSS linear() easings for the Web Animations API. */
+import { tokenEase, tokenMs } from "./tokens";
 
 const SPRINGS = {
   /** pills, tabs, toggles: no overshoot */
@@ -10,7 +11,6 @@ const SPRINGS = {
 } as const;
 export type SpringName = keyof typeof SPRINGS;
 
-const FADE_MS = 150;
 const POP_FROM = 0.8;
 
 function sample(name: SpringName) {
@@ -47,7 +47,7 @@ function play(el: HTMLElement, frames: Keyframe[], options: KeyframeAnimationOpt
 
 /** Scale and opacity in with the spring (reduced motion: a 150ms fade). */
 export function popIn(el: HTMLElement, name: SpringName = "bubbly", from = POP_FROM) {
-  if (reduced()) return play(el, [{ opacity: 0 }, { opacity: 1 }], { duration: FADE_MS });
+  if (reduced()) return play(el, [{ opacity: 0 }, { opacity: 1 }], { duration: tokenMs("--dur-fast") });
   const p = points(name);
   const frames = p.map((v, i) => ({ transform: `scale(${from + (1 - from) * v})`, opacity: Math.min(1, v * 3 + 0.02), offset: i / (p.length - 1) }));
   return play(el, frames, { duration: SPRINGS[name].ms, easing: "linear" });
@@ -55,5 +55,5 @@ export function popIn(el: HTMLElement, name: SpringName = "bubbly", from = POP_F
 
 /** Back to the hidden pop state (opacity 0, scale 0.8) in 150ms. */
 export function popOut(el: HTMLElement, from = POP_FROM) {
-  return play(el, [{ opacity: 0, transform: reduced() ? "none" : `scale(${from})` }], { duration: FADE_MS, easing: "ease-in" });
+  return play(el, [{ opacity: 0, transform: reduced() ? "none" : `scale(${from})` }], { duration: tokenMs("--dur-fast"), easing: tokenEase("--ease-in-out") });
 }

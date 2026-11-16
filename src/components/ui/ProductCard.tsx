@@ -1,5 +1,5 @@
 import type { Product, ShopCategory } from "@/content";
-import { priceMode, shopSection as shop } from "@/content";
+import { nav, priceMode, shopSection as shop } from "@/content";
 import { outletWhatsApp } from "@/lib/links";
 import { Button } from "./Button";
 import { Card, CardBody, CardImage } from "./Card";
@@ -31,13 +31,19 @@ export function ProductCard({ product, category }: { product: Product; category:
           )}
         </div>
         <div className="mt-auto pt-4">
-          <Button
-            variant="dark"
-            href={href}
-            twin={{ icon: <WhatsAppGlyph />, label: shop.askLabel.replace("{name}", product.name), href }}
-          >
-            {shop.ask}
-          </Button>
+          {href ? (
+            <Button
+              variant="dark"
+              href={href}
+              twin={{ icon: <WhatsAppGlyph />, label: shop.askLabel.replace("{name}", product.name), href, redundant: true }}
+            >
+              {shop.ask}
+            </Button>
+          ) : (
+            <Button variant="dark" href={nav.quote.href}>
+              {nav.quote.label}
+            </Button>
+          )}
         </div>
       </CardBody>
     </Card>

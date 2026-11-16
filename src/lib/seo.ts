@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { business, seo, type SeoEntry } from "@/content";
+import { business, ogImage, seo, type SeoEntry } from "@/content";
 import { absoluteUrl } from "./links";
 import { show } from "./facts";
 
@@ -16,6 +16,7 @@ export function buildMetadata(key: string, overrides: Partial<SeoEntry> = {}): M
   const e = { ...seo[key], ...overrides };
   const url = canonical(e.path);
   const name = show(business.name) as string;
+  const image = { url: absoluteUrl(ogImage.path), width: ogImage.width, height: ogImage.height, alt: ogImage.alt };
   return {
     title: e.title,
     description: e.description,
@@ -28,7 +29,8 @@ export function buildMetadata(key: string, overrides: Partial<SeoEntry> = {}): M
       description: e.description,
       url,
       locale: business.locale.replace("-", "_"),
+      images: [image],
     },
-    twitter: { card: "summary", title: e.title, description: e.description },
+    twitter: { card: "summary_large_image", title: e.title, description: e.description, images: [{ url: image.url, alt: image.alt }] },
   };
 }

@@ -137,10 +137,10 @@ Grammar:
 - **Pop**: small items enter from `scale(0.8)` and 0 opacity with spring.bubbly. Used for roof panels, result chips, cart count.
 - **Entry**: a block rises 24px and fades in over `--dur-slow` `--ease-out` once, when 20% visible, children staggered 80ms. The h1 and the hero image never animate in.
 - **Number change**: digits roll or crossfade in 200ms; tabular figures so nothing shifts.
-- **Marquee**: CSS transform loop, edges faded with a mask, pauses on hover and on focus within.
+- **Marquee**: CSS transform loop, edges faded with a mask, pauses on hover and on focus within, and has a 44px pause and play button (WCAG 2.2.2).
 - **Link line**: an SVG path draws once on entry (stroke-dashoffset), then one small dot travels along it on a slow loop.
 - **Smooth scroll**: Lenis, only with a fine pointer and without reduced motion. No pinned sections, no scroll-scrubbed stories, no horizontal scroll hijack.
-- Only `transform` and `opacity` animate. No `transition: all`. `prefers-reduced-motion`: springs become 150ms fades, loops stop, Lenis off.
+- Only `transform` and `opacity` animate, with two exceptions: the link line (stroke-dashoffset) and colour, which may transition on hover and focus for links and buttons (`--dur-fast`). No `transition: all`. `prefers-reduced-motion`: springs become 150ms fades, loops stop, Lenis off.
 - Libraries: none for animation. Springs are sampled once in `src/lib/spring.ts` into CSS `linear()` easings (the `--spring-*` variables) and the Web Animations API (panel, chip and figure pops); entry (rise 24px, fade, once at 20% visible, 80ms stagger) is a data attribute toggled by one IntersectionObserver with the transition in CSS; press, hover, zoom and the marquee are CSS. Lenis (dynamic import when idle) is the only motion dependency. No Motion, framer-motion, Radix or GSAP; a named effect that CSS and WAAPI cannot do needs a line here first.
 
 ## Components (build once, reuse everywhere)
@@ -156,9 +156,9 @@ Grammar:
 | `ProjectCard` | image with bottom caption on glass, city and system size chips |
 | `StatBlock` | `figure` number + one-line label; source is required in content |
 | `SectionHeading` | h2 left, lead or text link right |
-| `Marquee` | generic belt with faded edges; logo variant greyscale at 80% opacity, hovered logo full colour at scale 1.1 with spring.bubbly, belt stops while hovered |
+| `Marquee` | generic belt with faded edges and a pause and play button; logo variant at full opacity in `--ink-2` (4.5:1 or better), hovered logo in `--ink` at scale 1.1 with spring.bubbly, belt stops while hovered |
 | `Slider` | 52px touch height, pill track, lime fill, floating thumb; keyboard and screen-reader labelled |
-| `SegmentedControl` | pill with sliding active element |
+| `SegmentedControl` | pill on a `--tone-track` track (visible on ground, surface, sunken, glass and night) with a sliding active element; segments 44px high, inactive text in `--tone-ink` (4.5:1 or better); an option may carry a short label for phones |
 | `Field`, `Select`, `Textarea` | `--sunken` wells, `--r-input`, visible label above, error text below |
 | `Accordion` | FAQ; plus rotates to a cross, height animates with spring.soft |
 | `LinkDiagram` | SVG line diagram of sun, panel, inverter, home, battery, grid |
@@ -209,3 +209,17 @@ Other choices: the accordion panel height animates with a CSS keyframe on `--dur
 ## Added in phase 3 (chrome, hero, brand belt)
 
 No existing value changed. New tokens in `src/styles/tokens.css`: `--haze` (warm light wash over the hero image), `--panel-base`, `--panel-shadow` (roof panel object, drawn on the image), `--link-shadow` (legibility of the link line on the image), `--hero-height` (`min(92svh, 53.75rem)`), `--t-figure-compact-size` (2.75rem, big figure on short desktop windows), `--t-stat-size` and `--t-stat-size-lg` (result card figures), `--t-giant-*` (footer wordmark), `--measure-display` 11ch, `--measure-lead` 29ch, `--measure-lead-wide` 36ch. Utilities: `page-width` (nav, stages and content share the page edges: gutter inside the viewport, 1800px at most), `nav-width`, `hero-art`, `short:` variant (desktop windows 50rem high or less). Phase 3 components: `Nav` (native dialog sheet under 64rem), `Footer`, `Hero` with `SizingProvider`, `SizingCard`, `ResultCard`, `RoofPanels`, `LinkLine`, `BrandBelt`.
+
+## Added in the QA fix round (16 Nov 2026)
+
+No existing value changed. New tokens in `src/styles/tokens.css`:
+
+| Token | Value | Why |
+|---|---|---|
+| `--track`, `--night-track`, `--tone-track` | `rgb(11 15 10 / 0.1)`, `rgb(242 244 238 / 0.16)`, alias | the segmented-control track: a translucent tint reads on ground, surface, sunken and glass; the night one on night |
+| `--dur-draw` | `1100ms` | the hero link line draws once |
+| `--delay-draw` | `350ms` | wait for the hero image to paint before it draws |
+| `--dur-route` | `9s` | one loop of the dot along the link diagram's route |
+| `--hero-height-short` | `calc(100svh - 1.5rem)` | desktop windows 50rem high or less: the hero stage fills the window (12px above and below), so the h1 and the lead clear the nav and the sizing card by 24px or more |
+
+Rules added: inside a glass card text is `--ink`, not `--ink-2` (the glass lets the image through, so `--ink-2` fails 4.5:1). One lime primary per screen: the nav's quote button is the `dark` variant. A link smaller than 44px keeps its look and gets a 44px hit area (`hit-area` utility). A card with one text link uses a stretched link (`stretched` and `card-focus` utilities): one tab stop, the focus ring on the card. Script reads durations and easings from these tokens (`src/lib/tokens.ts`); no raw numbers in components.

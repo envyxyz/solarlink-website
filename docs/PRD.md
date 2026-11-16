@@ -31,7 +31,7 @@ Client-side: nothing about SolarLink's actual rates, stock or prices is in hand.
 
 ## 4. Sitemap and final URLs
 
-**Master list (owner decision, 16 Nov 2026): `src/routes.ts`.** It is the fuller plan from the first foundation and adds to the tree below: `/solar-systems/` with type and size pages, `/tools/` calculators, `/solar-financing/`, `/warranty-and-support/`, `/terms/` and brand pages. Where this section and `src/routes.ts` differ, `src/routes.ts` wins. Still to reconcile before the inner pages start: `/privacy/` here against `/privacy-policy/` there, and `docs/KEYWORD-MAP.md` against the longer `docs/research/keyword-map-full.md`. A page whose `needs` are unmet waits; it is not shipped thin.
+**Master list (owner decision, 16 Nov 2026): `src/routes.ts`.** It is the fuller plan from the first foundation and adds to the tree below: `/solar-systems/` with type and size pages, `/tools/` calculators, `/solar-financing/`, `/warranty-and-support/`, `/terms/` and brand pages. Where this section and `src/routes.ts` differ, `src/routes.ts` wins. Reconciled 16 Nov 2026: the privacy page is `/privacy-policy/` in both. Still to reconcile before the inner pages start: `docs/KEYWORD-MAP.md` against the longer `docs/research/keyword-map-full.md`. A page whose `needs` are unmet waits; it is not shipped thin.
 
 Trailing slash, lowercase, apex, https. `[page]` = built in its own chat. Homepage first.
 
@@ -46,7 +46,7 @@ Trailing slash, lowercase, apex, https. `[page]` = built in its own chat. Homepa
 /net-metering-guide/                Guide
 /resources/                         Hub for guides and FAQs
 /sitemap/                           Human sitemap
-/privacy/                           Privacy (new: quote form stores leads)
+/privacy-policy/                    Privacy policy (new: quote form stores leads)
 
 /services/                          Hub
 /services/residential-solar/
