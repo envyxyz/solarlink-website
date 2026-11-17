@@ -228,3 +228,21 @@ Open:
 - Only three projects exist, so at 1440 the row barely scrolls. It fills out as projects are confirmed.
 - The island's S emblem is still cut from the wordmark; the favicon now uses the badge's panel-and-sun mark. If Ameer wants the island to show the same mark, swap `emblem.*`.
 - Dev console shows a React warning ("state update on a component that hasn't mounted yet"); not traced tonight.
+
+## 18 Nov 2026 (night run, Part 2): inner pages, richer design
+
+Ameer's point 12 ("way too simple and plain"). The Fable plan named in the handover was not in the repo, so Opus wrote `docs/handover/fable-inner-pages-plan.md` from the inspiration board, DESIGN.md and the brief; three Sonnet agents built it on disjoint files (template, blocks, content), then Opus integrated, reviewed and fixed.
+
+Done:
+- **Template**: `InnerPage` now composes `PageHero`, `Block` and `QuoteDock` (`src/components/pages/`). Type-led hero with the h1 at `display`: render on an image stage under a frosted glass panel (64rem up), a split with the render on a sunken stage for square product renders, a sunken stage when there is no image.
+- **Rhythm**: each block takes a ground from its type (steps and shop on night, at most two per page; diagram, sizing and facts on sunken; the rest on the page ground). Prose, facts and FAQ use a side-heading grid. Guides, articles and legal pages read as one column with a sticky "On this page" list.
+- **Quote dock**: a frosted pill fixed at the bottom with the page title, the quote button and WhatsApp. It shows once the hero is out of view and steps aside for the sizing card, the closing call and the footer, so only one lime action is in view at a time. It replaces the sidebar quote card.
+- **Six new block types, all reuse**: `diagram` (`LinkDiagram`, opened on the page's system type), `sizing` (the home sizing card), `shop` (`ProductCard` row), `projects` (`ProjectCard`), `brands` (the belt `Marquee`), `feature` (a statement on its own stage). Existing blocks restyled: facts as value tiles, steps as a connected row on night, links as image-led cards with glass captions, FAQ as `Accordion`.
+- **Content**: every kind uses the new blocks (services: feature, steps, diagram, sizing; systems: diagram or sizing; products: shop and brands; hubs: projects, shop, brands, diagram; guides: diagram). Product facts got real labels in place of "Point 1/2/3". All docs stay `confirmed: false`; no new business fact.
+- `LinkDiagram` picks its layout from its own width (container query), so it reads in the narrow guide column; `SizingCard` takes a `slot`; the sizing config moved to `sizingConfig.ts`. Home renders as before.
+- Checks: lint (eslint and check-css), typecheck, sizing-check, check-content pre and post, the production build. Production still ships only `/`. Homepage JS 157.4 KB (limit 182.0); inner pages 153.9 KB in a preview build. 20 inner pages (two of each kind) screenshotted at 1440 and 390, light and dark, in the dev server: no horizontal overflow, no console errors. Shots of home and one page per kind: `design/shots/night-*`.
+
+Open:
+- Project pages and the "More projects" cards have empty image wells until the client sends real photos; business and industry share the power-line stand-in render; the 10 kW and larger size pages use it as their hero.
+- The diagram, sizing card and dock are client JS on every inner page (shared chunks, no extra weight measured), and were checked by screenshot only, not on real devices.
+- `ui.page.askHeading` is unused now (the sidebar card is gone).

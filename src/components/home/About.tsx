@@ -17,7 +17,7 @@ export function About() {
     <section id="about" className="page-width mb-section mt-section grid gap-12 lg:grid-cols-2 lg:items-center lg:gap-24">
       <div data-reveal="" className="flex flex-col items-start gap-6">
         <h2 className="max-w-heading text-h2">{about.title}</h2>
-        <p className="max-w-lead-wide text-lead text-tone-ink-2">{about.lead}</p>
+        <p className="text-lead text-tone-ink-2">{about.lead}</p>
         <Button href={about.ctaHref} variant="text">
           {about.cta}
         </Button>
