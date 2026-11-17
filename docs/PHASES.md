@@ -208,3 +208,23 @@ Added the same day, by parallel subagents (Sonnet): 6 company pages (about, cont
 
 - Merged `origin/next-main` (the 16 Nov polish round: hero under the nav, roof panels on one canvas, rolling digits, nav island with the S emblem) into the local work. Conflicts kept the polish round's layout and motion and laid the dark theme over it: `light-dark()` colour tokens plus the polish round's new tokens, `lg:scheme-light` on the moved hero text, the dark logo twin inside the new nav markup, `SHOT_SCHEME` and `SHOT_DSF` both in `scripts/shot.mjs`. Screenshots in `design/shots/` are the polish round's.
 - Ameer did not like the old site's watermarked project photos: removed from the home project cards (back to empty wells), from the inner pages and from `scripts/images.mjs`. Inner pages use the service renders instead; project pages have no image until the client sends real photos.
+
+## 18 Nov 2026 (night run, Part 1): home-page fixes
+
+Ameer's list, points 1 to 7, plus his favicon note. agy jobs A, B and C did first passes (B removed the wheel scroller); a Claude session finished, reconciled and checked them.
+
+Done:
+- **Nav island**: the header turns into the island and back over `--dur-island` (600ms) with `--ease-soft`, in both directions; the logo and emblem crossfade on the same timing. Reduced motion: instant width, 150ms fade. The phone menu keeps its quicker spring.
+- **Dark emblem**: `emblem-dark.{webp,png}` (dark parts in `--night-ink`, lime and alpha kept, made in `scripts/images.mjs`), served in dark through `<source media="(prefers-color-scheme: dark)">`.
+- **Favicon**: now the client's own mark: the panel and sun from the old site's badge (`design/img/brand-badge.png`) on an ink disc in a lime ring (`scripts/brand.mjs`). The ink S on a lime tile is gone.
+- **Brand belt pause button**: it was rendered, but as a sunken circle on the ground (about 1.05:1), so nobody could see it. Now the `dark` IconButton, 44px, clear in both themes.
+- **About**: the two columns are equal and centred against each other; the city list fills its column.
+- **Scrolling**: native. `SmoothScroll` and `--scroll-reach` removed (`momentum.ts` stays for the slider); no `scroll-behavior: smooth` anywhere. CLAUDE.md, HOMEPAGE.md and PRD.md updated.
+- **Project cards**: one horizontal scroll-snap row that runs to the window edges (`snap-row`), equal-height cards, the featured first card 1.3 times as wide from 64rem, masked edges, no scrollbar, every card a tab stop. About 1.15 cards visible at 390 and 2.3 at 1440 (2.5 without the wider featured card). Glass captions and empty wells kept.
+- **Reviews heading**: `SectionHeading` spans its container, the chip sits directly above the title (`above` slot), and the Google link sits at the right edge on the title's last baseline (left-aligned under the title on phones). Outlets and the link section still use the lead layout.
+- Checked in the dev server at 1440 and 390, light and dark. Lint, check-css, typecheck and check-content pass. The production build is run by the Part 2 session (it shares `.next/` with the dev server it owns).
+
+Open:
+- Only three projects exist, so at 1440 the row barely scrolls. It fills out as projects are confirmed.
+- The island's S emblem is still cut from the wordmark; the favicon now uses the badge's panel-and-sun mark. If Ameer wants the island to show the same mark, swap `emblem.*`.
+- Dev console shows a React warning ("state update on a component that hasn't mounted yet"); not traced tonight.

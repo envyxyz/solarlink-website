@@ -19,9 +19,8 @@
   --ink-3: light-dark(#7c8378, #8a9285);
   --line: light-dark(rgb(11 15 10 / 0.08), rgb(242 244 238 / 0.1));
   --track: light-dark(rgb(11 15 10 / 0.1), rgb(242 244 238 / 0.16)); /* segmented-control track: reads on ground, surface, sunken and glass */
-  --project: 300ms; /* input physics: how far ahead a wheel or scroll speed is projected */
+  --project: 300ms; /* input physics: how far ahead wheel speed is projected (the slider) */
   --slider-sweep: 600ms; /* the fastest the slider thumb may travel its full range */
-  --scroll-reach: 1.25; /* furthest a single flick may carry the page, in viewport heights */
   --night-track: rgb(242 244 238 / 0.16); /* the same on night */
   --lime: #7ed321;
   --lime-press: #6ac014;
@@ -147,6 +146,7 @@
   --dur-route: 9s; /* one loop of the dot on the link diagram */
   --dur-snappy: 350ms; /* length of spring.snappy and spring.bubbly when played as CSS transitions */
   --dur-bubbly: 700ms;
+  --dur-island: 600ms; /* the nav turning into the island and back, with its logo and emblem crossfade */
   --stagger: 80ms;
   /* spring easings: lib/spring.ts replaces these with sampled linear() curves after load */
   --spring-snappy: ease-out;
@@ -197,6 +197,7 @@
     --dur-slow: var(--dur-fast);
     --dur-snappy: var(--dur-fast);
     --dur-bubbly: var(--dur-fast);
+    --dur-island: var(--dur-fast);
   }
 }
 
@@ -263,4 +264,7 @@
   --ease-*: initial;
   --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out: cubic-bezier(0.45, 0, 0.2, 1);
+  --ease-soft: cubic-bezier(0.32, 0.72, 0, 1); /* calm, long settle: the nav island */
 }
+
+

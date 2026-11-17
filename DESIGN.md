@@ -25,7 +25,7 @@ Signature:  the live sizing hero. Drag the monthly bill, panels pop onto the roo
 |---|---|---|
 | faers.tech | Wide display type over calm CGI renders; the configurator (live summary chips, big selectable tiles); product cards; line diagrams that explain the product | Coloured count badges in the header; scroll-driven video; heavy page weight |
 | ubernatural.io | Motion vocabulary: spring pills, card lift with image zoom, staggered rise on entry, magnetic primary button, marquee | Custom cursor, WebGL, scroll-scrubbed text |
-| getfluently.app | Smooth scroll, spring pop on small cards | Pinned horizontal scroll: nothing may force the visitor to scroll through an animation |
+| getfluently.app | Spring pop on small cards (its smooth scroll was tried and removed: native scroll feels better) | Pinned horizontal scroll: nothing may force the visitor to scroll through an animation |
 | inspo-1 (finance) | Rounded image stages with glass stat cards; closing call-to-action on an image; giant faded wordmark in the footer | Serif italics, green tag pills |
 | nexarch (architecture) | Section rhythm: heading block on the left, row of image cards on the right; services grid; testimonials row | Circular stamp, eyebrow labels above every heading |
 | business-alliance | About text with four large numbers; logo strip; numbered process list beside one tall image | |
@@ -139,8 +139,8 @@ Grammar:
 - **Number change**: digits roll or crossfade in 200ms; tabular figures so nothing shifts.
 - **Marquee**: CSS transform loop, edges faded with a mask, pauses on hover and on focus within, and has a 44px pause and play button (WCAG 2.2.2).
 - **Link line**: an SVG path draws once on entry (stroke-dashoffset), then one small dot travels along it on a slow loop.
-- **Smooth scroll**: our own wheel scroller (`SmoothScroll`, physics in `src/lib/momentum.ts`), only with a fine pointer and without reduced motion, attached when the page is idle. Wheel speed is projected `--project` (300ms) ahead; one flick lands at most `--scroll-reach` (1.25 viewports) past where the raw wheel deltas would. It leaves the event to the browser for ctrl (zoom), horizontal deltas, an open modal and any inner scroller, and stops on any scroll it did not write (keys, anchors, focus, scrollbar). Touch scrolls natively. No pinned sections, no scroll-scrubbed stories, no horizontal scroll hijack.
-- Only `transform` and `opacity` animate, with two exceptions: the link line (stroke-dashoffset) and colour, which may transition on hover and focus for links and buttons (`--dur-fast`). No `transition: all`. `prefers-reduced-motion`: springs become 150ms fades, loops stop, smooth scroll off. More exceptions, all at the owner's request, are listed under "Added in the polish round".
+- **Page scroll**: native browser scrolling. Wheel hijacking (`SmoothScroll`) was removed because projected-target scrolling caused jumpy moves, inconsistent speeds, and direction reversal when scrolling up.
+- Only `transform` and `opacity` animate, with two exceptions: the link line (stroke-dashoffset) and colour, which may transition on hover and focus for links and buttons (`--dur-fast`). No `transition: all`. `prefers-reduced-motion`: springs become 150ms fades, loops stop. More exceptions, all at the owner's request, are listed under "Added in the polish round".
 - Libraries: none for animation. Springs are sampled once in `src/lib/spring.ts` into CSS `linear()` easings (the `--spring-*` variables) and the Web Animations API (panel, chip and figure pops); entry (rise 24px, fade, once at 20% visible, 80ms stagger) is a data attribute toggled by one IntersectionObserver with the transition in CSS; press, hover, zoom and the marquee are CSS. There is no motion dependency. No Lenis, Motion, framer-motion, Radix or GSAP; a named effect that CSS and WAAPI cannot do needs a line here first.
 
 ## Components (build once, reuse everywhere)
@@ -153,9 +153,9 @@ Grammar:
 | `Stage` | rounded inset panel; variants `image`, `night`, `sunken`; holds any section |
 | `Card` | `--surface`, `--r-card`, 8px image padding so the tile radius is concentric |
 | `ProductCard` | image tile on `--sunken`, brand, model, one spec line, price or "Ask for today's rate", pill action + round WhatsApp button. Store-ready: accepts stock, warranty, price per watt |
-| `ProjectCard` | image with bottom caption on glass, city and system size chips |
+| `ProjectCard` | image with bottom caption on glass, city and system size chips. On the homepage the cards sit in one scroll-snap row (`snap-row`), equal height, the featured first card wider from 64rem |
 | `StatBlock` | `figure` number + one-line label; source is required in content |
-| `SectionHeading` | h2 left, lead or text link right |
+| `SectionHeading` | h2 left, lead or text link right; spans its container, a link sits at the right edge on the title's last baseline; `above` holds a status chip only |
 | `Marquee` | generic belt with faded edges and a pause and play button; logo variant at full opacity in `--ink-2` (4.5:1 or better), hovered logo in `--ink` at scale 1.1 with spring.bubbly, belt stops while hovered |
 | `Slider` | 52px touch height. A transparent native range input (hit area, keys, aria) under a sunken pill track, lime fill and floating thumb. The input is the target; a follower glides the thumb at no more than the full range per `--slider-sweep`. A wheel over it (or with focus) moves it and not the page; at a limit, or within 200ms of a page scroll, the page gets the wheel. Arrows one step, Page keys ten, Home and End the limits |
 | `RollingNumber` | a figure whose digits sit in `--roll-slot` slots, keyed from the right. A changed digit rolls (spring.snappy, transform and opacity): up when the value rises, down when it falls. It flashes lime while it rolls and settles to ink. Instant under reduced motion or when the text's shape changes. `aria-hidden`; the control beside it carries the value |
@@ -247,15 +247,14 @@ Motion exceptions to "only transform and opacity":
 Other exceptions:
 - Lime text on a light ground: a rolling digit only, and only while it rolls.
 - Icons: the menu button is three line elements that morph into an X, not the lucide icons.
-- The S emblem (`public/images/brand/emblem.*`) and the favicon (ink S on a lime tile, `src/app/icon.png`, `apple-icon.png`) are cut from the wordmark until the owner supplies the real emblem.
+- The S emblem (`public/images/brand/emblem.*`) is cut from the wordmark until the owner supplies the real emblem. The favicon is the panel-and-sun mark from the client's badge (night run, below).
 
 New tokens in `src/styles/tokens.css`:
 
 | Token | Value | Why |
 |---|---|---|
-| `--project` | `300ms` | how far ahead wheel speed is projected (page scroll and the slider) |
+| `--project` | `300ms` | how far ahead wheel speed is projected (the slider) |
 | `--slider-sweep` | `600ms` | fastest full-range travel of the slider thumb |
-| `--scroll-reach` | `1.25` | furthest one flick may carry the page past its raw landing, in viewport heights |
 | `--roll-slot` | `0.88ch` | width of one digit slot in a rolling number |
 | `--dock-overlap` | `7rem`, `5.5rem` from 40rem | how far the hero dock overlaps the image under 64rem |
 | `--r-nav` | `1.875rem` | half the nav row: a pill at rest, the same corners on the open panel |
@@ -263,6 +262,36 @@ New tokens in `src/styles/tokens.css`:
 | `--panel-sheen`, `--panel-sheen-fade` | see file | one sweep of light across the whole array |
 | `--panel-contact`, `--panel-contact-blur`, `--panel-contact-x`, `--panel-contact-y` | see file | contact shadow under the array |
 
-Removed: `--panel-base`, `--panel-shadow`, the `panel-face` utility, the Lenis dependency, `MenuSheet`.
+Removed: `--panel-base`, `--panel-shadow`, the `panel-face` utility, the Lenis dependency, `MenuSheet`, `SmoothScroll`, `--scroll-reach`.
 
-Added 18 Nov 2026: `--on-lime`, `--on-ink`, the dark values above, utility `scheme-light`. Inner pages: h1 uses the h2 size; page blocks use `text-h3` headings.
+Added 18 Nov 2026: `--on-lime`, `--on-ink`, the dark values above, utility `scheme-light`. Inner pages: h1 uses the `display` size since the night run (see "Inner pages, night run" below).
+
+Home fixes, 18 Nov 2026 (night run):
+- `--dur-island` (`600ms`, the 150ms fade under reduced motion) and `--ease-soft` (`cubic-bezier(0.32, 0.72, 0, 1)`): the nav turning into the island and back, and the logo and emblem crossfade, both directions. The width is instant under reduced motion; the phone menu keeps spring.snappy. Utility `dur-island`.
+- `emblem-dark.{webp,png}`: the S emblem with its dark parts in `--night-ink`, used in dark.
+- Favicons (`src/app/icon.png`, `apple-icon.png`) come from the client's own badge (`design/img/brand-badge.png`, the old site's favicon): its panel-and-sun mark on an ink disc in a lime ring, wordmark dropped (`scripts/brand.mjs`). This replaces the ink S on a lime tile.
+- Utilities `snap-row`, `row-slide`, `row-slide-wide`: a horizontal scroll-snap row to the window edges, masked gutters, no scrollbar; about 1.15 cards on phones, 1.6 on tablets, 2.5 from 64rem.
+- The marquee's pause button is the `dark` IconButton: the sunken one did not show on the ground.
+
+
+## Inner pages, night run (18 Nov 2026)
+
+Owner note 12: the inner pages were "way too simple and plain". Plan: `docs/handover/fable-inner-pages-plan.md`. No existing token changed.
+
+Components (all in `src/components/pages/`, used only by `InnerPage`):
+
+| Component | Notes |
+|---|---|
+| `PageHero` | type-led: h1 at `display`. A landscape render fills an image stage with a frosted glass panel for h1 and lead from 64rem (`scheme-light`, text `--ink`); under 64rem the text sits above the stage. A square render (products) is a split: text left, render on a sunken stage right. No image: a sunken stage. Breadcrumbs and the awaiting chip above. Never animates in |
+| `QuoteDock` | glass pill fixed bottom-centre: page title (from 48rem), the lime quote button, the dark round WhatsApp button when the Lahore number is shown. Rises in (transform and opacity, `--spring-snappy`) once the hero has left the view; steps aside while the sizing card, the closing call or the footer is on screen, so lime stays one per view. Inert while hidden, instant under reduced motion, not on legal pages |
+| `Block` | one block: heading, ground and body. Grounds by type: steps and shop on night (two night stages at most per page, the rest fall back to sunken), diagram, sizing and facts on sunken, the rest on the page ground. Prose, facts and FAQ use the side-heading grid from 64rem |
+| `blocks/DiagramBlock` | `LinkDiagram` opened on the page's system type (`initial`) |
+| `blocks/SizingBlock` | the home `SizingCard` (`slot` prop) in a solid card; config from `sizingConfig()` (moved out of `Hero`) |
+| `blocks/ShopBlock` | night stage, one shop category's `ProductCard`s in a snap row |
+| `blocks/ProjectsBlock` | the home projects as `ProjectCard`s |
+| `blocks/BrandsBlock` | the brand `Marquee` with its pause button |
+| `blocks/FeatureBlock` | a statement on its own sunken or night stage, optionally with a render (never the hero's own) |
+
+Shop, projects and brands are samples or unconfirmed, so a production build renders none of them.
+
+`LinkDiagram` now picks its wide or tall layout from its own width (container query `@3xl`, 48rem), not the window, so it reads in a narrow reading column. Utilities: `quote-dock`, `dock-safe`, `step-link` (connector between step cards from 80rem), `scrollbar-none` (a scroll row inside a stage).

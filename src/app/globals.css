@@ -123,6 +123,7 @@
 @utility dur-fast { transition-duration: var(--dur-fast); }
 @utility dur { transition-duration: var(--dur); }
 @utility dur-slow { transition-duration: var(--dur-slow); }
+@utility dur-island { transition-duration: var(--dur-island); }
 @utility lift {
   transition-property: transform;
   transition-duration: var(--dur);
@@ -378,6 +379,32 @@
   width: min(100% - 2 * var(--gutter), var(--page-max));
   margin-inline: auto;
 }
+/* A horizontal scroll-snap row that runs to the window edges (projects). Cards snap to the page edge; the gutters fade
+   with a mask; no scrollbar in any browser. Keyboard: focusing a card scrolls it in. Children use `row-slide`. */
+@utility snap-row {
+  --edge: max(var(--gutter), (100% - var(--page-max)) / 2);
+  display: flex;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scroll-padding-inline: var(--edge);
+  padding-inline: var(--edge);
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
+  mask-image: linear-gradient(to right, transparent, black var(--edge), black calc(100% - var(--edge)), transparent);
+}
+/* Slide widths show about 1.15 cards on phones, 1.6 on tablets and 2.5 from 64rem (gap 1rem). `row-slide-wide` is the
+   featured first card: 1.3 times as wide from 64rem. */
+@utility row-slide {
+  flex: none;
+  scroll-snap-align: start;
+  width: calc((100% - 1rem) / 1.15);
+  @media (min-width: 48rem) { width: calc((100% - 1rem) / 1.6); }
+  @media (min-width: 64rem) { width: calc((100% - 2rem) / 2.5); }
+}
+@utility row-slide-wide {
+  @media (min-width: 64rem) { width: calc((100% - 2rem) / 2.5 * 1.3); }
+}
 @utility nav-width {
   width: min(100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
 }
@@ -387,7 +414,9 @@
   width: min(var(--nav-island, 100vw), 100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
 }
 @utility nav-morph {
-  transition: width var(--dur-snappy) var(--spring-snappy);
+  transition: width var(--dur-island) var(--ease-soft);
+  /* opening the phone menu keeps the quicker spring */
+  &[data-open], &[data-closing] { transition: width var(--dur-snappy) var(--spring-snappy); }
   @media (prefers-reduced-motion: reduce) { transition: none; }
 }
 /* Focus ring drawn on a child when its parent .group link has keyboard focus. */
@@ -550,10 +579,46 @@
   :where(h1, h2, h3, h4) { text-wrap: balance; }
   ::selection { background: var(--lime); color: var(--on-lime); }
   :focus-visible { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
-  @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-  }
   html { interpolate-size: allow-keywords; }
   /* The phone menu is a modal dialog: lock the page behind it. */
   body:has(dialog[open]) { overflow: hidden; }
+}
+
+/* Inner pages: the quote dock rises in (transform and opacity, spring) and is not focusable while hidden. */
+@utility quote-dock {
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateY(calc(var(--spacing) * 6));
+  transition: transform var(--dur-snappy) var(--spring-snappy), opacity var(--dur) var(--ease-out), visibility var(--dur-snappy) step-end;
+  &[data-shown] {
+    pointer-events: auto;
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    transition: transform var(--dur-snappy) var(--spring-snappy), opacity var(--dur) var(--ease-out), visibility var(--dur-snappy) step-start;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none !important; }
+}
+/* Keeps the dock clear of the home indicator on phones. */
+@utility dock-safe { padding-bottom: calc(var(--spacing) * 4 + env(safe-area-inset-bottom)); }
+/* A thin connector between two step cards in a row (80rem and up, where the steps sit side by side). */
+@utility step-link {
+  @media (min-width: 80rem) {
+    &:not(:last-child)::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 100%;
+      width: calc(var(--spacing) * 4);
+      height: 1px;
+      background: var(--tone-line);
+    }
+  }
+}
+
+/* A scroll row inside a stage (inner-page shop block): no scrollbar in any browser; cards stay reachable by keyboard. */
+@utility scrollbar-none {
+  scrollbar-width: none;
+  &::-webkit-scrollbar { display: none; }
 }

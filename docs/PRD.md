@@ -137,7 +137,7 @@ Components never hold literal text, phone, address, price or brand name.
 | LCP | 2.0 s (mid phone, 4G) |
 | CLS | 0 |
 | INP | 200 ms |
-| JavaScript, homepage | at most the React and Next baseline plus 50 KB, gzipped, every script `index.html` loads, `noModule` excluded. Baseline 132.0 KB (empty page, 16 Nov 2026), limit 182.0 KB. Checked by `node scripts/js-size.mjs`. The wheel scroller attaches after the page is idle |
+| JavaScript, homepage | at most the React and Next baseline plus 50 KB, gzipped, every script `index.html` loads, `noModule` excluded. Baseline 132.0 KB (empty page, 16 Nov 2026), limit 182.0 KB. Checked by `node scripts/js-size.mjs`. |
 | Lighthouse mobile | 95+ in all four categories |
 | Hero image | AVIF under 180 KB at 1440 wide, preloaded |
 | Font | one variable Mona Sans file, Latin subset, `swap`, size-adjusted fallback |
@@ -145,7 +145,7 @@ Components never hold literal text, phone, address, price or brand name.
 
 ## 9. Stack
 
-Next.js App Router as a static export (`output: 'export'`, `trailingSlash: true`, images unoptimized with pre-sized AVIF and WebP) · React · TypeScript strict · Tailwind CSS v4 (`@theme` tokens) · own primitives on native elements (range, radio, dialog, details) styled to the tokens · Web Animations API springs and CSS · own wheel scroller (idle, fine pointer only) · lucide-react · Zod in the Worker · Playwright and axe · Lighthouse CI · pnpm.
+Next.js App Router as a static export (`output: 'export'`, `trailingSlash: true`, images unoptimized with pre-sized AVIF and WebP) · React · TypeScript strict · Tailwind CSS v4 (`@theme` tokens) · own primitives on native elements (range, radio, dialog, details) styled to the tokens · Web Animations API springs and CSS · native page scroll · lucide-react · Zod in the Worker · Playwright and axe · Lighthouse CI · pnpm.
 
 ## 10. Hosting
 

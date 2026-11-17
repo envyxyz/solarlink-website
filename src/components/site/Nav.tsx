@@ -25,13 +25,15 @@ export function Nav() {
         <div data-row className="flex items-center justify-between gap-4 py-2 pl-5 pr-2">
         <div data-fit className="flex flex-1">
           <Link href="/" aria-label={nav.homeLabel} className="group press hit-area relative flex items-center rounded-pill py-2 focus-visible:outline-none">
-            <picture className="focus-ring-group block rounded-pill transition-opacity dur ease-out in-data-small:opacity-0 in-data-small:duration-150">
+            <picture className="focus-ring-group block rounded-pill transition-opacity dur-island ease-soft in-data-small:opacity-0">
               <source media="(prefers-color-scheme: dark)" type="image/webp" srcSet="/images/brand/logo-dark.webp" />
               <source media="(prefers-color-scheme: dark)" srcSet="/images/brand/logo-dark.png" />
               <source type="image/webp" srcSet="/images/brand/logo.webp" />
               <img src="/images/brand/logo.png" width={images.logo.width} height={images.logo.height} alt="" draggable={false} className="absolute left-0 top-1/2 h-3.5 w-auto max-w-none -translate-y-1/2 select-none sm:h-5" />
             </picture>
-            <picture className="focus-ring-group block rounded-pill opacity-0 transition-opacity dur ease-out in-data-small:opacity-100">
+            <picture className="focus-ring-group block rounded-pill opacity-0 transition-opacity dur-island ease-soft in-data-small:opacity-100">
+              <source media="(prefers-color-scheme: dark)" type="image/webp" srcSet="/images/brand/emblem-dark.webp" />
+              <source media="(prefers-color-scheme: dark)" srcSet="/images/brand/emblem-dark.png" />
               <source type="image/webp" srcSet="/images/brand/emblem.webp" />
               <img src="/images/brand/emblem.png" width={images.emblem.width} height={images.emblem.height} alt="" draggable={false} className="h-7 w-auto select-none" />
             </picture>

@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Mona_Sans } from "next/font/google";
 import { business, ui } from "@/content";
 import { Reveal } from "@/components/providers/Reveal";
-import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Footer } from "@/components/site/Footer";
 import { Nav } from "@/components/site/Nav";
 import { siteUrl } from "@/lib/seo";
@@ -36,7 +35,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {ui.skipToContent}
         </a>
         <Reveal />
-        <SmoothScroll />
         <Nav />
         {children}
         <Footer />

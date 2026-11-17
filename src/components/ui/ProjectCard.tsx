@@ -7,15 +7,15 @@ import { CardImage } from "./Card";
 
 /**
  * Image-led tile. The photo fills the card; one glass caption sits on its lower edge with the place and city on the left
- * and the system size as the figure on the right. The whole card is the link (stretched). `featured` is the large tile:
- * 4:3 on phones, 16:10 on tablets and the full height of its two-row slot from 64rem, with a larger figure.
+ * and the system size as the figure on the right. The whole card is the link (stretched). Cards sit in a scroll row:
+ * a plain card is 4:5 on phones and 4:3 from 48rem; `featured` fills the row's height (it is wider) with a larger figure.
  */
 export function ProjectCard({ project, featured }: { project: ProjectItem; featured?: boolean }) {
   return (
     <article
       className={cn(
         "group lift card-focus relative isolate h-full overflow-hidden rounded-card",
-        featured ? "aspect-4/3 md:aspect-16/10 lg:aspect-auto" : "aspect-4/3 lg:aspect-16/10",
+        featured ? "min-h-full" : "aspect-4/5 md:aspect-4/3",
       )}
     >
       <CardImage {...project.image} alt={project.alt} className="absolute inset-0 -z-10 rounded-none" />

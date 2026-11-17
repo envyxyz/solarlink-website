@@ -17,10 +17,10 @@ export function Reviews({ items, googleUrl = show(googleReviewsUrl) }: { items: 
   if (usable.length < reviews.minimum) return null;
   return (
     <section id="reviews" className="page-width mb-section flex flex-col gap-12">
-      <div data-reveal="" className="flex flex-col items-start gap-6">
-        {hasUnconfirmed(usable) && <Chip>{awaiting}</Chip>}
+      <div data-reveal="">
         <SectionHeading
           title={reviews.title}
+          above={hasUnconfirmed(usable) ? <Chip>{awaiting}</Chip> : undefined}
           action={
             googleUrl ? (
               <Button href={googleUrl} variant="text">
