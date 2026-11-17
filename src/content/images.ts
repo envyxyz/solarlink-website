@@ -34,6 +34,48 @@ export const images = {
       "height": 640
     }
   },
+  "serviceHomes": {
+    "800": {
+      "width": 800,
+      "height": 600
+    }
+  },
+  "serviceBusiness": {
+    "800": {
+      "width": 800,
+      "height": 600
+    }
+  },
+  "serviceFarms": {
+    "800": {
+      "width": 800,
+      "height": 600
+    }
+  },
+  "serviceNetMetering": {
+    "800": {
+      "width": 800,
+      "height": 600
+    }
+  },
+  "projectTubewell": {
+    "640": {
+      "width": 640,
+      "height": 400
+    }
+  },
+  "projectIndustrial": {
+    "640": {
+      "width": 640,
+      "height": 400
+    }
+  },
+  "projectResidential": {
+    "640": {
+      "width": 640,
+      "height": 400
+    }
+  },
   "logo": {
     "width": 740,
     "height": 66

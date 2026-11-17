@@ -1,7 +1,7 @@
 /*
   Homepage section 4, What we do (docs/COPY-HOME.md). Each card is flagged like a fact: an unconfirmed card is
-  left out of a production build. Links are the final service URLs (src/routes.ts). The four source images are not
-  generated yet, so every card is imagePending and shows an empty well at 4:3.
+  left out of a production build. Links are the final service URLs (src/routes.ts). The four images are CGI stand-ins
+  taken from the old site's renders (design/img/src) until the Gemini image quota resets; none shows a real project.
 */
 const AMEER = "Ameer, 13 Nov 2026 (Business Profile)";
 const WEB = "Website says (solarlink.com.pk crawl, 13 Nov 2026), Business Profile. Unconfirmed";
@@ -25,7 +25,8 @@ const cards: ServiceCard[] = [
     link: "See home solar",
     href: "/services/residential-solar/",
     alt: "Solar panels on the roof of a Pakistani family home",
-    imagePending: true,
+    imagePending: false,
+    image: { src: "/images/service-homes-800.webp", width: 800, height: 600 },
     confirmed: true,
     source: AMEER,
   },
@@ -34,8 +35,9 @@ const cards: ServiceCard[] = [
     text: "Solar for shops, offices and factories, from a small rooftop to a large plant. Cut the daytime bill that eats your margin.",
     link: "See business solar",
     href: "/services/commercial-solar/",
-    alt: "Rows of solar panels on a factory roof",
-    imagePending: true,
+    alt: "Rows of solar panels in evening light below high-voltage power lines",
+    imagePending: false,
+    image: { src: "/images/service-business-800.webp", width: 800, height: 600 },
     confirmed: true,
     source: AMEER,
   },
@@ -45,7 +47,8 @@ const cards: ServiceCard[] = [
     link: "See farm solar",
     href: "/services/agricultural-solar/",
     alt: "Solar panels beside a tubewell on farmland",
-    imagePending: true,
+    imagePending: false,
+    image: { src: "/images/service-farms-800.webp", width: 800, height: 600 },
     confirmed: false,
     source: WEB,
   },
@@ -54,8 +57,9 @@ const cards: ServiceCard[] = [
     text: "Send spare power to the grid and earn credit on your bill. We prepare and file the application with your DISCO.",
     link: "See net metering",
     href: "/services/net-metering-support/",
-    alt: "A solar meter and inverter on a wall",
-    imagePending: true,
+    alt: "Solar panels on a flat roof beside an inverter and a meter box",
+    imagePending: false,
+    image: { src: "/images/service-netmetering-800.webp", width: 800, height: 600 },
     confirmed: true,
     source: AMEER,
   },
