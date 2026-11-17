@@ -17,10 +17,10 @@ import { useSizing } from "./SizingProvider";
 export const sizingSlot =
   "order-2 md:order-1 md:basis-0 md:grow-6 lg:glass lg:absolute lg:bottom-12 lg:left-12 lg:z-5 lg:w-100 lg:rounded-card lg:p-6 short:bottom-4 short:p-4";
 
-export function SizingCard() {
+export function SizingCard({ slot = sizingSlot }: { slot?: string }) {
   const { mode, value, setValue, setMode, range, text, href, whatsapp } = useSizing();
   return (
-    <section id="sizing" data-island aria-label={hero.sizingLabel} className={`${sizingSlot} dock-hold scroll-mt-26`}>
+    <section id="sizing" data-island aria-label={hero.sizingLabel} className={`${slot} dock-hold scroll-mt-26`}>
       <div className="flex items-center justify-between gap-3">
         <p className="text-small">{hero.billLabel}</p>
         <SegmentedControl label={hero.unitLabel} options={hero.modes} value={mode} onValueChange={(v) => setMode(v as Mode)} />

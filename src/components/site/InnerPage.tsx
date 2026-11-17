@@ -1,178 +1,101 @@
-import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { Accordion } from "@/components/ui/Accordion";
+import { Block, slug, type Ground } from "@/components/pages/Block";
+import { PageHero } from "@/components/pages/PageHero";
+import { QuoteDock } from "@/components/pages/QuoteDock";
 import { Button } from "@/components/ui/Button";
-import { Card } from "@/components/ui/Card";
-import { Chip } from "@/components/ui/Chip";
 import { ClosingCall } from "@/components/home/ClosingCall";
-import { awaiting, nav, ui } from "@/content";
+import { nav, ui } from "@/content";
 import type { PageBlock, PageDoc } from "@/content/pages";
-import { preview } from "@/lib/facts";
 import { faqLd } from "@/lib/jsonld";
-import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
+import { outletWhatsApp } from "@/lib/links";
 
-const slug = (s: string) => s.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+const MAX_NIGHT = 2;
 
-/** Parent crumb from the path: the first segment's hub, or Resources for a top-level guide. */
-function trailFor(doc: PageDoc): Crumb[] {
-  const [first] = doc.path.split("/").filter(Boolean);
-  const topLevel = doc.path.split("/").filter(Boolean).length === 1;
-  const parentKey = topLevel ? (doc.kind === "guide" ? "resources" : null) : first;
-  const parent = parentKey ? ui.page.parents[parentKey] : null;
-  return [...(parent && parentKey ? ([[parent, `/${parentKey}/`]] as Crumb[]) : []), [doc.h1, doc.path]];
-}
-
-function Block({ block }: { block: PageBlock }) {
-  const heading = "heading" in block && block.heading ? block.heading : null;
-  return (
-    <section id={heading ? slug(heading) : undefined} className="scroll-mt-26">
-      {heading && <h2 className="mb-6 max-w-heading text-h3">{heading}</h2>}
-      {block.type === "prose" && (
-        <div className="flex max-w-prose flex-col gap-4 text-body">
-          {block.paragraphs.map((p) => (
-            <p key={p}>{p}</p>
-          ))}
-        </div>
-      )}
-      {block.type === "facts" && (
-        <dl className="grid gap-px overflow-hidden rounded-card bg-line sm:grid-cols-2">
-          {block.items.map((f) => (
-            <div key={f.label} className="flex flex-col gap-1 bg-surface p-5">
-              <dt className="text-small text-ink-2">{f.label}</dt>
-              <dd className="text-title">{f.value}</dd>
-            </div>
-          ))}
-        </dl>
-      )}
-      {block.type === "steps" && (
-        <ol className="grid gap-4 sm:grid-cols-2">
-          {block.items.map((s) => (
-            <li key={s.title}>
-              <Card className="h-full">
-                <div className="flex flex-col gap-2 p-5">
-                  <h3 className="text-title">{s.title}</h3>
-                  <p className="text-small text-tone-ink-2">{s.text}</p>
-                </div>
-              </Card>
-            </li>
-          ))}
-        </ol>
-      )}
-      {block.type === "links" && (
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {block.items.map((l) => (
-            <li key={l.href}>
-              <Card className="lift card-focus relative h-full">
-                {l.image && (
-                  <picture className="contents">
-                    <source type="image/avif" srcSet={l.image.src.replace(/\.webp$/, ".avif")} />
-                    <img src={l.image.src} alt={l.image.alt} width={l.image.width} height={l.image.height} loading="lazy" decoding="async" className="aspect-16/10 w-full rounded-tile object-cover" />
-                  </picture>
-                )}
-                <div className="flex flex-col gap-2 p-5">
-                  <h3 className="text-title">
-                    <Link href={l.href} className="stretched focus-ring rounded-input">
-                      {l.label}
-                    </Link>
-                  </h3>
-                  <p className="text-small text-tone-ink-2">{l.text}</p>
-                </div>
-              </Card>
-            </li>
-          ))}
-        </ul>
-      )}
-      {block.type === "gallery" && (
-        <ul className="grid gap-4 sm:grid-cols-2">
-          {block.images.map((img) => (
-            <li key={img.src} className="overflow-hidden rounded-card bg-sunken">
-              <picture className="contents">
-                <source type="image/avif" srcSet={img.src.replace(/\.webp$/, ".avif")} />
-                <img src={img.src} alt={img.alt} width={img.width} height={img.height} loading="lazy" decoding="async" className="size-full object-cover" />
-              </picture>
-            </li>
-          ))}
-        </ul>
-      )}
-      {block.type === "faq" && <Accordion items={block.items} />}
-    </section>
-  );
+/** Each block's ground from its type; a third night stage falls back to sunken. Reading pages keep to plain and sunken. */
+function groundsFor(blocks: PageBlock[], reading: boolean): { blocks: PageBlock[]; grounds: Ground[] } {
+  let nights = 0;
+  const night = () => !reading && nights++ < MAX_NIGHT;
+  const out = blocks.map((b): [PageBlock, Ground] => {
+    if (b.type === "steps" || b.type === "shop") return [b, night() ? "night" : "sunken"];
+    if (b.type === "feature" && b.tone === "night") return night() ? [b, "night"] : [{ ...b, tone: "sunken" }, "sunken"];
+    if (b.type === "diagram" || b.type === "sizing" || (b.type === "facts" && !reading)) return [b, "sunken"];
+    return [b, "plain"];
+  });
+  return { blocks: out.map(([b]) => b), grounds: out.map(([, g]) => g) };
 }
 
 /**
- * Shared template for services, systems, products, outlets, projects, guides and articles. Header (breadcrumbs, h1, lead),
- * the blocks, then related links and the closing call. Guides and articles read as one narrow column with an
- * "On this page" list; every other kind puts a quote card beside the blocks from 64rem.
+ * Shared template for every inner page. Hero, the blocks on a rhythm of grounds, related links, the closing call and
+ * the quote dock. Guides, articles and legal pages read as one narrow column with an "On this page" list from 64rem;
+ * every other kind uses the full page width.
  */
 export function InnerPage({ doc }: { doc: PageDoc }) {
-  const reading = doc.kind === "guide" || doc.kind === "article";
+  const reading = doc.kind === "guide" || doc.kind === "article" || doc.kind === "legal";
+  // A feature never repeats the hero render: same image, statement only.
+  const own = doc.blocks.map((b) => (b.type === "feature" && b.image && b.image.src === doc.image?.src ? { ...b, image: undefined } : b));
+  const { blocks, grounds } = groundsFor(own, reading);
   const headings = doc.blocks.flatMap((b) => ("heading" in b && b.heading ? [b.heading] : []));
   const faq = doc.blocks.find((b): b is Extract<PageBlock, { type: "faq" }> => b.type === "faq");
+  const wa = outletWhatsApp("lahore");
+
+  const related = doc.related && doc.related.length > 0 && (
+    <section className={reading ? undefined : "page-width"}>
+      <div className={reading ? undefined : "grid gap-6 lg:grid-cols-12 lg:gap-10"}>
+        <h2 className={reading ? "mb-4 text-h3" : "text-h3 lg:col-span-4"}>{ui.page.related}</h2>
+        <ul className="-mx-2 flex flex-wrap lg:col-span-8">
+          {doc.related.map((r) => (
+            <li key={r.href}>
+              <Button variant="text" href={r.href} className="px-2 pr-6">
+                {r.label}
+              </Button>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+  );
+
   return (
     <main id="main">
-      <header className="page-width flex flex-col items-start gap-6 pb-12 pt-32 lg:pb-16">
-        <Breadcrumbs trail={trailFor(doc)} />
-        {preview && !doc.confirmed && <Chip>{awaiting}</Chip>}
-        <h1 className="max-w-3xl text-h2">{doc.h1}</h1>
-        <p className="max-w-prose text-lead text-ink-2">{doc.lead}</p>
-      </header>
+      <PageHero doc={doc} />
 
-      {doc.image && !reading && (
-        <div className="page-width mb-12">
-          <picture className="contents">
-            <source type="image/avif" srcSet={doc.image.src.replace(/\.webp$/, ".avif")} />
-            <img src={doc.image.src} alt={doc.image.alt} width={doc.image.width} height={doc.image.height} fetchPriority="high" className="aspect-16/9 w-full rounded-card object-cover lg:aspect-21/9" />
-          </picture>
-        </div>
-      )}
-
-      <div className="page-width mb-section grid gap-12 lg:grid-cols-3 lg:gap-16">
-        {reading && headings.length > 1 && (
-          <nav aria-label={ui.page.onThisPage} className="hidden lg:sticky lg:top-28 lg:block lg:self-start">
-            <p className="text-small text-ink-2">{ui.page.onThisPage}</p>
-            <ul className="mt-4 flex flex-col gap-1">
-              {headings.map((h) => (
-                <li key={h}>
-                  <a href={`#${slug(h)}`} className="focus-ring hit-area block rounded-input py-1 text-small hover:underline">
-                    {h}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
-        <div className="flex flex-col gap-16 lg:col-span-2">
-          {doc.blocks.map((b, i) => (
-            <Block key={i} block={b} />
-          ))}
-          {doc.related && doc.related.length > 0 && (
-            <section>
-              <h2 className="mb-4 text-h3">{ui.page.related}</h2>
-              <ul className="flex flex-col">
-                {doc.related.map((r) => (
-                  <li key={r.href} className="border-b border-line">
-                    <Link href={r.href} className="focus-ring flex min-h-control-lg items-center text-title hover:text-ink-2">
-                      {r.label}
-                    </Link>
+      {reading ? (
+        <div className="page-width mb-section mt-16 grid gap-12 lg:grid-cols-12 lg:gap-16">
+          {headings.length > 1 && (
+            <nav aria-label={ui.page.onThisPage} className="hidden lg:sticky lg:top-28 lg:col-span-3 lg:block lg:self-start">
+              <p className="text-small text-ink-2">{ui.page.onThisPage}</p>
+              <ul className="mt-4 flex flex-col gap-1">
+                {headings.map((h) => (
+                  <li key={h}>
+                    <a href={`#${slug(h)}`} className="focus-ring hit-area block rounded-input py-1 text-small hover:underline">
+                      {h}
+                    </a>
                   </li>
                 ))}
               </ul>
-            </section>
+            </nav>
           )}
+          <div className="flex flex-col gap-16 lg:col-span-7 lg:col-start-4">
+            {blocks.map((b, i) => (
+              <Block key={i} block={b} ground={grounds[i]} wide={false} />
+            ))}
+            {related}
+          </div>
         </div>
-        {!reading && doc.kind !== "hub" && (
-          <aside className="lg:sticky lg:top-28 lg:self-start">
-            <Card ink>
-              <div className="flex flex-col items-start gap-4 p-6">
-                <h2 className="text-h3">{ui.page.askHeading}</h2>
-                <Button href={nav.quote.href}>{ui.page.quote}</Button>
-              </div>
-            </Card>
-          </aside>
-        )}
+      ) : (
+        <div className="mb-section mt-16 flex flex-col gap-section lg:mt-24">
+          {blocks.map((b, i) => (
+            <Block key={i} block={b} ground={grounds[i]} wide featured={doc.kind === "hub"} />
+          ))}
+          {related}
+        </div>
+      )}
+
+      <div data-dock-hide="">
+        <ClosingCall />
       </div>
-      <ClosingCall />
       {faq && <JsonLd data={faqLd(faq.items)} />}
+      {doc.kind !== "legal" && <QuoteDock label={ui.page.dock} title={doc.h1} quote={{ label: ui.page.quote, href: nav.quote.href }} whatsapp={wa ? { label: ui.whatsapp.openLabel, href: wa } : null} />}
     </main>
   );
 }

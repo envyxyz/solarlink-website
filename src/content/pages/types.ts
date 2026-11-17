@@ -4,6 +4,7 @@
   Plain strings only, safe for the server; the template is src/components/site/InnerPage.tsx.
 */
 import type { RouteKind } from "@/routes";
+import type { LinkMode } from "@/content/home/link";
 
 export type PageKind = Extract<RouteKind, "hub" | "company" | "legal" | "service" | "system" | "product" | "outlet" | "project" | "guide" | "article">;
 
@@ -15,7 +16,20 @@ export type PageBlock =
   | { type: "steps"; heading: string; items: { title: string; text: string }[] }
   | { type: "links"; heading?: string; items: { label: string; text: string; href: string; image?: PageImage }[] }
   | { type: "gallery"; heading?: string; images: PageImage[] }
-  | { type: "faq"; heading: string; items: { id: string; question: string; answer: string }[] };
+  | { type: "faq"; heading: string; items: { id: string; question: string; answer: string }[] }
+  /* Richer blocks (18 Nov 2026 night run): each one reuses a home component. */
+  /** The energy-flow line diagram (LinkDiagram), opened on this system type. */
+  | { type: "diagram"; heading: string; lead?: string; mode: LinkMode }
+  /** The home sizing card: bill slider, live system size, WhatsApp/quote action. */
+  | { type: "sizing"; heading: string; lead: string }
+  /** ProductCards of one shop category (shopSection slug). Samples, so production shows none until confirmed. */
+  | { type: "shop"; heading: string; lead?: string; category: string }
+  /** ProjectCards from the home projects list. Unconfirmed, so production shows none. */
+  | { type: "projects"; heading: string; lead?: string }
+  /** The brand belt (Marquee). Brands are unconfirmed, so production shows none. */
+  | { type: "brands"; heading: string }
+  /** A statement on its own stage: big text, optional render under a glass caption. */
+  | { type: "feature"; heading: string; text: string; image?: PageImage; tone?: "night" | "sunken" };
 
 export type PageDoc = {
   /** Must exist in src/routes.ts, with its trailing slash. */

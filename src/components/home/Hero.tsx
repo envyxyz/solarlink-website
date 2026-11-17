@@ -1,14 +1,14 @@
 import type { CSSProperties } from "react";
 import { preload } from "react-dom";
-import { hero, nav, outlets, seo, sizing } from "@/content";
+import { hero, nav, seo } from "@/content";
 import { Button } from "@/components/ui/Button";
-import { show } from "@/lib/facts";
 import { heroFull, heroSizes, heroSrc, heroSrcSet, heroWidest } from "@/lib/picture";
 import { LinkLine } from "./LinkLine";
 import { ResultCard } from "./ResultCard";
 import { RoofPanels } from "./RoofPanels";
 import { SizingCard, sizingSlot } from "./SizingCard";
-import { SizingProvider, type SizingConfig } from "./SizingProvider";
+import { SizingProvider } from "./SizingProvider";
+import { sizingConfig } from "./sizingConfig";
 
 /** Without JavaScript the island hides and the card below (a link to the quote page) shows instead. */
 const noJsStyle = "*[data-island]{display:none}";
@@ -18,25 +18,10 @@ export function Hero() {
   preload(heroSrc(heroWidest, "avif"), { as: "image", imageSrcSet: heroSrcSet("avif"), imageSizes: heroSizes, type: "image/avif", fetchPriority: "high" });
 
   const full = heroFull;
-  const lahore = outlets.find((o) => o.slug === "lahore") ?? outlets[0];
-  const config: SizingConfig = {
-    constants: {
-      ratePerUnit: show(sizing.ratePerUnit) as number,
-      sunHours: show(sizing.sunHours) as number,
-      performanceRatio: show(sizing.performanceRatio) as number,
-      panelWatts: show(sizing.panelWatts) as number,
-    },
-    rs: sizing.rs,
-    units: sizing.units,
-    roof: sizing.roof,
-    grid: sizing.grid,
-    whatsapp: show(lahore.whatsapp),
-    quoteHref: nav.quote.href,
-  };
   const artStyle = { "--ratio": full.width / full.height } as CSSProperties;
 
   return (
-    <SizingProvider config={config}>
+    <SizingProvider config={sizingConfig()}>
       <section id="hero" className="relative page-width pt-26 lg:mt-24 lg:hero-height lg:pt-0 short:hero-height-short">
         <noscript>
           <style>{noJsStyle}</style>

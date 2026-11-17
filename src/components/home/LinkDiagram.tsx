@@ -105,8 +105,8 @@ function Diagram({ layout: l, mode, className }: { layout: Layout; mode: LinkMod
  * The system-type switch and the line diagram. The wire draws once on entry (CSS), then one lime dot loops along the
  * active route (SVG animateMotion), paused under reduced motion and while the diagram is off screen.
  */
-export function LinkDiagram() {
-  const [mode, setMode] = useState<LinkMode>("hybrid");
+export function LinkDiagram({ initial = "hybrid" }: { initial?: LinkMode }) {
+  const [mode, setMode] = useState<LinkMode>(initial);
   const root = useRef<HTMLDivElement>(null);
   useEffect(() => {
     const el = root.current;
@@ -127,9 +127,9 @@ export function LinkDiagram() {
           {text}
         </p>
       </div>
-      <div ref={root} data-reveal="" style={{ "--i": 1 } as CSSProperties} className="w-full">
-        <Diagram layout={wide} mode={mode} className="max-lg:hidden" />
-        <Diagram layout={tall} mode={mode} className="mx-auto max-w-sm lg:hidden" />
+      <div ref={root} data-reveal="" style={{ "--i": 1 } as CSSProperties} className="@container w-full">
+        <Diagram layout={wide} mode={mode} className="@max-3xl:hidden" />
+        <Diagram layout={tall} mode={mode} className="mx-auto max-w-sm @3xl:hidden" />
       </div>
     </div>
   );
