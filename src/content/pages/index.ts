@@ -6,6 +6,8 @@
   src/content/kit.ts and exist only outside production builds.
 */
 import { routeByPath } from "@/routes";
+import { companyDocs } from "./docs/company";
+import { brandDocs, legalDocs } from "./docs/extra";
 import { articles, guides } from "./docs/reading";
 import { hubs } from "./docs/hubs";
 import { outletDocs, projectDocs } from "./docs/places";
@@ -16,7 +18,7 @@ import type { PageDoc } from "./types";
 
 const lists = { services, systems, products, outlets: outletDocs, projects: projectDocs, guides, articles };
 
-export const pageDocs: PageDoc[] = [...Object.values(lists).flat(), ...hubs(lists)];
+export const pageDocs: PageDoc[] = [...Object.values(lists).flat(), ...hubs(lists), ...companyDocs, ...legalDocs, ...brandDocs];
 
 /** A doc whose path is not a planned route is a mistake: fail the build rather than ship an unplanned URL. */
 for (const d of pageDocs) if (!routeByPath.has(d.path)) throw new Error(`${d.path} is not in src/routes.ts`);

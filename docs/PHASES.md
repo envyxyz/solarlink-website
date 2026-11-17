@@ -174,6 +174,8 @@ Done:
 
 Open:
 - Real copy for every page, from the client answers in `src/routes.ts` (`needs`). To publish a page, rewrite its doc and set `confirmed: true`.
-- Not built yet: company pages (about, contact, get-quote, FAQs, financing, warranty), tools (phase 6), legal pages, brand pages (stage "next").
+- Not built yet: the calculators and tools (phase 6, they need verified tariff data).
 - The "Get a quote" links on inner pages point to `/get-quote/`, which does not exist yet.
 - agy image regeneration still waits on the quota; the pages reuse the existing stand-ins.
+
+Added the same day, by parallel subagents (Sonnet): 6 company pages (about, contact, get-quote, FAQs, financing, warranty), terms, privacy and the sitemap page, and the 4 brand pages (Growatt, Fronus, Longi, Canadian Solar), 62 drafts in all. Legal text is a structure with "being finalised" notes, brand pages carry no dealer, stock, price or warranty claim. Checked by script: no banned words, every internal link is a planned route, none confirmed, production build ships only `/`. A photo sweep of the old-site and client folders found no unused real photos, so pages keep the existing ones.

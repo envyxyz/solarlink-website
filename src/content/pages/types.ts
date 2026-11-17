@@ -5,7 +5,7 @@
 */
 import type { RouteKind } from "@/routes";
 
-export type PageKind = Extract<RouteKind, "hub" | "service" | "system" | "product" | "outlet" | "project" | "guide" | "article">;
+export type PageKind = Extract<RouteKind, "hub" | "company" | "legal" | "service" | "system" | "product" | "outlet" | "project" | "guide" | "article">;
 
 export type PageImage = { src: string; width: number; height: number; alt: string };
 
