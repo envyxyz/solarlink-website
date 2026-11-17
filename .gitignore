@@ -20,3 +20,4 @@ design/img/*.log
 Thumbs.db
 *.tsbuildinfo
 next-env.d.ts
+design/img/_agy/*.log
