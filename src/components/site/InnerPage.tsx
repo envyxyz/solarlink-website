@@ -58,6 +58,30 @@ function Block({ block }: { block: PageBlock }) {
           ))}
         </ol>
       )}
+      {block.type === "links" && (
+        <ul className="grid gap-4 sm:grid-cols-2">
+          {block.items.map((l) => (
+            <li key={l.href}>
+              <Card className="lift card-focus relative h-full">
+                {l.image && (
+                  <picture className="contents">
+                    <source type="image/avif" srcSet={l.image.src.replace(/\.webp$/, ".avif")} />
+                    <img src={l.image.src} alt={l.image.alt} width={l.image.width} height={l.image.height} loading="lazy" decoding="async" className="aspect-16/10 w-full rounded-tile object-cover" />
+                  </picture>
+                )}
+                <div className="flex flex-col gap-2 p-5">
+                  <h3 className="text-title">
+                    <Link href={l.href} className="stretched focus-ring rounded-input">
+                      {l.label}
+                    </Link>
+                  </h3>
+                  <p className="text-small text-tone-ink-2">{l.text}</p>
+                </div>
+              </Card>
+            </li>
+          ))}
+        </ul>
+      )}
       {block.type === "gallery" && (
         <ul className="grid gap-4 sm:grid-cols-2">
           {block.images.map((img) => (
@@ -93,6 +117,15 @@ export function InnerPage({ doc }: { doc: PageDoc }) {
         <p className="max-w-prose text-lead text-ink-2">{doc.lead}</p>
       </header>
 
+      {doc.image && !reading && (
+        <div className="page-width mb-12">
+          <picture className="contents">
+            <source type="image/avif" srcSet={doc.image.src.replace(/\.webp$/, ".avif")} />
+            <img src={doc.image.src} alt={doc.image.alt} width={doc.image.width} height={doc.image.height} fetchPriority="high" className="aspect-16/9 w-full rounded-card object-cover lg:aspect-21/9" />
+          </picture>
+        </div>
+      )}
+
       <div className="page-width mb-section grid gap-12 lg:grid-cols-3 lg:gap-16">
         {reading && headings.length > 1 && (
           <nav aria-label={ui.page.onThisPage} className="hidden lg:sticky lg:top-28 lg:block lg:self-start">
@@ -127,7 +160,7 @@ export function InnerPage({ doc }: { doc: PageDoc }) {
             </section>
           )}
         </div>
-        {!reading && (
+        {!reading && doc.kind !== "hub" && (
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <Card ink>
               <div className="flex flex-col items-start gap-4 p-6">

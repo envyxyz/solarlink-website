@@ -156,6 +156,7 @@ const sample = (kind: PageKind, path: string): PageDoc => ({
 });
 
 export const kitPages: Record<PageKind, PageDoc> = {
+  hub: sample("hub", "/sample-hub/"),
   service: sample("service", "/services/sample/"),
   system: sample("system", "/solar-systems/sample/"),
   product: sample("product", "/products/sample/"),

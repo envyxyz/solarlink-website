@@ -5,7 +5,7 @@
 */
 import type { RouteKind } from "@/routes";
 
-export type PageKind = Extract<RouteKind, "service" | "system" | "product" | "outlet" | "project" | "guide" | "article">;
+export type PageKind = Extract<RouteKind, "hub" | "service" | "system" | "product" | "outlet" | "project" | "guide" | "article">;
 
 export type PageImage = { src: string; width: number; height: number; alt: string };
 
@@ -13,6 +13,7 @@ export type PageBlock =
   | { type: "prose"; heading?: string; paragraphs: string[] }
   | { type: "facts"; heading: string; items: { label: string; value: string }[] }
   | { type: "steps"; heading: string; items: { title: string; text: string }[] }
+  | { type: "links"; heading?: string; items: { label: string; text: string; href: string; image?: PageImage }[] }
   | { type: "gallery"; heading?: string; images: PageImage[] }
   | { type: "faq"; heading: string; items: { id: string; question: string; answer: string }[] };
 

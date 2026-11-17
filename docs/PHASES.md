@@ -163,3 +163,17 @@ Open:
 - Project photos need the client's originals (640 px and watermarked is soft at the large tile). Which photo belongs to which project is a guess.
 - Hub pages (services, products, projects, outlets, resources, blog) have no template yet; they need each hub's content.
 - Hub/legacy pages still need client answers listed in `src/routes.ts` before any doc is confirmed.
+
+## 18 Nov 2026 (later): inner pages with placeholder content
+
+Done:
+- **Every planned page type now exists as a draft doc**: 7 hubs (services, solar systems, products, outlets, projects, resources, blog), 5 services, 3 system types and 5 sizes, 4 products, 3 outlets, 10 projects, 2 guides and 10 blog posts, 49 in all, one file per kind in `src/content/pages/docs/`. The "hub" template is an index page: a short intro and a card for each child page (new `links` block); pages also take a header image.
+- **All of it is placeholder and `confirmed: false`**: it shows in dev and preview builds with the "Awaiting client" chip and is left out of production (checked: the production build still ships only `/`). The wording states no price, warranty, time, count or rate; outlet address, phone and hours come from the facts already in `src/content.ts` through `show()`. Photos are stand-ins from the old site and the home renders (`pics` in `docs/shared.ts`).
+- `next.config.ts`: in production the route turns on only when a doc file contains `confirmed: true`; dev and `SOLARLINK_PREVIEW` builds always have it.
+- Review on localhost: `node node_modules/next/dist/bin/next dev -p 3100`.
+
+Open:
+- Real copy for every page, from the client answers in `src/routes.ts` (`needs`). To publish a page, rewrite its doc and set `confirmed: true`.
+- Not built yet: company pages (about, contact, get-quote, FAQs, financing, warranty), tools (phase 6), legal pages, brand pages (stage "next").
+- The "Get a quote" links on inner pages point to `/get-quote/`, which does not exist yet.
+- agy image regeneration still waits on the quota; the pages reuse the existing stand-ins.
