@@ -25,6 +25,7 @@ export const companyDocs: PageDoc[] = [
         "We sell and fit solar panels, inverters and batteries, design systems around a customer's bills and roof, and prepare net metering applications. Customers can visit a shop, call, or send a request through the quote form.",
         "The company story, the team and the registration details are being confirmed and will appear on this page.",
       ] },
+      { type: "feature", heading: "Solar, supplied and installed", text: "We design systems around a customer's bills and roof, supply the equipment, install it and prepare the net metering application.", image: pics.hero, tone: "sunken" },
       { type: "links", heading: "Where to find us", items: [
         { label: "Our outlets", text: "Visit a shop, call or message us about a system or a product.", href: "/outlets/" },
         { label: "Our services", text: "Home, business, industrial and farm solar, and net metering support.", href: "/services/" },
@@ -62,6 +63,7 @@ export const companyDocs: PageDoc[] = [
         { title: "We suggest a system", text: "We recommend a system type and size and answer your questions." },
         { title: "Site survey", text: "We visit to check the roof, shade and meter before anything is confirmed." },
       ] },
+      { type: "sizing", heading: "Size it from your bill", lead: "Move the slider to see a rough system size for your bill. It is an estimate: the site survey confirms it." },
       { type: "prose", heading: "What affects the answer", paragraphs: [
         "Your units used, your roof or land, shade, and whether you want backup during power cuts all change the system. That is why a survey comes before a final quotation. Pricing is given by the outlet once these are known.",
       ] },

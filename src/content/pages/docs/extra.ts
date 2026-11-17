@@ -123,6 +123,7 @@ export const brandDocs: PageDoc[] = brands.map(([path, name, title, , pic, lead,
       { type: "prose", heading: `Comparing ${name}`, paragraphs: [intro, "Ask for every term in writing, and compare brands on the same points rather than on the name alone."] },
       { type: "facts", heading: "What to look at", items: facts.map((v, i) => ({ label: `Point ${i + 1}`, value: v })) },
       { type: "prose", heading: "Models, availability and price", paragraphs: ["Models, availability and prices are not listed here. Ask your nearest outlet, or send us a message, and the shop will confirm what is available."] },
+      { type: "brands", heading: "Brands" },
       faq(`Questions about ${name}`, q),
     ],
     related: [

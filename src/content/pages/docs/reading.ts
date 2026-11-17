@@ -12,6 +12,7 @@ export const guides: PageDoc[] = [
     h1: "How solar panels work", lead: "Sunlight to the sockets in your wall, in four parts.",
     blocks: [
       { type: "prose", heading: "From sunlight to power", paragraphs: ["Solar panels contain cells that make direct current when light falls on them. The more sun, the more power.", "An inverter turns that direct current into the alternating current your lights and appliances use, and keeps it in step with the grid."] },
+      { type: "diagram", heading: "How the power flows", mode: "hybrid" },
       { type: "steps", heading: "The four parts", items: [
         { title: "Panels", text: "Make direct current from sunlight." },
         { title: "Inverter", text: "Converts it to household power and manages the grid link." },
@@ -41,11 +42,11 @@ export const guides: PageDoc[] = [
   }),
 ];
 
-const post = (slug: string, title: string, h1: string, lead: string, paras: string[], related: [string, string][]): PageDoc =>
+const post = (slug: string, title: string, h1: string, lead: string, paras: string[], related: [string, string][], extra: PageDoc["blocks"] = []): PageDoc =>
   make({
     path: `/blog/${slug}/`, kind: "article",
     title: `${title} | SolarLink`, description: lead, h1, lead,
-    blocks: [{ type: "prose", heading: "The short version", paragraphs: paras }],
+    blocks: [{ type: "prose", heading: "The short version", paragraphs: paras }, ...extra],
     related: related.map(([label, href]) => ({ label, href })),
   });
 
@@ -55,7 +56,7 @@ export const articles: PageDoc[] = [
   post("net-metering-common-mistakes-pakistan", "Net Metering Application Mistakes", "Common net metering mistakes", "Applications are delayed by small errors. These are the ones to avoid.", ["Missing documents, a system that does not match what was applied for, and a meter or connection that is not in the applicant's name are common causes of delay.", "Check every form before you submit, or let us file it."], [["Net metering guide", "/net-metering-guide/"]]),
   post("net-metering-lesco-application-guide", "LESCO Net Metering Application", "Net metering with LESCO", "The steps of a net metering application with the Lahore distribution company.", ["The steps follow the pattern in our net metering guide: apply, inspect, approve, install the meter. Forms and fees are set by the company and change, so check them before you apply.", "We are rewriting this post against the current rules."], [["Net metering guide", "/net-metering-guide/"]]),
   post("net-metering-vs-battery-storage-pakistan", "Net Metering vs Battery Storage", "Net metering or a battery?", "Two ways to use solar power you do not use right away.", ["Net metering sends extra power to the grid for a credit. A battery keeps it for later and gives backup in a power cut. Which is better depends on how reliable your grid is and what the current net metering rules pay.", "Many homes choose one; some use both with a hybrid inverter."], [["Hybrid systems", "/solar-systems/hybrid/"], ["Batteries", "/products/batteries/"]]),
-  post("on-grid-vs-hybrid-vs-off-grid-pakistan", "On-grid vs Hybrid vs Off-grid Solar", "On-grid, hybrid or off-grid?", "The three kinds of system, what each needs and who each suits.", ["On-grid has no battery and works with the grid. Hybrid adds a battery for backup. Off-grid has no grid at all and needs a battery bank sized for the nights.", "The deciding questions are how often the power goes off and what must keep running."], [["On-grid", "/solar-systems/on-grid/"], ["Hybrid", "/solar-systems/hybrid/"], ["Off-grid", "/solar-systems/off-grid/"]]),
+  post("on-grid-vs-hybrid-vs-off-grid-pakistan", "On-grid vs Hybrid vs Off-grid Solar", "On-grid, hybrid or off-grid?", "The three kinds of system, what each needs and who each suits.", ["On-grid has no battery and works with the grid. Hybrid adds a battery for backup. Off-grid has no grid at all and needs a battery bank sized for the nights.", "The deciding questions are how often the power goes off and what must keep running."], [["On-grid", "/solar-systems/on-grid/"], ["Hybrid", "/solar-systems/hybrid/"], ["Off-grid", "/solar-systems/off-grid/"]], [{ type: "diagram", heading: "How the power flows", mode: "hybrid" }]),
   post("solar-installation-red-flags-pakistan", "How to Choose a Solar Company", "Red flags when choosing an installer", "What to ask before you sign with any solar company.", ["Ask for the full list of components with brand and model, the warranty terms in writing, who files the net metering application and who services the system later.", "Be careful of a quote that cannot be itemised."], [["Home solar", "/services/residential-solar/"]]),
   post("solar-panel-brands-comparison-pakistan", "Best Solar Panel Brands in Pakistan", "Solar panel brands compared", "How to compare panel brands without relying on a ranking.", ["Look at the rated power, the panel type, the maker's warranty and whether the model is stocked locally for replacement.", "A full comparison with sources is being written."], [["Solar panels", "/products/solar-panels/"]]),
   post("solar-panel-cleaning-maintenance-pakistan", "Solar Panel Cleaning", "Cleaning and caring for your panels", "Dust lowers output. A few habits keep panels working well.", ["Dust and bird droppings block light. Clean the panels when the sun is low, with water and a soft cloth, and keep clear of the edges and cables.", "Never climb onto a wet roof. If you cannot reach the panels safely, ask us."], [["Home solar", "/services/residential-solar/"]]),

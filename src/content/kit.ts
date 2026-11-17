@@ -141,6 +141,18 @@ const sampleBlocks: PageDoc["blocks"] = [
   { type: "faq", heading: "Questions", items: [{ id: "q1", question: "A sample question?", answer: "A sample answer." }] },
 ];
 
+const extras: Partial<Record<PageKind, PageDoc["blocks"][number]>> = {
+  hub: { type: "projects", heading: "Recent work" },
+  company: { type: "sizing", heading: "Size it from your bill", lead: "Sample lead. An estimate only; the survey confirms it." },
+  service: { type: "feature", heading: "A sample statement", text: "One plain sentence about what this page offers.", tone: "sunken" },
+  system: { type: "diagram", heading: "How the power flows", mode: "hybrid" },
+  product: { type: "shop", heading: "In the shops", category: "panels" },
+  outlet: { type: "feature", heading: "A sample statement", text: "One plain sentence about this shop.", tone: "sunken" },
+  project: { type: "projects", heading: "More projects" },
+  guide: { type: "diagram", heading: "How the power flows", mode: "on-grid" },
+  article: { type: "brands", heading: "Brands" },
+};
+
 const sample = (kind: PageKind, path: string): PageDoc => ({
   path,
   kind,
@@ -149,7 +161,7 @@ const sample = (kind: PageKind, path: string): PageDoc => ({
   h1: `Sample ${kind} page`,
   lead: "One supporting sentence under the heading, the same measure on every page type.",
   lastmod: "2026-11-18",
-  blocks: sampleBlocks,
+  blocks: extras[kind] ? [...sampleBlocks, extras[kind]!] : sampleBlocks,
   related: [{ label: "A related page", href: "/" }],
   confirmed: false,
   source: "Dev kit sample",

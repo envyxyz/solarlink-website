@@ -23,6 +23,8 @@ const type = (k: (typeof kinds)[number]): PageDoc =>
     image: k[0] === "off-grid" ? pics.farms : pics.homes,
     blocks: [
       { type: "prose", heading: "How it works", paragraphs: [k[3], k[4]] },
+      { type: "diagram", heading: "How the power flows", mode: k[0] as "on-grid" | "hybrid" | "off-grid" },
+      { type: "feature", heading: `${k[1]} in one line`, text: k[3], tone: "sunken" },
       { type: "facts", heading: "Good to know", items: k[5].map((v, i) => ({ label: ["Suits", "Pairs with", "Keep in mind"][i], value: v })) },
       faq(`Questions about ${k[1].toLowerCase()} systems`, [
         ["How do I choose between the three types?", "It depends on how reliable your grid is and what you need to run in a cut. Send us a recent bill and tell us about your power cuts, and we will advise."],
@@ -45,6 +47,7 @@ const size = (kw: number): PageDoc =>
         { label: "System types", value: "On-grid, hybrid or off-grid" },
         { label: "Price", value: "Quoted after a survey" },
       ] },
+      { type: "sizing", heading: "Size it from your bill", lead: "Move the slider to see a rough system size for your bill. It is an estimate: the site survey confirms it." },
       { type: "prose", heading: "What it is made of", paragraphs: ["Solar panels, one or more inverters, mounting structure, cables, breakers and earthing, and a battery if the system is hybrid or off-grid.", quote] },
       faq(`Questions about a ${kw} kW system`, [
         ["Is a " + kw + " kW system right for me?", "Send a recent bill. We compare it with the size and check the roof before we suggest anything."],
