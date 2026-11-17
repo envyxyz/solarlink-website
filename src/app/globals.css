@@ -81,6 +81,12 @@
 
 @utility tabular { font-variant-numeric: tabular-nums; }
 
+/* Pins a subtree to the light theme (the daytime hero image keeps dark text in a dark page). */
+@utility scheme-light {
+  color-scheme: light;
+  color: var(--ink);
+}
+
 /* Focus: 2px ring, 2px offset. Ink on light, lime on night (--focus). */
 @utility focus-ring {
   &:focus-visible {
@@ -409,7 +415,7 @@
     min-height: 100svh;
   }
   :where(h1, h2, h3, h4) { text-wrap: balance; }
-  ::selection { background: var(--lime); color: var(--ink); }
+  ::selection { background: var(--lime); color: var(--on-lime); }
   :focus-visible { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }

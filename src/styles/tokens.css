@@ -4,26 +4,35 @@
   Tailwind utilities generated from the @theme block at the bottom.
 */
 :root {
+  /*
+    The page follows the device theme: light-dark(light, dark) with color-scheme "light dark". Custom properties keep the
+    function unresolved, so it resolves where a property uses it; `scheme-light` (globals.css) pins a subtree to light.
+  */
+  color-scheme: light dark;
+
   /* colour */
-  --ground: #f6f6f2;
-  --surface: #fdfdfb;
-  --sunken: #eeefe9;
-  --ink: #0b0f0a;
-  --ink-2: #565d53;
-  --ink-3: #7c8378;
-  --line: rgb(11 15 10 / 0.08);
-  --track: rgb(11 15 10 / 0.1); /* segmented-control track: reads on ground, surface, sunken and glass */
+  --ground: light-dark(#f6f6f2, #0b0f0a);
+  --surface: light-dark(#fdfdfb, #171d15);
+  --sunken: light-dark(#eeefe9, #11160f);
+  --ink: light-dark(#0b0f0a, #f2f4ee);
+  --ink-2: light-dark(#565d53, #a6ad9f);
+  --ink-3: light-dark(#7c8378, #8a9285);
+  --line: light-dark(rgb(11 15 10 / 0.08), rgb(242 244 238 / 0.1));
+  --track: light-dark(rgb(11 15 10 / 0.1), rgb(242 244 238 / 0.16)); /* segmented-control track: reads on ground, surface, sunken and glass */
   --night-track: rgb(242 244 238 / 0.16); /* the same on night */
   --lime: #7ed321;
   --lime-press: #6ac014;
-  --lime-wash: #e8f7d3;
-  --night: #0b0f0a;
-  --night-surface: #151a13;
-  --night-raised: #1e241b;
+  --lime-wash: light-dark(#e8f7d3, #22340f);
+  --on-lime: #0b0f0a; /* text on a lime fill, and on any fill that is light in both themes */
+  --on-ink: light-dark(#f2f4ee, #0b0f0a); /* text on an --ink fill */
+  /* night sections: black on a light page, one step above the ground on a dark page so they still read as panels */
+  --night: light-dark(#0b0f0a, #171d15);
+  --night-surface: light-dark(#151a13, #212920);
+  --night-raised: light-dark(#1e241b, #2b3428);
   --night-ink: #f2f4ee;
   --night-ink-2: #a6ad9f;
   --night-line: rgb(242 244 238 / 0.1);
-  --error: #c8321e; /* forms only */
+  --error: light-dark(#c8321e, #ff6b57); /* forms only */
 
   /* hero (added in phase 3, see DESIGN.md) */
   --haze: radial-gradient(58% 55% at 12% 6%, rgb(255 246 230 / 0.55), rgb(255 246 230 / 0) 100%);
@@ -107,10 +116,10 @@
   --r-pill: 999px;
 
   /* depth */
-  --float: 0 1px 2px rgb(11 15 10 / 0.05), 0 4px 8px rgb(11 15 10 / 0.05),
-    0 12px 24px rgb(11 15 10 / 0.06), 0 32px 48px rgb(11 15 10 / 0.05);
-  --glass-bg: rgb(253 253 251 / 0.62);
-  --glass-edge: inset 0 1px 0 rgb(255 255 255 / 0.7);
+  --float: 0 1px 2px light-dark(rgb(11 15 10 / 0.05), rgb(0 0 0 / 0.3)), 0 4px 8px light-dark(rgb(11 15 10 / 0.05), rgb(0 0 0 / 0.3)),
+    0 12px 24px light-dark(rgb(11 15 10 / 0.06), rgb(0 0 0 / 0.35)), 0 32px 48px light-dark(rgb(11 15 10 / 0.05), rgb(0 0 0 / 0.3));
+  --glass-bg: light-dark(rgb(253 253 251 / 0.62), rgb(23 29 21 / 0.72));
+  --glass-edge: inset 0 1px 0 light-dark(rgb(255 255 255 / 0.7), rgb(255 255 255 / 0.1));
   --glass-night-bg: rgb(11 15 10 / 0.5);
   --glass-night-edge: inset 0 1px 0 rgb(255 255 255 / 0.12);
   --glass-blur: blur(20px) saturate(1.6);
@@ -144,7 +153,7 @@
   --tone-sunken: var(--sunken);
   --tone-ink: var(--ink);
   --tone-ink-2: var(--ink-2);
-  --tone-on-ink: var(--night-ink); /* text on an ink-coloured fill */
+  --tone-on-ink: var(--on-ink); /* text on an ink-coloured fill */
   --tone-line: var(--line);
   --tone-track: var(--track);
   --focus: var(--ink);
@@ -155,7 +164,7 @@
   --tone-sunken: var(--night-raised);
   --tone-ink: var(--night-ink);
   --tone-ink-2: var(--night-ink-2);
-  --tone-on-ink: var(--ink);
+  --tone-on-ink: var(--on-lime);
   --tone-line: var(--night-line);
   --tone-track: var(--night-track);
   --focus: var(--lime);
@@ -185,6 +194,8 @@
   --color-lime: var(--lime);
   --color-lime-press: var(--lime-press);
   --color-lime-wash: var(--lime-wash);
+  --color-on-lime: var(--on-lime);
+  --color-on-ink: var(--on-ink);
   --color-night: var(--night);
   --color-night-surface: var(--night-surface);
   --color-night-raised: var(--night-raised);

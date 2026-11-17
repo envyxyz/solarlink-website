@@ -12,7 +12,7 @@ export type ButtonSize = "md" | "lg";
 
 /** Fill and text colour per variant. Hover and active are instant tone steps; motion is transform only. */
 export const variantClass: Record<ButtonVariant, string> = {
-  primary: "bg-lime text-ink hover:bg-lime-press active:bg-lime-press",
+  primary: "bg-lime text-on-lime hover:bg-lime-press active:bg-lime-press",
   dark: "bg-tone-ink text-tone-on-ink hover:brightness-90 active:brightness-75",
   quiet: "bg-tone-sunken text-tone-ink hover:brightness-95 active:brightness-90",
   text: "bg-transparent text-tone-ink",

@@ -46,7 +46,7 @@ export function Hero() {
           <style>{noJsStyle}</style>
         </noscript>
 
-        <div className="px-1 pb-3 sm:pb-5 lg:absolute lg:left-14 lg:top-26 lg:z-5 lg:p-0 short:top-24">
+        <div className="px-1 pb-3 sm:pb-5 lg:scheme-light lg:absolute lg:left-14 lg:top-26 lg:z-5 lg:p-0 short:top-24">
           <h1 className="max-w-display text-display">{seo.home.h1}</h1>
           <p className="mt-3 max-w-lead text-lead max-sm:max-w-none max-sm:text-small sm:mt-4 short:mt-2 short:max-w-lead-wide">{hero.lead}</p>
         </div>

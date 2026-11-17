@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
   images: { unoptimized: true },
   pageExtensions: isProd ? ["tsx", "ts"] : ["tsx", "ts", "dev.tsx"],
   poweredByHeader: false,
+  // Keep light-dark() native: the lowered form resolves at :root and breaks `scheme-light` on a subtree.
+  experimental: { lightningCssFeatures: { exclude: ["light-dark"] } },
 };
 
 export default nextConfig;

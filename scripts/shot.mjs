@@ -10,7 +10,7 @@ import { extname, join, normalize } from "node:path";
 import { chromium } from "playwright";
 
 const route = process.argv[2] ?? "/";
-const prefix = process.argv[3] ?? "";
+const prefix = (process.argv[3] ?? "") + (process.env.SHOT_SCHEME === "dark" ? "dark-" : "");
 const slug = prefix + (route === "/" ? "home" : route.replaceAll("/", "-").replace(/^-|-$/g, ""));
 const root = join(process.cwd(), "out");
 const outDir = join(process.cwd(), "design", "shots");
@@ -40,7 +40,7 @@ const browser = await chromium.launch(process.env.SHOT_CHROME ? { executablePath
 const errors = [];
 
 async function open(view) {
-  const page = await browser.newPage({ viewport: { width: view.width, height: view.height }, deviceScaleFactor: 1, isMobile: view.mobile, hasTouch: view.mobile });
+  const page = await browser.newPage({ colorScheme: process.env.SHOT_SCHEME ?? "light", viewport: { width: view.width, height: view.height }, deviceScaleFactor: 1, isMobile: view.mobile, hasTouch: view.mobile });
   page.on("console", (m) => m.type() === "error" && !m.text().includes("status of 404") && errors.push(`${view.name} console: ${m.text()}`));
   page.on("pageerror", (e) => errors.push(`${view.name} pageerror: ${e.message}`));
   // Nav and footer link to pages later phases build; Next prefetches them, so those 404s are expected for now.

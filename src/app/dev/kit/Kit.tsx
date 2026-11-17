@@ -98,7 +98,7 @@ function MotionDemo() {
           {kit.motion.replay}
         </Button>
         {kit.motion.springs.map((name) => (
-          <div key={`${name}-${round}`} ref={popRef(name)} className="grid size-20 place-items-center rounded-card bg-lime text-ink">
+          <div key={`${name}-${round}`} ref={popRef(name)} className="grid size-20 place-items-center rounded-card bg-lime text-on-lime">
             <span className="text-caption">{name}</span>
           </div>
         ))}

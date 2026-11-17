@@ -21,6 +21,8 @@ export function Nav({ brand }: { brand: string }) {
       >
         <Link href="/" aria-label={nav.homeLabel} className="focus-ring press hit-area flex items-center rounded-pill py-2">
           <picture>
+            <source media="(prefers-color-scheme: dark)" type="image/webp" srcSet="/images/brand/logo-dark.webp" />
+            <source media="(prefers-color-scheme: dark)" srcSet="/images/brand/logo-dark.png" />
             <source type="image/webp" srcSet="/images/brand/logo.webp" />
             <img src="/images/brand/logo.png" width={images.logo.width} height={images.logo.height} alt={brand} draggable={false} className="h-3.5 w-auto select-none sm:h-5" />
           </picture>
