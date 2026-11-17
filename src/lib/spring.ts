@@ -9,9 +9,11 @@ const SPRINGS = {
   /** large things that settle */
   soft: { k: 160, c: 24, m: 1.2, secs: 1, steps: 56, ms: 900 },
 } as const;
+/** Stiffness of a spring, for the physics followers in momentum.ts. */
+export const springStiffness = (name: keyof typeof SPRINGS) => SPRINGS[name].k;
 export type SpringName = keyof typeof SPRINGS;
 
-const POP_FROM = 0.8;
+export const POP_FROM = 0.8;
 
 function sample(name: SpringName) {
   const { k, c, m, secs, steps } = SPRINGS[name];
@@ -28,6 +30,16 @@ function sample(name: SpringName) {
 
 const cache: Partial<Record<SpringName, number[]>> = {};
 const points = (name: SpringName) => (cache[name] ??= sample(name));
+/** The spring's value (0 to 1, may overshoot) `ms` after it starts; 1 once it has settled. For drawing on a canvas. */
+export function springAt(name: SpringName, ms: number) {
+  const p = points(name);
+  const x = Math.max(0, ms / SPRINGS[name].ms) * (p.length - 1);
+  if (x >= p.length - 1) return 1;
+  const i = Math.floor(x);
+  return p[i] + (p[i + 1] - p[i]) * (x - i);
+}
+/** The spring's duration in ms. */
+export const springMs = (name: SpringName) => SPRINGS[name].ms;
 export const reduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 /** Sets --spring-snappy, --spring-bubbly and --spring-soft so CSS transitions use the same springs (linear under reduced motion). */

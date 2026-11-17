@@ -1,8 +1,8 @@
 /*
   Homepage section 7, Projects (docs/COPY-HOME.md). The facts come from live project pages that call parts of
   themselves placeholders, so each project is unconfirmed and a production build leaves the section out.
-  The photos are the client's own, taken from the old site (640 px wide, watermarked): which photo belongs to which
-  named project is a guess from the subject (a tubewell, a factory, a house) and the client must confirm it.
+  No photos yet: the old site's watermarked photos were tried and dropped (Ameer, 18 Nov 2026), so every card shows an
+  empty well until the client sends the originals.
   Links are the final project URLs.
 */
 const WEB = "Website says (live projects_*.html pages, which call parts of themselves placeholders). Unconfirmed";
@@ -18,7 +18,8 @@ export type ProjectItem = {
   mode: string;
   alt: string;
   href: string;
-  image: { src: string; width: number; height: number };
+  /** None yet: the card shows an empty well until the client sends the real photos. */
+  image?: { src: string; width: number; height: number };
   confirmed: boolean;
   source: string;
 };
@@ -39,7 +40,6 @@ export const projectsSection = {
       mode: "On-grid",
       alt: "Solar panels on a pole above a tubewell pipe pouring water into a channel",
       href: "/projects/company-bagh-sargodha-10kw-farm/",
-      image: { src: "/images/project-tubewell-640.webp", width: 640, height: 400 },
       confirmed: false,
       source: WEB,
     },
@@ -52,7 +52,6 @@ export const projectsSection = {
       mode: "On-grid",
       alt: "Solar inverter and control panel on a wall, with rows of panels on a roof below",
       href: "/projects/gulberg-iii-lahore-20kw-commercial/",
-      image: { src: "/images/project-industrial-640.webp", width: 640, height: 400 },
       confirmed: false,
       source: WEB,
     },
@@ -65,7 +64,6 @@ export const projectsSection = {
       mode: "On-grid",
       alt: "Solar inverter and meter box on a wall beside a roof with a panel frame",
       href: "/projects/dha-phase-5-lahore-15kw/",
-      image: { src: "/images/project-residential-640.webp", width: 640, height: 400 },
       confirmed: false,
       source: WEB,
     },

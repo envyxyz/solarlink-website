@@ -10,12 +10,6 @@ export const images = {
       "height": 768
     }
   },
-  "panelTop": {
-    "256": {
-      "width": 256,
-      "height": 459
-    }
-  },
   "productPanel": {
     "640": {
       "width": 640,
@@ -58,26 +52,12 @@ export const images = {
       "height": 600
     }
   },
-  "projectTubewell": {
-    "640": {
-      "width": 640,
-      "height": 400
-    }
-  },
-  "projectIndustrial": {
-    "640": {
-      "width": 640,
-      "height": 400
-    }
-  },
-  "projectResidential": {
-    "640": {
-      "width": 640,
-      "height": 400
-    }
-  },
   "logo": {
     "width": 740,
     "height": 66
+  },
+  "emblem": {
+    "width": 111,
+    "height": 86
   }
 } as const;

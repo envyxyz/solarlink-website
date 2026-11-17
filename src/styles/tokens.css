@@ -19,6 +19,9 @@
   --ink-3: light-dark(#7c8378, #8a9285);
   --line: light-dark(rgb(11 15 10 / 0.08), rgb(242 244 238 / 0.1));
   --track: light-dark(rgb(11 15 10 / 0.1), rgb(242 244 238 / 0.16)); /* segmented-control track: reads on ground, surface, sunken and glass */
+  --project: 300ms; /* input physics: how far ahead a wheel or scroll speed is projected */
+  --slider-sweep: 600ms; /* the fastest the slider thumb may travel its full range */
+  --scroll-reach: 1.25; /* furthest a single flick may carry the page, in viewport heights */
   --night-track: rgb(242 244 238 / 0.16); /* the same on night */
   --lime: #7ed321;
   --lime-press: #6ac014;
@@ -36,12 +39,21 @@
 
   /* hero (added in phase 3, see DESIGN.md) */
   --haze: radial-gradient(58% 55% at 12% 6%, rgb(255 246 230 / 0.55), rgb(255 246 230 / 0) 100%);
-  --panel-base: #101821;
-  --panel-shadow: inset 0 4px 0 rgb(255 255 255 / 0.22), 0 0 0 2px rgb(8 12 16 / 0.7),
-    14px 22px 22px -8px rgb(8 12 16 / 0.55);
+  --panel-frame: #8d96a0; /* roof panels (canvas): aluminium frame */
+  --panel-cell: #0d1622; /* cell area, dark blue-black */
+  --panel-edge: #4d565f; /* the thin front edge, suggests thickness */
+  --panel-line: rgb(150 175 205 / 0.32); /* cell lines */
+  --panel-sheen: rgb(255 244 224 / 0.34); /* one sweep across the whole array, from the sun side */
+  --panel-sheen-fade: rgb(255 244 224 / 0);
+  --panel-contact: rgb(8 12 16 / 0.5); /* contact shadow under the array */
+  --panel-contact-blur: 9px;
+  --panel-contact-x: 5px;
+  --panel-contact-y: 8px;
   --link-shadow: drop-shadow(0 1px 1px rgb(11 15 10 / 0.3));
-  --hero-height: min(92svh, 53.75rem);
-  --hero-height-short: calc(100svh - 1.5rem); /* short desktop windows: the stage fills the window, 12px above and below */
+  --hero-height: min(calc(100svh - 7.5rem), 53.75rem); /* the stage starts 12px under the floating nav (96px) and ends 24px above the window bottom */
+  --hero-height-short: calc(100svh - 6.75rem); /* short desktop windows: 96px above, 12px below */
+  --roll-slot: 0.88ch; /* width of one digit slot in a rolling number: a hair under the zero, so the figure fits its card (glyph side bearings are not clipped) */
+  --dock-overlap: 7rem; /* how far the hero dock overlaps the image; 5.5rem from 40rem */
   --t-figure-compact-size: 2.75rem;
   --t-stat-size: clamp(1.0625rem, 4.6vw, 1.375rem); /* result card figures; 1.5rem from 64rem */
   --t-stat-size-lg: 1.5rem;
@@ -114,6 +126,7 @@
   --r-tile: 1.25rem;
   --r-input: 1rem;
   --r-pill: 999px;
+  --r-nav: 1.875rem; /* half the 60px nav row: a pill at rest, the same corners on the open panel */
 
   /* depth */
   --float: 0 1px 2px light-dark(rgb(11 15 10 / 0.05), rgb(0 0 0 / 0.3)), 0 4px 8px light-dark(rgb(11 15 10 / 0.05), rgb(0 0 0 / 0.3)),
@@ -171,6 +184,12 @@
   color: var(--night-ink);
 }
 
+@media (min-width: 40rem) {
+  :root {
+    --dock-overlap: 5.5rem;
+  }
+}
+
 /* Reduced motion: every duration becomes the 150ms fade, loops stop. */
 @media (prefers-reduced-motion: reduce) {
   :root {
@@ -217,6 +236,7 @@
   --radius-tile: var(--r-tile);
   --radius-input: var(--r-input);
   --radius-pill: var(--r-pill);
+  --radius-nav: var(--r-nav);
 
   --shadow-*: initial;
   --shadow-float: var(--float);

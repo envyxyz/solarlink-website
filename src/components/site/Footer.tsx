@@ -1,6 +1,5 @@
 import Link from "next/link";
 import { business, footer, outlets } from "@/content";
-import { Stage } from "@/components/ui/Stage";
 import { show } from "@/lib/facts";
 import { telHref } from "@/lib/links";
 import { fill } from "@/lib/sizing";
@@ -9,9 +8,11 @@ const linkClass = "focus-ring dur-fast rounded-pill transition-colors hover:text
 const numberClass = `${linkClass} tabular underline-offset-4 hover:underline focus-visible:underline`;
 
 /**
- * Night stage as the page's footer landmark: shops (address, phone and hours only once the client confirms them),
- * the link columns from docs/COPY-HOME.md section 12, socials once confirmed, the legal line, and a giant faded
- * wordmark (a pseudo-element, so it is not text for assistive tech) resting just inside the stage's bottom edge.
+ * Full-bleed night band as the page's footer landmark: square corners, flush with the viewport sides and the page
+ * bottom. Its content sits in the page-width column so it lines up with the stages above: shops (address, phone and
+ * hours only once the client confirms them), the link columns from docs/COPY-HOME.md section 12, socials once
+ * confirmed, the legal line, and a giant faded wordmark (a pseudo-element, so it is not text for assistive tech)
+ * sized from that column; its padding keeps the glyph overhang inside the band, so the wordmark is whole.
  */
 export function Footer() {
   const name = show(business.name) as string;
@@ -20,9 +21,9 @@ export function Footer() {
   const ntn = show(business.ntn);
   const legalLine = legalName && ntn ? fill(footer.legalLine, { brand: name, legal: legalName, ntn }) : footer.copyright;
   return (
-    <div className="pb-gutter">
-      <Stage as="footer" variant="night" className="@container pt-10 lg:pt-14">
-        <div className="px-6 lg:px-14">
+    <footer className="night relative isolate overflow-hidden bg-night pt-10 lg:pt-14">
+      <div className="page-width @container">
+        <div>
           <h2 className="mb-6 text-title">{footer.outletsTitle}</h2>
           <div className="grid gap-10 md:grid-cols-3">
             {outlets.map((o) => {
@@ -97,8 +98,8 @@ export function Footer() {
             </ul>
           </div>
         </div>
-        <div aria-hidden data-text={name} className="wordmark pointer-events-none mt-6 select-none whitespace-nowrap text-center text-giant text-night-ink/10" />
-      </Stage>
-    </div>
+        <div aria-hidden data-text={name} className="wordmark pointer-events-none mt-6 pb-6 select-none whitespace-nowrap text-center text-giant text-night-ink/10" />
+      </div>
+    </footer>
   );
 }

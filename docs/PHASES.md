@@ -148,6 +148,30 @@ Open:
 - Phone numbers use tabular figures, which in Mona Sans have a dotted zero and look slightly mechanical.
 - Brand belt is preview only (brands unconfirmed); its pause button is checked in the preview build.
 
+## 16 Nov 2026: polish round (homepage, owner requests)
+
+Planned by Opus, built by four Sonnet agents and one Haiku in separate worktrees, merged in the order D, B, C, A, E, then one integration fix pass.
+
+Done:
+- Hero: the stage starts 12px under the nav on desktop. Roof panels are drawn on one canvas (clean edges, no moire, one sheen across the array, contact shadow); the `panelTop` image job and files are gone.
+- Slider: the thumb glides behind the pointer with a speed cap; a wheel over the slider moves it; keys step as before. Physics in `src/lib/momentum.ts`.
+- Page scroll: our own wheel scroller with 300ms velocity projection, one flick capped at 1.25 viewports. Lenis is removed.
+- Bill figure: digits roll in fixed slots and flash lime while they change (`RollingNumber`).
+- Roof message: the result card grows first, then the message fades in; the reverse on close. Under 64rem the card grows upward so the slider stays put.
+- Nav: narrows into an island with the S emblem after 80px. Under 64rem the menu button morphs into an X and the pill grows into the menu panel; links arrive one by one. Under 40rem the quote button is in the panel, not the header.
+- Favicon: ink S on a lime tile (`src/app/icon.png`, `apple-icon.png`). The S is cut from the wordmark until the owner supplies the emblem.
+- Order: services now follow the link section; reviews follow services as three quote cards (old-site testimonials T06b, T08, T01b, unconfirmed, preview only).
+- Closing call: sunken full-width stage, no image. Footer: full-bleed, square corners. System-type pills span the column on phones.
+- Integration fixes: the slider thumb overlay widened the page on phones at maximum (now a fixed-width thumb moved with `--p` and container units); rolling digit slots clipped glyphs sideways (they now clip the block axis only); both hero cards share `short:bottom-4`.
+- Homepage JS 157.8 KB (limit 182.0 KB). Production build, lint and typecheck pass. No horizontal overflow at 360, 390, 768, 1024, 1280 and 1440 in first load, slider minimum and maximum, scrolled, page bottom and menu open states.
+
+Open:
+- The real S emblem and the testimonial reference image are with the owner.
+- Testimonials need the client's confirmation and consent before they can show in production.
+- Scroll and slider constants are tuned by measurement in headless Chromium, not on real wheels and trackpads.
+- Not re-run after this round: Lighthouse, axe, the Opus QA pass.
+- The hero render is still 1376px wide.
+
 ## 18 Nov 2026: dark theme, images, project cards, inner-page foundation
 
 Done:
@@ -179,3 +203,8 @@ Open:
 - agy image regeneration still waits on the quota; the pages reuse the existing stand-ins.
 
 Added the same day, by parallel subagents (Sonnet): 6 company pages (about, contact, get-quote, FAQs, financing, warranty), terms, privacy and the sitemap page, and the 4 brand pages (Growatt, Fronus, Longi, Canadian Solar), 62 drafts in all. Legal text is a structure with "being finalised" notes, brand pages carry no dealer, stock, price or warranty claim. Checked by script: no banned words, every internal link is a planned route, none confirmed, production build ships only `/`. A photo sweep of the old-site and client folders found no unused real photos, so pages keep the existing ones.
+
+## 18 Nov 2026 (later still): merged the polish round, project photos dropped
+
+- Merged `origin/next-main` (the 16 Nov polish round: hero under the nav, roof panels on one canvas, rolling digits, nav island with the S emblem) into the local work. Conflicts kept the polish round's layout and motion and laid the dark theme over it: `light-dark()` colour tokens plus the polish round's new tokens, `lg:scheme-light` on the moved hero text, the dark logo twin inside the new nav markup, `SHOT_SCHEME` and `SHOT_DSF` both in `scripts/shot.mjs`. Screenshots in `design/shots/` are the polish round's.
+- Ameer did not like the old site's watermarked project photos: removed from the home project cards (back to empty wells), from the inner pages and from `scripts/images.mjs`. Inner pages use the service renders instead; project pages have no image until the client sends real photos.

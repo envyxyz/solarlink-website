@@ -122,7 +122,7 @@ export function LinkDiagram() {
   return (
     <div className="flex flex-col gap-8">
       <div data-reveal="" className="flex flex-col items-start gap-4 md:flex-row md:items-center md:gap-8">
-        <SegmentedControl label={link.switchLabel} options={link.modes} value={mode} onValueChange={(v) => setMode(v as LinkMode)} />
+        <SegmentedControl label={link.switchLabel} options={link.modes} value={mode} onValueChange={(v) => setMode(v as LinkMode)} className="w-full sm:w-max" />
         <p aria-live="polite" className="max-w-lead-wide text-small text-tone-ink-2">
           {text}
         </p>

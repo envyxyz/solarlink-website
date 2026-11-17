@@ -6,3 +6,6 @@ export function tokenMs(name: string): number {
 
 /** Reads an easing token (`--ease-out`) from the page. Client only. */
 export const tokenEase = (name: string): string => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+
+/** Reads a plain-number token (`--scroll-reach`) from the page. Client only. */
+export const tokenNum = (name: string): number => parseFloat(getComputedStyle(document.documentElement).getPropertyValue(name));

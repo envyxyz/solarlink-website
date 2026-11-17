@@ -5,7 +5,6 @@ import { Reveal } from "@/components/providers/Reveal";
 import { SmoothScroll } from "@/components/providers/SmoothScroll";
 import { Footer } from "@/components/site/Footer";
 import { Nav } from "@/components/site/Nav";
-import { show } from "@/lib/facts";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -38,7 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         <Reveal />
         <SmoothScroll />
-        <Nav brand={show(business.name) as string} />
+        <Nav />
         {children}
         <Footer />
       </body>

@@ -50,7 +50,7 @@ export const services = [
     title: "Industrial Solar System in Pakistan | SolarLink",
     description: "Large-scale solar for factories and industrial sites, designed, supplied and installed by SolarLink.",
     h1: "Solar for industry", lead: "Factories and large sites need a plant designed to their load, their roof or land and their connection.",
-    image: pics.industrial,
+    image: pics.business,
     blocks: [
       { type: "prose", heading: "Large systems, planned properly", paragraphs: ["An industrial plant starts with the load profile: what runs, when, and on which connection. From that we plan the array, inverters, protection and metering, then supply and install it.", "Because every site differs, we start with a conversation and a survey rather than a package. Send your recent bills and a description of the site."] },
       { type: "facts", heading: "What we need from you", items: [{ label: "Bills", value: "Recent months of electricity bills" }, { label: "Site", value: "Roof or land available, with photos" }, { label: "Connection", value: "Tariff and sanctioned load" }, { label: "Goal", value: "What you want solar to cover" }] },
@@ -62,7 +62,7 @@ export const services = [
     title: "Solar Tube Well in Pakistan | SolarLink",
     description: "Solar power for farms and tubewells: pumps run directly from the sun, sized to the pump and the field.",
     h1: "Solar for farms and tubewells", lead: "A solar tubewell runs its pump from the sun, so water costs no electricity or diesel while the sun is up.",
-    image: pics.tubewell,
+    image: pics.farms,
     blocks: [
       { type: "prose", heading: "How a solar tubewell works", paragraphs: ["Panels feed a pump inverter that drives the pump directly. The pump runs when the sun is out, and many farms store the water in a tank or channel for use later.", "The size depends on the pump power, the depth of the water and how much water you need. We ask for those details, then size the array and the drive."] },
       { type: "facts", heading: "What we need from you", items: [{ label: "Pump", value: "Horsepower and make, if known" }, { label: "Water depth", value: "Depth to the water in the bore" }, { label: "Water need", value: "Area or volume you irrigate" }, { label: "Location", value: "Village or area, with a photo of the site" }] },

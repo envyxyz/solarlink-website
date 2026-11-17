@@ -227,28 +227,30 @@
   :is([data-reveal="in"]) & { animation: dot-in var(--dur-slow) var(--ease-out) calc(var(--dur-slow) * 3) backwards; }
 }
 
-/* Slider: native range input. --p (0 to 1) places the lime fill under the thumb centre. */
+/* Slider: a transparent native range input (hit area, keyboard, aria) under sunken track, lime fill and thumb overlays.
+   The thumb overlay is one thumb wide and travels the track less one thumb (--p is 0 to 1; cqw is the slider's own width,
+   its wrapper is a size container). It never grows the track's width, so a thumb at maximum cannot widen the page. */
 @utility slider {
   --thumb: calc(var(--spacing) * 8);
   --track: calc(var(--spacing) * 3);
-  --fill: calc(var(--thumb) / 2 + (100% - var(--thumb)) * var(--p, 0));
   appearance: none;
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
-  height: var(--control-lg);
+  height: 100%;
   margin: 0;
   background: transparent;
   cursor: pointer;
-  &:disabled { opacity: 0.5; cursor: default; }
+  &:disabled { cursor: default; }
+  &:focus-visible { outline: none; }
   &::-webkit-slider-runnable-track {
     height: var(--track);
-    border-radius: var(--r-pill);
-    background: linear-gradient(to right, var(--lime) var(--fill), var(--tone-sunken) var(--fill));
+    background: transparent;
   }
   &::-moz-range-track {
     height: var(--track);
-    border-radius: var(--r-pill);
-    background: linear-gradient(to right, var(--lime) var(--fill), var(--tone-sunken) var(--fill));
+    background: transparent;
   }
   &::-webkit-slider-thumb {
     appearance: none;
@@ -256,28 +258,49 @@
     height: var(--thumb);
     margin-top: calc((var(--track) - var(--thumb)) / 2);
     border: 0;
-    border-radius: var(--r-pill);
-    background: var(--surface);
-    box-shadow: var(--float);
-    transition: transform var(--dur-fast) var(--ease-out);
+    background: transparent;
   }
   &::-moz-range-thumb {
     width: var(--thumb);
     height: var(--thumb);
     box-sizing: border-box;
     border: 0;
-    border-radius: var(--r-pill);
-    background: var(--surface);
-    box-shadow: var(--float);
-    transition: transform var(--dur-fast) var(--ease-out);
+    background: transparent;
   }
-  &:hover:not(:disabled)::-webkit-slider-thumb { filter: brightness(0.95); }
-  &:hover:not(:disabled)::-moz-range-thumb { filter: brightness(0.95); }
-  &:active:not(:disabled)::-webkit-slider-thumb { transform: scale(var(--press-scale)); }
-  &:active:not(:disabled)::-moz-range-thumb { transform: scale(var(--press-scale)); }
-  &:focus-visible { outline: none; }
-  &:focus-visible::-webkit-slider-thumb { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
-  &:focus-visible::-moz-range-thumb { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
+}
+@utility slider-track {
+  position: absolute;
+  inset-inline: 0;
+  top: 50%;
+  height: calc(var(--spacing) * 3);
+  translate: 0 -50%;
+  overflow: hidden;
+  pointer-events: none;
+  border-radius: var(--r-pill);
+  background: var(--tone-sunken);
+}
+@utility slider-thumb {
+  position: absolute;
+  inset-block: 0;
+  left: 0;
+  width: calc(var(--spacing) * 8);
+  transform: translateX(calc(var(--p, 0) * (100cqw - var(--spacing) * 8)));
+  pointer-events: none;
+}
+@utility slider-dot {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: calc(var(--spacing) * 8);
+  height: calc(var(--spacing) * 8);
+  margin-top: calc(var(--spacing) * -4);
+  border-radius: var(--r-pill);
+  background: var(--surface);
+  box-shadow: var(--float);
+  transition: transform var(--dur-fast) var(--ease-out);
+  :where(.peer:hover:not(:disabled)) ~ .slider-thumb > & { filter: brightness(0.95); }
+  :where(.peer:active:not(:disabled)) ~ .slider-thumb > & { transform: scale(var(--press-scale)); }
+  :where(.peer:focus-visible) ~ .slider-thumb > & { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
 }
 
 /* Segmented control: the active pill slides with a transform set from --i (index) and --n (count). */
@@ -298,6 +321,50 @@
   &:has(input:focus-visible) { outline: var(--ring-width) solid var(--focus); outline-offset: var(--ring-offset); }
 }
 
+/* Rolling number: a digit slot is one --roll-slot wide, narrower than the digit's advance, so it clips only the block axis (the digit that rolls through it leaves by the top or bottom of the line box) and lets the glyph overhang the slot sideways. The digit is centred on the slot so the overhang is even. The lime copy lies over the ink digit and fades after the roll. */
+@utility roll-slot {
+  display: inline-block;
+  position: relative;
+  width: var(--roll-slot);
+  overflow-x: visible;
+  overflow-y: clip;
+}
+@utility roll-in { display: flex; justify-content: center; position: relative; }
+@utility roll-out { display: flex; justify-content: center; position: absolute; inset: 0; opacity: 0; }
+@utility roll-lime { display: flex; justify-content: center; position: absolute; inset: 0; color: var(--lime); opacity: 0; }
+
+/* Roof cap message: the wrapper's rows run 0fr to 1fr (the one height animation, at the owner's request). Opening grows the rows, then fades the text in; closing fades the text, then shrinks the rows. */
+@utility cap-wrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--dur) var(--ease-out) var(--dur-fast);
+  &[data-open] {
+    grid-template-rows: 1fr;
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+@utility cap-text {
+  opacity: 0;
+  transition: opacity var(--dur-fast) linear;
+  [data-open] & {
+    opacity: 1;
+    transition: opacity var(--dur) var(--ease-out) var(--dur);
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+
+/* Side by side (48 to 64rem) the sizing card is top aligned in the dock, so it would rise with the dock's top edge: it is carried back down by the same amount. */
+@utility dock-hold {
+  @media (min-width: 48rem) and (max-width: 63.999rem) { transform: translateY(var(--dock-lift, 0px)); }
+}
+
+/* Hero dock on phones and tablets: it overlaps the image by --dock-overlap, and rises by --dock-lift (set from script) as the roof cap message opens, so the slider stays put. */
+@utility dock-lift {
+  margin-top: calc(-1 * var(--dock-overlap) - var(--dock-lift, 0px));
+  @media (min-width: 64rem) { --dock-lift: 0px; }
+}
+
 @keyframes marquee {
   to { transform: translateX(-50%); }
 }
@@ -314,6 +381,76 @@
 @utility nav-width {
   width: min(100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
 }
+/* The nav pill becomes an island on scroll: width springs to --nav-island (px, measured by NavShrink), capped at the full width.
+   The one deliberate exception to "only transform and opacity", at the owner's request. Never under reduced motion. */
+@utility nav-island {
+  width: min(var(--nav-island, 100vw), 100% - 2 * var(--gutter), calc(var(--page-max) - 2rem));
+}
+@utility nav-morph {
+  transition: width var(--dur-snappy) var(--spring-snappy);
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+/* Focus ring drawn on a child when its parent .group link has keyboard focus. */
+@utility focus-ring-group {
+  .group:focus-visible > & {
+    outline: var(--ring-width) solid var(--focus);
+    outline-offset: var(--ring-offset);
+  }
+}
+/* Nav menu (under 64rem): the pill grows downward into a panel. The width and the grid-row height are the owner-requested
+   exceptions to "only transform and opacity". Open: panel and lines start together, links arrive one by one after half the spring.
+   Close: NavMenu sets data-closing, links fade at once, then data-open goes and the panel shrinks. */
+@utility menu-icon {
+  position: relative;
+  display: block;
+  width: 1.125rem;
+  height: 1.125rem;
+  & > span {
+    position: absolute;
+    inset-inline: 0;
+    top: calc(50% - var(--ring-width) / 2);
+    height: var(--ring-width);
+    border-radius: var(--r-pill);
+    background: currentColor;
+    transition: transform var(--dur-snappy) var(--spring-snappy), opacity var(--dur-fast) var(--ease-out);
+  }
+  & > span:nth-child(1) { transform: translateY(-0.3125rem); }
+  & > span:nth-child(3) { transform: translateY(0.3125rem); }
+  [data-nav][data-open] & > span:nth-child(1) { transform: rotate(45deg); }
+  [data-nav][data-open] & > span:nth-child(2) { opacity: 0; }
+  [data-nav][data-open] & > span:nth-child(3) { transform: rotate(-45deg); }
+  @media (prefers-reduced-motion: reduce) { & > span { transition: none; } }
+}
+@utility nav-panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows var(--dur-snappy) var(--spring-snappy), visibility var(--dur-snappy) step-end;
+  [data-nav][data-open] & {
+    grid-template-rows: 1fr;
+    visibility: visible;
+    transition: grid-template-rows var(--dur-snappy) var(--spring-snappy), visibility var(--dur-snappy) step-start;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none; }
+}
+/* The panel never outgrows the window: 100svh less the nav's 1.5rem top offset, its 3.75rem row and 1.5rem to spare. */
+@utility nav-panel-max { max-height: calc(100svh - 6.75rem); }
+@utility nav-item {
+  opacity: 0;
+  transform: translateY(0.5rem);
+  transition: opacity var(--dur) var(--ease-out), transform var(--dur) var(--ease-out);
+  [data-nav][data-open] & {
+    opacity: 1;
+    transform: none;
+    transition-delay: calc(var(--dur-snappy) / 2 + var(--i, 0) * var(--stagger));
+  }
+  [data-nav][data-closing] & {
+    opacity: 0;
+    transition: opacity var(--dur-fast) var(--ease-out);
+    transition-delay: 0s;
+  }
+  @media (prefers-reduced-motion: reduce) { transition: none !important; }
+}
 @utility hero-height { height: var(--hero-height); }
 @utility hero-height-short { height: var(--hero-height-short); }
 @utility bg-haze { background: var(--haze); }
@@ -323,10 +460,6 @@
   line-height: var(--t-figure-lh);
   letter-spacing: var(--t-figure-track);
   font-variation-settings: "wdth" var(--t-figure-wdth);
-}
-@utility panel-face {
-  background-color: var(--panel-base);
-  box-shadow: var(--panel-shadow);
 }
 
 /* Short desktop windows (1280 by 720): the hero tightens so both cards fit. */

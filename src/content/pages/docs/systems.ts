@@ -20,7 +20,7 @@ const type = (k: (typeof kinds)[number]): PageDoc =>
     title: `${k[1]} Solar System in Pakistan | SolarLink`,
     description: `${k[1]} solar systems explained, with what they suit and what they need. SolarLink supplies and installs them.`,
     h1: `${k[1]} solar system`, lead: k[3],
-    image: k[0] === "off-grid" ? pics.tubewell : pics.homes,
+    image: k[0] === "off-grid" ? pics.farms : pics.homes,
     blocks: [
       { type: "prose", heading: "How it works", paragraphs: [k[3], k[4]] },
       { type: "facts", heading: "Good to know", items: k[5].map((v, i) => ({ label: ["Suits", "Pairs with", "Keep in mind"][i], value: v })) },
@@ -37,7 +37,7 @@ const size = (kw: number): PageDoc =>
     title: `${kw}kW Solar System Price in Pakistan | SolarLink`,
     description: `${kw} kW solar system for Pakistan: what it is made of and how to ask for a quote. SolarLink supplies and installs.`,
     h1: `${kw} kW solar system`, lead: `A ${kw} kW system is the rated power of its panels added together. How much it suits you depends on your bill, your roof and your hours of use.`,
-    image: kw >= 10 ? pics.industrial : pics.residential,
+    image: kw >= 10 ? pics.business : pics.homes,
     blocks: [
       { type: "facts", heading: "At a glance", items: [
         { label: "Rated size", value: `${kw} kW` },

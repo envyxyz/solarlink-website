@@ -18,9 +18,6 @@ export const pics = {
   panel: img("/images/product-panel-640.webp", "A solar panel", 640, 640),
   inverter: img("/images/product-inverter-640.webp", "A solar inverter", 640, 640),
   battery: img("/images/product-battery-640.webp", "A solar battery", 640, 640),
-  tubewell: img("/images/project-tubewell-640.webp", "Solar panels on a pole above a tubewell pipe", 640, 400),
-  industrial: img("/images/project-industrial-640.webp", "Solar inverter and control panel on a wall", 640, 400),
-  residential: img("/images/project-residential-640.webp", "Solar inverter and meter box beside a roof", 640, 400),
   hero: img("/images/hero-1376.webp", "A solar home at the end of the day", 1376, 774),
 };
 

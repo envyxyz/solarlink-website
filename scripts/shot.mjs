@@ -40,7 +40,7 @@ const browser = await chromium.launch(process.env.SHOT_CHROME ? { executablePath
 const errors = [];
 
 async function open(view) {
-  const page = await browser.newPage({ colorScheme: process.env.SHOT_SCHEME ?? "light", viewport: { width: view.width, height: view.height }, deviceScaleFactor: 1, isMobile: view.mobile, hasTouch: view.mobile });
+  const page = await browser.newPage({ colorScheme: process.env.SHOT_SCHEME ?? "light", viewport: { width: view.width, height: view.height }, deviceScaleFactor: Number(process.env.SHOT_DSF ?? 1), isMobile: view.mobile, hasTouch: view.mobile });
   page.on("console", (m) => m.type() === "error" && !m.text().includes("status of 404") && errors.push(`${view.name} console: ${m.text()}`));
   page.on("pageerror", (e) => errors.push(`${view.name} pageerror: ${e.message}`));
   // Nav and footer link to pages later phases build; Next prefetches them, so those 404s are expected for now.
@@ -75,11 +75,16 @@ for (const view of VIEWS) {
       await page.waitForTimeout(3500);
       await shot(page, `${view.name}-slider-max`, false);
     }
+    await page.evaluate(() => window.scrollTo(0, 1200));
+    await page.waitForTimeout(800);
+    await shot(page, `${view.name}-scrolled`, false);
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await page.waitForTimeout(500);
     if (view.mobile) {
       await page.reload({ waitUntil: "networkidle" });
       await page.waitForTimeout(800);
       await page.locator("header nav button").first().click();
-      await page.waitForTimeout(600);
+      await page.waitForTimeout(1200);
       await shot(page, `${view.name}-menu`, false);
     }
   }

@@ -3,8 +3,8 @@
 
 type Pt = readonly [number, number];
 
-/** Solve the 3x3 homography taking src[i] to dst[i] (4 points each); returns `matrix3d(...)`. */
-export function homography(src: readonly Pt[], dst: readonly Pt[]): string {
+/** Solve the 3x3 homography taking src[i] to dst[i] (4 points each); returns its eight coefficients (the ninth is 1). */
+function solve(src: readonly Pt[], dst: readonly Pt[]): number[] {
   const A: number[][] = [];
   const b: number[] = [];
   for (let i = 0; i < 4; i++) {
@@ -33,6 +33,20 @@ export function homography(src: readonly Pt[], dst: readonly Pt[]): string {
     for (let c = i + 1; c < 8; c++) s -= A[i][c] * h[c];
     h[i] = s / A[i][i];
   }
-  const [a, bb, c, d, e, f, g, hh] = h;
+  return h;
+}
+
+/** The same solve as a function: maps a grid point to its screen point. Used to draw the roof panels on a canvas. */
+export function projector(src: readonly Pt[], dst: readonly Pt[]): (x: number, y: number) => Pt {
+  const [a, b, c, d, e, f, g, h] = solve(src, dst);
+  return (x, y) => {
+    const w = g * x + h * y + 1;
+    return [(a * x + b * y + c) / w, (d * x + e * y + f) / w];
+  };
+}
+
+/** The same solve as a CSS `matrix3d(...)` string. */
+export function homography(src: readonly Pt[], dst: readonly Pt[]): string {
+  const [a, bb, c, d, e, f, g, hh] = solve(src, dst);
   return `matrix3d(${a},${d},0,${g}, ${bb},${e},0,${hh}, 0,0,1,0, ${c},${f},0,1)`;
 }

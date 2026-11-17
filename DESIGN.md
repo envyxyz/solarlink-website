@@ -25,7 +25,7 @@ Signature:  the live sizing hero. Drag the monthly bill, panels pop onto the roo
 |---|---|---|
 | faers.tech | Wide display type over calm CGI renders; the configurator (live summary chips, big selectable tiles); product cards; line diagrams that explain the product | Coloured count badges in the header; scroll-driven video; heavy page weight |
 | ubernatural.io | Motion vocabulary: spring pills, card lift with image zoom, staggered rise on entry, magnetic primary button, marquee | Custom cursor, WebGL, scroll-scrubbed text |
-| getfluently.app | Smooth scroll (Lenis), spring pop on small cards | Pinned horizontal scroll: nothing may force the visitor to scroll through an animation |
+| getfluently.app | Smooth scroll, spring pop on small cards | Pinned horizontal scroll: nothing may force the visitor to scroll through an animation |
 | inspo-1 (finance) | Rounded image stages with glass stat cards; closing call-to-action on an image; giant faded wordmark in the footer | Serif italics, green tag pills |
 | nexarch (architecture) | Section rhythm: heading block on the left, row of image cards on the right; services grid; testimonials row | Circular stamp, eyebrow labels above every heading |
 | business-alliance | About text with four large numbers; logo strip; numbered process list beside one tall image | |
@@ -139,9 +139,9 @@ Grammar:
 - **Number change**: digits roll or crossfade in 200ms; tabular figures so nothing shifts.
 - **Marquee**: CSS transform loop, edges faded with a mask, pauses on hover and on focus within, and has a 44px pause and play button (WCAG 2.2.2).
 - **Link line**: an SVG path draws once on entry (stroke-dashoffset), then one small dot travels along it on a slow loop.
-- **Smooth scroll**: Lenis, only with a fine pointer and without reduced motion. No pinned sections, no scroll-scrubbed stories, no horizontal scroll hijack.
-- Only `transform` and `opacity` animate, with two exceptions: the link line (stroke-dashoffset) and colour, which may transition on hover and focus for links and buttons (`--dur-fast`). No `transition: all`. `prefers-reduced-motion`: springs become 150ms fades, loops stop, Lenis off.
-- Libraries: none for animation. Springs are sampled once in `src/lib/spring.ts` into CSS `linear()` easings (the `--spring-*` variables) and the Web Animations API (panel, chip and figure pops); entry (rise 24px, fade, once at 20% visible, 80ms stagger) is a data attribute toggled by one IntersectionObserver with the transition in CSS; press, hover, zoom and the marquee are CSS. Lenis (dynamic import when idle) is the only motion dependency. No Motion, framer-motion, Radix or GSAP; a named effect that CSS and WAAPI cannot do needs a line here first.
+- **Smooth scroll**: our own wheel scroller (`SmoothScroll`, physics in `src/lib/momentum.ts`), only with a fine pointer and without reduced motion, attached when the page is idle. Wheel speed is projected `--project` (300ms) ahead; one flick lands at most `--scroll-reach` (1.25 viewports) past where the raw wheel deltas would. It leaves the event to the browser for ctrl (zoom), horizontal deltas, an open modal and any inner scroller, and stops on any scroll it did not write (keys, anchors, focus, scrollbar). Touch scrolls natively. No pinned sections, no scroll-scrubbed stories, no horizontal scroll hijack.
+- Only `transform` and `opacity` animate, with two exceptions: the link line (stroke-dashoffset) and colour, which may transition on hover and focus for links and buttons (`--dur-fast`). No `transition: all`. `prefers-reduced-motion`: springs become 150ms fades, loops stop, smooth scroll off. More exceptions, all at the owner's request, are listed under "Added in the polish round".
+- Libraries: none for animation. Springs are sampled once in `src/lib/spring.ts` into CSS `linear()` easings (the `--spring-*` variables) and the Web Animations API (panel, chip and figure pops); entry (rise 24px, fade, once at 20% visible, 80ms stagger) is a data attribute toggled by one IntersectionObserver with the transition in CSS; press, hover, zoom and the marquee are CSS. There is no motion dependency. No Lenis, Motion, framer-motion, Radix or GSAP; a named effect that CSS and WAAPI cannot do needs a line here first.
 
 ## Components (build once, reuse everywhere)
 
@@ -157,13 +157,14 @@ Grammar:
 | `StatBlock` | `figure` number + one-line label; source is required in content |
 | `SectionHeading` | h2 left, lead or text link right |
 | `Marquee` | generic belt with faded edges and a pause and play button; logo variant at full opacity in `--ink-2` (4.5:1 or better), hovered logo in `--ink` at scale 1.1 with spring.bubbly, belt stops while hovered |
-| `Slider` | 52px touch height, pill track, lime fill, floating thumb; keyboard and screen-reader labelled |
+| `Slider` | 52px touch height. A transparent native range input (hit area, keys, aria) under a sunken pill track, lime fill and floating thumb. The input is the target; a follower glides the thumb at no more than the full range per `--slider-sweep`. A wheel over it (or with focus) moves it and not the page; at a limit, or within 200ms of a page scroll, the page gets the wheel. Arrows one step, Page keys ten, Home and End the limits |
+| `RollingNumber` | a figure whose digits sit in `--roll-slot` slots, keyed from the right. A changed digit rolls (spring.snappy, transform and opacity): up when the value rises, down when it falls. It flashes lime while it rolls and settles to ink. Instant under reduced motion or when the text's shape changes. `aria-hidden`; the control beside it carries the value |
 | `SegmentedControl` | pill on a `--tone-track` track (visible on ground, surface, sunken, glass and night) with a sliding active element; segments 44px high, inactive text in `--tone-ink` (4.5:1 or better); an option may carry a short label for phones |
 | `Field`, `Select`, `Textarea` | `--sunken` wells, `--r-input`, visible label above, error text below |
 | `Accordion` | FAQ; plus rotates to a cross, height animates with spring.soft |
 | `LinkDiagram` | SVG line diagram of sun, panel, inverter, home, battery, grid |
-| `Nav` | floating glass pill: logo, 5 links, primary button; shrinks slightly after 80px scroll; sheet menu on phones. No badges |
-| `Footer` | night stage: outlets from content, link columns, giant faded SolarLink wordmark |
+| `Nav` | floating glass pill (radius `--r-nav`): wordmark, five links, quote button. After 80px of scroll it springs narrower into an island and the wordmark becomes the S emblem. Under 64rem the three-line button (`NavMenu`) turns into an X and the pill itself grows downward into a panel with the links, which arrive one by one; closing fades the links, then the panel shrinks back. A disclosure, not a modal. Under 40rem the quote button lives in the panel, top right, not in the header. No badges |
+| `Footer` | full-bleed night band, square corners, flush with the page bottom; its content sits on the page width: outlets from content, link columns, giant faded SolarLink wordmark |
 | `WhatsAppButton` | routes to the nearest outlet's number from content; carries a prefilled message |
 | `Price` | one formatter: `Rs 45,000`, no decimals; `priceMode` switch `show`, `ask`, `hidden` in content |
 
@@ -224,5 +225,44 @@ No existing value changed. New tokens in `src/styles/tokens.css`:
 
 Rules added: inside a glass card text is `--ink`, not `--ink-2` (the glass lets the image through, so `--ink-2` fails 4.5:1). One lime primary per screen: the nav's quote button is the `dark` variant. A link smaller than 44px keeps its look and gets a 44px hit area (`hit-area` utility). A card with one text link uses a stretched link (`stretched` and `card-focus` utilities): one tab stop, the focus ring on the card. Script reads durations and easings from these tokens (`src/lib/tokens.ts`); no raw numbers in components.
 
+## Added in the polish round (16 Nov 2026)
+
+Owner requests. Where they break an earlier rule, the exception is named here and applies only to the thing named.
+
+Layout:
+- The hero stage starts 12px under the floating nav (96px from the top) on desktop; the nav no longer overlaps it. `--hero-height` is `min(calc(100svh - 7.5rem), 53.75rem)`, `--hero-height-short` is `calc(100svh - 6.75rem)`.
+- Homepage order: hero, brand belt, about, the link, services, reviews, shop, projects, outlets, questions, closing call.
+- Reviews are quote cards: a row of three, the middle one on ink with a lime mark. Old-site testimonials are unconfirmed content (preview builds only). No rating, count or schema.
+- The closing call is a sunken stage with no image: heading and line left, buttons right.
+- The footer is the one full-bleed element on the page.
+- A segmented control may span its column on phones (`w-full sm:w-max`).
+
+Motion exceptions to "only transform and opacity":
+- The nav's width transitions when it becomes an island and when the menu opens (`--dur-snappy`, `--spring-snappy`).
+- The nav menu panel and the hero's roof message animate their height (grid rows `0fr` to `1fr`). Text fades in after the height has grown and fades out before it shrinks.
+- Under 64rem the hero dock's top margin follows the roof message's height through `--dock-lift` (set from a ResizeObserver, never transitioned), so the card grows upward over the image and the slider stays under the finger.
+- The roof panels are redrawn on one canvas (`RoofPanels`); they keep the same scale and fade grammar. Cell lines are drawn only when they are 3 device pixels or more apart.
+- None of these run under reduced motion.
+
+Other exceptions:
+- Lime text on a light ground: a rolling digit only, and only while it rolls.
+- Icons: the menu button is three line elements that morph into an X, not the lucide icons.
+- The S emblem (`public/images/brand/emblem.*`) and the favicon (ink S on a lime tile, `src/app/icon.png`, `apple-icon.png`) are cut from the wordmark until the owner supplies the real emblem.
+
+New tokens in `src/styles/tokens.css`:
+
+| Token | Value | Why |
+|---|---|---|
+| `--project` | `300ms` | how far ahead wheel speed is projected (page scroll and the slider) |
+| `--slider-sweep` | `600ms` | fastest full-range travel of the slider thumb |
+| `--scroll-reach` | `1.25` | furthest one flick may carry the page past its raw landing, in viewport heights |
+| `--roll-slot` | `0.88ch` | width of one digit slot in a rolling number |
+| `--dock-overlap` | `7rem`, `5.5rem` from 40rem | how far the hero dock overlaps the image under 64rem |
+| `--r-nav` | `1.875rem` | half the nav row: a pill at rest, the same corners on the open panel |
+| `--panel-frame`, `--panel-cell`, `--panel-edge`, `--panel-line` | see file | roof panel frame, cells, front edge, cell lines (canvas) |
+| `--panel-sheen`, `--panel-sheen-fade` | see file | one sweep of light across the whole array |
+| `--panel-contact`, `--panel-contact-blur`, `--panel-contact-x`, `--panel-contact-y` | see file | contact shadow under the array |
+
+Removed: `--panel-base`, `--panel-shadow`, the `panel-face` utility, the Lenis dependency, `MenuSheet`.
 
 Added 18 Nov 2026: `--on-lime`, `--on-ink`, the dark values above, utility `scheme-light`. Inner pages: h1 uses the h2 size; page blocks use `text-h3` headings.

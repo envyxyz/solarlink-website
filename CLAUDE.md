@@ -22,7 +22,7 @@ Brand assets: `../growth/Brand/`. Raw audit data: `../.agency/raw/`. Copy into `
 
 ## Stack
 
-Next.js App Router, **static export** (`output: 'export'`, `trailingSlash: true`, `images.unoptimized`, pre-sized AVIF and WebP) · React · TypeScript strict · Tailwind CSS v4 · own primitives on native elements (range, radio, dialog, details), styled to our tokens · Web Animations API springs and CSS · Lenis (idle, fine pointer only) · lucide-react · Zod (Worker) · Playwright + axe · Lighthouse CI · **pnpm** · Cloudflare Workers (static assets plus one small Worker for `/api/*`).
+Next.js App Router, **static export** (`output: 'export'`, `trailingSlash: true`, `images.unoptimized`, pre-sized AVIF and WebP) · React · TypeScript strict · Tailwind CSS v4 · own primitives on native elements (range, radio, dialog, details), styled to our tokens · Web Animations API springs and CSS · own wheel scroller (idle, fine pointer only) · lucide-react · Zod (Worker) · Playwright + axe · Lighthouse CI · **pnpm** · Cloudflare Workers (static assets plus one small Worker for `/api/*`).
 
 Check current docs with context7 before using a library API. Add no dependency for what a few lines or the platform does.
 
@@ -33,7 +33,7 @@ Check current docs with context7 before using a library API. Add no dependency f
 3. **Reuse first.** Check `src/components` and `src/components/ui` before writing a component. A new component needs a line in `DESIGN.md` first.
 4. **One accent per view.** Lime is a fill with ink text on it. Lime text only on night. No kickers, no gradient text, no glass on glass, no cards inside cards, no decorative section numbers.
 5. **Icons:** lucide-react, stroke 1.75, 20 or 24px, `currentColor`, never in tinted squares. WhatsApp uses its official glyph. No emoji as icons.
-6. **Motion:** only `transform` and `opacity`. Springs and grammar as in `DESIGN.md`. The h1 and the hero image never animate in. Nothing is scroll-gated or pinned. Lenis only with a fine pointer and no reduced-motion. Honour `prefers-reduced-motion` and `prefers-reduced-transparency`.
+6. **Motion:** only `transform` and `opacity`. Springs and grammar as in `DESIGN.md`. The h1 and the hero image never animate in. Nothing is scroll-gated or pinned. Smooth scroll (our own wheel scroller) only with a fine pointer and no reduced-motion. The owner-approved exceptions are listed in `DESIGN.md` under "Added in the polish round"; add no others. Honour `prefers-reduced-motion` and `prefers-reduced-transparency`.
 7. **Phone formats.** Display as the content file holds it (for example `0321-8425777`, `042-37117713`). Dial with `tel:+92...` (drop the leading 0, no dashes). WhatsApp is `https://wa.me/92...` with `?text=` from the content template. Generate every link from the content number; never type one by hand.
 8. **Numbers and units.** `Rs 45,000` with no decimals and a non-breaking space; `10 kW`; `580 W`. Tabular figures for any number that changes.
 9. **No invented claims.** Banned unless the client confirmed it in writing and it is in content with a source:
