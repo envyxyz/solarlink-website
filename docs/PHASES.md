@@ -147,3 +147,19 @@ Open:
 - The footer has no UPS and backup link: there is no page for it in `src/routes.ts`. Accessories stands in.
 - Phone numbers use tabular figures, which in Mona Sans have a dotted zero and look slightly mechanical.
 - Brand belt is preview only (brands unconfirmed); its pause button is checked in the preview build.
+
+## 18 Nov 2026: dark theme, images, project cards, inner-page foundation
+
+Done:
+- **Which repo.** The active site is this Next.js repo on `next-main` (the Astro repo `solarlink-website` `main` is Phase 0 only and was left alone; `solarlink-2.0` untouched). Picked up after the QA fix round (5f86a9e).
+- **Dark theme that follows the device.** All colour tokens are `light-dark()` under `color-scheme: light dark`: no toggle, no script, no flash. `next.config.ts` excludes `light-dark` from the CSS lowering so a subtree can pin light (`scheme-light`, used on the daytime hero text). Night panels lift one step on a dark page; lime buttons keep ink text (`--on-lime`); nav uses a dark logo twin. Contrast of every dark pair 5.3:1 or better (DESIGN.md). `scripts/shot.mjs` takes `SHOT_SCHEME=dark`.
+- **Images.** Service cards now have images: the old site's CGI renders (design/img/src), because agy's image quota is exhausted (about 20 h from 18 Nov). Project cards use the client's own photos from the old site (640 px, watermarked).
+- **Project cards.** Image-led: one large featured tile (two rows tall from 64rem) and two stacked beside it; one glass caption with place, city and system size as the figure. Before: `design/shots/before/`; after: `design/shots/projects-*`.
+- **Inner pages.** `src/content/pages` (PageDoc model, one file per doc in `docs/` folder), `InnerPage` template (breadcrumbs with JSON-LD, h1, blocks: prose, facts, steps, gallery, FAQ, related, quote card, closing call), catch-all route `src/app/[...slug]/page.docs.tsx` that exists only once a doc exists and only builds confirmed docs, sitemap reads the same docs, dev previews at `/dev/pages/<kind>/` (not in production). No page is published.
+- Checks: lint, typecheck, `check:content` (pre and post), `check:js` 154.1 KB of 182.0 KB, production build. `pnpm` is broken on this machine, so scripts ran through `node` directly.
+
+Open:
+- agy image quota: regenerate `service-business` (the stand-in is a sunset with power lines, not a factory), `closing-dusk.jpg`, the UPS render and the four service images with `design/img/_agy/run.sh` (prompts in `design/img/p-*.txt`).
+- Project photos need the client's originals (640 px and watermarked is soft at the large tile). Which photo belongs to which project is a guess.
+- Hub pages (services, products, projects, outlets, resources, blog) have no template yet; they need each hub's content.
+- Hub/legacy pages still need client answers listed in `src/routes.ts` before any doc is confirmed.

@@ -130,3 +130,37 @@ export const sampleReviews = [
 export const sampleGoogleUrl = "https://www.google.com/";
 
 export default kit;
+
+// One sample PageDoc per template kind, for /dev/pages/<kind>/. Placeholder wording only: it states no business fact.
+import type { PageDoc, PageKind } from "@/content/pages";
+
+const sampleBlocks: PageDoc["blocks"] = [
+  { type: "prose", heading: "What this page covers", paragraphs: ["Sample paragraph one. It shows the measure and the rhythm of running text.", "Sample paragraph two. A real page has its own words here."] },
+  { type: "facts", heading: "Key details", items: [{ label: "Sample label", value: "Sample value" }, { label: "Another label", value: "Another value" }] },
+  { type: "steps", heading: "How it goes", items: [{ title: "Sample step one", text: "Sample text." }, { title: "Sample step two", text: "Sample text." }] },
+  { type: "faq", heading: "Questions", items: [{ id: "q1", question: "A sample question?", answer: "A sample answer." }] },
+];
+
+const sample = (kind: PageKind, path: string): PageDoc => ({
+  path,
+  kind,
+  title: `Sample ${kind} page | SolarLink`,
+  description: "Template preview. Not a real page.",
+  h1: `Sample ${kind} page`,
+  lead: "One supporting sentence under the heading, the same measure on every page type.",
+  lastmod: "2026-11-18",
+  blocks: sampleBlocks,
+  related: [{ label: "A related page", href: "/" }],
+  confirmed: false,
+  source: "Dev kit sample",
+});
+
+export const kitPages: Record<PageKind, PageDoc> = {
+  service: sample("service", "/services/sample/"),
+  system: sample("system", "/solar-systems/sample/"),
+  product: sample("product", "/products/sample/"),
+  outlet: sample("outlet", "/outlets/sample/"),
+  project: sample("project", "/projects/sample/"),
+  guide: sample("guide", "/sample-guide/"),
+  article: sample("article", "/blog/sample/"),
+};

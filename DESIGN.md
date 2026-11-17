@@ -34,7 +34,7 @@ Signature:  the live sizing hero. Drag the monthly bill, panels pop onto the roo
 
 ## Colour
 
-Light is the base. Dark tokens are for dark sections, not a site-wide dark mode.
+Light is the base and dark sections stay. Since 18 Nov 2026 the whole page also follows the device theme (`prefers-color-scheme`, no toggle, no script): every colour token is `light-dark(light, dark)` under `color-scheme: light dark`. Dark values: ground `#0b0f0a`, surface `#171d15`, sunken `#11160f`, ink `#f2f4ee`, ink-2 `#a6ad9f` (8.4:1), ink-3 `#8a9285` (6.0:1 on ground, 5.3:1 on surface), lime-wash `#22340f`, error `#ff6b57`; night panels step up (`--night` `#171d15`, `--night-surface` `#212920`, `--night-raised` `#2b3428`) so they still read as panels. Added tokens: `--on-lime` (text on lime, same in both themes) and `--on-ink` (text on an ink fill). The daytime hero keeps dark text in both themes with the `scheme-light` utility. The nav swaps to `logo-dark` in dark. Lime text stays night-only.
 
 | Token | Hex | OKLCH | Use |
 |---|---|---|---|
@@ -223,3 +223,6 @@ No existing value changed. New tokens in `src/styles/tokens.css`:
 | `--hero-height-short` | `calc(100svh - 1.5rem)` | desktop windows 50rem high or less: the hero stage fills the window (12px above and below), so the h1 and the lead clear the nav and the sizing card by 24px or more |
 
 Rules added: inside a glass card text is `--ink`, not `--ink-2` (the glass lets the image through, so `--ink-2` fails 4.5:1). One lime primary per screen: the nav's quote button is the `dark` variant. A link smaller than 44px keeps its look and gets a 44px hit area (`hit-area` utility). A card with one text link uses a stretched link (`stretched` and `card-focus` utilities): one tab stop, the focus ring on the card. Script reads durations and easings from these tokens (`src/lib/tokens.ts`); no raw numbers in components.
+
+
+Added 18 Nov 2026: `--on-lime`, `--on-ink`, the dark values above, utility `scheme-light`. Inner pages: h1 uses the h2 size; page blocks use `text-h3` headings.

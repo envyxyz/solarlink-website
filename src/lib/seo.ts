@@ -12,8 +12,10 @@ export function canonical(path: string): string {
 }
 
 /** Metadata for a route, built only from content.seo. */
-export function buildMetadata(key: string, overrides: Partial<SeoEntry> = {}): Metadata {
-  const e = { ...seo[key], ...overrides };
+export const buildMetadata = (key: string, overrides: Partial<SeoEntry> = {}): Metadata => metadataFor({ ...seo[key], ...overrides });
+
+/** Metadata for any entry: a content.seo route or a page doc. */
+export function metadataFor(e: SeoEntry): Metadata {
   const url = canonical(e.path);
   const name = show(business.name) as string;
   const image = { url: absoluteUrl(ogImage.path), width: ogImage.width, height: ogImage.height, alt: ogImage.alt };
