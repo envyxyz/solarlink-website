@@ -7,6 +7,7 @@ import { FeatureBlock } from "@/components/pages/blocks/FeatureBlock";
 import { ProjectsBlock } from "@/components/pages/blocks/ProjectsBlock";
 import { ShopBlock } from "@/components/pages/blocks/ShopBlock";
 import { SizingBlock } from "@/components/pages/blocks/SizingBlock";
+import { ToolBlock } from "@/components/pages/blocks/ToolBlock";
 import { Accordion } from "@/components/ui/Accordion";
 import { Card, CardBody } from "@/components/ui/Card";
 import { Stage } from "@/components/ui/Stage";
@@ -124,6 +125,8 @@ function Body({ block, featured }: { block: PageBlock; featured?: boolean }) {
       return <DiagramBlock block={block} />;
     case "sizing":
       return <SizingBlock block={block} />;
+    case "tool":
+      return <ToolBlock block={block} />;
     default:
       return null;
   }
@@ -179,7 +182,7 @@ export function Block({ block, ground, wide, featured }: { block: PageBlock; gro
   );
   return (
     // The sizing card carries its own lime action: the dock steps aside while it is on screen (one lime per view).
-    <section id={heading ? slug(heading) : undefined} data-dock-hide={block.type === "sizing" ? "" : undefined} className={cn("scroll-mt-26", wide && "page-width")}>
+    <section id={heading ? slug(heading) : undefined} data-dock-hide={block.type === "sizing" || block.type === "tool" ? "" : undefined} className={cn("scroll-mt-26", wide && "page-width")}>
       {ground === "plain" ? inner : (
         <Stage variant={ground} as="div" nested className={wide ? "p-6 sm:p-10 lg:p-14" : "p-6 sm:p-8"}>
           {inner}

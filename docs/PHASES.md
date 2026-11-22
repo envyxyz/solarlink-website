@@ -246,3 +246,22 @@ Open:
 - Project pages and the "More projects" cards have empty image wells until the client sends real photos; business and industry share the power-line stand-in render; the 10 kW and larger size pages use it as their hero.
 - The diagram, sizing card and dock are client JS on every inner page (shared chunks, no extra weight measured), and were checked by screenshot only, not on real devices.
 - `ui.page.askHeading` is unused now (the sidebar card is gone).
+
+## 23 Nov 2026: tools (load, battery backup, solar calculator; tariff scaffold)
+
+Built unattended on a worktree branch from `next-main`. Six draft docs (`confirmed: false`) in `src/content/pages/docs/tools.ts`: `/tools/` hub, `/solar-calculator/`, `/tools/load-calculator/`, `/tools/battery-backup-calculator/`, `/tools/bill-breakdown/`, `/tools/net-billing-calculator/`.
+
+Done:
+- **New block type `tool`** (`types.ts`, `Block.tsx`, `blocks/ToolBlock.tsx`) and new page kind `tool`. Each island is a lazy chunk (`next/dynamic`) in `src/components/tools/`: `LoadTool`, `BatteryTool`, `SolarTool` inside one `ToolShell`. Server HTML carries the inputs, starting result, maths, assumptions and FAQ, so a page reads without JS.
+- **Maths** in `src/lib/tools/*.ts` (load, battery, state clean-up, WhatsApp handoff); the solar tool calls `size()` from `src/lib/sizing.ts` with the home constants. `scripts/tools-check.mjs` asserts every formula, the saved-state clean-up, the handoff link and the tariff gate; it runs after `sizing-check` in `build` (`pnpm check:tools`).
+- **Shared state**: one `localStorage` key (`solarlink.tools.v1`) holds bill, city, appliances and battery assumptions; the battery tool can take the load tool's night load, the solar tool its daily total as units a month.
+- **Copy** only in `src/content/tools.ts` (appliance watts labelled "typical, check the label", every WhatsApp text a template) and the doc file. Result sentence in a debounced `aria-live` region; assumptions and the data date (23 Nov 2026) shown on every tool.
+- **Tariff scaffold** `src/data/tariffs.ts`: DISCO slabs, fixed charge, GST, effective date and export rate, all `{ value: null, confirmed: false, source: "[confirm with client]" }`, `billReady()` and `netBillingReady()` gates. Bill and net billing pages show "Awaiting verified tariff data" and no number. TODO comments mark where verified figures and the two calculators plug in. Server only: the island never receives these strings.
+- `DESIGN.md` has a line per new component.
+
+Open:
+- Bill breakdown and net billing calculators are not built: they need verified data (research in `docs/research/agy-2026-11-23/` is leads only).
+- Which DISCO serves each SolarLink city is unconfirmed; the DISCO list is a guess to be settled with the research.
+- The keyword map title for `/solar-calculator/` says "Savings"; the page title drops it because the tool shows no savings.
+- Appliance watts and the starting battery assumptions (48 V, 80% usable, 90% efficiency) are typical values, not client facts.
+- No motor start-up surge in peak load; the page tells the visitor to ask.

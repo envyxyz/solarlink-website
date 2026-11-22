@@ -18,7 +18,7 @@ function groundsFor(blocks: PageBlock[], reading: boolean): { blocks: PageBlock[
   const out = blocks.map((b): [PageBlock, Ground] => {
     if (b.type === "steps" || b.type === "shop") return [b, night() ? "night" : "sunken"];
     if (b.type === "feature" && b.tone === "night") return night() ? [b, "night"] : [{ ...b, tone: "sunken" }, "sunken"];
-    if (b.type === "diagram" || b.type === "sizing" || (b.type === "facts" && !reading)) return [b, "sunken"];
+    if (b.type === "diagram" || b.type === "sizing" || b.type === "tool" || (b.type === "facts" && !reading)) return [b, "sunken"];
     return [b, "plain"];
   });
   return { blocks: out.map(([b]) => b), grounds: out.map(([, g]) => g) };

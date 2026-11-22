@@ -151,6 +151,7 @@ const extras: Partial<Record<PageKind, PageDoc["blocks"][number]>> = {
   project: { type: "projects", heading: "More projects" },
   guide: { type: "diagram", heading: "How the power flows", mode: "on-grid" },
   article: { type: "brands", heading: "Brands" },
+  tool: { type: "tool", tool: "load", heading: "Work it out" },
 };
 
 const sample = (kind: PageKind, path: string): PageDoc => ({
@@ -178,4 +179,5 @@ export const kitPages: Record<PageKind, PageDoc> = {
   project: sample("project", "/projects/sample/"),
   guide: sample("guide", "/sample-guide/"),
   article: sample("article", "/blog/sample/"),
+  tool: sample("tool", "/tools/sample/"),
 };

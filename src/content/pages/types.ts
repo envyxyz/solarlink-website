@@ -6,7 +6,7 @@
 import type { RouteKind } from "@/routes";
 import type { LinkMode } from "@/content/home/link";
 
-export type PageKind = Extract<RouteKind, "hub" | "company" | "legal" | "service" | "system" | "product" | "outlet" | "project" | "guide" | "article">;
+export type PageKind = Extract<RouteKind, "hub" | "company" | "legal" | "service" | "system" | "product" | "outlet" | "project" | "guide" | "article" | "tool">;
 
 export type PageImage = { src: string; width: number; height: number; alt: string };
 
@@ -29,7 +29,11 @@ export type PageBlock =
   /** The brand belt (Marquee). Brands are unconfirmed, so production shows none. */
   | { type: "brands"; heading: string }
   /** A statement on its own stage: big text, optional render under a glass caption. */
-  | { type: "feature"; heading: string; text: string; image?: PageImage; tone?: "night" | "sunken" };
+  | { type: "feature"; heading: string; text: string; image?: PageImage; tone?: "night" | "sunken" }
+  /** A calculator island (src/components/tools), lazy-loaded. bill and net-billing show an awaiting state until the tariff data is verified. */
+  | { type: "tool"; tool: ToolId; heading: string; lead?: string };
+
+export type ToolId = "load" | "battery" | "solar" | "bill" | "net-billing";
 
 export type PageDoc = {
   /** Must exist in src/routes.ts, with its trailing slash. */

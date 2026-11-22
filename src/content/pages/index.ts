@@ -14,11 +14,12 @@ import { outletDocs, projectDocs } from "./docs/places";
 import { products } from "./docs/products";
 import { services } from "./docs/services";
 import { systems } from "./docs/systems";
+import { tools } from "./docs/tools";
 import type { PageDoc } from "./types";
 
 const lists = { services, systems, products, outlets: outletDocs, projects: projectDocs, guides, articles };
 
-export const pageDocs: PageDoc[] = [...Object.values(lists).flat(), ...hubs(lists), ...companyDocs, ...legalDocs, ...brandDocs];
+export const pageDocs: PageDoc[] = [...Object.values(lists).flat(), ...hubs(lists), ...companyDocs, ...legalDocs, ...brandDocs, ...tools];
 
 /** A doc whose path is not a planned route is a mistake: fail the build rather than ship an unplanned URL. */
 for (const d of pageDocs) if (!routeByPath.has(d.path)) throw new Error(`${d.path} is not in src/routes.ts`);

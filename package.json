@@ -5,13 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "next dev",
-    "build": "node scripts/sizing-check.mjs && node scripts/check-content.mjs --pre && next build && node scripts/check-content.mjs --post",
+    "build": "node scripts/sizing-check.mjs && node scripts/tools-check.mjs && node scripts/check-content.mjs --pre && next build && node scripts/check-content.mjs --post",
     "start": "next start",
     "lint": "eslint && node scripts/check-css.mjs",
     "typecheck": "tsc --noEmit",
     "check:content": "node scripts/check-content.mjs --pre",
     "check:claims": "node scripts/check-content.mjs --post",
     "check:sizing": "node scripts/sizing-check.mjs",
+    "check:tools": "node scripts/tools-check.mjs",
     "images": "node scripts/images.mjs",
     "check:js": "node scripts/js-size.mjs",
     "shot": "node scripts/shot.mjs"

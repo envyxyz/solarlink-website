@@ -295,3 +295,18 @@ Components (all in `src/components/pages/`, used only by `InnerPage`):
 Shop, projects and brands are samples or unconfirmed, so a production build renders none of them.
 
 `LinkDiagram` now picks its wide or tall layout from its own width (container query `@3xl`, 48rem), not the window, so it reads in a narrow reading column. Utilities: `quote-dock`, `dock-safe`, `step-link` (connector between step cards from 80rem), `scrollbar-none` (a scroll row inside a stage).
+
+## Tools (23 Nov 2026)
+
+No token changed. Components in `src/components/tools/`, used only by the `tool` block of `InnerPage` (`blocks/ToolBlock`). Each tool island is its own lazy chunk (`next/dynamic`), so the home page JS does not grow.
+
+| Component | Notes |
+|---|---|
+| `blocks/ToolBlock` | the `tool` block body on a sunken stage: lead, then the island. `bill` and `net-billing` render the "Awaiting verified tariff data" card (solid surface, one `Button` to the solar calculator) until `src/data/tariffs.ts` is confirmed |
+| `ToolIsland` | client switch that lazy-loads `LoadTool`, `BatteryTool` or `SolarTool`; server-rendered first, so inputs and the starting result are in the HTML |
+| `ToolShell` | the frame all three share: inputs on a solid card (7 columns from 64rem), result card (5 columns, sticky): one big figure, a 2-column grid of the rest, a debounced `role="status"` sentence, assumptions, data date, shop `Select`, the lime WhatsApp `Button` (the quote page when no number is shown) and a quiet reset. Also exports `NumField`, a `Field` number input that keeps what is being typed until blur |
+| `LoadTool` | appliance list as `NumField` quantities (label = appliance, hint = "Typical ..., check the label"); a row with a quantity opens watts, daytime hours and night hours |
+| `BatteryTool` | watts, hours, voltage `Select`, depth of discharge and inverter efficiency as editable assumptions; a quiet button copies the night load from the load calculator |
+| `SolarTool` | `SegmentedControl` Rs or units, the home `Slider`, shared sizing constants from `sizingConfig()`; a quiet button takes the load calculator total as units a month |
+
+Values persist in `localStorage` (`solarlink.tools.v1`, `useToolState`) and are shared between tools. The dock steps aside while a tool is on screen (`data-dock-hide`), so lime stays one per view. Maths in `src/lib/tools/*.ts`, checked by `scripts/tools-check.mjs`.
