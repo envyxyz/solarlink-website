@@ -356,3 +356,13 @@ Open:
 - Raw phone-number links (outlet cards, footer) send no `call_click`: they are server-rendered anchors. Add a Button there if wanted.
 - `place` header exists only where a WhatsApp control sits there today (none yet); dock, card, tool and quote are wired.
 - GA4 property ownership still unconfirmed (PRD question 10), so production sends nothing until confirmed.
+
+## 23 Nov 2026: perf pass (LCP and CLS)
+
+Details and before/after table in `docs/qa/2026-11-23-perf.md`. Inner pages went from perf 87 to 92 to 96 to 99 and LCP 2.7 to 3.3 s to 1.7 to 2.0 s; home from 89 to 90 (LCP 3.30 to 2.05 s, TBT still 360 ms).
+
+- `scripts/post-export.mjs` (after `next build`): loads the React and Next scripts 500 ms after `load` through an inline loader (JS size unchanged; `js-size.mjs` reads it); renames the nested `__next.*` segment files Next 16.4 writes on Windows (the `_rsc` 404s are a Windows-only export bug, not a Cloudflare issue).
+- CLS 0.03 to about 0: the h1 gets its own widened fallback face (`--font-display`, `globals.css`, line in `DESIGN.md`).
+- `tsconfig.json` excludes `tests`.
+
+Open: home TBT and LCP at the budget edge; font subset; confirm the 0.5 s hydration delay with Ameer; re-run on Cloudflare.

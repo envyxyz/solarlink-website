@@ -2,7 +2,19 @@
 @import "../styles/tokens.css";
 
 /* Type styles: size, width axis, weight, line height and tracking set together. */
+/* The display style sets wdth 125, which the stock size-adjusted Arial fallback cannot follow: the h1 gained a line when
+   Mona Sans swapped in (CLS 0.03). This fallback is Arial widened by the measured width ratio (1.138 over the h1 set,
+   times the stock 104.08%), with the stock vertical metrics rescaled to it. Re-measure if the display wdth or weight changes. */
+@font-face {
+  font-family: "Mona Sans Display Fallback";
+  src: local("Arial");
+  size-adjust: 118.43%;
+  ascent-override: 92.02%;
+  descent-override: 27.01%;
+  line-gap-override: 0%;
+}
 @utility text-display {
+  font-family: var(--font-display);
   font-size: var(--t-display-size);
   font-weight: var(--t-display-weight);
   line-height: var(--t-display-lh);
