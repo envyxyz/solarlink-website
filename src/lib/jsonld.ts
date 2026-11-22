@@ -1,4 +1,5 @@
 import { business, logo, outlets, ui, type Outlet } from "@/content";
+import type { PageDoc } from "@/content/pages";
 import { show } from "./facts";
 import { canonical, siteUrl } from "./seo";
 import { absoluteUrl, telHref } from "./links";
@@ -23,6 +24,7 @@ export function organizationLd() {
     name,
     url: `${siteUrl}/`,
     logo: absoluteUrl(logo.path),
+    description: show(business.descriptions.short),
     legalName: show(business.legalName),
     email: show(business.email),
     sameAs: sameAs.length ? sameAs : undefined,
@@ -93,4 +95,39 @@ export function breadcrumbLd(trail: [label: string, path: string][]) {
       item: canonical(path),
     })),
   };
+}
+
+/** The Organization by reference: name and url inline, because the full node only sits on the home page. */
+const orgRef = { "@type": "Organization", "@id": ORG_ID, name, url: `${siteUrl}/` };
+
+/**
+ * Schema for what an inner page is, from its kind: Service, Article, or the outlet's LocalBusiness. Only what the page
+ * shows; no price, rating or review. datePublished is left out on purpose (no doc carries a real publish date);
+ * dateModified is the doc's lastmod. Project, product, hub, company and legal pages get BreadcrumbList only.
+ */
+export function docLd(doc: PageDoc) {
+  const url = canonical(doc.path);
+  const image = doc.image ? absoluteUrl(doc.image.src) : undefined;
+  if (doc.kind === "service") {
+    return strip({ "@context": "https://schema.org", "@type": "Service", "@id": `${url}#service`, name: doc.h1, description: doc.description, url, image, provider: orgRef });
+  }
+  if (doc.kind === "guide" || doc.kind === "article") {
+    return strip({
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: doc.h1,
+      description: doc.description,
+      mainEntityOfPage: url,
+      inLanguage: business.locale,
+      dateModified: doc.lastmod,
+      image: image ? [image] : undefined,
+      author: orgRef,
+      publisher: orgRef,
+    });
+  }
+  if (doc.kind === "outlet") {
+    const outlet = outlets.find((o) => o.path === doc.path);
+    return outlet ? localBusinessLd(outlet) : null;
+  }
+  return null;
 }

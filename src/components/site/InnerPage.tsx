@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/Button";
 import { ClosingCall } from "@/components/home/ClosingCall";
 import { nav, ui } from "@/content";
 import type { PageBlock, PageDoc } from "@/content/pages";
-import { faqLd } from "@/lib/jsonld";
+import { docLd, faqLd } from "@/lib/jsonld";
 import { outletWhatsApp } from "@/lib/links";
 
 const MAX_NIGHT = 2;
@@ -94,7 +94,7 @@ export function InnerPage({ doc }: { doc: PageDoc }) {
       <div data-dock-hide="">
         <ClosingCall />
       </div>
-      {faq && <JsonLd data={faqLd(faq.items)} />}
+      <JsonLd data={[docLd(doc), faq ? faqLd(faq.items) : null]} />
       {doc.kind !== "legal" && <QuoteDock label={ui.page.dock} title={doc.h1} quote={{ label: ui.page.quote, href: nav.quote.href }} whatsapp={wa ? { label: ui.whatsapp.openLabel, href: wa } : null} />}
     </main>
   );

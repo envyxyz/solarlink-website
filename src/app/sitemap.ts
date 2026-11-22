@@ -3,13 +3,17 @@ import { seo } from "@/content";
 import { pageDocs } from "@/content/pages";
 import { shownList } from "@/lib/facts";
 import { canonical } from "@/lib/seo";
+import { routeByPath } from "@/routes";
 
 export const dynamic = "force-static";
 
-/** One entry per indexable route in content.seo. lastmod is the date the content changed, never the build date. */
+/**
+ * One entry per indexable route: content.seo plus every doc a production build shows (confirmed), minus routes marked
+ * `index: false`. lastmod is the date the content changed (the doc's own `lastmod`), never the build date.
+ */
 export default function sitemap(): MetadataRoute.Sitemap {
-  const docs = shownList(pageDocs).map((d) => ({ path: d.path, lastmod: d.lastmod, indexable: true }));
+  const docs = shownList(pageDocs).filter((d) => routeByPath.get(d.path)?.index !== false);
   return [...Object.values(seo), ...docs]
-    .filter((e) => e.indexable)
+    .filter((e) => ("indexable" in e ? e.indexable : true))
     .map((e) => ({ url: canonical(e.path), lastModified: e.lastmod }));
 }

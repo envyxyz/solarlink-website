@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { business, ogImage, seo, type SeoEntry } from "@/content";
 import { absoluteUrl } from "./links";
-import { show } from "./facts";
+import { preview, show } from "./facts";
 
 export const siteUrl = show(business.siteUrl) as string;
 
@@ -14,8 +14,12 @@ export function canonical(path: string): string {
 /** Metadata for a route, built only from content.seo. */
 export const buildMetadata = (key: string, overrides: Partial<SeoEntry> = {}): Metadata => metadataFor({ ...seo[key], ...overrides });
 
-/** Metadata for any entry: a content.seo route or a page doc. */
-export function metadataFor(e: SeoEntry): Metadata {
+/**
+ * Metadata for any entry: a content.seo route or a page doc. `article` marks guides and posts (og:type article with
+ * the modified time). Preview builds (SOLARLINK_PREVIEW and dev) are noindex on every page; production never is,
+ * except the 404.
+ */
+export function metadataFor(e: SeoEntry, { article = false }: { article?: boolean } = {}): Metadata {
   const url = canonical(e.path);
   const name = show(business.name) as string;
   const image = { url: absoluteUrl(ogImage.path), width: ogImage.width, height: ogImage.height, alt: ogImage.alt };
@@ -23,9 +27,9 @@ export function metadataFor(e: SeoEntry): Metadata {
     title: e.title,
     description: e.description,
     alternates: { canonical: url },
-    robots: e.indexable ? undefined : { index: false, follow: false },
+    robots: e.indexable && !preview ? undefined : { index: false, follow: false },
     openGraph: {
-      type: "website",
+      ...(article ? { type: "article" as const, modifiedTime: e.lastmod } : { type: "website" as const }),
       siteName: name,
       title: e.title,
       description: e.description,
