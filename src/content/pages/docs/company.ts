@@ -57,6 +57,7 @@ export const companyDocs: PageDoc[] = [
     lead: "Tell us about your home, business or farm. We use your bill and your roof to suggest a system, then arrange a site survey.",
     image: pics.homes,
     blocks: [
+      { type: "quoteForm", heading: "Ask for a quote", lead: "Fill in the form and your message opens in WhatsApp, ready to send to the nearest outlet. Share a photo of your latest bill there if you have one." },
       { type: "steps", heading: "How a quote starts", items: [
         { title: "Send your details", text: "Your name, phone number, city and whether the property is a home, business or farm." },
         { title: "Share a recent bill", text: "A clear photo of your last electricity bill shows how much power you use." },

@@ -28,6 +28,8 @@ export type PageBlock =
   | { type: "projects"; heading: string; lead?: string }
   /** The brand belt (Marquee). Brands are unconfirmed, so production shows none. */
   | { type: "brands"; heading: string }
+  /** The quote form island (QuoteForm): posts to the Worker, then opens WhatsApp. */
+  | { type: "quoteForm"; heading: string; lead: string }
   /** A statement on its own stage: big text, optional render under a glass caption. */
   | { type: "feature"; heading: string; text: string; image?: PageImage; tone?: "night" | "sunken" };
 

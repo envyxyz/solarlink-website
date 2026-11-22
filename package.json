@@ -14,7 +14,9 @@
     "check:sizing": "node scripts/sizing-check.mjs",
     "images": "node scripts/images.mjs",
     "check:js": "node scripts/js-size.mjs",
-    "shot": "node scripts/shot.mjs"
+    "shot": "node scripts/shot.mjs",
+    "preview": "node worker/node_modules/wrangler/bin/wrangler.js dev --var SHOW_UNCONFIRMED:1",
+    "deploy": "node worker/node_modules/wrangler/bin/wrangler.js deploy"
   },
   "dependencies": {
     "clsx": "^2.1.1",
