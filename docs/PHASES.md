@@ -306,3 +306,14 @@ Playwright e2e and axe, Lighthouse CI, in `tests/` (own package.json, kept out o
 Findings (details in `docs/qa/2026-11-23-tests.md`): Lighthouse mobile performance 78 to 92 and LCP 2.5 to 3.5 s on the local preview build (budget 95 and 2.0 s); `_rsc` prefetch 404s in the Windows export; CLS 0.03 on two inner pages.
 
 Next: re-run Lighthouse on a Linux production-like build and the Cloudflare preview, then tune hero LCP and JS.
+
+## 23 Nov 2026: company pages and the two guides (content)
+
+`company.ts` (about, contact, get-quote, FAQs, solar financing, warranty and support) and `reading.ts` (net metering guide, how solar works) rewritten from placeholder to full copy. Every old FAQ question kept (62 in the one faq block, so the schema covers all). Public facts carry their source and date in the text: NEPRA (Prosumer) Regulations 2026 (S.R.O. 251(I)/2026, 547(I)/2026, 1330(I)/2026), tariff decision of 11 Feb 2026, Global Solar Atlas yields. No SolarLink price, warranty length, time or brand status is stated. All docs stay `confirmed: false`, `lastmod` 2026-11-23.
+
+Open:
+- Net metering figures (export rate Rs 10.00 to 11.30, DISCO fees, 7-year grandfathering) come from AI research (`docs/research/agy-2026-11-23/net-billing.md`); open each S.R.O. at nepra.org.pk and check before launch.
+- `/solar-financing/` title keeps the KEYWORD-MAP phrase "Installments", which `check-content` bans as a claim; settle with the client before confirming the page.
+- `/get-quote/` title carries "Free" (KEYWORD-MAP phrase) while the free survey is unconfirmed.
+- `/about-us/` title cannot carry "Punjab's Trusted Solar Company" (claim word), so meta-check warns.
+- The FAQ question "What is a tier one solar panel?" is spelled out to stay clear of the Tier-1 ban.
