@@ -1,0 +1,987 @@
+{
+  "asOf": "2026-11-23",
+  "discos": {
+    "LESCO": {
+      "slabs": [
+        {
+          "from": 1,
+          "to": 50,
+          "rate": 3.95,
+          "protected": true,
+          "category": "Lifeline (consumption up to 50 units/month)",
+          "fixedCharge": 0,
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 51,
+          "to": 100,
+          "rate": 7.74,
+          "protected": true,
+          "category": "Lifeline (consumption 51-100 units/month)",
+          "fixedCharge": 0,
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 1,
+          "to": 100,
+          "rate": 10.54,
+          "protected": true,
+          "category": "Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months)",
+          "fixedCharge": 200,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 101,
+          "to": 200,
+          "rate": 13.01,
+          "protected": true,
+          "category": "Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months)",
+          "fixedCharge": 300,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 1,
+          "to": 100,
+          "rate": 22.44,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 275,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 101,
+          "to": 200,
+          "rate": 28.91,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 300,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 201,
+          "to": 300,
+          "rate": 33.1,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 350,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 301,
+          "to": 400,
+          "rate": 36.46,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 400,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 401,
+          "to": 500,
+          "rate": 38.95,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 500,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 501,
+          "to": 600,
+          "rate": 40.22,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 601,
+          "to": 700,
+          "rate": 41.85,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 701,
+          "to": null,
+          "rate": 47.2,
+          "protected": false,
+          "category": "Unprotected (Above 700 units, sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": null,
+          "to": null,
+          "rate": 46.85,
+          "protected": false,
+          "category": "Time of Use (ToU) - Peak (sanctioned load >= 5 kW)",
+          "fixedCharge": null,
+          "note": "Fixed charges applicable under Off-Peak component",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": null,
+          "to": null,
+          "rate": 34.53,
+          "protected": false,
+          "category": "Time of Use (ToU) - Off-Peak (sanctioned load >= 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "note": "Applicable on 50% of sanctioned load or actual MDI, whichever is higher",
+          "source": {
+            "document": "S.R.O. 46(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1161(I)/2025; FY24: S.R.O. 1026(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20LESCO.php",
+            "type": "official"
+          }
+        }
+      ],
+      "fixed": [
+        {
+          "category": "Non-ToU Domestic (Sanctioned Load < 5 kW)",
+          "rule": "Fixed charges are applied on a per kW basis of the sanctioned load per month according to consumption slab (ranging from Rs. 200/kW/M for protected 1-100 units up to Rs. 675/kW/M for >500 units)",
+          "slabs": {
+            "1-100 Protected": "Rs. 200/kW/month",
+            "101-200 Protected": "Rs. 300/kW/month",
+            "1-100 Unprotected": "Rs. 275/kW/month",
+            "101-200 Unprotected": "Rs. 300/kW/month",
+            "201-300 Unprotected": "Rs. 350/kW/month",
+            "301-400 Unprotected": "Rs. 400/kW/month",
+            "401-500 Unprotected": "Rs. 500/kW/month",
+            "Above 500 Unprotected": "Rs. 675/kW/month"
+          },
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Lifeline Consumers (Up to 100 units)",
+          "rule": "Exempt from monthly fixed charges (Rs. 0)",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Time-of-Use (ToU) Domestic (Sanctioned Load >= 5 kW)",
+          "rule": "Rs. 675 per kW per month applicable based on 50% of sanctioned load or Maximum Demand Indicator (MDI), whichever is higher",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Minimum Monthly Customer Charges",
+          "rule": "Applicable when no energy is consumed and monthly fixed charges are not applicable: Single-phase Rs. 75/consumer/month; Three-phase Rs. 150/consumer/month",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        }
+      ]
+    },
+    "IESCO": {
+      "slabs": [
+        {
+          "from": 1,
+          "to": 50,
+          "rate": 3.95,
+          "protected": true,
+          "category": "Lifeline (consumption up to 50 units/month)",
+          "fixedCharge": 0,
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 51,
+          "to": 100,
+          "rate": 7.74,
+          "protected": true,
+          "category": "Lifeline (consumption 51-100 units/month)",
+          "fixedCharge": 0,
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 1,
+          "to": 100,
+          "rate": 10.54,
+          "protected": true,
+          "category": "Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months)",
+          "fixedCharge": 200,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 101,
+          "to": 200,
+          "rate": 13.01,
+          "protected": true,
+          "category": "Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months)",
+          "fixedCharge": 300,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 1,
+          "to": 100,
+          "rate": 22.44,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 275,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 101,
+          "to": 200,
+          "rate": 28.91,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 300,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 201,
+          "to": 300,
+          "rate": 33.1,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 350,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 301,
+          "to": 400,
+          "rate": 36.46,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 400,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 401,
+          "to": 500,
+          "rate": 38.95,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 500,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 501,
+          "to": 600,
+          "rate": 40.22,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 601,
+          "to": 700,
+          "rate": 41.85,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 701,
+          "to": null,
+          "rate": 47.2,
+          "protected": false,
+          "category": "Unprotected (Above 700 units, sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": null,
+          "to": null,
+          "rate": 46.85,
+          "protected": false,
+          "category": "Time of Use (ToU) - Peak (sanctioned load >= 5 kW)",
+          "fixedCharge": null,
+          "note": "Fixed charges applicable under Off-Peak component",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": null,
+          "to": null,
+          "rate": 34.53,
+          "protected": false,
+          "category": "Time of Use (ToU) - Off-Peak (sanctioned load >= 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "note": "Applicable on 50% of sanctioned load or actual MDI, whichever is higher",
+          "source": {
+            "document": "S.R.O. 45(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1160(I)/2025; FY24: S.R.O. 1025(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20IESCO.php",
+            "type": "official"
+          }
+        }
+      ],
+      "fixed": [
+        {
+          "category": "Non-ToU Domestic (Sanctioned Load < 5 kW)",
+          "rule": "Fixed charges are applied on a per kW basis of the sanctioned load per month according to consumption slab (ranging from Rs. 200/kW/M for protected 1-100 units up to Rs. 675/kW/M for >500 units)",
+          "slabs": {
+            "1-100 Protected": "Rs. 200/kW/month",
+            "101-200 Protected": "Rs. 300/kW/month",
+            "1-100 Unprotected": "Rs. 275/kW/month",
+            "101-200 Unprotected": "Rs. 300/kW/month",
+            "201-300 Unprotected": "Rs. 350/kW/month",
+            "301-400 Unprotected": "Rs. 400/kW/month",
+            "401-500 Unprotected": "Rs. 500/kW/month",
+            "Above 500 Unprotected": "Rs. 675/kW/month"
+          },
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Lifeline Consumers (Up to 100 units)",
+          "rule": "Exempt from monthly fixed charges (Rs. 0)",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Time-of-Use (ToU) Domestic (Sanctioned Load >= 5 kW)",
+          "rule": "Rs. 675 per kW per month applicable based on 50% of sanctioned load or Maximum Demand Indicator (MDI), whichever is higher",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Minimum Monthly Customer Charges",
+          "rule": "Applicable when no energy is consumed and monthly fixed charges are not applicable: Single-phase Rs. 75/consumer/month; Three-phase Rs. 150/consumer/month",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        }
+      ]
+    },
+    "FESCO": {
+      "slabs": [
+        {
+          "from": 1,
+          "to": 50,
+          "rate": 3.95,
+          "protected": true,
+          "category": "Lifeline (consumption up to 50 units/month)",
+          "fixedCharge": 0,
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 51,
+          "to": 100,
+          "rate": 7.74,
+          "protected": true,
+          "category": "Lifeline (consumption 51-100 units/month)",
+          "fixedCharge": 0,
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 1,
+          "to": 100,
+          "rate": 10.54,
+          "protected": true,
+          "category": "Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months)",
+          "fixedCharge": 200,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 101,
+          "to": 200,
+          "rate": 13.01,
+          "protected": true,
+          "category": "Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months)",
+          "fixedCharge": 300,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 1,
+          "to": 100,
+          "rate": 22.44,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 275,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 101,
+          "to": 200,
+          "rate": 28.91,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 300,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 201,
+          "to": 300,
+          "rate": 33.1,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 350,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 301,
+          "to": 400,
+          "rate": 36.46,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 400,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 401,
+          "to": 500,
+          "rate": 38.95,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 500,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 501,
+          "to": 600,
+          "rate": 40.22,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 601,
+          "to": 700,
+          "rate": 41.85,
+          "protected": false,
+          "category": "Unprotected (sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": 701,
+          "to": null,
+          "rate": 47.2,
+          "protected": false,
+          "category": "Unprotected (Above 700 units, sanctioned load < 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": null,
+          "to": null,
+          "rate": 46.85,
+          "protected": false,
+          "category": "Time of Use (ToU) - Peak (sanctioned load >= 5 kW)",
+          "fixedCharge": null,
+          "note": "Fixed charges applicable under Off-Peak component",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        },
+        {
+          "from": null,
+          "to": null,
+          "rate": 34.53,
+          "protected": false,
+          "category": "Time of Use (ToU) - Off-Peak (sanctioned load >= 5 kW)",
+          "fixedCharge": 675,
+          "fixedChargeUnit": "Rs/kW/month",
+          "note": "Applicable on 50% of sanctioned load or actual MDI, whichever is higher",
+          "source": {
+            "document": "S.R.O. 41(I)/2026 dated 13-01-2026 read with S.R.O. 279(I)/2026 dated 12-02-2026 (earlier FY25: S.R.O. 1159(I)/2025; FY24: S.R.O. 1027(I)/2024); uniform schedule S.R.O. 279(I)/2026",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "discoPortalUrl": "https://nepra.org.pk/tariff/Distribution%20FESCO.php",
+            "type": "official"
+          }
+        }
+      ],
+      "fixed": [
+        {
+          "category": "Non-ToU Domestic (Sanctioned Load < 5 kW)",
+          "rule": "Fixed charges are applied on a per kW basis of the sanctioned load per month according to consumption slab (ranging from Rs. 200/kW/M for protected 1-100 units up to Rs. 675/kW/M for >500 units)",
+          "slabs": {
+            "1-100 Protected": "Rs. 200/kW/month",
+            "101-200 Protected": "Rs. 300/kW/month",
+            "1-100 Unprotected": "Rs. 275/kW/month",
+            "101-200 Unprotected": "Rs. 300/kW/month",
+            "201-300 Unprotected": "Rs. 350/kW/month",
+            "301-400 Unprotected": "Rs. 400/kW/month",
+            "401-500 Unprotected": "Rs. 500/kW/month",
+            "Above 500 Unprotected": "Rs. 675/kW/month"
+          },
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Lifeline Consumers (Up to 100 units)",
+          "rule": "Exempt from monthly fixed charges (Rs. 0)",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Time-of-Use (ToU) Domestic (Sanctioned Load >= 5 kW)",
+          "rule": "Rs. 675 per kW per month applicable based on 50% of sanctioned load or Maximum Demand Indicator (MDI), whichever is higher",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        },
+        {
+          "category": "Minimum Monthly Customer Charges",
+          "rule": "Applicable when no energy is consumed and monthly fixed charges are not applicable: Single-phase Rs. 75/consumer/month; Three-phase Rs. 150/consumer/month",
+          "source": {
+            "document": "S.R.O. 279(I)/2026 (GoP Applicable Schedule of Electricity Tariffs for XWDISCOs & K-Electric) read with Decision dated 11-02-2026 (TRF-100/2935-57)",
+            "date": "2026-02-12",
+            "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+            "decisionUrl": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOS%20AND%20KE%20RATIONALIZATION%20OF%20TARIFF%2011-02-2026%202935-57.pdf",
+            "type": "official"
+          }
+        }
+      ]
+    }
+  },
+  "addOns": [
+    {
+      "name": "General Sales Tax (GST)",
+      "value": "18%",
+      "appliesTo": "Sum of total Energy Charges, Fixed Charges, Fuel Charges Adjustment (FCA), and Quarterly Tariff Adjustment (QTA)",
+      "source": {
+        "document": "Sales Tax Act, 1990 (Section 3(1) as amended via Finance (Supplementary) Act 2023 & Finance Acts 2023/2024)",
+        "date": "2023-02-23",
+        "url": "https://www.fbr.gov.pk",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Electricity Duty (ED) - Punjab",
+      "value": "1.5%",
+      "appliesTo": "Cost of electricity (variable energy charges) on LESCO, FESCO, and Punjab jurisdiction of IESCO bills",
+      "source": {
+        "document": "Punjab Electricity Duty Act, 1964 / West Pakistan Finance Act 1964 (Fifth Schedule as amended by Punjab Finance Acts)",
+        "date": "1964-07-01",
+        "url": "https://punjablaws.punjab.gov.pk",
+        "type": "official",
+        "note": "Recent Punjab Finance amendments proposed domestic exemption; however, billing systems historically and currently levy 1.5% on variable electricity cost."
+      }
+    },
+    {
+      "name": "Electricity Duty (ED) - ICT",
+      "value": "1.5%",
+      "appliesTo": "Cost of electricity (variable energy charges) on IESCO bills for consumers within Islamabad Capital Territory",
+      "source": {
+        "document": "Islamabad Capital Territory Electricity Duty Regulations / West Pakistan Finance Act 1964 as adapted",
+        "date": "1964-07-01",
+        "url": "https://iesco.com.pk",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Electricity Duty (ED) - Khyber Pakhtunkhwa (KP)",
+      "value": "1.5%",
+      "appliesTo": "Domestic electricity charges in KP (PESCO/TESCO/HAZECO)",
+      "source": {
+        "document": "KP Electricity Duty Rules / Inspectorate of Electricity KP (Energy & Power Dept)",
+        "date": "2020-07-01",
+        "url": "https://ioekp.gov.pk",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Electricity Duty (ED) - Sindh",
+      "value": "1.5%",
+      "appliesTo": "Domestic electricity charges in Sindh (HESCO/SEPCO/K-Electric)",
+      "source": {
+        "document": "Sindh Finance Act / Sindh Electricity Duty Rules",
+        "date": "1964-07-01",
+        "url": "https://ke.com.pk",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Electricity Duty (ED) - Balochistan",
+      "value": "1.5%",
+      "appliesTo": "Domestic electricity charges in Balochistan (QESCO)",
+      "source": {
+        "document": "Balochistan Electricity Duty Regulations",
+        "date": "1964-07-01",
+        "url": "https://nepra.org.pk",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Pakistan Television (PTV) License Fee",
+      "value": "Rs. 35 per month",
+      "appliesTo": "All residential electricity consumers",
+      "source": {
+        "document": "Ministry of Information & Broadcasting / PTV License Fee Order / DISCO billing circulars",
+        "date": "2004-07-01",
+        "url": "https://power.gov.pk",
+        "type": "official",
+        "note": "Abolition announced by the Prime Minister in mid-2025; implementation in DISCO billing engines remains subject to gazetted repeal."
+      }
+    },
+    {
+      "name": "Fuel Charges Adjustment (FCA) - September 2026",
+      "value": "+Rs. 2.3673 per kWh",
+      "appliesTo": "All electricity units billed to XWDISCOs and K-Electric consumers (billed in November 2026), EXCLUDING lifeline consumers (up to 50 units)",
+      "source": {
+        "document": "NEPRA Decision in the matter of Fuel Charges Adjustment for September 2026 for XWDISCOs (No. NEPRA/DG(Trf)/TRF-100/MFPA/21785-804)",
+        "date": "2026-11-06",
+        "url": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOs%20FCA%20Sept-2026%2006-11-2026%2021785-804.PDF",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Quarterly Tariff Adjustment (QTA) - 2nd Quarter CY 2026",
+      "value": "+Rs. 0.5194 per kWh",
+      "appliesTo": "All electricity units billed across 3 months (September to November 2026) for XWDISCOs and K-Electric, EXCLUDING lifeline, Incremental Consumption Package, and prepaid consumers",
+      "source": {
+        "document": "Notification S.R.O. 1501(I)/2026 (Decision dated 04-09-2026 in the matter of Periodic Adjustment in Tariff for 2nd Quarter CY 2026)",
+        "date": "2026-09-07",
+        "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/09%20Sep/SRO%201501(I)-2026%20Dated%2007-09-2026.pdf",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Advance Income Tax (Withholding Tax under Section 235)",
+      "value": "7.5% for non-filers with monthly bill >= Rs. 25,000; 0% for filers (ATL) and bills < Rs. 25,000",
+      "appliesTo": "Total monthly bill amount of domestic consumers not appearing on the Active Taxpayers List (ATL) whose bill equals or exceeds Rs. 25,000",
+      "source": {
+        "document": "Income Tax Ordinance, 2001 (Section 235 read with Division IV, Part IV of First Schedule; Section 235A omitted via Finance Act 2021)",
+        "date": "2021-07-01",
+        "url": "https://www.fbr.gov.pk",
+        "type": "official"
+      }
+    },
+    {
+      "name": "Financing Cost (FC) / Debt Servicing Surcharge",
+      "value": "Rs. 3.23 per kWh",
+      "appliesTo": "All domestic consumers except lifeline consumers (consumption up to 50 units/month)",
+      "source": {
+        "document": "Federal Government Notification under Section 31(5) of NEPRA Act, 1997 (servicing of Power Holding Limited loan mark-up and circular debt)",
+        "date": "2023-04-01",
+        "url": "https://power.gov.pk",
+        "type": "official"
+      }
+    }
+  ],
+  "notes": [
+    "Uniform Consumer-End Tariff: Under Section 31(7) of the Regulation of Generation, Transmission and Distribution of Electric Power Act, 1997, the Federal Government notifies a uniform consumer-end tariff across all ex-WAPDA distribution companies (XWDISCOs), including LESCO, IESCO, and FESCO. S.R.O. 279(I)/2026 dated 12-02-2026 is the overarching uniform notification.",
+    "Protected Consumer Eligibility: Domestic consumers who consume 200 units or less per month consistently for the previous consecutive six (6) months qualify as Protected. If consumption exceeds 200 units in any single month, the consumer is classified as Unprotected for that month.",
+    "Benefit of One Previous Slab: Protected residential consumers are eligible for the incremental benefit of one previous slab rate under NEPRA guidelines.",
+    "Fixed Charges Shift: Starting from the February 2026 tariff rationalization decision (notified in S.R.O. 279(I)/2026), fixed charges for non-lifeline residential consumers were restructured onto a per kW sanctioned load basis (Rs. 200 to Rs. 675/kW/month), moving from purely per-consumer volumetric models to fixed cost recovery.",
+    "Time of Use (ToU) Billing: Residential connections with sanctioned load >= 5 kW are mandatorily on ToU meters with separate Peak and Off-Peak rates. Fixed charges of Rs. 675/kW/month are applied to 50% of the sanctioned load or actual recorded MDI, whichever is higher.",
+    "Taxes & Levies Sequencing: Electricity bills are computed by applying: (1) Base Energy Charges (slab-based) + (2) Fixed Capacity Charges + (3) Fuel Charges Adjustment (FCA) + (4) Quarterly Tariff Adjustment (QTA) + (5) Financing Cost Surcharge = Electricity Cost. GST (18%) is levied on this combined electricity cost. Provincial Electricity Duty (1.5%) is levied on energy charges. PTV Fee (Rs. 35) is added flat. For non-filers with gross bill >= Rs. 25,000, 7.5% advance income tax is collected."
+  ]
+}

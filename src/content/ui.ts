@@ -34,6 +34,6 @@ export const ui = {
     askHeading: "Ask us about this",
     dock: "Quick actions",
     /* Parent crumb by first path segment; guides at the top level sit under Resources. */
-    parents: { services: "Services", "solar-systems": "Solar systems", products: "Products", projects: "Projects", outlets: "Outlets", blog: "Blog", resources: "Resources" } as Record<string, string>,
+    parents: { services: "Services", "solar-systems": "Solar systems", products: "Products", projects: "Projects", outlets: "Outlets", blog: "Blog", resources: "Resources", tools: "Tools" } as Record<string, string>,
   },
 };

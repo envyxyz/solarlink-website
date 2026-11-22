@@ -1,0 +1,101 @@
+{
+  "asOf": "2026-11-23",
+  "regulatoryRegime": {
+    "currentFramework": "NEPRA (Prosumer) Regulations, 2026",
+    "primaryNotification": "S.R.O. 251(I)/2026",
+    "notificationDate": "2026-02-09",
+    "repealedRegulation": "NEPRA (Alternative & Renewable Energy) Distributed Generation and Net Metering Regulations, 2015 (S.R.O. 812(I)/2015)",
+    "amendments": [
+      {
+        "sro": "S.R.O. 547(I)/2026",
+        "date": "2026-04-02",
+        "title": "NEPRA (Prosumer) Regulations (Amendment) - Regulation 21 Grandfathering"
+      },
+      {
+        "sro": "S.R.O. 1330(I)/2026",
+        "date": "2026-08-06",
+        "title": "NEPRA (Prosumer) Regulations (Amendment) - Concurrence Exemption <= 25 kW"
+      }
+    ],
+    "source": {
+      "title": "NEPRA (Prosumer) Regulations, 2026 (S.R.O. 251(I)/2026)",
+      "date": "2026-02-09",
+      "url": "https://nepra.org.pk"
+    }
+  },
+  "billingMechanism": {
+    "type": "Net Billing",
+    "isNettedPerKwh": false,
+    "description": "Imports and exports are billed separately. Grid imports are billed at applicable consumer retail slab tariffs; surplus exports are credited separately at buyback rate. Net monetary balance is billed/credited.",
+    "grossMeteringStatus": "Not implemented. Mid-2024 Power Division gross metering proposals were shelved in favor of net billing (self-consumption behind the meter is retained).",
+    "source": {
+      "title": "NEPRA (Prosumer) Regulations, 2026 (S.R.O. 251(I)/2026)",
+      "date": "2026-02-09",
+      "url": "https://nepra.org.pk"
+    }
+  },
+  "exportRate": {
+    "value": "Rs. 10.00 - 11.30 per kWh",
+    "benchmarkRatePkr": 11.0,
+    "determinationMethod": "National Average Energy Purchase Price (NAEPP / EPP) / avoided variable fuel generation cost, excluding capacity charges and T&D margins",
+    "source": {
+      "title": "NEPRA (Prosumer) Regulations, 2026 & Power Purchase Price Benchmarks",
+      "date": "2026-02-09",
+      "url": "https://nepra.org.pk"
+    }
+  },
+  "settlementPeriod": {
+    "cycle": "Monthly",
+    "creditRollover": "Surplus monetary export credit carries forward to offset subsequent monthly electricity bills",
+    "source": {
+      "title": "NEPRA (Prosumer) Regulations, 2026",
+      "date": "2026-02-09",
+      "url": "https://nepra.org.pk"
+    }
+  },
+  "systemLimits": {
+    "maxCapacityVsSanctionedLoadPct": 100,
+    "maxSystemCapacityKw": 1000,
+    "transformerLoadingLimitPct": 80,
+    "loadFlowStudyThresholdKw": 250,
+    "nepraConcurrenceExemptionThresholdKw": 25,
+    "source": {
+      "title": "NEPRA (Prosumer) Regulations, 2026 (S.R.O. 251(I)/2026 & S.R.O. 1330(I)/2026)",
+      "date": "2026-08-06",
+      "url": "https://nepra.org.pk"
+    }
+  },
+  "fees": {
+    "nepraConcurrenceFeePkrPerKw": 1000,
+    "nepraConcurrenceFeeBelow25Kw": 0,
+    "discoProcessingFeePkr": {
+      "min": 15000,
+      "max": 25000
+    },
+    "bidirectionalMeterCostPkr": {
+      "min": 35000,
+      "max": 75000
+    },
+    "turnkeyLiaisonFeePkr": {
+      "min": 70000,
+      "max": 110000,
+      "note": "Private EPC liaison & documentation fee (secondary source / market estimate)"
+    },
+    "source": {
+      "title": "DISCO Guidelines (LESCO/IESCO/FESCO) & NEPRA Schedule of Fees",
+      "date": "2026",
+      "url": "https://lesco.gov.pk"
+    }
+  },
+  "grandfathering": {
+    "eligibleUsers": "Distributed generation consumers with valid net metering agreements executed under the 2015 regulations prior to February 9, 2026",
+    "protectedTerms": "Retain 1:1 volumetric unit-for-unit net metering mechanism",
+    "expiry": "Valid until the expiration of the original agreement tenure (standard 7 years from agreement date)",
+    "forfeitureCondition": "Any material modification or increase to maximum generation output/capacity revokes grandfathering and migrates facility to 2026 net billing",
+    "source": {
+      "title": "NEPRA S.R.O. 547(I)/2026 (Amendment to Prosumer Regulations, Regulation 21)",
+      "date": "2026-04-02",
+      "url": "https://nepra.org.pk"
+    }
+  }
+}
