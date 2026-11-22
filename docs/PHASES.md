@@ -331,3 +331,8 @@ Open:
 - DISCO per city (LESCO, IESCO, FESCO) is stated from public knowledge and the research; the old Sargodha page named GEPCO in places. Client to confirm.
 - Project facts needed from the client: that each job is real, photos, date, equipment list, real bill figures, owner consent.
 - The projects hub title is 61 characters to keep its KEYWORD-MAP phrase, so it carries no "| SolarLink" suffix; project titles of 60 characters or more also drop the suffix.
+
+## 23 Nov 2026: services, systems and products copy
+
+Full copy for the five service pages, the three system types, the 3/5/10/15/20 kW size pages and the four product guides (services.ts, systems.ts, products.ts), all still confirmed:false. No prices, warranties, times, counts or brand-dealer claims. Size pages explain panels, roof area and modelled yield (Global Solar Atlas, Lahore to Islamabad) and route to the sizing card and WhatsApp quote. Net billing and tariff statements cite S.R.O. 251(I)/2026 and 279(I)/2026 and say 'as reported': the figures come from AI-compiled research and need checking against nepra.org.pk before launch. Two answers carry [confirm with client] (warranty, after-sales).
+
