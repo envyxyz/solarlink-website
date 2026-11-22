@@ -31,7 +31,7 @@ export function SizingCard({ slot = sizingSlot }: { slot?: string }) {
       </p>
       <Slider label={hero.sliderLabel} valueText={text.valueText} value={value} onValueChange={setValue} min={range.min} max={range.max} step={range.step} />
       <div className="mt-2 flex items-center gap-2 short:mt-0">
-        <Button href={href} size="lg" className="min-w-0 flex-1">
+        <Button href={href} size="lg" className="min-w-0 flex-1 max-sm:px-3!">
           {whatsapp ? hero.cta : hero.noJs.cta}
         </Button>
         {whatsapp && (
