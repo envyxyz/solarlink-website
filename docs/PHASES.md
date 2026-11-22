@@ -336,3 +336,14 @@ Open:
 
 Full copy for the five service pages, the three system types, the 3/5/10/15/20 kW size pages and the four product guides (services.ts, systems.ts, products.ts), all still confirmed:false. No prices, warranties, times, counts or brand-dealer claims. Size pages explain panels, roof area and modelled yield (Global Solar Atlas, Lahore to Islamabad) and route to the sizing card and WhatsApp quote. Net billing and tariff statements cite S.R.O. 251(I)/2026 and 279(I)/2026 and say 'as reported': the figures come from AI-compiled research and need checking against nepra.org.pk before launch. Two answers carry [confirm with client] (warranty, after-sales).
 
+
+## 23 Nov 2026: company pages and the two guides (content)
+
+`company.ts` (about, contact, get-quote, FAQs, solar financing, warranty and support) and `reading.ts` (net metering guide, how solar works) rewritten from placeholder to full copy. Every old FAQ question kept (62 in the one faq block, so the schema covers all). Public facts carry their source and date in the text: NEPRA (Prosumer) Regulations 2026 (S.R.O. 251(I)/2026, 547(I)/2026, 1330(I)/2026), tariff decision of 11 Feb 2026, Global Solar Atlas yields. No SolarLink price, warranty length, time or brand status is stated. All docs stay `confirmed: false`, `lastmod` 2026-11-23.
+
+Open:
+- Net metering figures (export rate Rs 10.00 to 11.30, DISCO fees, 7-year grandfathering) come from AI research (`docs/research/agy-2026-11-23/net-billing.md`); open each S.R.O. at nepra.org.pk and check before launch.
+- `/solar-financing/` title keeps the KEYWORD-MAP phrase "Installments", which `check-content` bans as a claim; settle with the client before confirming the page.
+- `/get-quote/` title carries "Free" (KEYWORD-MAP phrase) while the free survey is unconfirmed.
+- `/about-us/` title cannot carry "Punjab's Trusted Solar Company" (claim word), so meta-check warns.
+- The FAQ question "What is a tier one solar panel?" is spelled out to stay clear of the Tier-1 ban.
