@@ -14,7 +14,9 @@
     "check:sizing": "node scripts/sizing-check.mjs",
     "images": "node scripts/images.mjs",
     "check:js": "node scripts/js-size.mjs",
-    "shot": "node scripts/shot.mjs"
+    "shot": "node scripts/shot.mjs",
+    "test:e2e": "npm --prefix tests run e2e",
+    "lhci": "npm --prefix tests run lhci"
   },
   "dependencies": {
     "clsx": "^2.1.1",
