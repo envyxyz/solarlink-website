@@ -15,7 +15,7 @@ export const quoteSchema = z
     bill: z.number().int().min(1).max(LIMITS.bill).optional(),
     billMode: z.enum(BILL_MODES).optional(),
     // Line breaks become spaces: the text goes into one WhatsApp message.
-    message: z.string().max(LIMITS.message).transform((s) => s.replace(/\s+/g, " ").trim()).optional(),
+    message: z.string().max(LIMITS.message).transform((s) => s.replace(/\s+/g, " ").trim()).refine(noControl).optional(),
     /** Honeypot: hidden from people, so any value means a bot. */
     website: z.string().max(200).optional(),
     /** Milliseconds the form was on screen before submit. The browser clock is not trusted, so no timestamp. */

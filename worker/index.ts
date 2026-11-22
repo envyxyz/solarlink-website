@@ -15,17 +15,24 @@ type Env = {
 const LEAD_TTL_SECONDS = 180 * 24 * 60 * 60;
 const MAX_BODY_BYTES = 4096;
 
-const json = (body: unknown, status = 200) => Response.json(body, { status, headers: { "cache-control": "no-store" } });
+// _headers covers static files only, so API answers carry their own.
+const json = (body: unknown, status = 200) =>
+  Response.json(body, { status, headers: { "cache-control": "no-store", "x-content-type-options": "nosniff", "x-frame-options": "DENY" } });
+
+/** Rate-limit key: IPv4 as is, IPv6 cut to its /64 so one host cannot rotate through its own block. */
+const rateKey = (ip: string) => (ip.includes(":") ? ip.split(":").slice(0, 4).join(":") : ip);
 
 async function quote(request: Request, env: Env): Promise<Response> {
   if (request.method !== "POST") return json({ error: "method" }, 405);
-  // A browser form on our own site always sends Origin; a cross-site page does not get to post here.
-  const origin = request.headers.get("origin");
-  if (origin && origin !== new URL(request.url).origin) return json({ error: "origin" }, 403);
+  // A browser form on our own site always sends Origin on a POST; no Origin or another one is refused.
+  if (request.headers.get("origin") !== new URL(request.url).origin) return json({ error: "origin" }, 403);
+  // JSON only: a plain cross-site <form> cannot send it without a preflight.
+  if (!request.headers.get("content-type")?.startsWith("application/json")) return json({ error: "type" }, 415);
+  if (Number(request.headers.get("content-length") ?? 0) > MAX_BODY_BYTES) return json({ error: "size" }, 413);
 
   // Ceiling: 5 submissions a minute per IP (the binding's limit lives in wrangler.jsonc). Before parsing, so a flood stays cheap.
   const ip = request.headers.get("cf-connecting-ip") ?? "unknown";
-  if (env.RATE && !(await env.RATE.limit({ key: ip })).success) return json({ error: "rate" }, 429);
+  if (env.RATE && !(await env.RATE.limit({ key: rateKey(ip) })).success) return json({ error: "rate" }, 429);
 
   const text = await request.text();
   if (text.length > MAX_BODY_BYTES) return json({ error: "size" }, 413);
