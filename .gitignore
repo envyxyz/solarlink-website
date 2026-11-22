@@ -27,3 +27,5 @@ design/img/_agy/*.log
 tests/node_modules/
 tests/reports/
 .lighthouseci/
+docs/research/agy-*/*.log
+.claude/worktrees/
