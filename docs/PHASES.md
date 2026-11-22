@@ -306,3 +306,7 @@ Playwright e2e and axe, Lighthouse CI, in `tests/` (own package.json, kept out o
 Findings (details in `docs/qa/2026-11-23-tests.md`): Lighthouse mobile performance 78 to 92 and LCP 2.5 to 3.5 s on the local preview build (budget 95 and 2.0 s); `_rsc` prefetch 404s in the Windows export; CLS 0.03 on two inner pages.
 
 Next: re-run Lighthouse on a Linux production-like build and the Cloudflare preview, then tune hero LCP and JS.
+
+## 23 Nov 2026: blog posts part 1 written
+
+blog-1.ts: five posts rewritten from stubs to full sourced articles (growatt-vs-fronus 2049 words, how-to-size 1956, net-metering-common-mistakes 1578, net-metering-lesco-application-guide 1473, net-metering-vs-battery-storage 1724; old stubs about 320). Each ends in a Sources block. Still confirmed:false. One [confirm with client] (filing fee). No payback figure, battery price or SolarLink timeline stated.
