@@ -306,3 +306,8 @@ Playwright e2e and axe, Lighthouse CI, in `tests/` (own package.json, kept out o
 Findings (details in `docs/qa/2026-11-23-tests.md`): Lighthouse mobile performance 78 to 92 and LCP 2.5 to 3.5 s on the local preview build (budget 95 and 2.0 s); `_rsc` prefetch 404s in the Windows export; CLS 0.03 on two inner pages.
 
 Next: re-run Lighthouse on a Linux production-like build and the Cloudflare preview, then tune hero LCP and JS.
+
+## 23 Nov 2026: blog posts, part 2
+
+Rewrote the five posts in src/content/pages/docs/blog-2.ts from stubs into full articles (1,700 to 2,100 words in main each) with FAQs and a sources block: on-grid vs hybrid vs off-grid, installer red flags, panel brands (datasheet facts only, no ranking, no dealer status), cleaning and maintenance, solar payback (method plus a labelled example, no SolarLink figure). Open: the red flags title is 63 characters because the KEYWORD-MAP phrase plus suffix is that long; figures from AI-compiled research (net billing rate, S.R.O. numbers, datasheet values) still need a check against the primary documents.
+
