@@ -306,3 +306,19 @@ Playwright e2e and axe, Lighthouse CI, in `tests/` (own package.json, kept out o
 Findings (details in `docs/qa/2026-11-23-tests.md`): Lighthouse mobile performance 78 to 92 and LCP 2.5 to 3.5 s on the local preview build (budget 95 and 2.0 s); `_rsc` prefetch 404s in the Windows export; CLS 0.03 on two inner pages.
 
 Next: re-run Lighthouse on a Linux production-like build and the Cloudflare preview, then tune hero LCP and JS.
+
+## 23 Nov 2026: outlets, projects and hubs copy
+
+Rewrote `src/content/pages/docs/places.ts` (3 outlet pages, 10 project drafts) and `src/content/pages/docs/hubs.ts` (7 hubs) from placeholders into full draft copy. All docs stay `confirmed: false`.
+
+Done:
+- **Outlets** (Lahore, Islamabad, Sargodha): visit facts from `src/content.ts` only, sun figures from the Global Solar Atlas and PVGIS (read 23 Nov 2026), net metering under the NEPRA Prosumer Regulations 2026 named by S.R.O. number, an application steps block, the old site's area lists marked unconfirmed, local FAQs. Titles keep the KEYWORD-MAP phrase "Solar Installation in <city>" and add "Solar Company".
+- **Projects**: ten short drafts that state only what the old pages said (place, size, type, kind), with every savings figure, quote, photo and brand left out and a "Still to confirm" block on each page.
+- **Hubs**: an intro that answers each hub's query, the child cards, and FAQs. The solar-systems hub lists what decides the price and what 3 to 20 kW makes a year (Lahore, Global Solar Atlas), and prints no price.
+- No Rawalpindi doc exists; `/outlets/rawalpindi/` should 301 to `/outlets/islamabad/`.
+
+Open:
+- Net metering and tariff text comes from AI-compiled research (`docs/research/agy-2026-11-23/`): open the NEPRA notifications (S.R.O. 251(I)/2026, 1330(I)/2026, 547(I)/2026, 279(I)/2026) and check every figure before launch.
+- DISCO per city (LESCO, IESCO, FESCO) is stated from public knowledge and the research; the old Sargodha page named GEPCO in places. Client to confirm.
+- Project facts needed from the client: that each job is real, photos, date, equipment list, real bill figures, owner consent.
+- The projects hub title is 61 characters to keep its KEYWORD-MAP phrase, so it carries no "| SolarLink" suffix; project titles of 60 characters or more also drop the suffix.
