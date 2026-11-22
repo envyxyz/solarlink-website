@@ -1,0 +1,15 @@
+{
+  "name": "solarlink-tests",
+  "private": true,
+  "type": "module",
+  "description": "Test tooling kept out of the site's node_modules. Run `npm install` here once, build with SOLARLINK_PREVIEW=1 first.",
+  "scripts": {
+    "e2e": "playwright test",
+    "lhci": "lhci autorun --config=../lighthouserc.cjs"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.10.0",
+    "@lhci/cli": "^0.15.0",
+    "@playwright/test": "1.65.1"
+  }
+}

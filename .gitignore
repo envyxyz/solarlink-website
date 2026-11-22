@@ -22,3 +22,8 @@ Thumbs.db
 *.tsbuildinfo
 next-env.d.ts
 design/img/_agy/*.log
+
+# test tooling output
+tests/node_modules/
+tests/reports/
+.lighthouseci/

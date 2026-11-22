@@ -298,3 +298,11 @@ Open:
 - The keyword map title for `/solar-calculator/` says "Savings"; the page title drops it because the tool shows no savings.
 - Appliance watts and the starting battery assumptions (48 V, 80% usable, 90% efficiency) are typical values, not client facts.
 - No motor start-up surge in peak load; the page tells the visitor to ask.
+
+## 23 Nov 2026: tests and audits
+
+Playwright e2e and axe, Lighthouse CI, in `tests/` (own package.json, kept out of the shared node_modules). 94 e2e tests pass (h1, nav keyboard, internal links, axe WCAG 2.2 AA light and dark at 1440 and 390 on home and one page per kind, reflow at 390 and 320, reduced motion); zero axe violations. `lighthouserc.cjs` asserts the rule 11 budgets. Scripts: `test:e2e`, `lhci`.
+
+Findings (details in `docs/qa/2026-11-23-tests.md`): Lighthouse mobile performance 78 to 92 and LCP 2.5 to 3.5 s on the local preview build (budget 95 and 2.0 s); `_rsc` prefetch 404s in the Windows export; CLS 0.03 on two inner pages.
+
+Next: re-run Lighthouse on a Linux production-like build and the Cloudflare preview, then tune hero LCP and JS.
