@@ -8,7 +8,11 @@
 import { routeByPath } from "@/routes";
 import { companyDocs } from "./docs/company";
 import { brandDocs, legalDocs } from "./docs/extra";
-import { articles, guides } from "./docs/reading";
+import { guides } from "./docs/reading";
+import { articles1 } from "./docs/blog-1";
+import { articles2 } from "./docs/blog-2";
+
+const articles = [...articles1, ...articles2];
 import { hubs } from "./docs/hubs";
 import { outletDocs, projectDocs } from "./docs/places";
 import { products } from "./docs/products";
