@@ -1,0 +1,674 @@
+[
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[0]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Lifeline (consumption up to 50 units/month) variable rate of Rs. 3.95/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[1]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Lifeline (consumption 51-100 units/month) variable rate of Rs. 7.74/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[2]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months) variable rate of Rs. 10.54/kWh and fixed charge of Rs. 200/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[3]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months) variable rate of Rs. 13.01/kWh and fixed charge of Rs. 300/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[4]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 22.44/kWh and fixed charge of Rs. 275/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[5]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 28.91/kWh and fixed charge of Rs. 300/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[6]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 33.1/kWh and fixed charge of Rs. 350/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[7]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 36.46/kWh and fixed charge of Rs. 400/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[8]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 38.95/kWh and fixed charge of Rs. 500/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[9]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 40.22/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[10]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 41.85/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[11]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (Above 700 units, sanctioned load < 5 kW) variable rate of Rs. 47.2/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[12]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Time of Use (ToU) - Peak (sanctioned load >= 5 kW) variable rate of Rs. 46.85/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.slabs[13]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Time of Use (ToU) - Off-Peak (sanctioned load >= 5 kW) variable rate of Rs. 34.53/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.fixed[0]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table confirms Non-ToU fixed charges ranging from Rs. 200/kW/month up to Rs. 675/kW/month across consumption slabs."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.fixed[1]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table confirms Lifeline consumers are exempt from monthly fixed charges (Rs. 0)."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.fixed[2]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 Note 2 and tariff table confirm fixed charges of Rs. 675/kW/month applicable on 50% of sanctioned load or MDI, whichever is higher."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.LESCO.fixed[3]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 and attached decision TRF-100/2935-57 do not specify the cited minimum customer charges of Single-phase Rs. 75/month and Three-phase Rs. 150/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[0]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Lifeline (consumption up to 50 units/month) variable rate of Rs. 3.95/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[1]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Lifeline (consumption 51-100 units/month) variable rate of Rs. 7.74/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[2]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months) variable rate of Rs. 10.54/kWh and fixed charge of Rs. 200/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[3]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months) variable rate of Rs. 13.01/kWh and fixed charge of Rs. 300/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[4]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 22.44/kWh and fixed charge of Rs. 275/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[5]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 28.91/kWh and fixed charge of Rs. 300/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[6]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 33.1/kWh and fixed charge of Rs. 350/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[7]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 36.46/kWh and fixed charge of Rs. 400/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[8]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 38.95/kWh and fixed charge of Rs. 500/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[9]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 40.22/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[10]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 41.85/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[11]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (Above 700 units, sanctioned load < 5 kW) variable rate of Rs. 47.2/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[12]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Time of Use (ToU) - Peak (sanctioned load >= 5 kW) variable rate of Rs. 46.85/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.slabs[13]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Time of Use (ToU) - Off-Peak (sanctioned load >= 5 kW) variable rate of Rs. 34.53/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.fixed[0]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table confirms Non-ToU fixed charges ranging from Rs. 200/kW/month up to Rs. 675/kW/month across consumption slabs."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.fixed[1]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table confirms Lifeline consumers are exempt from monthly fixed charges (Rs. 0)."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.fixed[2]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 Note 2 and tariff table confirm fixed charges of Rs. 675/kW/month applicable on 50% of sanctioned load or MDI, whichever is higher."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.IESCO.fixed[3]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 and attached decision TRF-100/2935-57 do not specify the cited minimum customer charges of Single-phase Rs. 75/month and Three-phase Rs. 150/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[0]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Lifeline (consumption up to 50 units/month) variable rate of Rs. 3.95/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[1]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Lifeline (consumption 51-100 units/month) variable rate of Rs. 7.74/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[2]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months) variable rate of Rs. 10.54/kWh and fixed charge of Rs. 200/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[3]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Protected (sanctioned load < 5 kW, <=200 units/month for last 6 months) variable rate of Rs. 13.01/kWh and fixed charge of Rs. 300/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[4]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 22.44/kWh and fixed charge of Rs. 275/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[5]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 28.91/kWh and fixed charge of Rs. 300/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[6]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 33.1/kWh and fixed charge of Rs. 350/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[7]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 36.46/kWh and fixed charge of Rs. 400/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[8]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 38.95/kWh and fixed charge of Rs. 500/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[9]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 40.22/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[10]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (sanctioned load < 5 kW) variable rate of Rs. 41.85/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[11]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Unprotected (Above 700 units, sanctioned load < 5 kW) variable rate of Rs. 47.2/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[12]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Time of Use (ToU) - Peak (sanctioned load >= 5 kW) variable rate of Rs. 46.85/kWh and fixed charge of Rs. 0/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.slabs[13]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table (page 6) confirms Time of Use (ToU) - Off-Peak (sanctioned load >= 5 kW) variable rate of Rs. 34.53/kWh and fixed charge of Rs. 675/kW/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.fixed[0]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table confirms Non-ToU fixed charges ranging from Rs. 200/kW/month up to Rs. 675/kW/month across consumption slabs."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.fixed[1]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 schedule table confirms Lifeline consumers are exempt from monthly fixed charges (Rs. 0)."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.fixed[2]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 Note 2 and tariff table confirm fixed charges of Rs. 675/kW/month applicable on 50% of sanctioned load or MDI, whichever is higher."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "discos.FESCO.fixed[3]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/02%20Feb/S.R.O.%20279(1)2026%20dated%2012-02-2026.pdf",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-12. S.R.O. 279(I)/2026 and attached decision TRF-100/2935-57 do not specify the cited minimum customer charges of Single-phase Rs. 75/month and Three-phase Rs. 150/month."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[0]",
+    "url": "https://www.fbr.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2023-02-23 (Sales Tax Act 1990). FBR homepage does not contain statutory 18% GST rate on electricity bills."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[1]",
+    "url": "https://punjablaws.punjab.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 1964-07-01. Punjab Laws Online homepage does not state the 1.5% electricity duty rate."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[2]",
+    "url": "https://iesco.com.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 1964-07-01. IESCO homepage does not specify the 1.5% ICT electricity duty rate."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[3]",
+    "url": "https://ioekp.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2020-07-01. Inspectorate of Electricity KP homepage does not specify the 1.5% electricity duty rate."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[4]",
+    "url": "https://ke.com.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 1964-07-01. K-Electric homepage does not specify the 1.5% Sindh electricity duty rate."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[5]",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 1964-07-01. NEPRA homepage does not specify the 1.5% Balochistan electricity duty rate."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[6]",
+    "url": "https://power.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2004-07-01. Ministry of Energy (Power Division) homepage does not state the Rs. 35/month PTV fee."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[7]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Ex-WAPDA%20DISCOS/2026/TRF-100%20XWDISCOs%20FCA%20Sept-2026%2006-11-2026%2021785-804.PDF",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-06. NEPRA Decision TRF-100/MFPA/21785-804 explicitly determines positive FCA of Rs. 2.3673/kWh for September 2026."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[8]",
+    "url": "https://nepra.org.pk/tariff/Tariff/Notifications/2026/09%20Sep/SRO%201501(I)-2026%20Dated%2007-09-2026.pdf",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-09-07. S.R.O. 1501(I)/2026 explicitly notifies uniform quarterly adjustment of Rs. 0.5194/kWh across September-November 2026."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[9]",
+    "url": "https://www.fbr.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2021-07-01. FBR homepage does not contain Section 235 advance income tax rate of 7.5%."
+  },
+  {
+    "file": "tariffs.json",
+    "field": "addOns[10]",
+    "url": "https://power.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2023-04-01. Power Division homepage does not contain the Rs. 3.23/kWh financing cost surcharge notification."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "regulatoryRegime",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-09. NEPRA homepage does not contain full text or regulatory provisions of S.R.O. 251(I)/2026 or amending SROs."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "billingMechanism",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-09. NEPRA homepage does not detail net billing import/export rules or gross metering policy status."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "exportRate",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-09. NEPRA homepage does not contain export buyback rate range Rs. 10.00-11.30/kWh or benchmark rate Rs. 11.0/kWh."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "settlementPeriod",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-02-09. NEPRA homepage does not specify monthly settlement cycle or monetary credit rollover rules."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "systemLimits",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-08-06. NEPRA homepage does not state 100% capacity limit, 1000 kW cap, 80% transformer limit, 250 kW study, or 25 kW exemption."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "fees",
+    "url": "https://lesco.gov.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026. LESCO homepage does not contain schedule of fees (processing fee Rs. 15k-25k, meter Rs. 35k-75k, liaison Rs. 70k-110k, concurrence Rs. 1000/kW)."
+  },
+  {
+    "file": "net-billing.json",
+    "field": "grandfathering",
+    "url": "https://nepra.org.pk",
+    "status": 200,
+    "supports": false,
+    "note": "Document date: 2026-04-02. NEPRA homepage does not contain grandfathering terms (7-year tenure, 1:1 net metering retention under Regulation 21)."
+  },
+  {
+    "file": "sun.json",
+    "field": "cities.Lahore",
+    "url": "https://globalsolaratlas.info/map?c=31.5204,74.3587,11&s=31.5204,74.3587",
+    "status": 200,
+    "supports": "unclear",
+    "note": "Document date: 2026-11-23. Global Solar Atlas web app (SPA) returned HTTP 200, but raw fetched HTML does not contain cited figures (annual GTI 5.08 kWh/m2/day, specific yield 1465.6 kWh/kWp, tilt 28 deg) as data loads client-side."
+  },
+  {
+    "file": "sun.json",
+    "field": "cities.Islamabad",
+    "url": "https://globalsolaratlas.info/map?c=33.6844,73.0479,11&s=33.6844,73.0479",
+    "status": 200,
+    "supports": "unclear",
+    "note": "Document date: 2026-11-23. Global Solar Atlas web app (SPA) returned HTTP 200, but raw fetched HTML does not contain cited figures (annual GTI 5.38 kWh/m2/day, specific yield 1559.1 kWh/kWp, tilt 30 deg) as data loads client-side."
+  },
+  {
+    "file": "sun.json",
+    "field": "cities.Sargodha",
+    "url": "https://globalsolaratlas.info/map?c=32.0836,72.6711,11&s=32.0836,72.6711",
+    "status": 200,
+    "supports": "unclear",
+    "note": "Document date: 2026-11-23. Global Solar Atlas web app (SPA) returned HTTP 200, but raw fetched HTML does not contain cited figures (annual GTI 5.25 kWh/m2/day, specific yield 1512.9 kWh/kWp, tilt 28 deg) as data loads client-side."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.GlobalSolarAtlas.cities.Lahore",
+    "url": "https://globalsolaratlas.info/map?c=31.5204,74.3587,11&s=31.5204,74.3587",
+    "status": 200,
+    "supports": "unclear",
+    "note": "Document date: 2026-11-23. Global Solar Atlas web app (SPA) returned HTTP 200, but raw fetched HTML does not contain cited figures (GTI 5.08, specific yield 1465.61) as data is rendered client-side."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.GlobalSolarAtlas.cities.Islamabad",
+    "url": "https://globalsolaratlas.info/map?c=33.6844,73.0479,11&s=33.6844,73.0479",
+    "status": 200,
+    "supports": "unclear",
+    "note": "Document date: 2026-11-23. Global Solar Atlas web app (SPA) returned HTTP 200, but raw fetched HTML does not contain cited figures (GTI 5.38, specific yield 1559.14) as data is rendered client-side."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.GlobalSolarAtlas.cities.Sargodha",
+    "url": "https://globalsolaratlas.info/map?c=32.0836,72.6711,11&s=32.0836,72.6711",
+    "status": 200,
+    "supports": "unclear",
+    "note": "Document date: 2026-11-23. Global Solar Atlas web app (SPA) returned HTTP 200, but raw fetched HTML does not contain cited figures (GTI 5.25, specific yield 1512.9) as data is rendered client-side."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.PVGIS.cities.Lahore",
+    "url": "https://re.jrc.ec.europa.eu/api/v5_2/PVcalc?lat=31.5204&lon=74.3587&peakpower=1&loss=14&optimalinclination=1&outputformat=json",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-23. PVGIS-ERA5 API JSON response confirms optimal tilt 34 deg, annual daily irradiation 5.92 kWh/m2/day, and specific yield 1612.88 kWh/kWp/year."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.PVGIS.cities.Islamabad",
+    "url": "https://re.jrc.ec.europa.eu/api/v5_2/PVcalc?lat=33.6844&lon=73.0479&peakpower=1&loss=14&optimalinclination=1&outputformat=json",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-23. PVGIS-ERA5 API JSON response confirms optimal tilt 35 deg, annual daily irradiation 5.88 kWh/m2/day, and specific yield 1606.56 kWh/kWp/year."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.PVGIS.cities.Sargodha",
+    "url": "https://re.jrc.ec.europa.eu/api/v5_2/PVcalc?lat=32.0836&lon=72.6711&peakpower=1&loss=14&optimalinclination=1&outputformat=json",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-23. PVGIS-ERA5 API JSON response confirms optimal tilt 34 deg, annual daily irradiation 5.96 kWh/m2/day, and specific yield 1615.98 kWh/kWp/year."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.NASAPOWER.cities.Lahore",
+    "url": "https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN,SI_TILTED_AVG_OPTIMAL,SI_TILTED_AVG_OPTIMAL_ANG&community=RE&latitude=31.5204&longitude=74.3587&format=JSON",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-23. NASA POWER Climatology API JSON response confirms optimal tilt 25.0 deg, annual daily tilted irradiation 5.15 kWh/m2/day, and annual horizontal GHI 4.93 kWh/m2/day."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.NASAPOWER.cities.Islamabad",
+    "url": "https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN,SI_TILTED_AVG_OPTIMAL,SI_TILTED_AVG_OPTIMAL_ANG&community=RE&latitude=33.6844&longitude=73.0479&format=JSON",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-23. NASA POWER Climatology API JSON response confirms optimal tilt 27.0 deg, annual daily tilted irradiation 5.24 kWh/m2/day, and annual horizontal GHI 4.9 kWh/m2/day."
+  },
+  {
+    "file": "sun.json",
+    "field": "notes.authoritativeSourcesComparison.NASAPOWER.cities.Sargodha",
+    "url": "https://power.larc.nasa.gov/api/temporal/climatology/point?parameters=ALLSKY_SFC_SW_DWN,SI_TILTED_AVG_OPTIMAL,SI_TILTED_AVG_OPTIMAL_ANG&community=RE&latitude=32.0836&longitude=72.6711&format=JSON",
+    "status": 200,
+    "supports": true,
+    "note": "Document date: 2026-11-23. NASA POWER Climatology API JSON response confirms optimal tilt 27.0 deg, annual daily tilted irradiation 5.49 kWh/m2/day, and annual horizontal GHI 5.15 kWh/m2/day."
+  }
+]

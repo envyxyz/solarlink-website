@@ -117,7 +117,7 @@ export const guides: PageDoc[] = [
         { label: "Regulation in force", value: "NEPRA (Prosumer) Regulations, 2026, S.R.O. 251(I)/2026, notified 9 February 2026. Repealed the 2015 regulations (S.R.O. 812(I)/2015)." },
         { label: "Amendments", value: "S.R.O. 547(I)/2026, 2 April 2026, amended Regulation 21 on existing users. S.R.O. 1330(I)/2026, 6 August 2026, waived direct NEPRA concurrence for systems up to 25 kW." },
         { label: "Billing", value: "Net billing: imports at the retail tariff, exports credited at a separate rate, settled monthly. Surplus credit rolls forward against future bills." },
-        { label: "Export rate", value: "Reported at about Rs 10.00 to 11.30 per kWh, with Rs 11 as a benchmark, against legacy levels of Rs 22 to 27 per kWh. It follows NEPRA's national average energy purchase price, so it is reviewed." },
+        { label: "Export rate", value: "National average energy purchase price: Rs 8.13 per kWh (NEPRA, 2026), against legacy levels of Rs 22 to 27 per kWh. It is reviewed." },
         { label: "Size limit", value: "No more than 100% of the connection's sanctioned load. Up to 1 MW (1,000 kW). The earlier allowance of up to 150% of sanctioned load was removed." },
         { label: "Transformer limit", value: "Total distributed generation on one distribution transformer is capped at 80% of its rating." },
         { label: "Load flow study", value: "Required for systems of 250 kW and above." },
@@ -152,8 +152,8 @@ export const guides: PageDoc[] = [
       ] },
       { type: "facts", heading: "Fees and costs reported", items: [
         { label: "NEPRA concurrence", value: "Nil for systems up to 25 kW. Rs 1,000 per kW above 25 kW (S.R.O. 1330(I)/2026, 6 August 2026)." },
-        { label: "Distribution company processing and inspection", value: "Reported at about Rs 15,000 to 25,000, charged on the demand notice (LESCO, IESCO and FESCO consumer guidelines)." },
-        { label: "Bi-directional meter and testing", value: "Reported at about Rs 35,000 to 75,000 or more, depending on the meter model and the testing lab's rates (same guidelines)." },
+        { label: "Distribution company processing and inspection", value: "Set per site on the demand notice (Regulation 3(9))." },
+        { label: "Bi-directional meter and testing", value: "Set per site on the demand notice (Regulation 3(9)); you pay the actual cost (Regulation 12(1))." },
         { label: "Your installer's work", value: "Design, documents and follow-up are priced by the installer and differ. Ask for it as a line in the quotation." },
       ] },
       { type: "prose", heading: "What the fees figures are, and are not", paragraphs: [
@@ -177,7 +177,7 @@ export const guides: PageDoc[] = [
         ["What is net metering in Pakistan?", "It is the arrangement that lets a solar owner connect to the distribution company's grid through a two-way meter and exchange power with it. Since the NEPRA (Prosumer) Regulations, 2026 (S.R.O. 251(I)/2026, 9 February 2026), new connections are billed under net billing: imports at the tariff, exports credited at a separate rate."],
         ["Who is eligible for net metering?", "A consumer with a connection from a distribution company, for a system within the sanctioned load, up to 1 MW, and with room on the distribution transformer (80% limit). Residential, commercial and industrial consumers can apply. The company named on your bill handles the application."],
         ["What is the maximum system size under net metering?", "No more than 100% of the sanctioned load of your connection, and not more than 1 MW overall (S.R.O. 251(I)/2026). The earlier allowance of 150% of sanctioned load no longer applies. If you need a larger system, raise the sanctioned load first."],
-        ["What rate is paid for exported electricity?", "The export rate follows NEPRA's national average energy purchase price and is reported at about Rs 10.00 to 11.30 per kWh, against Rs 22 to 27 under the legacy arrangement. It is reviewed, so check nepra.org.pk for the current figure on the day you decide."],
+        ["What rate is paid for exported electricity?", "The export rate follows NEPRA's national average energy purchase price and is Rs 8.13 per kWh in the 2026 determination, against Rs 22 to 27 under the legacy arrangement. It is reviewed, so check nepra.org.pk for the current figure on the day you decide."],
         ["How long does the application take?", "It varies with the distribution company, the completeness of the file and the state of your feeder. We do not give a figure. Ask for the dates of each step in writing and ask the installer where the file stands."],
         ["What documents are required?", "Typically the application form, a single line diagram, equipment datasheets, your national identity card, a recent paid bill and an indemnity bond, with the owner's consent for tenants. Your distribution company sets the exact list. Ask for its checklist."],
         ["Does SolarLink handle the net metering application?", "Yes. Net metering support is one of SolarLink's services: we prepare the application for your distribution company, follow it through approval and the meter, and tell you where it stands."],
