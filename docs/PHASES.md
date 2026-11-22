@@ -310,3 +310,8 @@ Next: re-run Lighthouse on a Linux production-like build and the Cloudflare prev
 ## 23 Nov 2026: blog posts part 1 written
 
 blog-1.ts: five posts rewritten from stubs to full sourced articles (growatt-vs-fronus 2049 words, how-to-size 1956, net-metering-common-mistakes 1578, net-metering-lesco-application-guide 1473, net-metering-vs-battery-storage 1724; old stubs about 320). Each ends in a Sources block. Still confirmed:false. One [confirm with client] (filing fee). No payback figure, battery price or SolarLink timeline stated.
+
+## 23 Nov 2026: blog posts, part 2
+
+Rewrote the five posts in src/content/pages/docs/blog-2.ts from stubs into full articles (1,700 to 2,100 words in main each) with FAQs and a sources block: on-grid vs hybrid vs off-grid, installer red flags, panel brands (datasheet facts only, no ranking, no dealer status), cleaning and maintenance, solar payback (method plus a labelled example, no SolarLink figure). Open: the red flags title is 63 characters because the KEYWORD-MAP phrase plus suffix is that long; figures from AI-compiled research (net billing rate, S.R.O. numbers, datasheet values) still need a check against the primary documents.
+
