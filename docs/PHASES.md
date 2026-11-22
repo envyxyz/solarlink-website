@@ -306,3 +306,8 @@ Playwright e2e and axe, Lighthouse CI, in `tests/` (own package.json, kept out o
 Findings (details in `docs/qa/2026-11-23-tests.md`): Lighthouse mobile performance 78 to 92 and LCP 2.5 to 3.5 s on the local preview build (budget 95 and 2.0 s); `_rsc` prefetch 404s in the Windows export; CLS 0.03 on two inner pages.
 
 Next: re-run Lighthouse on a Linux production-like build and the Cloudflare preview, then tune hero LCP and JS.
+
+## 23 Nov 2026: services, systems and products copy
+
+Full copy for the five service pages, the three system types, the 3/5/10/15/20 kW size pages and the four product guides (services.ts, systems.ts, products.ts), all still confirmed:false. No prices, warranties, times, counts or brand-dealer claims. Size pages explain panels, roof area and modelled yield (Global Solar Atlas, Lahore to Islamabad) and route to the sizing card and WhatsApp quote. Net billing and tariff statements cite S.R.O. 251(I)/2026 and 279(I)/2026 and say 'as reported': the figures come from AI-compiled research and need checking against nepra.org.pk before launch. Two answers carry [confirm with client] (warranty, after-sales).
+
