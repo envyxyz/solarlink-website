@@ -49,7 +49,7 @@ export function QuoteDock({
         <p className="hidden max-w-xs truncate text-small md:block">{title}</p>
         <Button href={quote.href}>{quote.label}</Button>
         {whatsapp && (
-          <IconButton variant="dark" label={whatsapp.label} href={whatsapp.href}>
+          <IconButton variant="dark" label={whatsapp.label} href={whatsapp.href} ev={["whatsapp_click", { outlet: "lahore", place: "dock" }]}>
             <WhatsAppGlyph />
           </IconButton>
         )}

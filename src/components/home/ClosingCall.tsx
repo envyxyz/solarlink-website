@@ -22,7 +22,7 @@ export function ClosingCall() {
           <div className="flex flex-wrap gap-3">
             <Button href={nav.quote.href}>{closing.quote}</Button>
             {phone && (
-              <Button variant="dark" href={telHref(phone)}>
+              <Button variant="dark" href={telHref(phone)} ev={["call_click", { outlet: "lahore", place: "quote" }]}>
                 {closing.call}
               </Button>
             )}

@@ -4,6 +4,7 @@ import Link from "next/link";
 import type { ButtonHTMLAttributes, PointerEvent, ReactNode } from "react";
 import { ArrowRight, Loader2 } from "lucide-react";
 import { ui } from "@/content/ui";
+import { track, type Ev } from "@/lib/analytics";
 import { cn } from "@/lib/cn";
 import { icon } from "./icons";
 
@@ -35,6 +36,8 @@ export type ButtonProps = Native & {
   href?: string;
   /** Round icon twin beside the pill (the product-card pair). */
   twin?: { icon: ReactNode; label: string; href?: string; onClick?: () => void; redundant?: boolean };
+  /** Analytics event sent when a link is clicked: [name, params]. */
+  ev?: Ev;
   className?: string;
   children: ReactNode;
 };
@@ -68,6 +71,7 @@ export function Button({
   loading = false,
   href,
   twin,
+  ev,
   className,
   children,
   disabled,
@@ -87,7 +91,7 @@ export function Button({
       {loading && <Loader2 {...icon} aria-label={ui.loading} aria-hidden={false} className="absolute animate-spin" />}
     </>
   );
-  const common = { ...magnetProps(variant === "primary"), className: cls, "aria-busy": loading || undefined };
+  const common = { ...magnetProps(variant === "primary"), onClick: ev && (() => track(...ev)), className: cls, "aria-busy": loading || undefined };
 
   const main = href ? (
     href.startsWith("/") ? (
@@ -127,12 +131,13 @@ export type IconButtonProps = {
   onClick?: () => void;
   /** The same action is already one tab stop away (the round twin of a pill): out of the tab order and the accessibility tree. */
   redundant?: boolean;
+  ev?: Ev;
   className?: string;
   children: ReactNode;
 };
 
 /** 44px circle, same variants as Button. */
-export function IconButton({ variant = "quiet", size = "md", label, href, loading, disabled, onClick, redundant, className, children }: IconButtonProps) {
+export function IconButton({ variant = "quiet", size = "md", label, href, loading, disabled, onClick, redundant, ev, className, children }: IconButtonProps) {
   const inactive = disabled || loading;
   const cls = cn(
     "focus-ring press relative inline-flex shrink-0 select-none items-center justify-center rounded-pill disabled:opacity-50 aria-disabled:opacity-50",
@@ -144,11 +149,11 @@ export function IconButton({ variant = "quiet", size = "md", label, href, loadin
   const twin = redundant ? { tabIndex: -1, "aria-hidden": true } : {};
   if (href) {
     return href.startsWith("/") ? (
-      <Link href={href} aria-label={label} aria-disabled={inactive || undefined} className={cls} {...twin}>
+      <Link href={href} onClick={ev && (() => track(...ev))} aria-label={label} aria-disabled={inactive || undefined} className={cls} {...twin}>
         {inner}
       </Link>
     ) : (
-      <a href={href} {...external(href)} aria-label={label} aria-disabled={inactive || undefined} className={cls} {...twin}>
+      <a href={href} {...external(href)} onClick={ev && (() => track(...ev))} aria-label={label} aria-disabled={inactive || undefined} className={cls} {...twin}>
         {inner}
       </a>
     );

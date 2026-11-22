@@ -1,6 +1,7 @@
 import type { OutletSlug } from "@/content";
 import { nav, ui } from "@/content";
 
+import type { Ev } from "@/lib/analytics";
 import { outletWhatsApp } from "@/lib/links";
 import { Button, IconButton, type ButtonVariant } from "./Button";
 import { WhatsAppGlyph } from "./WhatsAppGlyph";
@@ -19,6 +20,7 @@ export function WhatsAppButton({
   size,
   iconOnly,
   loading,
+  place = "header",
   children,
 }: {
   outlet?: OutletSlug;
@@ -28,8 +30,10 @@ export function WhatsAppButton({
   /** Round 44px button with just the glyph. */
   iconOnly?: boolean;
   loading?: boolean;
+  place?: "header" | "dock" | "card" | "tool" | "quote";
   children?: string;
 }) {
+  const ev: Ev = ["whatsapp_click", { outlet, place }];
   const href = outletWhatsApp(outlet, message);
   if (!href) {
     return iconOnly ? null : (
@@ -40,13 +44,13 @@ export function WhatsAppButton({
   }
   if (iconOnly) {
     return (
-      <IconButton variant={variant} label={children ?? ui.whatsapp.openLabel} href={href} loading={loading}>
+      <IconButton variant={variant} label={children ?? ui.whatsapp.openLabel} href={href} loading={loading} ev={ev}>
         <WhatsAppGlyph />
       </IconButton>
     );
   }
   return (
-    <Button variant={variant} size={size} href={href} loading={loading}>
+    <Button variant={variant} size={size} href={href} loading={loading} ev={ev}>
       <WhatsAppGlyph />
       {children ?? ui.whatsapp.label}
     </Button>

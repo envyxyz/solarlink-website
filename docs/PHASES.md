@@ -347,3 +347,12 @@ Open:
 - `/get-quote/` title carries "Free" (KEYWORD-MAP phrase) while the free survey is unconfirmed.
 - `/about-us/` title cannot carry "Punjab's Trusted Solar Company" (claim word), so meta-check warns.
 - The FAQ question "What is a tier one solar panel?" is spelled out to stay clear of the Tier-1 ban.
+
+## 23 Nov 2026: analytics
+
+GA4 through gtag.js, injected once after the first pointerdown, keydown, scroll or touchstart (`src/lib/analytics.ts`, mounted by `Analytics` in the root layout). Nothing loads without a shown id: the production build shows `G-50GMQWKL7R` only once the fact is confirmed; `NEXT_PUBLIC_GA4_ID` overrides it. Config sends `anonymize_ip`, no Google signals, no ad personalisation. Events carry outlet slugs, places and flags only: `whatsapp_click`, `call_click`, `directions_click` (an `ev` prop on `Button`/`IconButton`), `quote_submit` (QuoteForm), `tool_complete` (once per tool per page load, after the visitor first changes an input). CSP adds googletagmanager.com (script) and google-analytics.com plus region1 (connect). Checked in a built page with Playwright: no Google request before a click, one after with `NEXT_PUBLIC_GA4_ID=G-TEST`. Homepage JS 159.7 KB of 182.0 KB.
+
+Open:
+- Raw phone-number links (outlet cards, footer) send no `call_click`: they are server-rendered anchors. Add a Button there if wanted.
+- `place` header exists only where a WhatsApp control sits there today (none yet); dock, card, tool and quote are wired.
+- GA4 property ownership still unconfirmed (PRD question 10), so production sends nothing until confirmed.

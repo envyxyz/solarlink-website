@@ -50,17 +50,17 @@ export function Outlets() {
                   </div>
                   <div className="mt-auto grid grid-cols-2 gap-2 @xl:grid-cols-3">
                     {address && (
-                      <Button variant="dark" href={mapsHref(address)} className="col-span-2 @xl:col-span-1">
+                      <Button variant="dark" href={mapsHref(address)} ev={["directions_click", { outlet: o.slug }]} className="col-span-2 @xl:col-span-1">
                         {section.directions}
                       </Button>
                     )}
                     {phones && (
-                      <Button variant="quiet" href={telHref(phones[0])} className="whitespace-normal! py-2 px-3! text-center leading-tight!">
+                      <Button variant="quiet" href={telHref(phones[0])} ev={["call_click", { outlet: o.slug, place: "card" }]} className="whitespace-normal! py-2 px-3! text-center leading-tight!">
                         {section.call}
                       </Button>
                     )}
                     {whatsapp && (
-                      <Button variant="quiet" href={whatsapp} className="whitespace-normal! py-2 px-3! text-center leading-tight!">
+                      <Button variant="quiet" href={whatsapp} ev={["whatsapp_click", { outlet: o.slug, place: "card" }]} className="whitespace-normal! py-2 px-3! text-center leading-tight!">
                         <WhatsAppGlyph />
                         {section.message}
                       </Button>

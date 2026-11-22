@@ -4,11 +4,13 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Button } from "@/components/ui/Button";
 import { Field, Select } from "@/components/ui/Field";
 import { WhatsAppGlyph } from "@/components/ui/WhatsAppGlyph";
+import { track } from "@/lib/analytics";
 import { toolsContent } from "@/content/tools";
 import { fill } from "@/lib/sizing";
 import type { HandoffOutlet } from "@/lib/tools/handoff";
 
 const { common } = toolsContent;
+const completed = new Set<string>();
 
 /** Said once, after the visitor stops changing things (a slider would otherwise chatter). The first render says nothing. */
 function useSettled(text: string, ms = 700) {
@@ -53,6 +55,7 @@ export function NumField({ label, hint, value, onValue, min, max, step = 1, aria
  * figures, the sentence a screen reader hears, the assumptions, the data date, the shop picker and the WhatsApp action.
  */
 export function ToolShell({
+  tool,
   inputs,
   results,
   announce,
@@ -63,6 +66,7 @@ export function ToolShell({
   link,
   onReset,
 }: {
+  tool: string;
   inputs: ReactNode;
   results: { label: string; value: string }[];
   announce: string;
@@ -74,6 +78,13 @@ export function ToolShell({
   onReset: () => void;
 }) {
   const said = useSettled(announce);
+  // A result counts once the visitor has changed something and it settled; once per tool per page load.
+  useEffect(() => {
+    if (said && !completed.has(tool)) {
+      completed.add(tool);
+      track("tool_complete", { tool });
+    }
+  }, [said, tool]);
   const [main, ...rest] = results;
   return (
     <div className="grid gap-6 lg:grid-cols-12 lg:items-start lg:gap-8">
@@ -105,7 +116,7 @@ export function ToolShell({
           <p className="text-caption text-tone-ink-2">{fill(common.asOf, { date: toolsContent.asOf })}</p>
         </div>
         <Select label={common.city} value={city} onChange={(e) => onCity(e.target.value)} options={outlets.map((o) => ({ value: o.slug, label: o.city }))} />
-        <Button href={link.href} size="lg" className="w-full">
+        <Button href={link.href} size="lg" className="w-full" ev={link.whatsapp ? ["whatsapp_click", { outlet: city, place: "tool" }] : undefined}>
           {link.whatsapp && <WhatsAppGlyph size={24} />}
           {link.whatsapp ? common.cta : common.ctaQuote}
         </Button>
