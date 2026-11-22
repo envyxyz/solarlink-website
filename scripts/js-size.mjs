@@ -9,7 +9,9 @@ const LIMIT_KB = BASELINE_KB + 50;
 const file = process.argv[2] ?? "out/index.html";
 const root = file.replace(/index\.html$/, "");
 const html = readFileSync(file, "utf8");
-const srcs = [...new Set([...html.matchAll(/<script(?![^>]*noModule)[^>]*\ssrc="([^"]+)"/gi)].map((m) => m[1]))];
+// Scripts are plain tags or, after scripts/post-export.mjs, the JSON list in the inline loader.
+const loader = html.match(/<script data-deferred>\(function\(\)\{var s=(\[.*?\]),d;/)?.[1];
+const srcs = [...new Set([...html.matchAll(/<script(?![^>]*noModule)[^>]*\ssrc="([^"]+)"/gi)].map((m) => m[1]).concat(loader ? JSON.parse(loader).map((a) => a[0]) : []))];
 let total = 0;
 const rows = srcs.map((s) => {
   const kb = gzipSync(readFileSync(join(root, s.split("?")[0]))).length / 1024;

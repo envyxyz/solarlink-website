@@ -63,7 +63,7 @@ Rules:
 
 ## Type
 
-One family: **Mona Sans** variable (OFL), self-hosted, `font-display: swap`, axes `wght` 200 to 900 and `wdth` 75 to 125. Fallback stack: `"Mona Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif` with a size-adjusted fallback to stop layout shift.
+One family: **Mona Sans** variable (OFL), self-hosted, `font-display: swap`, axes `wght` 200 to 900 and `wdth` 75 to 125. Fallback stack: `"Mona Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif` with a size-adjusted fallback to stop layout shift. The `display` style uses its own widened fallback face (`--font-display`, "Mona Sans Display Fallback", Arial at 118.43%), because wdth 125 is 13.8% wider than the stock fallback.
 
 | Token | Size | Width | Weight | Line height | Tracking | Use |
 |---|---|---|---|---|---|---|

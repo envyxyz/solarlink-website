@@ -245,6 +245,7 @@
   --text-*: initial;
 
   --font-sans: var(--font-mona), "Mona Sans", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+  --font-display: "Mona Sans", "Mona Sans Display Fallback", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
 
   --container-page: var(--page-max);
   --container-heading: var(--measure-heading);
