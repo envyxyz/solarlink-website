@@ -35,6 +35,7 @@ export function ProductCard({ product, category }: { product: Product; category:
             <Button
               variant="dark"
               href={href}
+              ev={["whatsapp_click", { outlet: "lahore", place: "card" }]}
               twin={{ icon: <WhatsAppGlyph />, label: shop.askLabel.replace("{name}", product.name), href, redundant: true }}
             >
               {shop.ask}

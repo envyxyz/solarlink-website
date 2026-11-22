@@ -23,6 +23,7 @@ export function LoadTool({ config }: { config: ToolConfig }) {
 
   return (
     <ToolShell
+      tool="load"
       inputs={
         <>
           <div>

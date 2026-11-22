@@ -336,3 +336,12 @@ Open:
 
 Full copy for the five service pages, the three system types, the 3/5/10/15/20 kW size pages and the four product guides (services.ts, systems.ts, products.ts), all still confirmed:false. No prices, warranties, times, counts or brand-dealer claims. Size pages explain panels, roof area and modelled yield (Global Solar Atlas, Lahore to Islamabad) and route to the sizing card and WhatsApp quote. Net billing and tariff statements cite S.R.O. 251(I)/2026 and 279(I)/2026 and say 'as reported': the figures come from AI-compiled research and need checking against nepra.org.pk before launch. Two answers carry [confirm with client] (warranty, after-sales).
 
+
+## 23 Nov 2026: analytics
+
+GA4 through gtag.js, injected once after the first pointerdown, keydown, scroll or touchstart (`src/lib/analytics.ts`, mounted by `Analytics` in the root layout). Nothing loads without a shown id: the production build shows `G-50GMQWKL7R` only once the fact is confirmed; `NEXT_PUBLIC_GA4_ID` overrides it. Config sends `anonymize_ip`, no Google signals, no ad personalisation. Events carry outlet slugs, places and flags only: `whatsapp_click`, `call_click`, `directions_click` (an `ev` prop on `Button`/`IconButton`), `quote_submit` (QuoteForm), `tool_complete` (once per tool per page load, after the visitor first changes an input). CSP adds googletagmanager.com (script) and google-analytics.com plus region1 (connect). Checked in a built page with Playwright: no Google request before a click, one after with `NEXT_PUBLIC_GA4_ID=G-TEST`. Homepage JS 159.7 KB of 182.0 KB.
+
+Open:
+- Raw phone-number links (outlet cards, footer) send no `call_click`: they are server-rendered anchors. Add a Button there if wanted.
+- `place` header exists only where a WhatsApp control sits there today (none yet); dock, card, tool and quote are wired.
+- GA4 property ownership still unconfirmed (PRD question 10), so production sends nothing until confirmed.

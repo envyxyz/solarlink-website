@@ -7,6 +7,7 @@ import { Field, Textarea } from "@/components/ui/Field";
 import { SegmentedControl } from "@/components/ui/SegmentedControl";
 import { WhatsAppGlyph } from "@/components/ui/WhatsAppGlyph";
 import { quote } from "@/content/quote";
+import { track } from "@/lib/analytics";
 import { BILL_MODES, cleanPhone, LIMITS, PHONE_RE, quoteMessage } from "@/lib/quote";
 import { fill } from "@/lib/sizing";
 import { waHref } from "@/lib/phone";
@@ -106,6 +107,7 @@ export function QuoteForm({ outlets }: { outlets: QuoteOutlet[] }) {
       // Offline or no Worker: same direct link.
     }
     setSending(false);
+    track("quote_submit", { outlet: outlet.slug, property, stored });
     setDone({ name: cleanName, city: outlet.city, url, stored });
     if (url) window.location.assign(url);
   }

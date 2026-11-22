@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from "next";
 import { Mona_Sans } from "next/font/google";
 import { business, ui } from "@/content";
+import { Analytics } from "@/components/providers/Analytics";
 import { Reveal } from "@/components/providers/Reveal";
 import { Footer } from "@/components/site/Footer";
 import { Nav } from "@/components/site/Nav";
+import { show } from "@/lib/facts";
 import { siteUrl } from "@/lib/seo";
 import "./globals.css";
 
@@ -35,6 +37,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {ui.skipToContent}
         </a>
         <Reveal />
+        <Analytics id={process.env.NEXT_PUBLIC_GA4_ID || show(business.ga4Id)} />
         <Nav />
         {children}
         <Footer />

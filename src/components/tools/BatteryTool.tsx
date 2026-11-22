@@ -35,6 +35,7 @@ export function BatteryTool({ config }: { config: ToolConfig }) {
 
   return (
     <ToolShell
+      tool="battery"
       inputs={
         <>
           <NumField label={t.watts} hint={t.wattsHint} value={b.watts} onValue={(watts) => set({ watts })} min={L.watts.min} max={L.watts.max} step={10} />
