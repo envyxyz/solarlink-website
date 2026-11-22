@@ -4,6 +4,7 @@ import { ArrowRight } from "lucide-react";
 import { BrandsBlock } from "@/components/pages/blocks/BrandsBlock";
 import { DiagramBlock } from "@/components/pages/blocks/DiagramBlock";
 import { FeatureBlock } from "@/components/pages/blocks/FeatureBlock";
+import { QuoteFormBlock } from "@/components/pages/blocks/QuoteFormBlock";
 import { ProjectsBlock } from "@/components/pages/blocks/ProjectsBlock";
 import { ShopBlock } from "@/components/pages/blocks/ShopBlock";
 import { SizingBlock } from "@/components/pages/blocks/SizingBlock";
@@ -124,6 +125,8 @@ function Body({ block, featured }: { block: PageBlock; featured?: boolean }) {
       return <DiagramBlock block={block} />;
     case "sizing":
       return <SizingBlock block={block} />;
+    case "quoteForm":
+      return <QuoteFormBlock block={block} />;
     default:
       return null;
   }
@@ -178,8 +181,8 @@ export function Block({ block, ground, wide, featured }: { block: PageBlock; gro
     </>
   );
   return (
-    // The sizing card carries its own lime action: the dock steps aside while it is on screen (one lime per view).
-    <section id={heading ? slug(heading) : undefined} data-dock-hide={block.type === "sizing" ? "" : undefined} className={cn("scroll-mt-26", wide && "page-width")}>
+    // The sizing card and the quote form carry their own lime action: the dock steps aside while it is on screen (one lime per view).
+    <section id={heading ? slug(heading) : undefined} data-dock-hide={block.type === "sizing" || block.type === "quoteForm" ? "" : undefined} className={cn("scroll-mt-26", wide && "page-width")}>
       {ground === "plain" ? inner : (
         <Stage variant={ground} as="div" nested className={wide ? "p-6 sm:p-10 lg:p-14" : "p-6 sm:p-8"}>
           {inner}

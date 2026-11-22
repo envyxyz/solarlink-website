@@ -16,7 +16,9 @@
     "check:js": "node scripts/js-size.mjs",
     "check:redirects": "node scripts/seo/redirects-check.mjs",
     "check:meta": "node scripts/seo/meta-check.mjs",
-    "shot": "node scripts/shot.mjs"
+    "shot": "node scripts/shot.mjs",
+    "preview": "node worker/node_modules/wrangler/bin/wrangler.js dev --var SHOW_UNCONFIRMED:1",
+    "deploy": "node worker/node_modules/wrangler/bin/wrangler.js deploy"
   },
   "dependencies": {
     "clsx": "^2.1.1",

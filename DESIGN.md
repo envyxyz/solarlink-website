@@ -287,6 +287,7 @@ Components (all in `src/components/pages/`, used only by `InnerPage`):
 | `Block` | one block: heading, ground and body. Grounds by type: steps and shop on night (two night stages at most per page, the rest fall back to sunken), diagram, sizing and facts on sunken, the rest on the page ground. Prose, facts and FAQ use the side-heading grid from 64rem |
 | `blocks/DiagramBlock` | `LinkDiagram` opened on the page's system type (`initial`) |
 | `blocks/SizingBlock` | the home `SizingCard` (`slot` prop) in a solid card; config from `sizingConfig()` (moved out of `Hero`) |
+| `blocks/QuoteFormBlock` | the `QuoteForm` island (`src/components/quote/`, new 23 Nov 2026) in a solid card on a sunken stage: name, phone, outlet and property as `SegmentedControl`s, optional bill and message in `Field` and `Textarea`. Posts to the Worker, then opens WhatsApp; errors in a `role="alert"` line and under each field. Hides the dock while on screen (one lime per view) |
 | `blocks/ShopBlock` | night stage, one shop category's `ProductCard`s in a snap row |
 | `blocks/ProjectsBlock` | the home projects as `ProjectCard`s |
 | `blocks/BrandsBlock` | the brand `Marquee` with its pause button |

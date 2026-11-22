@@ -262,3 +262,20 @@ Open:
 - No `Product` schema: the product pages are category pages, not single products, and no price or stock is confirmed.
 - No no-slash twins in `_redirects`; run `hops.mjs` against the deployed Worker and add them only if it answers 307.
 - Worktree note: Turbopack cannot follow a `node_modules` junction outside the project root; building in a worktree needs a temporary `turbopack.root` (not committed).
+
+## 23 Nov 2026: quote flow (form island and Worker)
+
+Done:
+- **Worker** (`worker/`, own `package.json`; zod, wrangler and workers-types installed there so the site lockfile is untouched): `POST /api/quote` only, everything else falls to `env.ASSETS`. Zod schema per field (strict, unknown keys fail), honeypot (`website`), time trap (the form sends how long it was on screen; under 3 s is rejected, so the visitor's clock is not trusted), rate limit by IP through the Cloudflare rate-limit binding (5 per 60 s, set in `wrangler.jsonc`), same-origin check, 4 KB body cap. The lead goes to KV (`LEADS`, 180-day TTL, no IP stored) before the reply; if storing fails it logs the error message only and still returns the link. The reply is `{ whatsapp, stored }`, the wa.me link built from the chosen outlet's number in content, with the visitor's own text and no phone number in it. An unconfirmed number is handed out only when the `SHOW_UNCONFIRMED` var is "1" (`pnpm preview` sets it; the deployed default is "0").
+- `wrangler.jsonc` at the root: assets `out/`, `404-page`, `run_worker_first: ["/api/*"]`, KV placeholder id. **Not deployed.** `worker/selfcheck.mjs` asserts the validator and the WhatsApp text (`node worker/selfcheck.mjs`).
+- **Form island** `src/components/quote/QuoteForm.tsx`: name, phone, outlet (from content, so no Rawalpindi, Multan or Gilgit), home/business/farm, optional bill in Rs or units, optional message. Existing `Field`, `Textarea`, `SegmentedControl`, `Button`. Errors in a `role="alert"` line plus under each field; focus moves to the first invalid field, then to the confirmation. If the Worker is unreachable or answers anything but a validation error (a static preview has none), it opens WhatsApp directly with the same text. Copy in `src/content/quote.ts`; limits, the phone rule and the message builder in `src/lib/quote.ts`, shared with the Worker.
+- New block type `quoteForm` (`types.ts`, `Block.tsx`, `blocks/QuoteFormBlock.tsx`), first block of the `/get-quote/` draft (still `confirmed: false`); the dock steps aside while it is on screen. Line added to `DESIGN.md`.
+- Privacy-policy draft now lists what the quote form keeps, where, for 180 days, and who receives it `[confirm with client]`.
+- `package.json`: `preview` and `deploy` scripts (wrangler from `worker/node_modules`). Root `tsconfig.json` excludes `worker/`, which has its own.
+- Checked: tsc (site and worker), eslint, check-css, check-content pre and post, selfcheck, preview build, production build ships only `/` (homepage JS 159.1 KB with webpack, limit 182.0). Form tested in a browser at 390: empty submit shows the alert and focuses the name; a good submit with no Worker lands on wa.me with the right text. Shots `design/shots/quote-*` at 1440 and 390, light and dark.
+
+Open:
+- Real KV namespace id, rate-limit namespace, and who receives alerts (client). npm skipped wrangler's esbuild and workerd install scripts, so `pnpm preview` needs `npm approve-scripts` or a rebuild in `worker/` before it runs.
+- The home sizing card does not store its values, so the form is not prefilled from it.
+- `pnpm deploy` is a pnpm built-in command; use `pnpm run deploy`.
+- The sizing card on `/get-quote/` clips its Units toggle at 390 (existing sizing block, not touched).
